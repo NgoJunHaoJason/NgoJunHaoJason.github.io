@@ -1,0 +1,334 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* start of header-related styles */
+.header {
+    margin: auto;
+    display: flex;
+    margin-top: 16px;
+    /* https://stackoverflow.com/questions/38896055/how-to-center-align-a-flexbox-container */
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+.header img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header h1 {
+    margin-left: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-block;
+    font-size: 24px;
+}
+
+h2 .header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* end of header-related styles */
+
+/* start of navbar-related styles */
+.navbar {
+    background-color: lightskyblue;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.navbar li {
+    float: left;
+    text-align: center;
+}
+
+.navbar a {
+    display: block;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:not(.active):hover {
+    color: white;
+}
+
+.navbar .active {
+    background-color: steelblue;
+    color: white;
+}
+/* end of navbar-related styles */
+
+/* start of content-related styles */
+.content{
+    font-size: 18px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.content h3 {
+    text-align: center;
+}
+
+.content li {
+    font-size: 17px;
+}
+
+.content .table {
+    table-layout: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.content .table {
+    border: 1px solid black;
+}
+
+.content .table th, td {
+    border: 1px solid black;
+}
+
+.content .table img {
+    width: 100%;
+    height: auto;
+}
+/* end of content-related styles */
+
+/* start of collapsible-related styles */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+}
+
+.collapsible-active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-active:after {
+    content: "\2212";
+}
+
+.collapsible-content {
+    padding: 0 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+/* end of collapsible-related styles */
+
+/* start of nav-button styles */
+.nav-buttons {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    justify-content: space-around;
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 4px
+}
+
+.nav-buttons a {
+    display: inline-block;
+
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: burlywood;
+    background-color: moccasin;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-buttons a.disabled {
+    display: inline-block;
+
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    background-color: grey;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-buttons a:not(.disabled):hover {
+    background-color: burlywood;
+    color: white;
+}
+/* end of nav-button styles */
+
+/* start of footer-related styles */
+.footer {
+    background-color: lightgray;
+    display: flex;
+    font-size: 14px;
+}
+
+.footer .github {
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer .github img {
+    width: 12px;
+    margin-top: 3px;
+}
+
+.footer .github a {
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer .github a:hover {
+    color: white;
+}
+
+.footer .load-time {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .last-modified {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 6px;
+}
+/* end of footer-related styles */
+
+/* 
+change styles if screen is too small 
+
+source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon
+*/
+@media screen and (max-width: 500px) {
+    .navbar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navbar li a {
+        font-size: 15px;
+    }
+
+    .content {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 16px;
+    }
+
+    .content li {
+        font-size: 15px;
+    }
+
+    .nav-buttons {
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 12px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .header {
+        display: block;
+        text-align: center;
+    }
+
+    .header img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header h1 {
+        display: block;
+        margin-top: 4px;
+    }
+
+    .navbar li {
+        float: none;
+    }
+
+    .nav-buttons {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 13px;
+    }
+
+    .nav-buttons a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .footer, .footer .github {
+        display: block;
+    }
+
+    .footer .load-time, .footer .last-modified {
+        display: block;
+        text-align: right;
+        margin-right: 6px;
+    }
+}

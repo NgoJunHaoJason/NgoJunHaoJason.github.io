@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+<!--remember to include the following for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>CZ2001 Lab 4 Report | Jason Ngo's website</title>
+    <link rel="icon" href="../../../../../images/sciurus_96.png">
+    <link rel="stylesheet" type="text/css" href="../../../../../styles/default_style.css">
+</head>
+
+<body>
+    <h2 class="header">
+        CZ2001 Algorithms
+    </h2>
+
+    <!--start of nav-related code-->
+    <ul class="navbar">
+        <li>
+            <a href="../../../../../index.html">
+                home
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../main.html">
+                education
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../experience.html">
+                experience
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../miscellaneous/main.html">
+                miscellaneous
+            </a>
+        </li>
+    </ul>
+    <!--end of nav-related code-->
+
+    <!--start of content-related code-->
+    <div class="content">
+        <h3>Example Class 4 Report (Project 4B)</h3>
+
+        <p><u>Data</u></p>
+
+        <p>
+            The data set of cities used for this lab is taken from a
+            <a target="_blank" href="https://github.com/datasets/world-cities ">
+                GitHub repository
+            </a>
+        </p>
+
+        <p><u>Graph Implementation</u></p>
+
+        <p>
+            In our implementation, we used adjacency lists to represent the graph (undirected, non-weighted). The Graph
+            class holds all the functions to create and modify the graph, which are used by the Graph Generation class.
+        </p>
+
+        <p>
+            Methods:
+            <ol>
+                <li>
+                    connect: Creates an undirected edge between 2 cities.
+                </li>
+
+                <li>
+                    density: 2 * (number of non-stop flights (undirected graph)) / (size of the adjacency list)
+                    <ul>
+                        <li>
+                            num of non-stop flights = density * maximum possible number of non-stop flights
+                        </li>
+
+                        <li>
+                            maximum possible number of non-stop flights = size * (size-1) / 2
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    printGraph - Although the Graph is implemented as an adjacency list, we printed the graph out as an
+                    adjacency matrix allows us to easily see which cities are connected.
+                </li>
+            </ol>
+        </p>
+
+        <p><u>Graph Generation Implementation</u></p>
+
+        <p>
+            In this implementation, we will be using size, density and number of non-stop flight to generate random
+            graph by randomly generating linked list to each city.
+        </p>
+
+        <p>
+            Methods:
+            <ol>
+                buildNonStopFlights: Edges are built on top of pre-existing graph.
+                <ul>
+                    <li>
+                        only cities that are not connected are selected
+                    </li>
+
+                    <li>
+                        selection of cities is done using an adjacency matrix - search time of O(1)
+                    </li>
+                </ul>
+            </ol>
+        </p>
+
+        <p><u>Implementation of Searching Algorithms</u></p>
+
+        <p>
+            Our searching algorithms are implemented in the Searcher class.
+            <ul>
+                <li>
+                    the Searcher class make use of a linked list, L
+                    <ul>
+                        <li>
+                            L is used as a queue in BFS
+                        </li>
+                        <li>
+                            L is used as a stack in DFS
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Both BFS and DFS have the same code structure; they:
+            <ul>
+                <li>
+                    visit the source
+                </li>
+                <li>
+                    place the source in L
+                </li>
+                <li>
+                    while L is not empty (ie graph is not fully traversed)
+                    <ul>
+                        <li>
+                            remove the first City in L
+                        </li>
+                        <li>
+                            visit the first City’s neighbouring Cities if they are not already visited
+                        </li>
+                        <li>
+                            add the neighbouring Cities to L
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Differences in BFS and DFS
+            <ul>
+                <li>
+                    upon visiting a neighbouring City which is the destination
+                    <ul>
+                        <li>
+                            BFS: return path to destination as the shortest route
+                        </li>
+
+                        <li>
+                            DFS: compare new path found to previously known shortest route - if the newly-found path is
+                            shorter than the current shortest route, or there is no shortest route currently, the new
+                            path found is stored as the shortest route
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    for adding of neighbouring Cities to L
+                    <ul>
+                        <li>
+                            BFS: add neighbouring Cities to back of L (i.e. L is used as a queue)
+                        </li>
+
+                        <li>
+                            DFS: if neighbouring Cities are already in L, remove them from L first; add neighbouring
+                            Cities to front of L (i.e. L is used as a stack)
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    at the end of the function
+                    <ul>
+                        <li>
+                            BFS: returns null since no path can be found
+                        </li>
+
+                        <li>
+                            DFS: returns the shortest route, or null if no path can be found
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+
+        <p><u>Analysis of Running Times</u></p>
+
+        <p>
+            Based on number of cities (size of graph/ |V|) and number of non-stop flights (|E|):
+        </p>
+
+        <img class="lazy" style="width: 100%; height: auto;" data-src="lab_4_images/cz2001_lab4_search_time_plot.png">
+
+        <p>
+            Based on the graph, search time = O(0.1 (|V| +|E|) + 40000) = O(|V|+|E|).
+        </p>
+
+        <p><u>Conclusion</u></p>
+
+        <p>
+            DFS cannot be used in place of BFS as it does not guarantee that a node which is visited before
+            another node is closer to the source node. This is also reflected in the backtracking nature of DFS in which
+            it visits the “deeper” nodes further away from the source nodes first; going as far as it possibly can
+            before returning to the unvisited adjacent nodes.
+        </p>
+
+        <p>
+            On the other hand, BFS visits nodes in increasing order of distance from the source; visiting all nodes at
+            the same “level” before proceeding to the next. Therefore it would be more practical to search wide instead
+            of deep and this can be seen empirically based on a better overall average search time by using BFS.
+        </p>
+
+        <p>
+            Nonetheless, DFS can also be used in place of BFS, but that would require the program to find all possible
+            ways to reach the destination node from source node and updating the shortest path with each new discovery;
+            however, this comes with high complexity and it is simply not recommended in this instance.
+        </p>
+
+        <table class="table" style="width: auto;">
+            <tr>
+                <th>Authors - SE1 (Group 2)</th>
+            </tr>
+
+            <tr>
+                <td>Lee Yi Zhuo</td>
+                </th>
+            </tr>
+            <tr>
+                <td>Ngo Jun Hao Jason</td>
+            </tr>
+            <tr>
+                <td>Thomas Stephen Felix</td>
+            </tr>
+            <tr>
+                <td>Tan Yong Heng Kenrick</td>
+            </tr>
+            <tr>
+                <td>Yung-Hsueh Lee</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <!--end of content-related code-->
+
+    <!--start of nav-buttons code-->
+    <div class="nav-buttons">
+        <a href="../main.html">
+            back
+        </a>
+    </div>
+    <!--end of nav-buttons code-->
+
+    <!--start of footer-related code-->
+    <div class="footer">
+        <div class="github">
+            <img src="../../../../../images/GitHub-Mark-120px-plus.png">
+
+            <a target="_blank" href="https://github.com/NgoJunHaoJason">
+                GitHub profile
+            </a>
+        </div>
+
+        <div class="load-time">
+            time taken to load:
+            <span id="load_time">null</span>
+        </div>
+
+        <div class="last-modified">
+            last modified:
+            <span id="last_modified">null</span>
+        </div>
+    </div>
+    <!--end of footer-related code-->
+
+    <script defer="defer" src="../../../../../scripts/on_page_load.js"></script>
+</body>
+
+</html>

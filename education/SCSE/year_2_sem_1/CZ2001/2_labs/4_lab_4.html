@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+<!--remember to include the following for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>CZ2001 Lab 4 | Jason Ngo's website</title>
+    <link rel="icon" href="../../../../../images/sciurus_96.png">
+    <link rel="stylesheet" type="text/css" href="../../../../../styles/default_style.css">
+</head>
+
+<body>
+    <h2 class="header">
+        CZ2001 Algorithms
+    </h2>
+
+    <!--start of nav-related code-->
+    <ul class="navbar">
+        <li>
+            <a href="../../../../../index.html">
+                home
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../main.html">
+                education
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../experience.html">
+                experience
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../miscellaneous/main.html">
+                miscellaneous
+            </a>
+        </li>
+    </ul>
+    <!--end of nav-related code-->
+
+    <!--start of content-related code-->
+    <div class="content">
+        <h3>Example Class 4 (Week 11 – Week 12)</h3>
+
+        <p>
+            Please choose <b>one</b> of the following two projects (Project 4A or 4B):
+        </p>
+
+        <p>
+            <u>
+                Project 4A: Statistical and topological analysis of social networks
+            </u>
+        </p>
+
+        <p>
+            Write a program (in Java, C or C++) to analyze the statistical properties of a social network. For a node in
+            a network (or graph), its <i>degree</i> is the number of other nodes connected with it. In this project, we
+            will calculate and analyze the distribution of node degrees for a graph <i>G</i> that represents a social
+            network, to see if <i>G</i> represents a “scale-free” network.
+        </p>
+
+        <p>
+            The following definition of "scale-free network" is from Wikipedia, and it is used in
+            this project:
+        </p>
+
+        <p>
+            "A scale-free network is a network whose degree distribution follows a power law, at least asymptotically.
+            That is, the fraction <i>P(k)</i> of nodes in the network having <i>k</i> connections to other nodes goes
+            for large values of <i>k</i> as <i>P(k) &prop; k<sup>-&gamma;</sup></i>, where <i>&gamma;</i> is a parameter
+            whose value is typically in the range 2 &lt; <i>&gamma;</i> &lt; 3 , although occasionally it may lie
+            outside these bounds."
+        </p>
+
+        <p>
+            The project can be divided into the following steps:
+
+            <ol>
+                <li>
+                    <b>Retrieve a real social network dataset of big size:</b> You may use APIs of
+                    some publicly available social networks. For example:
+
+                    <ol>
+                        <li>
+                            <a href="https://developers.facebook.com/docs/reference/api/">
+                                Facebook
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://dev.twitter.com/overview/api">
+                                Twitter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://developers.google.com/+/web/api/rest/latest/">
+                                Google+
+                            </a>
+                        </li>
+                    </ol>
+
+                    Also, you can choose a social network from <a href="https://snap.stanford.edu/data/">SNAP</a>.
+                    <br>
+                    A recommended network size is around 5000 nodes. But you may also
+                    choose other network sizes. Use either an adjacency matrix or an array of
+                    adjacency lists to represent the network.
+                </li>
+
+                <li>
+                    <b>Calculate node degrees:</b> Design and implement an algorithm to calculate the
+                    degrees of all the nodes in the network.
+                </li>
+
+                <li>
+                    <b>Study the distribution of node degrees:</b> Plot a histogram for the node degrees in your
+                    network, where the variable on x-axis is <i>k</i> (i.e. the node degree), and the variable on y-axis
+                    is <i>P(k)</i> (i.e. the fraction of nodes having degree equal to <i>k</i>). Do curve fitting (e.g.
+                    using Microsoft Excel or R) of the power-law function to the data, choosing a value for &gamma; that
+                    fits the data well.
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            In your report and presentation, please describe the above steps and results.
+        </p>
+
+        <p>
+            <u>
+                Project 4B: Application of BFS to flight scheduling
+            </u>
+        </p>
+
+        <p>
+            Construct an undirected graph to represent non-stop airline flights between cities in the world (a
+            <u>hypothetical</u> graph for Asia Pacific is given below). In your graph, please add more cities and
+            flights to make it more realistic. It should contain at least one pair of cities, between which there is no
+            non-stop flight, but there is a route (or path) between them.
+        </p>
+
+        <img class="lazy" style="width:100%;height:auto;"
+        data-src="lab_4_images/cz2001_lab4_hypothetical_graph.png">
+
+
+        <p>
+            Implement the Breadth-first search (BFS) algorithm (using Java or C/C++) to find a route between two cities
+            with the minimum number of stops. That is, when user inputs the names of two cities, your program should
+            return <b>one</b> route with the smallest possible number of stop(s). If a non-stop flight is available, it
+            will just return the departure city and arrival city.
+        </p>
+
+        <p>
+            In your report and presentation, please include a description and results of the following steps:
+            <ol>
+                <li>
+                    Measure the CPU times of your program on graphs of different sizes, and analyze how the running
+                    times depend on the numbers of cities and non-stop flights.
+                </li>
+
+                <li>
+                    Explain whether Depth-first search (DFS) algorithm can be used in place of BFS, why or why not.
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            <u>Note for Example class 4</u>
+            <br>
+            Any student who has not done any presentation for his/her group must present.
+        </p>
+    </div>
+    <!--end of content-related code-->
+
+    <!--start of nav-buttons code-->
+    <div class="nav-buttons">
+        <a href="../main.html">
+            back
+        </a>
+    </div>
+    <!--end of nav-buttons code-->
+
+    <!--start of footer-related code-->
+    <div class="footer">
+        <div class="github">
+            <img src="../../../../../images/GitHub-Mark-120px-plus.png">
+
+            <a target="_blank" href="https://github.com/NgoJunHaoJason">
+                GitHub profile
+            </a>
+        </div>
+
+        <div class="load-time">
+            time taken to load:
+            <span id="load_time">null</span>
+        </div>
+
+        <div class="last-modified">
+            last modified:
+            <span id="last_modified">null</span>
+        </div>
+    </div>
+    <!--end of footer-related code-->
+
+    <script defer="defer" src="../../../../../scripts/on_page_load.js"></script>
+</body>
+
+</html>
