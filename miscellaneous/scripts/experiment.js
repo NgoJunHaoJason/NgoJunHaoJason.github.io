@@ -14,6 +14,8 @@ const canvasWidth = displayCanvas.width;
 const canvasHeight = displayCanvas.height;
 
 const video = document.getElementById('video');
+video.width = 224;
+video.height = 224;
 const startStopButton = document.getElementById('start-stop-button');
 
 const CONSTRAINTS = {
