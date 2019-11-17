@@ -27,9 +27,11 @@ const CONSTRAINTS = {
 
 const img = document.getElementById('img');
 cocoSsd.load().then(model => {
+    let start = Date.now();
     // detect objects in the image.
     model.detect(img).then(predictions => {
         console.log('Predictions: ', predictions);
+        console.log('time taken: ', Date.now() - start);
     });
 });
 
