@@ -25,7 +25,13 @@ const CONSTRAINTS = {
     }
 } // should let constraints be variable in future to switch cameras
 
-const model = cocoSsd.load();
+const img = document.getElementById('img');
+cocoSsd.load().then(model => {
+    // detect objects in the image.
+    model.detect(img).then(predictions => {
+        console.log('Predictions: ', predictions);
+    });
+});
 console.log(model);
 
 // add event handlers
