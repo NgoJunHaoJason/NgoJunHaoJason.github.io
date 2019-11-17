@@ -20,6 +20,9 @@ const startStopButton = document.getElementById('start-stop-button');
 video.onloadeddata = drawCanvas;
 startStopButton.onclick = startCamera;
 
+// canvas is black on page load
+stopDisplay();
+
 const CONSTRAINTS = {
     audio: false,
     video: {
@@ -30,10 +33,16 @@ const CONSTRAINTS = {
 }
 
 function startCamera() {
+    startStopButton.onclick = stopCamera;
+    startStopButton.innerHTML = 'stop';
+
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        startStopButton.onclick = stopCamera;
-        startStopButton.innerHTML = 'stop';
         startStream(CONSTRAINTS,video);
+    }
+    else {
+        context.font = '30px Arial';
+        context.strokeStyle = '#FFFFFF'; // white
+        context.strokeText('no access to camera...', 5, 35); // 30 (font size) + 5
     }
 }
 
@@ -57,22 +66,7 @@ function stopStream(video) {
 
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
-    console.log('loaded frame');
-}
-
-function startDisplay(displayId) {
-    let displayCanvas = document.getElementById(displayId);
-
-    if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        
-    }
-    else {
-        let context = displayCanvas.getContext('2d');
-        
-        context.font = '30px Arial';
-        context.strokeStyle = '#FFFFFF'; // white
-        context.strokeText('no access to camera...', 5, 35); // 30 (font size) + 5
-    }
+    requestAnimationFrame(drawCanvas);
 }
 
 function stopDisplay() {
@@ -80,12 +74,3 @@ function stopDisplay() {
     context.fillRect(0, 0, canvasWidth, canvasHeight);
 
 }
-
-// on load page, show a black display
-// let displayCanvas = document.getElementById('displayCanvas');
-
-// if (displayCanvas) {
-//     let context = displayCanvas.getContext('2d');
-//     context.fillStyle = '#000000'; // black
-//     context.fillRect(0, 0, displayCanvas.width, displayCanvas.height);
-// }
