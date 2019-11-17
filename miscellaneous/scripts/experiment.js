@@ -29,7 +29,7 @@ function addScripts(url) {
     document.head.appendChild(script);
 }
 
-const model = await cocoSsd.load();
+const model = async () => await cocoSsd.load();
 console.log(model);
 
 // add event handlers
