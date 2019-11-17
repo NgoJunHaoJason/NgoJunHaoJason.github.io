@@ -16,22 +16,6 @@ const canvasHeight = displayCanvas.height;
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
 
-// use tensorflow
-
-// not latest: https://cdn.jsdelivr.net/npm/@tensorflow/tfjs
-addScripts('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest');
-addScripts('https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd');
-
-function addScripts(url) {
-    let script = document.createElement("script");
-    script.type = 'text/javascript';
-    script.src = url;
-    document.head.appendChild(script);
-}
-
-const model = async () => await cocoSsd.load();
-console.log(model);
-
 // add event handlers
 video.onloadeddata = drawCanvas;
 startStopButton.onclick = startCamera;
