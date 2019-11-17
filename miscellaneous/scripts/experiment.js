@@ -25,7 +25,7 @@ const CONSTRAINTS = {
     }
 } // should let constraints be variable in future to switch cameras
 
-const model = await cocoSsd.load();
+const model = cocoSsd.load();
 console.log(model);
 
 // add event handlers
