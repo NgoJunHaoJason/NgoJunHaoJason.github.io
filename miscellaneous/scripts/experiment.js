@@ -16,7 +16,7 @@ const canvasHeight = displayCanvas.height;
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
 
-const model = cocoSsd.load(config);
+const model = cocoSsd.load();
 console.log(model);
 
 // add event handlers
