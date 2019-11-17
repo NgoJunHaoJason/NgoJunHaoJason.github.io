@@ -12,7 +12,7 @@
 
 <body>
     <h2 class="header">
-        Miscellaneous
+        Experiments
     </h2>
 
     <!--start of nav-related code-->
@@ -36,7 +36,7 @@
         </li>
 
         <li>
-            <a class="active">
+            <a href="main.html">
                 miscellaneous
             </a>
         </li>
@@ -46,37 +46,12 @@
     <!--start of content-related code-->
     <div class="content">
         <p>
-            These pages contain a bunch of random, helpful (hopefully) stuff.
+            This page is used for testing stuff.
         </p>
 
-        <ul>
-            <li>
-                <a href="quick_reference.html">
-                    quick reference
-                </a>
-                (algorithms and whatnots)
-            </li>
-
-            <li>
-                <a href="set_up.html">
-                    set up
-                </a>
-                (computer, environment, etc)
-
-                <ul>
-                    <li>
-                        TODO: list relevant hardware info
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="experiments.html">
-                    experiments
-                </a>
-                (for testing stuff on this site)
-            </li>
-        </ul>
+        <canvas id="displayCanvas" width="50px" height="50px" style="border:1px solid #000000; margin-left: auto; margin-right: auto;">
+            Test canvas
+        </canvas>
     </div>
     <!--end of content-related code-->
 
@@ -103,6 +78,7 @@
     <!--end of footer-related code-->
 
     <script defer="defer" src="../scripts/on_page_load.js"></script>
+    <script defer="defer" src="scripts/on_experiment_load.js"></script>
 </body>
 
 </html>
