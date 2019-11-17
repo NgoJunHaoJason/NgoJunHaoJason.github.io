@@ -16,13 +16,6 @@ const canvasHeight = displayCanvas.height;
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
 
-// add event handlers
-video.onloadeddata = drawCanvas;
-startStopButton.onclick = startCamera;
-
-// canvas is black on page load
-stopDisplay();
-
 const CONSTRAINTS = {
     audio: false,
     video: {
@@ -31,6 +24,16 @@ const CONSTRAINTS = {
         facingMode: 'user' // front camera; for back camera, use environment
     }
 } // should let constraints be variable in future to switch cameras
+
+const model = await cocoSsd.load();
+console.log(model);
+
+// add event handlers
+video.onloadeddata = drawCanvas;
+startStopButton.onclick = startCamera;
+
+// canvas is black on page load
+stopDisplay();
 
 // fallbacks for requestAnimationFrame
 if (!window.requestAnimationFrame) {
