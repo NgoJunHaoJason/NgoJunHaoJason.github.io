@@ -1,10 +1,22 @@
 'use strict';
 
+// resources:
+// https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+// https://scotch.io/tutorials/front-and-rear-camera-access-with-javascripts-getusermedia
+// https://developers.google.com/web/fundamentals/media/capturing-images
+// https://stackoverflow.com/questions/49473678/accessing-device-camera-using-javascript
+// https://www.w3schools.com/tags/canvas_drawimage.asp
+
+const displayCanvas = document.getElementById('display-canvas');
+const context = displayCanvas.getContext('2d');
+const canvasWidth = displayCanvas.width;
+const canvasHeight = displayCanvas.height;
+
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
-startStopButton.onclick = startCamera;
 
-// https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+video.onloadeddata = drawCanvas;
+startStopButton.onclick = startCamera;
 
 const CONSTRAINTS = {
     audio: false,
@@ -39,6 +51,10 @@ function stopStream(video) {
 }
 
 // canvas
+
+function drawCanvas() {
+    context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
+}
 
 function startDisplay(displayId) {
     let displayCanvas = document.getElementById(displayId);
