@@ -32,7 +32,6 @@ cocoSsd.load().then(model => {
         console.log('Predictions: ', predictions);
     });
 });
-console.log(model);
 
 // add event handlers
 video.onloadeddata = drawCanvas;
