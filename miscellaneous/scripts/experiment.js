@@ -11,8 +11,8 @@
 // initialise stuff
 const displayCanvas = document.getElementById('display-canvas');
 const context = displayCanvas.getContext('2d');
-context.font = '30px Arial';
-context.strokeStyle = '#32CD32'; // lime green
+context.font = '10px Arial';
+context.strokeStyle = '2px #32CD32'; // lime green
 context.fillStyle = '#000000'; // black
 
 const canvasWidth = displayCanvas.width;
@@ -65,6 +65,7 @@ function startCamera() {
         startStream(CONSTRAINTS, video);
     }
     else {
+        context.font = '30px Arial';
         context.strokeText('no access to camera...', 5, 35); // 30 (font size) + 5
     }
 }
@@ -98,6 +99,7 @@ function drawCanvas() {
                 if (detection.score >= 0.5) {
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
+                    context.strokeText(detection.class + ' ' + detection.score, bbox[0] + 2, bbox[1] + 10);
                 }
             });
         });
