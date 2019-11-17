@@ -79,8 +79,9 @@
         
             const img = document.getElementById('image');
         
-            // // Load the model.
-            cocoSsd.load({modelUrl: 'https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json'})
+            // Load the model.
+            // config = {modelUrl: 'https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json'}
+            cocoSsd.load()
             .then(model => {
             // detect objects in the image.
                 model.detect(img).then(predictions => {
