@@ -7,6 +7,7 @@
 // https://stackoverflow.com/questions/49473678/accessing-device-camera-using-javascript
 // https://www.w3schools.com/tags/canvas_drawimage.asp
 
+// initialise stuff
 const displayCanvas = document.getElementById('display-canvas');
 const context = displayCanvas.getContext('2d');
 const canvasWidth = displayCanvas.width;
@@ -15,6 +16,7 @@ const canvasHeight = displayCanvas.height;
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
 
+// add event handlers
 video.onloadeddata = drawCanvas;
 startStopButton.onclick = startCamera;
 
@@ -48,12 +50,14 @@ function stopCamera() {
 
 function stopStream(video) {
     video.srcObject.getVideoTracks().forEach(track => track.stop());
+    stopDisplay();
 }
 
 // canvas
 
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
+    console.log('loaded frame');
 }
 
 function startDisplay(displayId) {
@@ -71,14 +75,10 @@ function startDisplay(displayId) {
     }
 }
 
-function stopDisplay(displayId) {
-    let displayCanvas = document.getElementById(displayId);
+function stopDisplay() {
+    context.fillStyle = '#000000'; // black
+    context.fillRect(0, 0, canvasWidth, canvasHeight);
 
-    if (displayCanvas) {
-        let context = displayCanvas.getContext('2d');
-        context.fillStyle = '#000000'; // black
-        context.fillRect(0, 0, displayCanvas.width, displayCanvas.height);
-    }
 }
 
 // on load page, show a black display
