@@ -30,7 +30,9 @@ const CONSTRAINTS = {
         height: { min: 360, ideal: 720, max: 1080 },
         facingMode: 'user' // front camera; for back camera, use environment
     }
-}
+} // should let constraints be variable in future to switch cameras
+
+// canvas functions
 
 function startCamera() {
     startStopButton.onclick = stopCamera;
@@ -46,27 +48,30 @@ function startCamera() {
     }
 }
 
-async function startStream(constraints, video) {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-    video.srcObject = stream;
-};
-
 function stopCamera() {
     startStopButton.onclick = startCamera;
     startStopButton.innerHTML = 'start';
     stopStream(video);
 }
 
+// stream functions
+
+async function startStream(constraints, video) {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    video.srcObject = stream;
+};
+
 function stopStream(video) {
     video.srcObject.getVideoTracks().forEach(track => track.stop());
     stopDisplay();
 }
 
-// canvas
+// canvas functions
 
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
-    requestAnimationFrame(drawCanvas);
+    // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
+    requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
 }
 
 function stopDisplay() {
