@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-    <title>miscellaneous | Jason Ngo's website</title>
+    <title>Experiments | Jason Ngo's website</title>
     <link rel="icon" href="../images/sciurus_96.png">
     <link rel="stylesheet" type="text/css" href="../styles/default_style.css">
-    <link rel="stylesheet" type="text/css" href="styles/display_style.css">
 </head>
 
 <body>
@@ -49,30 +48,6 @@
         <p>
             This page is used for testing stuff.
         </p>
-
-        <h3>Object Detection</h3>
-        <p>
-            <ul>
-                <li>
-                    You will need to give permission to use your device's camera.
-                </li>
-                <li>
-                    The model may take some time to load over the content delivery network such that this page becomes unresponsive for a while.
-                </li>
-            </ul>
-        </p>
-
-        <video id="video" autoplay style="display: none;"></video>
-
-        <canvas id="display-canvas">
-            Test canvas
-        </canvas>
-
-        <br>
-
-        <div id="button-group" style="text-align: center;">
-            <button id="start-stop-button">start</button>
-        </div>
     </div>
     <br>
     <!--end of content-related code-->
@@ -100,14 +75,6 @@
     <!--end of footer-related code-->
 
     <script defer="defer" src="../scripts/on_page_load.js"></script>
-
-    <!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"> </script>
-    <!-- Load the coco-ssd model. -->
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
-    <!--modelUrl: 'https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json'-->
-
-    <script defer="defer" src="scripts/experiment.js"></script>
 </body>
 
 </html>
