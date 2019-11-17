@@ -8,4 +8,3 @@ if (displayCanvas) {
     context.fillStyle = '#000000'; // black
     context.fillRect(0, 0, displayCanvas.width, displayCanvas.height);
 }
-
