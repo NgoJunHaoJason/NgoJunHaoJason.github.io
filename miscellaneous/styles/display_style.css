@@ -2,7 +2,7 @@ canvas {
     width: 320px;
     height: 180px;
 
-    border:1px solid #000000; 
+    border:1px solid black; 
 
     margin-left: auto;
     margin-right: auto;
