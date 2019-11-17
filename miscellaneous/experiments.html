@@ -91,6 +91,11 @@
     </div>
     <!--end of footer-related code-->
 
+    <!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+    <script id="tensorflow" defer="defer" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load the coco-ssd model. -->
+    <script id="coco-ssd" defer="defer" src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
     <script defer="defer" src="../scripts/on_page_load.js"></script>
     <script defer="defer" src="scripts/experiment.js"></script>
 </body>

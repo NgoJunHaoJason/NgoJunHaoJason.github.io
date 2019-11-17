@@ -16,6 +16,9 @@ const canvasHeight = displayCanvas.height;
 const video = document.getElementById('video');
 const startStopButton = document.getElementById('start-stop-button');
 
+const model = cocoSsd.load(config);
+console.log(model);
+
 // add event handlers
 video.onloadeddata = drawCanvas;
 startStopButton.onclick = startCamera;
@@ -32,6 +35,7 @@ const CONSTRAINTS = {
     }
 } // should let constraints be variable in future to switch cameras
 
+// fallbacks for requestAnimationFrame
 if (!window.requestAnimationFrame) {
     window.requestAnimationFrame = window.requestAnimationFrame
         || window.mozRequestAnimationFrame
