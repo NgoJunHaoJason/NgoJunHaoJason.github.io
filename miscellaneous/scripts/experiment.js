@@ -8,7 +8,7 @@ function startDisplay(displayId) {
         
         context.font = '30px Arial';
         context.strokeStyle = '#FFFFFF'; // white
-        context.strokeText('display stuff...', 5, 5);
+        context.strokeText('display stuff...', 5, 35); // 30 (font size) + 5
     }
 }
 
