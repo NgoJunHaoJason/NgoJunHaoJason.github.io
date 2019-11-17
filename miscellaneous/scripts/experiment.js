@@ -32,6 +32,14 @@ const CONSTRAINTS = {
     }
 } // should let constraints be variable in future to switch cameras
 
+if (!window.requestAnimationFrame) {
+    window.requestAnimationFrame = window.requestAnimationFrame
+        || window.mozRequestAnimationFrame
+        || window.webkitRequestAnimationFrame
+        || window.msRequestAnimationFrame
+        || function (f) { return setTimeout(f, 1000 / 60) } // simulate calling code 60 
+}
+
 // canvas functions
 
 function startCamera() {
@@ -39,7 +47,7 @@ function startCamera() {
     startStopButton.innerHTML = 'stop';
 
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        startStream(CONSTRAINTS,video);
+        startStream(CONSTRAINTS, video);
     }
     else {
         context.font = '30px Arial';
@@ -70,7 +78,9 @@ function stopStream(video) {
 
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
+
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
+    // https://stackoverflow.com/a/33835857/9171260
     requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
 }
 
