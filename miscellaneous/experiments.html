@@ -71,22 +71,21 @@
         <!-- Load the coco-ssd model. -->
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
 
+        <img src="../images/sciurus_96.png">
         <!-- Place your code in the script tag below. You can also use an external .js file -->
         <script>
             // Notice there is no 'import' statement. 'cocoSsd' and 'tf' is
             // available on the index-page because of the script tag above.
         
-            // const img = document.getElementById('img');
+            const img = document.getElementById('image');
         
             // // Load the model.
-            // cocoSsd.load().then(model => {
-            // // detect objects in the image.
-                // model.detect(img).then(predictions => {
-                //     console.log('Predictions: ', predictions);
-                // });
-            // });
             cocoSsd.load().then(model => {
-                console.log(model);
+            // detect objects in the image.
+                model.detect(img).then(predictions => {
+                    alert('Predictions: ', predictions);
+                    console.log('Predictions: ', predictions);
+                });
             });
         </script>
     </div>
