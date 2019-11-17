@@ -92,16 +92,17 @@ function stopStream(video) {
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
     
-    // if (detectionModel) {
-    //     detectionModel.detect(video).then(predictions => {
-    //         predictions.forEach(function (detection) {
-    //             if (detection.score >= 0.5) {
-    //                 let bbox = detection.bbox;
-    //                 context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
-    //             }
-    //         });
-    //     });
-    // }
+    if (detectionModel) {
+        detectionModel.detect(video).then(predictions => {
+            predictions.forEach(function (detection) {
+                console.log(detection);
+                // if (detection.score >= 0.5) {
+                //     let bbox = detection.bbox;
+                //     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
+                // }
+            });
+        });
+    }
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
     // https://stackoverflow.com/a/33835857/9171260
