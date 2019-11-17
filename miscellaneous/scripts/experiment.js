@@ -19,8 +19,8 @@ const canvasWidth = displayCanvas.width;
 const canvasHeight = displayCanvas.height;
 
 const video = document.getElementById('video');
-video.width = 224; // otherwise, will pass in video of 0 width to model
-video.height = 224; // otherwise, will pass in video of 0 height to model
+video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
+video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
 
 const CONSTRAINTS = {
