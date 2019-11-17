@@ -11,9 +11,8 @@
 // initialise stuff
 const displayCanvas = document.getElementById('display-canvas');
 const context = displayCanvas.getContext('2d');
-context.font = '10px Arial';
+context.font = '12px Arial';
 context.strokeStyle = '#32CD32'; // lime green
-context.lineWidth = 2;
 context.fillStyle = '#000000'; // black
 
 const canvasWidth = displayCanvas.width;
@@ -100,7 +99,7 @@ function drawCanvas() {
                 if (detection.score >= 0.5) {
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
-                    context.strokeText(detection.class + ' ' + detection.score.toFixed(2), bbox[0] + 2, bbox[1] + 10);
+                    context.strokeText(detection.class + ' ' + detection.score.toFixed(2), bbox[0] + 2, bbox[1] + 12);
                 }
             });
         });

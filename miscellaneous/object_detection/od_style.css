@@ -1,6 +1,6 @@
-canvas, video {
-    width: 320px;
-    height: 180px;
+canvas {
+    width: 640px;
+    height: 320px;
 
     border:1px solid black; 
 
@@ -10,8 +10,15 @@ canvas, video {
     display: block;
 }
 
+@media screen and (max-width: 500px) {
+    canvas {
+        width: 320px;
+        height: 180px;
+    }
+}
+
 @media screen and (max-width: 385px) {
-    canvas, video {
+    canvas {
         width: 160px;
         height: 90px;
     }
