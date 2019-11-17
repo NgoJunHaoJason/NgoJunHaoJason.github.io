@@ -26,13 +26,17 @@ const CONSTRAINTS = {
 } // should let constraints be variable in future to switch cameras
 
 const img = document.getElementById('img');
+
+let detectionModel = null;
+
 cocoSsd.load().then(model => {
     let start = Date.now();
     // detect objects in the image.
     model.detect(img).then(predictions => {
         console.log('Predictions: ', predictions);
-        console.log('time taken: ', Date.now() - start);
+        console.log('time taken: ', Date.now() - start, 'ms');
     });
+    detectionModel = model;
 });
 
 // add event handlers
@@ -88,6 +92,11 @@ function stopStream(video) {
 // canvas functions
 
 function drawCanvas() {
+    detectionModel.detect(video).then(predictions => {
+        console.log('Predictions: ', predictions);
+        console.log('time taken: ', Date.now() - start, 'ms');
+    });
+
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
