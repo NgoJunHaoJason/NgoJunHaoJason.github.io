@@ -94,7 +94,7 @@ function drawCanvas() {
     
     if (detectionModel) {
         detectionModel.detect(video).then(predictions => {
-            predictions.forEach(detection => {
+            predictions.forEach(function (detection) {
                 if (detection.score >= 0.5) {
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
