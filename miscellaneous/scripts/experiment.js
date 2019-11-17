@@ -92,11 +92,13 @@ function stopStream(video) {
 // canvas functions
 
 function drawCanvas() {
-    detectionModel.detect(video).then(predictions => {
-        console.log('Predictions: ', predictions);
-        console.log('time taken: ', Date.now() - start, 'ms');
-    });
-
+    if (detectionModel) {
+        detectionModel.detect(video).then(predictions => {
+            console.log('Predictions: ', predictions);
+            console.log('time taken: ', Date.now() - start, 'ms');
+        });
+    }
+    
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
