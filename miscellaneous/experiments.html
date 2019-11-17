@@ -50,16 +50,18 @@
             This page is used for testing stuff.
         </p>
 
-        <canvas id="displayCanvas">
+        <video id="video" autoplay controls></video>
+
+        <!-- <canvas id="displayCanvas">
             Test canvas
-        </canvas>
+        </canvas> -->
 
         <br>
 
         <script src="scripts/experiment.js"></script>
         <div id="button-group" style="text-align: center;">
-            <button id="start-button" onclick="startDisplay('displayCanvas');">start</button>
-            <button id="stop-button" onclick="stopDisplay('displayCanvas');">stop</button>
+            <button id="start-button" onclick="startCamera('video');">start</button>
+            <button id="stop-button" onclick="stopCamera('video');">stop</button>
         </div>
     </div>
     <br>
