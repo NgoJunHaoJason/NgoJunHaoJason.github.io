@@ -1,4 +1,4 @@
-canvas {
+canvas, video {
     width: 320px;
     height: 180px;
 
@@ -11,7 +11,7 @@ canvas {
 }
 
 @media screen and (max-width: 385px) {
-    canvas {
+    canvas, video {
         width: 160px;
         height: 90px;
     }

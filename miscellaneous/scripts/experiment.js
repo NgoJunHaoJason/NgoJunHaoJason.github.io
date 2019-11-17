@@ -1,5 +1,9 @@
 'use strict';
 
+const video = document.getElementById('video');
+const startStopButton = document.getElementById('start-stop-button');
+startStopButton.onclick = startCamera;
+
 // https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 
 const CONSTRAINTS = {
@@ -11,26 +15,27 @@ const CONSTRAINTS = {
     }
 }
 
+function startCamera() {
+    if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
+        startStopButton.onclick = stopCamera;
+        startStopButton.innerHTML = 'stop';
+        startStream(CONSTRAINTS,video);
+    }
+}
+
 async function startStream(constraints, video) {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     video.srcObject = stream;
 };
 
+function stopCamera() {
+    startStopButton.onclick = startCamera;
+    startStopButton.innerHTML = 'start';
+    stopStream(video);
+}
+
 function stopStream(video) {
     video.srcObject.getVideoTracks().forEach(track => track.stop());
-}
-
-function startCamera(videoId) {
-    let video = document.getElementById(videoId);
-
-    if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        startStream(CONSTRAINTS,video);
-    }
-}
-
-function stopCamera(videoId) {
-    let video = document.getElementById(videoId);
-    stopStream(video);
 }
 
 // canvas
@@ -59,3 +64,12 @@ function stopDisplay(displayId) {
         context.fillRect(0, 0, displayCanvas.width, displayCanvas.height);
     }
 }
+
+// on load page, show a black display
+// let displayCanvas = document.getElementById('displayCanvas');
+
+// if (displayCanvas) {
+//     let context = displayCanvas.getContext('2d');
+//     context.fillStyle = '#000000'; // black
+//     context.fillRect(0, 0, displayCanvas.width, displayCanvas.height);
+// }
