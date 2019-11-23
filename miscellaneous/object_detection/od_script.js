@@ -8,6 +8,15 @@
 // canvas - https://www.w3schools.com/tags/canvas_drawimage.asp
 // object detection - https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
 
+// fallbacks for requestAnimationFrame
+if (!window.requestAnimationFrame) {
+    window.requestAnimationFrame = window.requestAnimationFrame
+        || window.mozRequestAnimationFrame
+        || window.webkitRequestAnimationFrame
+        || window.msRequestAnimationFrame
+        || function (f) { return setTimeout(f, 1000 / 60); }; // simulate calling code 60 
+}
+
 // initialise stuff
 const CONFIDENCE_THRESHOLD = 0.2;
 
@@ -47,15 +56,6 @@ startStopButton.onclick = startCamera;
 
 // canvas is black on page load
 stopDisplay();
-
-// fallbacks for requestAnimationFrame
-if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = window.requestAnimationFrame
-        || window.mozRequestAnimationFrame
-        || window.webkitRequestAnimationFrame
-        || window.msRequestAnimationFrame
-        || function (f) { return setTimeout(f, 1000 / 60) } // simulate calling code 60 
-}
 
 // canvas functions
 
