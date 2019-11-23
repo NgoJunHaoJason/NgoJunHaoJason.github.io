@@ -9,6 +9,17 @@
 // object detection - https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
 
 // initialise stuff
+const CONFIDENCE_THRESHOLD = 0.2;
+
+const CONSTRAINTS = {
+    audio: false,
+    video: {
+        width: { min: 640, ideal: 1280, max: 1920 },
+        height: { min: 360, ideal: 720, max: 1080 },
+        facingMode: 'user' // front camera; for back camera, use environment
+    }
+} // should let constraints be variable in future to switch cameras
+
 const displayCanvas = document.getElementById('display-canvas');
 const context = displayCanvas.getContext('2d');
 context.font = '12px Arial';
@@ -22,15 +33,6 @@ const video = document.getElementById('video');
 video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
 video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
-
-const CONSTRAINTS = {
-    audio: false,
-    video: {
-        width: { min: 640, ideal: 1280, max: 1920 },
-        height: { min: 360, ideal: 720, max: 1080 },
-        facingMode: 'user' // front camera; for back camera, use environment
-    }
-} // should let constraints be variable in future to switch cameras
 
 // set up detection model
 let detectionModel = null;
@@ -96,7 +98,7 @@ function drawCanvas() {
     if (detectionModel) {
         detectionModel.detect(video).then(predictions => {
             predictions.forEach(function (detection) {
-                if (detection.score >= 0.5) {
+                if (detection.score >= CONFIDENCE_THRESHOLD) {
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
                     context.strokeText(detection.class + ' ' + detection.score.toFixed(2), bbox[0] + 2, bbox[1] + 12);
