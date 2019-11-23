@@ -77,11 +77,6 @@ function setUpCollapsibles() {
     }
 }
 
-// https://stackoverflow.com/questions/14341156/calculating-page-load-time-in-javascript
-function displayLoadTime() {
-    document.getElementById('load_time').innerHTML = (performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart) + 'ms';
-}
-
 function displayLastModified() {
     let date = new Date(document.lastModified);
 
@@ -110,6 +105,5 @@ function addLoadEvent(onLoadEvent) {
 }
 
 addLoadEvent(displayLastModified);
-addLoadEvent(displayLoadTime);
 addLoadEvent(setUpCollapsibles);
 addLoadEvent(setUpLazyLoading);
