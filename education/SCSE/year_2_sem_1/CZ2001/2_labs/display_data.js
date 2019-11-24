@@ -25,7 +25,7 @@ d3.csv(
 ).then(function (data) {
     // Add X axis --> it is a date format
     // .domain(d3.extent(data, (datum) => datum.arraySize))
-    let x = d3.scaleTime()
+    let x = d3.scaleLinear()
         .domain([0, d3.max(data, (datum) => datum.arraySize)])
         .range([0, width]);
 
