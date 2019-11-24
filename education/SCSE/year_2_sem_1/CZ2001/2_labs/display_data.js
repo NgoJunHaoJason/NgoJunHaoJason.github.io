@@ -31,7 +31,7 @@ d3.csv(
         .range([0, width]);
 
     svg.append('g')
-        // .attr('transform', 'translate(0,' + height + ')')
+        .attr('transform', 'translate(0,' + height + ')')
         .call(d3.axisBottom(x));
 
     // Add Y axis
@@ -41,6 +41,9 @@ d3.csv(
 
     svg.append('g')
         .call(d3.axisLeft(y));
+
+    console.log('max x: ' + d3.max(data, (datum) => datum.arraySize));
+    console.log('max y: ' + d3.max(data, (datum) => datum.numKeyComparisons));
 
     // Add the line
     svg.append('path')
