@@ -1,7 +1,7 @@
 // reference: https://www.d3-graph-gallery.com/graph/line_basic.html
 
 // set the dimensions and MARGINs of the graph
-const MARGIN = { top: 60, right: 60, bottom: 60, left: 60 };
+const MARGIN = { top: 60, right: 60, bottom: 60, left: 120 };
 const WIDTH = 960 - MARGIN.left - MARGIN.right;
 const HEIGHT = 480 - MARGIN.top - MARGIN.bottom;
 
@@ -62,30 +62,30 @@ let displaySortingResults = function () {
         'lab_3_csv/cz2001_lab3_insertion_sort_ascending_results.csv'
     );
 
-    displayData(
-        'insertion_sort_random_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_random_results.csv'
-    );
+    // displayData(
+    //     'insertion_sort_random_results_visualisation',
+    //     'lab_3_csv/cz2001_lab3_insertion_sort_random_results.csv'
+    // );
 
-    displayData(
-        'insertion_sort_descending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_descending_results.csv'
-    );
+    // displayData(
+    //     'insertion_sort_descending_results_visualisation',
+    //     'lab_3_csv/cz2001_lab3_insertion_sort_descending_results.csv'
+    // );
 
-    displayData(
-        'merge_sort_ascending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_ascending_results.csv'
-    );
+    // displayData(
+    //     'merge_sort_ascending_results_visualisation',
+    //     'lab_3_csv/cz2001_lab3_merge_sort_ascending_results.csv'
+    // );
 
-    displayData(
-        'merge_sort_random_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_random_results.csv'
-    );
+    // displayData(
+    //     'merge_sort_random_results_visualisation',
+    //     'lab_3_csv/cz2001_lab3_merge_sort_random_results.csv'
+    // );
 
-    displayData(
-        'merge_sort_descending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_descending_results.csv'
-    );
+    // displayData(
+    //     'merge_sort_descending_results_visualisation',
+    //     'lab_3_csv/cz2001_lab3_merge_sort_descending_results.csv'
+    // );
 }
 
 displaySortingResults();
