@@ -2,8 +2,8 @@
 
 // set the dimensions and margins of the graph
 const margin = { top: 60, right: 60, bottom: 60, left: 60 };
-const width = 720 - margin.left - margin.right;
-const height = 560 - margin.top - margin.bottom;
+const width = 960 - margin.left - margin.right;
+const height = 480 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 let svg = d3.select('#insertion_sort_ascending_results_visualisation')
@@ -16,6 +16,7 @@ let svg = d3.select('#insertion_sort_ascending_results_visualisation')
 d3.csv(
     'lab_3_csv/cz2001_lab3_merge_sort_random_results.csv',
     function (datum) {
+        console.log(datum);
         return {
             arraySize: Number(datum['Array Size']),
             numKeyComparisons: Number(datum['Number of Key Comparisons']),
@@ -52,8 +53,4 @@ d3.csv(
             .x((datum) => x(datum.arraySize))
             .y((datum) => x(datum.timeTaken))
         );
-    
-    for (let index = 0; index < data.length; index += 10) {
-        console.log(data[index]);
-    }
 });
