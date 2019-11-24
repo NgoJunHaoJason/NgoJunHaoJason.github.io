@@ -24,6 +24,7 @@ d3.csv(
     }
 ).then(function (data) {
     // Add X axis --> it is a date format
+    // .domain([0, d3.max(data, (datum) => datum.arraySize)])
     // .domain(d3.extent(data, (datum) => datum.arraySize))
     let x = d3.scaleLinear()
         .domain([0, d3.max(data, (datum) => datum.arraySize)])
@@ -36,7 +37,7 @@ d3.csv(
     // Add Y axis
     let y = d3.scaleLinear()
         .domain([0, d3.max(data, (datum) => datum.numKeyComparisons)])
-        .range([height, 0]);
+        .range([0, height]);
 
     svg.append('g')
         .call(d3.axisLeft(y));
