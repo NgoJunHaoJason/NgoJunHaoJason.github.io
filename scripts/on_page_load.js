@@ -106,3 +106,4 @@ addLoadEvent(setUpCollapsibles);
 console.log('pre lazy load');
 addLoadEvent(setUpLazyLoading);
 console.log('post lazy load');
+console.log('done');
