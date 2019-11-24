@@ -3,54 +3,62 @@
 // sources:
 // https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 // https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+function lazyLoad() {
+    if ('IntersectionObserver' in window) {
+        let lazyObjects = document.querySelectorAll('.lazy');
+        console.log(lazyObjects);
+
+        let lazyObjectObserver = new IntersectionObserver(
+            // callback
+            function (entries) {
+                entries.forEach(
+                    function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyObject = entry.target;
+
+                            lazyObject.src = lazyObject.dataset.src;
+                            // lazyObject.srcset = lazyObject.dataset.srcset;
+
+                            lazyObject.classList.remove('lazy');
+                            lazyObjectObserver.unobserve(lazyObject);
+                        }
+                    }
+                );
+            }
+        );
+
+        lazyObjects.forEach(
+            function (lazyObject) {
+                lazyObjectObserver.observe(lazyObject);
+                alert(lazyObject.src);
+            }
+        );
+    }
+    else // browser does not support IntersectionObserver
+    {
+        window.alert("This browser does not support lazy loading.\nImages may not load properly");
+
+        lazyObjects.forEach(
+            function (lazyObject) {
+                lazyObject.src = lazyObject.dataset.src;
+                lazyObject.srcset = lazyObject.dataset.srcset;
+            }
+        );
+    }
+}
+
 function setUpLazyLoading() {
-    document.addEventListener(
-        'DOMContentLoaded', 
-        function () {
-            console.log('in lazy load');
-            if ('IntersectionObserver' in window) {
-                let lazyObjects = document.querySelectorAll('.lazy');
-                console.log(lazyObjects);
-
-                let lazyObjectObserver = new IntersectionObserver(
-                    // callback
-                    function (entries) {
-                        entries.forEach(
-                            function (entry) {
-                                if (entry.isIntersecting) {
-                                    let lazyObject = entry.target;
-
-                                    lazyObject.src = lazyObject.dataset.src;
-                                    // lazyObject.srcset = lazyObject.dataset.srcset;
-
-                                    lazyObject.classList.remove('lazy');
-                                    lazyObjectObserver.unobserve(lazyObject);
-                                }
-                            }
-                        );
-                    }
-                );
-
-                lazyObjects.forEach(
-                    function (lazyObject) {
-                        lazyObjectObserver.observe(lazyObject);
-                        alert(lazyObject.src);
-                    }
-                );
+    if (document.readyState !== 'loading') {
+        lazyLoad();
+    }
+    else {
+        document.addEventListener(
+            'DOMContentLoaded', 
+            function () {
+                lazyLoad();
             }
-            else // browser does not support IntersectionObserver
-            {
-                window.alert("This browser does not support lazy loading.\nImages may not load properly");
-
-                lazyObjects.forEach(
-                    function (lazyObject) {
-                        lazyObject.src = lazyObject.dataset.src;
-                        lazyObject.srcset = lazyObject.dataset.srcset;
-                    }
-                );
-            }
-        }
-    );
+        );
+    }
 }
 
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
@@ -96,7 +104,6 @@ function addLoadEvent(onLoadEvent) {
             }
 
             onLoadEvent();
-            console.log(onLoadEvent.name);
         }
     }
 }
