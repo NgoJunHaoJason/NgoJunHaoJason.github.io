@@ -96,6 +96,7 @@ function addLoadEvent(onLoadEvent) {
             }
 
             onLoadEvent();
+            console.log(onLoadEvent.name);
         }
     }
 }
