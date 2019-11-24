@@ -101,7 +101,11 @@ function drawCanvas() {
                 if (detection.score >= CONFIDENCE_THRESHOLD) {
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
-                    context.strokeText(detection.class + ' ' + detection.score.toFixed(2), bbox[0] + 2, bbox[1] + 12);
+                    context.strokeText(
+                        detection.class + ' ' + detection.score.toFixed(2), 
+                        bbox[0] + 2, 
+                        bbox[1] + 12
+                    );
                 }
             });
         });

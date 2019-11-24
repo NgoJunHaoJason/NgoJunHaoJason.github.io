@@ -321,14 +321,4 @@ source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_ico
         padding-left: 3px;
         padding-right: 3px;
     }
-
-    .footer, .footer .github {
-        display: block;
-    }
-
-    .footer .load-time, .footer .last-modified {
-        display: block;
-        text-align: right;
-        margin-right: 6px;
-    }
 }
