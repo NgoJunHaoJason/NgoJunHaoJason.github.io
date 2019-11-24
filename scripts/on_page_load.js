@@ -5,10 +5,11 @@
 // https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
 function setUpLazyLoading() {
     document.addEventListener(
-        "DOMContentLoaded", 
+        'DOMContentLoaded', 
         function () {
-            if ("IntersectionObserver" in window) {
+            if ('IntersectionObserver' in window) {
                 let lazyObjects = document.querySelectorAll('.lazy');
+                console.log(lazyObjects);
 
                 let lazyObjectObserver = new IntersectionObserver(
                     // callback
@@ -32,7 +33,6 @@ function setUpLazyLoading() {
                 lazyObjects.forEach(
                     function (lazyObject) {
                         lazyObjectObserver.observe(lazyObject);
-                        console.log('lazy load' + lazyObject.src);
                     }
                 );
             }
@@ -44,7 +44,6 @@ function setUpLazyLoading() {
                     function (lazyObject) {
                         lazyObject.src = lazyObject.dataset.src;
                         lazyObject.srcset = lazyObject.dataset.srcset;
-                        console.log('lazy load' + lazyObject.src);
                     }
                 );
             }
