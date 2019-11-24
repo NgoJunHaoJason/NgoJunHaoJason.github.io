@@ -1,9 +1,9 @@
 // reference: https://www.d3-graph-gallery.com/graph/line_basic.html
 
 // set the dimensions and margins of the graph
-const margin = { top: 30, right: 30, bottom: 30, left: 30 };
-const width = 460 - margin.left - margin.right;
-const height = 400 - margin.top - margin.bottom;
+const margin = { top: 60, right: 60, bottom: 60, left: 60 };
+const width = 720 - margin.left - margin.right;
+const height = 560 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 let svg = d3.select('#insertion_sort_ascending_results_visualisation')
@@ -41,9 +41,6 @@ d3.csv(
 
     svg.append('g')
         .call(d3.axisLeft(y));
-
-    console.log('max x: ' + d3.max(data, (datum) => datum.arraySize));
-    console.log('max y: ' + d3.max(data, (datum) => datum.numKeyComparisons));
 
     // Add the line
     svg.append('path')
