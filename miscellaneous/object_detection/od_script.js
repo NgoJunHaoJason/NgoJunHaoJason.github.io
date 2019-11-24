@@ -43,9 +43,11 @@ video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
 video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
 
+// set-up upon page load
+let detectionModel = null;
 addLoadEvent(function() {
     // set up detection model
-    let detectionModel = null;
+    
 
     cocoSsd.load().then(model => {
         detectionModel = model;
