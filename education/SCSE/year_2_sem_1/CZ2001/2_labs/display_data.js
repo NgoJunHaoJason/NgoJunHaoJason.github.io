@@ -56,11 +56,13 @@ function displayData(divId, csvPath) {
     });
 }
 
+displayData(
+    'insertion_sort_ascending_results_visualisation',
+    'lab_3_csv/cz2001_lab3_insertion_sort_ascending_results.csv'
+);
+
 let displaySortingResults = function () {
-    displayData(
-        'insertion_sort_ascending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_ascending_results.csv'
-    );
+    
 
     // displayData(
     //     'insertion_sort_random_results_visualisation',
