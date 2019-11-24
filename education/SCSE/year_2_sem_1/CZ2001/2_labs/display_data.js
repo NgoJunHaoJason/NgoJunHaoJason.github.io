@@ -55,4 +55,5 @@ d3.csv(
     
     console.log('max x: ' + d3.max(data, (datum) => datum.arraySize));
     console.log('max y: ' + d3.max(data, (datum) => datum.timeTaken));
+    console.log(data[data.length - 1]);
 });
