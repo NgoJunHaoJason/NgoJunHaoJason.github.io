@@ -6,6 +6,7 @@ const WIDTH = 960 - MARGIN.left - MARGIN.right;
 const HEIGHT = 480 - MARGIN.top - MARGIN.bottom;
 
 function displayData(divId, csvPath) {
+    console.log('start of display data');
     // append the svg object to the body of the page
     let svg = d3.select('#' + divId)
     .append('svg')
@@ -54,12 +55,15 @@ function displayData(divId, csvPath) {
             .y((datum) => y(datum.numKeyComparisons))
         );
     });
+    console.log('end of display data');
 }
 
+console.log('before display data');
 displayData(
     'insertion_sort_ascending_results_visualisation',
     'lab_3_csv/cz2001_lab3_insertion_sort_ascending_results.csv'
 );
+console.log('after display data');
 
 let displaySortingResults = function () {
     
