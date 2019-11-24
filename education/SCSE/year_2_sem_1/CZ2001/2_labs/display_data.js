@@ -89,4 +89,4 @@ let displaySortingResults = function () {
     );
 }
 
-addLoadEvent(displaySortingResults);
+displaySortingResults();
