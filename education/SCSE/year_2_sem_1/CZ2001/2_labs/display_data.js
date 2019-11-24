@@ -37,7 +37,7 @@ d3.csv(
 
     // Add Y axis
     let y = d3.scaleLinear()
-        .domain([0, d3.max(data, (datum) => datum.timeTaken)])
+        .domain([d3.max(data, (datum) => datum.numKeyComparisons), 0])
         .range([height, 0]);
 
     svg.append('g')
@@ -51,6 +51,6 @@ d3.csv(
         .attr('stroke-width', 1.5)
         .attr('d', d3.line()
             .x((datum) => x(datum.arraySize))
-            .y((datum) => x(datum.timeTaken))
+            .y((datum) => x(datum.numKeyComparisons))
         );
 });
