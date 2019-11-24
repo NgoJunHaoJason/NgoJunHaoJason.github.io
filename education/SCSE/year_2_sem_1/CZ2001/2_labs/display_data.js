@@ -51,6 +51,6 @@ d3.csv(
         .attr('stroke-width', 1.5)
         .attr('d', d3.line()
             .x((datum) => x(datum.arraySize))
-            .y((datum) => x(datum.numKeyComparisons))
+            .y((datum) => y(datum.numKeyComparisons))
         );
 });
