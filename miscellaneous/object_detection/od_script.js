@@ -43,23 +43,22 @@ video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
 video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
 
-// set-up upon page load
+// set up detection model
 let detectionModel = null;
-addLoadEvent(function() {
-    // set up detection model
-    
+cocoSsd.load().then(model => {
+    detectionModel = model;
+});
 
-    cocoSsd.load().then(model => {
-        detectionModel = model;
-    });
-
+// set-up upon page load
+let onLoadODPage = function () {
     // add event handlers
     video.onloadeddata = drawCanvas;
     startStopButton.onclick = startCamera;
 
     // canvas is black on page load
     stopDisplay();
-});
+}
+addLoadEvent(onLoadODPage);
 
 // canvas functions
 
