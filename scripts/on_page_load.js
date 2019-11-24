@@ -6,7 +6,6 @@
 function lazyLoad() {
     if ('IntersectionObserver' in window) {
         let lazyObjects = document.querySelectorAll('.lazy');
-        console.log(lazyObjects);
 
         let lazyObjectObserver = new IntersectionObserver(
             // callback
@@ -30,7 +29,6 @@ function lazyLoad() {
         lazyObjects.forEach(
             function (lazyObject) {
                 lazyObjectObserver.observe(lazyObject);
-                alert(lazyObject.src);
             }
         );
     }
@@ -47,16 +45,16 @@ function lazyLoad() {
     }
 }
 
+
 function setUpLazyLoading() {
+    // https://stackoverflow.com/a/39993724/9171260
     if (document.readyState !== 'loading') {
-        lazyLoad();
+        lazyLoad(); // DOMContentLoaded may be fired already
     }
     else {
         document.addEventListener(
             'DOMContentLoaded', 
-            function () {
-                lazyLoad();
-            }
+            lazyLoad()
         );
     }
 }
@@ -110,7 +108,4 @@ function addLoadEvent(onLoadEvent) {
 
 addLoadEvent(displayLastModified);
 addLoadEvent(setUpCollapsibles);
-console.log('pre lazy load');
 addLoadEvent(setUpLazyLoading);
-console.log('post lazy load');
-console.log('done');
