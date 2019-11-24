@@ -37,7 +37,7 @@ d3.csv(
 
     // Add Y axis
     let y = d3.scaleLinear()
-        .domain([d3.max(data, (datum) => datum.numKeyComparisons), 0])
+        .domain([0, d3.max(data, (datum) => datum.numKeyComparisons)])
         .range([height, 0]);
 
     svg.append('g')
