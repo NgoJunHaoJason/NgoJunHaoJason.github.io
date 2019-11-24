@@ -1,6 +1,6 @@
 // reference: https://www.d3-graph-gallery.com/graph/line_basic.html
 
-// set the dimensions and MARGINs of the graph
+// set the dimensions and margins of the graph
 const MARGIN = { top: 60, right: 60, bottom: 60, left: 120 };
 const WIDTH = 960 - MARGIN.left - MARGIN.right;
 const HEIGHT = 480 - MARGIN.top - MARGIN.bottom;
@@ -9,8 +9,8 @@ function displayData(divId, csvPath) {
     // append the svg object to the body of the page
     let svg = d3.select('#' + divId)
     .append('svg')
-    .attr('WIDTH', WIDTH + MARGIN.left + MARGIN.right)
-    .attr('HEIGHT', HEIGHT + MARGIN.top + MARGIN.bottom)
+    .attr('width', WIDTH + MARGIN.left + MARGIN.right)
+    .attr('height', HEIGHT + MARGIN.top + MARGIN.bottom)
     .append('g')
     .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
 
@@ -48,7 +48,7 @@ function displayData(divId, csvPath) {
         .datum(data)
         .attr('fill', 'none')
         .attr('stroke', 'steelblue')
-        .attr('stroke-WIDTH', 1.5)
+        .attr('stroke-width', 1.5)
         .attr('d', d3.line()
             .x((datum) => x(datum.arraySize))
             .y((datum) => y(datum.numKeyComparisons))
