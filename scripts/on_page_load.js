@@ -7,7 +7,6 @@ function setUpLazyLoading() {
     document.addEventListener(
         'DOMContentLoaded', 
         function () {
-            alert('got here');
             if ('IntersectionObserver' in window) {
                 let lazyObjects = document.querySelectorAll('img.lazy');
 
@@ -101,4 +100,6 @@ function addLoadEvent(onLoadEvent) {
 
 addLoadEvent(displayLastModified);
 addLoadEvent(setUpCollapsibles);
+console.log('pre lazy load');
 addLoadEvent(setUpLazyLoading);
+console.log('post lazy load');
