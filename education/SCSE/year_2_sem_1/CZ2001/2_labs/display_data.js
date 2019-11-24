@@ -14,9 +14,8 @@ let svg = d3.select('#insertion_sort_ascending_results_visualisation')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 d3.csv(
-    'lab_3_csv/cz2001_lab3_merge_sort_random_results.csv',
+    'lab_3_csv/cz2001_lab3_insertion_sort_random_results.csv',
     function (datum) {
-        console.log(datum);
         return {
             arraySize: Number(datum['Array Size']),
             numKeyComparisons: Number(datum['Number of Key Comparisons']),
