@@ -7,6 +7,7 @@ function setUpLazyLoading() {
     document.addEventListener(
         'DOMContentLoaded', 
         function () {
+            console.log('in lazy load');
             if ('IntersectionObserver' in window) {
                 let lazyObjects = document.querySelectorAll('.lazy');
                 console.log(lazyObjects);
