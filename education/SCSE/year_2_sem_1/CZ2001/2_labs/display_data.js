@@ -17,7 +17,6 @@ function displayData(divId, csvPath) {
     d3.csv(
         csvPath,
         function (datum) {
-            console.log(datum);
             return {
                 arraySize: Number(datum['Array Size']),
                 numKeyComparisons: Number(datum['Number of Key Comparisons']),
