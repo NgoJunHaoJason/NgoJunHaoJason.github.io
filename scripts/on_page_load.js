@@ -7,8 +7,7 @@ function setUpLazyLoading() {
     document.addEventListener(
         "DOMContentLoaded", 
         function () {
-            if ("IntersectionObserver" in window)
-            {
+            if ("IntersectionObserver" in window) {
                 let lazyObjects = document.querySelectorAll('.lazy');
 
                 let lazyObjectObserver = new IntersectionObserver(
@@ -16,14 +15,13 @@ function setUpLazyLoading() {
                     function (entries) {
                         entries.forEach(
                             function (entry) {
-                                if (entry.isIntersecting)
-                                {
+                                if (entry.isIntersecting) {
                                     let lazyObject = entry.target;
 
                                     lazyObject.src = lazyObject.dataset.src;
                                     // lazyObject.srcset = lazyObject.dataset.srcset;
 
-                                    lazyObject.classList.remove("lazy");
+                                    lazyObject.classList.remove('lazy');
                                     lazyObjectObserver.unobserve(lazyObject);
                                 }
                             }
@@ -45,6 +43,7 @@ function setUpLazyLoading() {
                     function (lazyObject) {
                         lazyObject.src = lazyObject.dataset.src;
                         lazyObject.srcset = lazyObject.dataset.srcset;
+                        console.log('lazy load' + lazyObject.src);
                     }
                 );
             }
@@ -64,12 +63,10 @@ function setUpCollapsibles() {
                 this.classList.toggle("collapsible-active");
                 let content = this.nextElementSibling;
                 
-                if (content.style.maxHeight)
-                {
+                if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } 
-                else 
-                {
+                else {
                     content.style.maxHeight = content.scrollHeight + "px";
                 } 
             }
@@ -87,15 +84,12 @@ function displayLastModified() {
 function addLoadEvent(onLoadEvent) {
     let oldOnload = window.onload;
 
-    if (typeof oldOnload != 'function') 
-    {
+    if (typeof oldOnload != 'function') {
         window.onload = onLoadEvent;
     } 
-    else 
-    {
+    else {
         window.onload = function() {
-            if (oldOnload) 
-            {
+            if (oldOnload) {
                 oldOnload();
             }
 
