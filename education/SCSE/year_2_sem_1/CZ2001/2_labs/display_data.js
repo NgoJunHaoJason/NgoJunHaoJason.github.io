@@ -51,5 +51,8 @@ d3.csv(
         .attr('d', d3.line()
             .x((datum) => x(datum.arraySize))
             .y((datum) => x(datum.numKeyComparisons))
-        )
+        );
+    
+    console.log('max x: ' + d3.max(data, (datum) => datum.arraySize));
+    console.log('max y: ' + d3.max(data, (datum) => datum.numKeyComparisons));
 });
