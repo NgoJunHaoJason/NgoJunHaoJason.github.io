@@ -9,7 +9,6 @@ function setUpLazyLoading() {
         function () {
             if ('IntersectionObserver' in window) {
                 let lazyObjects = document.querySelectorAll('.lazy');
-                console.log(lazyObjects);
 
                 let lazyObjectObserver = new IntersectionObserver(
                     // callback
@@ -33,6 +32,7 @@ function setUpLazyLoading() {
                 lazyObjects.forEach(
                     function (lazyObject) {
                         lazyObjectObserver.observe(lazyObject);
+                        alert(lazyObject.src);
                     }
                 );
             }
