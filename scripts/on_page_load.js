@@ -32,6 +32,7 @@ function setUpLazyLoading() {
                 lazyObjects.forEach(
                     function (lazyObject) {
                         lazyObjectObserver.observe(lazyObject);
+                        console.log('lazy load' + lazyObject.src);
                     }
                 );
             }
