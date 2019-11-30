@@ -96,7 +96,6 @@ function stopStream(video) {
 // canvas functions
 
 function drawCanvas() {
-    alert('start drawCanvas');
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
     
     if (detectionModel) {
@@ -117,10 +116,7 @@ function drawCanvas() {
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
     // https://stackoverflow.com/a/33835857/9171260
-    alert('going to requestAnimationFrame');
     requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
-
-    alert('end drawCanvas');
 }
 
 function stopDisplay() {
