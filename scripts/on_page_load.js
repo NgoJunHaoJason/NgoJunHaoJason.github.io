@@ -1,5 +1,11 @@
 'use strict';
 
+// actually do stuff
+addLoadEvent(displayLastModified);
+addLoadEvent(setUpCollapsibles);
+addLoadEvent(setUpLazyLoading);
+addLoadEvent(bringNavBarToFront);
+
 // sources:
 // https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 // https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
@@ -106,6 +112,17 @@ function addLoadEvent(onLoadEvent) {
     }
 }
 
-addLoadEvent(displayLastModified);
-addLoadEvent(setUpCollapsibles);
-addLoadEvent(setUpLazyLoading);
+
+// https://stackoverflow.com/questions/4012112/how-to-bring-the-selected-div-on-top-of-all-other-divs
+function bringNavBarToFront() {
+    let navbar = document.getElementsByClassName('navbar')[0];
+    navbar.style.zIndex = 1;
+    
+    let allDivs = document.getElementsByTagName('div');
+
+    for (let index = 0; index < allDivs.length; ++index) {
+        if (allDivs[index].style.zIndex > navbar.style.zIndex) {
+            navbar.style.zIndex = allDivs[index].style.zIndex + 1;
+        }
+    }
+}
