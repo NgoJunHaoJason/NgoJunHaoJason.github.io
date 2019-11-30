@@ -1,9 +1,14 @@
 // reference: https://www.d3-graph-gallery.com/graph/line_basic.html
 
 // set the dimensions and margins of the graph
-const MARGIN = { top: 60, right: 60, bottom: 60, left: 120 };
-const WIDTH = Math.floor(window.innerWidth * (720 - MARGIN.left - MARGIN.right) / 720);
-const HEIGHT = WIDTH / 2;
+const MARGIN = { 
+    top: Math.floor(window.innerHeight / 16), 
+    right: Math.floor(window.innerWidth / 16), 
+    bottom: Math.floor(window.innerHeight / 16), 
+    left: Math.floor(window.innerWidth / 8), 
+};
+const WIDTH = Math.floor(window.innerWidth * 13 / 16);
+const HEIGHT = Math.floor(window.innerHeight * 7 / 8);
 
 function displayData(divId, csvPath) {
     // append the svg object to the body of the page
