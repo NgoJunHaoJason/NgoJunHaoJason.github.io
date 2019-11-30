@@ -7,8 +7,8 @@ const MARGIN = {
     bottom: Math.floor(window.innerHeight / 16), 
     left: Math.floor(window.innerWidth / 8), 
 };
-const WIDTH = Math.floor(window.innerWidth * 13 / 16);
-const HEIGHT = Math.floor(window.innerHeight * 7 / 8);
+const WIDTH = Math.floor(window.innerWidth * 12 / 16);
+const HEIGHT = Math.min(Math.floor(window.innerHeight * 7 / 8), Math.floor(WIDTH * 5 / 6));
 
 function displayData(divId, csvPath) {
     // append the svg object to the body of the page
