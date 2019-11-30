@@ -19,7 +19,7 @@ canvas {
 
 @media screen and (max-width: 385px) {
     canvas {
-        width: 160px;
-        height: 90px;
+        width: 256px;
+        height: 256px;
     }
 }
