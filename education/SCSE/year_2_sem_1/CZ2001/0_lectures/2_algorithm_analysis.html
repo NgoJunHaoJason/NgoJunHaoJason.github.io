@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+<!--remember to include the following for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Algorithm Analysis | CZ2001 | Jason Ngo's website</title>
+    <link rel="icon" href="../../../../../images/sciurus_96.png">
+    <link rel="stylesheet" type="text/css" href="../../../../../styles/default_style.css">
+</head>
+
+<body>
+    <h2 class="header">
+        CZ2001 Algorithms
+    </h2>
+
+    <!--start of nav-related code-->
+    <ul class="navbar">
+        <li>
+            <a href="../../../../../index.html">
+                home
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../main.html">
+                education
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../experience.html">
+                internship
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../miscellaneous/main.html">
+                miscellaneous
+            </a>
+        </li>
+    </ul>
+    <!--end of nav-related code-->
+
+    <!--start of content-related code-->
+    <div class="content">
+        <h3>
+            Algorithm Analysis
+        </h3>
+
+        <h4>What is it?</h4>
+        <p>
+            We analyse algorithms to quantify their resource consumption.
+        </p>
+        <p>
+            To be more specific, we do asymptotic algorithm analysis: study of the resources used by an algorithm when
+            the problem becomes larger and larger without bound.
+        </p>
+        <p>
+            To do so, we need comparison criteria or measures.
+        </p>
+        <p>
+            In this course, we measure algorithms' efficiency in terms of time and space taken.
+        </p>
+
+        <h4>So how do we do it?</h4>
+        <p>
+            A naive approach is to do empirical comparison, where you actually run the programs and measure the time
+            taken to run them.
+        </p>
+        <p>
+            However, there are several problems with doing an empirical comparison:
+            <ul>
+                <li>
+                    It is difficult to do it 'fairly'.
+                    <ul>
+                        <li>
+                            When you run a program on a machine, other factors come into play.
+                        </li>
+                        <li>
+                            For example, different CPUs may have different clock speed and take different amount of time
+                            to run programs.
+                        </li>
+                        <li>
+                            In addition, otther programs that are running in the background would require the CPU and
+                            contribute to the time taken.
+                        </li>
+                        <li>
+                            Also, during the first run of a program, some values are accessed for the first time and for
+                            subsequent runs, they are readily available in the cache, resulting in inconsistent time
+                            taken.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Execution time is not the right measure of time efficiency.
+                    <ul>
+                        <li>
+                            In order to run the program, you have to enter data of known, finite problem size. However,
+                            for asymptotic analysis, there is supposedly no upper bound on problem - it can get as large
+                            as possible.
+                        </li>
+                        <li>
+                            Points regarding fairness of empirical comparisons applies here as well.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    It is time consuming to perform empirical comparisons.
+                    <ul>
+                        The problem size is typically huge, which means a lot of time is taken to process the data.
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        <p>
+            The smarter way of measuring efficiency is to derive the time and space complexity of the algorithm.
+        </p>
+        <p>
+            To measure time complexity (amount of time used), we:
+            <ol>
+                <li>
+                    Count the number of primitive operations.
+                </li>
+                <li>
+                    Determine the major parameters that affect the problem (i.e. problem size).
+                </li>
+                <li>
+                    Derive an equation that relates the parameters to the number of primitive operations that the
+                    algorithm does.
+                </li>
+            </ol>
+            This is related to algorithmic aspects.
+        </p>
+        <p>
+            To measure space complexity (amount of space used), we:
+            <ol>
+                <li>
+                    Count the number of storage units required. (e.g. memory used - 1 int &rightarrow; 4 bytes for
+                    instance)
+                </li>
+                <li>
+                    Determine the major parameters that affect the
+                    problem (problem size).
+                </li>
+                <li>
+                    Derive an equation that relates the parameters to the number of storage units that the algorithm
+                    uses.
+                </li>
+            </ol>
+            This is related to data structures.
+        </p>
+
+        <h4>Some Terminologies</h4>
+        <p>
+            problem size
+            <ul>
+                <li>
+                    The problem size depends on the problem being studied (e.g. the number of items to be sorted).
+                </li>
+                <li>
+                    Usually, the number of primitive operations done by an algorithm is a function of the problem size.
+                </li>
+            </ul>
+        </p>
+        <p>
+            primitive operation
+            <ul>
+                <li>
+                    A basic step that can be performed in constant time.
+                </li>
+                <li>
+                    Examples:
+                    <ul>
+                        <li>
+                            Assignment (e.g. x = 1)
+                        </li>
+                        <li>
+                            Arithmetic operations (+, -, *, /)
+                        </li>
+                        <li>
+                            Comparisons (==, !=, &lt;, &gt;, &lt;=, &gt;=)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        <p>
+            programming constructs
+            <ul>
+                <li>
+                    A composite collection of basic steps.
+                </li>
+                <li>
+                    Examples:
+                    <ul>
+                        <li>
+                            loops (for, while)
+                        </li>
+                        <li>
+                            branching (if-else, switch-case)
+                        </li>
+                        <li>
+                            functions (recursive vs non-recursive)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+    </div>
+    <!--end of content-related code-->
+
+    <!--start of nav-buttons code-->
+    <div class="nav-buttons">
+        <a href="1_mathematics_review.html">
+            &#8249; math review
+        </a>
+
+        <a href="../main.html">
+            back
+        </a>
+
+        <a class="disabled">
+            TODO &#8250;
+        </a>
+    </div>
+    <!--end of nav-buttons code-->
+
+    <!--start of footer-related code-->
+    <div class="footer">
+        <div class="github">
+            <img src="../../../../../images/GitHub-Mark-120px-plus.png">
+
+            <a target="_blank" href="https://github.com/NgoJunHaoJason">
+                GitHub profile
+            </a>
+        </div>
+
+        <div class="last-modified">
+            last modified:
+            <span id="last_modified">null</span>
+        </div>
+    </div>
+    <!--end of footer-related code-->
+
+    <script defer="defer" src="../../../../../scripts/on_page_load.js"></script>
+</body>
+
+</html>
