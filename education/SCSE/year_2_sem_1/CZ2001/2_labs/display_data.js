@@ -2,8 +2,8 @@
 
 // set the dimensions and margins of the graph
 const MARGIN = { top: 60, right: 60, bottom: 60, left: 120 };
-const WIDTH = Math.floor(window.innerWidth * (960 - MARGIN.left - MARGIN.right) / 960);
-const HEIGHT = Math.floor(window.innerWidth * (480 - MARGIN.top - MARGIN.bottom) / 480);
+const WIDTH = Math.floor(window.innerWidth * (720 - MARGIN.left - MARGIN.right) / 720);
+const HEIGHT = WIDTH / 2;
 
 function displayData(divId, csvPath) {
     // append the svg object to the body of the page
