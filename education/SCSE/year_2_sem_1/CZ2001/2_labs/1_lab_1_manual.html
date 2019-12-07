@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+<meta charset="utf-8" />
 <!--remember to include the following for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -100,9 +101,11 @@
                 &emsp;&emsp; = 2 * 2 * 2 * W(n-3) + 4 + 2 + 1<br>
                 &emsp;&emsp; = 2<sup>3</sup> * W(n-3) + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup><br>
                 &emsp;&emsp; = ...<br>
-                &emsp;&emsp; = 2<sup>i</sup> * W(n-i) + 2<sup>i-1</sup> + ... + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup><br>
+                &emsp;&emsp; = 2<sup>i</sup> * W(n-i) + 2<sup>i-1</sup> + ... + 2<sup>2</sup> + 2<sup>1</sup> +
+                2<sup>0</sup><br>
                 &emsp;&emsp; = ...<br>
-                &emsp;&emsp; = 2<sup>n</sup> * W(n-n) + 2<sup>n-1</sup> + ... + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup><br>
+                &emsp;&emsp; = 2<sup>n</sup> * W(n-n) + 2<sup>n-1</sup> + ... + 2<sup>2</sup> + 2<sup>1</sup> +
+                2<sup>0</sup><br>
                 &emsp;&emsp; = 2<sup>n</sup> * W(0) + <sup>n-1</sup>&sum;<sub>i=0</sub> 2<sup>i</sup><br>
                 &emsp;&emsp; = 2<sup>n</sup> * 0 + 2<sup>0</sup> * (<sup>2<sup>n</sup> - 1</sup>/<sub>2 - 1</sub>)<br>
                 &emsp;&emsp; = 2<sup>n</sup> - 1<br>
@@ -155,7 +158,8 @@
                 W(1) = 0<br>
                 <br>
 
-                At n > 1, there is 1 addition in a function call, along with a call to itself with n/2, resulting in recurrence of the form:<br>
+                At n > 1, there is 1 addition in a function call, along with a call to itself with n/2, resulting in
+                recurrence of the form:<br>
                 W(n) = W(<sup>n</sup>/<sub>2</sub>) + 1<br>
                 <br>
                 which is equivalent to:<br>
@@ -193,10 +197,11 @@
                 W(1) = 0<br>
                 <br>
 
-                At n > 1, the function calls itself twice with n/2 and 1 element comparison (not index comparison),so<br>
+                At n > 1, the function calls itself twice with n/2 and 1 element comparison (not index
+                comparison),so<br>
                 W(n) = 2 * W(<sup>n</sup>/<sub>2</sub>) + 1<br>
                 <br>
-                
+
                 which is equivalent to:<br>
                 W(2<sup>k</sup>) = 2 * W(<sup>2<sup>k</sup></sup>/<sub>2</sub>) + 1<br>
                 &emsp;&emsp; = 2 * W(2<sup>k-1</sup>) + 1<br>
@@ -224,7 +229,8 @@
         <button class="collapsible">Solution</button>
         <div class="collapsible-content">
             <p>
-                Flow control in minimum() is such that whenever there is an element comparison, there will be a division.<br>
+                Flow control in minimum() is such that whenever there is an element comparison, there will be a
+                division.<br>
                 <br>
 
                 As such, there are (n - 1) divisions.
@@ -244,7 +250,8 @@
                 W(1) = 0<br>
                 <br>
 
-                When n > 1, the function calls itself with (n - 1), and perform 1 addition and 1 subtraction, such that:<br>
+                When n > 1, the function calls itself with (n - 1), and perform 1 addition and 1 subtraction, such
+                that:<br>
                 W(n) = W(n-1) + 2<br>
                 &emsp;&emsp; = [W(n - 2) + 2] + 2<br>
                 &emsp;&emsp; = W(n - 2) + 2 * 2<br>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+<meta charset="utf-8" />
 <!--remember to include the following for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -229,9 +230,11 @@
             target keys generated have to not match any of the keys in the hash table. The random string generator
             function does not account for the existing keys stored in the hash table, so there is a possibility that a
             target key generated end up being the same as a key stored in the hash table. However, we deemed this
-            possibility to be insignificant, as there are (10+26+26)<sup>32</sup> = 62<sup>32</sup> combinations of strings that can be
+            possibility to be insignificant, as there are (10+26+26)<sup>32</sup> = 62<sup>32</sup> combinations of
+            strings that can be
             generated, of which only 20 000 would already exist in the data set. Even if keys of the entire data set are
-            stored in the hash table, the probability of getting 2 strings that match is <sup>20000</sup>/<sub>62<sup>32</sup></sub> = 8.8e<sup>-54</sup>, which is
+            stored in the hash table, the probability of getting 2 strings that match is
+            <sup>20000</sup>/<sub>62<sup>32</sup></sub> = 8.8e<sup>-54</sup>, which is
             a very, very small probability. We ran the searches multiple times, for various load factors, for hash
             tables of various hash size, so even if we have one anomalous data, the rest of the data will average the
             error out.
