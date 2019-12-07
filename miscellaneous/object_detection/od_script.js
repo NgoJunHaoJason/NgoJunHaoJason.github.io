@@ -10,15 +10,16 @@
 
 // fallbacks for requestAnimationFrame
 if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = window.requestAnimationFrame
-        || window.mozRequestAnimationFrame
-        || window.webkitRequestAnimationFrame
-        || window.msRequestAnimationFrame
-        || function (f) { return setTimeout(f, 1000 / 60); }; // simulate calling code 60 
+    window.requestAnimationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame || 
+        window.webkitRequestAnimationFrame || 
+        window.msRequestAnimationFrame || 
+        function (func) { return setTimeout(func, 1000 / 60); }; // simulate calling code 60 
 }
 
 // initialise stuff
 const CONFIDENCE_THRESHOLD = 0.2;
+const CANVAS_TEXT_FONT_SIZE = 12;
 
 const CONSTRAINTS = {
     audio: false,
@@ -31,7 +32,7 @@ const CONSTRAINTS = {
 
 const displayCanvas = document.getElementById('display-canvas');
 const context = displayCanvas.getContext('2d');
-context.font = '12px Arial';
+context.font = CANVAS_TEXT_FONT_SIZE + 'px Arial';
 context.strokeStyle = '#32CD32'; // lime green
 context.fillStyle = '#000000'; // black
 
@@ -43,26 +44,50 @@ video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
 video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
 
+const TENSORFLOW_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js';
+const COCO_SSD_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd';
+
 // set up detection model
 let detectionModel = null;
-cocoSsd.load().then(model => {
-    detectionModel = model;
-});
 
-// set-up upon page load
-let onLoadODPage = function () {
+addLoadEvent(setUpObjectDetection);
+
+function setUpObjectDetection() {
     // add event handlers
     video.onloadeddata = drawCanvas;
     startStopButton.onclick = startCamera;
 
     // canvas is black on page load
-    stopDisplay();
+    darkenCanvas();
+
+    loadScript(TENSORFLOW_URL, function (error) {
+        if (error) {
+            window.alert(error);
+            return;
+        }
+
+        loadScript(COCO_SSD_URL, function (error) {
+            if (error) {
+                window.alert(error);
+                return;
+            }
+
+            cocoSsd.load().then((model) => detectionModel = model);
+        })
+    });
 }
 
-// actually do stuff
-addLoadEvent(onLoadODPage);
+function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
 
-// canvas functions
+    script.onload = () => callback(null);
+    script.onerror = () => callback(new Error(`error loading script: ${src}`));
+
+    document.head.append(script);
+}
+
+// camera functions below
 
 function startCamera() {
     startStopButton.onclick = stopCamera;
@@ -72,18 +97,18 @@ function startCamera() {
         startStream(CONSTRAINTS, video);
     }
     else {
-        context.font = '30px Arial';
-        context.strokeText('no access to camera...', 5, 35); // 30 (font size) + 5
+        displayTextOnCanvas('no access to camera...');
     }
 }
 
 function stopCamera() {
     startStopButton.onclick = startCamera;
     startStopButton.innerHTML = 'start';
+
     stopStream(video);
 }
 
-// stream functions
+// stream functions below
 
 async function startStream(constraints, video) {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -91,29 +116,36 @@ async function startStream(constraints, video) {
 };
 
 function stopStream(video) {
-    video.srcObject.getVideoTracks().forEach(track => track.stop());
-    stopDisplay();
+    video.srcObject.getVideoTracks()[0].stop();
+    darkenCanvas();
 }
 
-// canvas functions
+// canvas functions below
 
 function drawCanvas() {
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
-    
+
     if (detectionModel) {
-        detectionModel.detect(video).then(predictions => {
-            predictions.forEach(function (detection) {
-                if (detection.score >= CONFIDENCE_THRESHOLD) {
+        detectionModel.detect(video)
+            .then((predictions) => predictions.forEach(
+                function (detection) {
+                    if (detection.score < CONFIDENCE_THRESHOLD) {
+                        return;
+                    }
+
                     let bbox = detection.bbox;
                     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
                     context.strokeText(
-                        detection.class + ' ' + detection.score.toFixed(2), 
-                        bbox[0] + 2, 
+                        detection.class + ' ' + detection.score.toFixed(2),
+                        bbox[0] + 2,
                         bbox[1] + 12
                     );
                 }
-            });
-        });
+            )
+            );
+    }
+    else {
+        displayTextOnCanvas('loading object detector...');
     }
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
@@ -121,6 +153,11 @@ function drawCanvas() {
     requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
 }
 
-function stopDisplay() {
+function displayTextOnCanvas(text) {
+    const offset = 5;
+    context.strokeText(text, offset, CANVAS_TEXT_FONT_SIZE + offset);
+}
+
+function darkenCanvas() {
     context.fillRect(0, 0, canvasWidth, canvasHeight);
 }
