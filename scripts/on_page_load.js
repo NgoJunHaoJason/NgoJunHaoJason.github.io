@@ -24,11 +24,6 @@ function addLoadEvent(onLoadEvent) {
     }
 }
 
-function displayLastModified() {
-    let date = new Date(document.lastModified);
-    document.getElementById('last_modified').innerHTML = date.toLocaleDateString();
-}
-
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
 function setUpCollapsibles() {
     let collapsibles = document.getElementsByClassName("collapsible");
@@ -52,19 +47,20 @@ function setUpCollapsibles() {
     }
 }
 
-// function setUpLazyLoading() {
-//     // https://stackoverflow.com/a/39993724/9171260
-//     if (document.readyState !== 'loading') {
-//         lazyLoad(); // DOMContentLoaded fired already
-//     }
-//     else {
-//         document.addEventListener('DOMContentLoaded', lazyLoad);
-//     }
-// }
+function setUpLazyLoading() {
+    // https://stackoverflow.com/a/39993724/9171260
+    if (document.readyState !== 'loading') {
+        lazyLoad(); // DOMContentLoaded fired already
+    }
+    else {
+        document.addEventListener('DOMContentLoaded', lazyLoad);
+    }
+}
 
 // sources:
 // https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
-// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+// https://developers.google.com/web/fundamentals/performance/
+// lazy-loading-guidance/images-and-video/
 function lazyLoad() {
     if ('IntersectionObserver' in window) {
         let lazyObjects = document.querySelectorAll('.lazy');
@@ -74,7 +70,7 @@ function lazyLoad() {
             function (entries) {
                 entries.forEach(
                     function (entry) {
-                        if (entry.isIntersecting) {
+                        if (!entry.isIntersecting) {
                             return;
                         }
 
@@ -101,7 +97,13 @@ function lazyLoad() {
     }
 }
 
-// https://stackoverflow.com/questions/4012112/how-to-bring-the-selected-div-on-top-of-all-other-divs
+function displayLastModified() {
+    let date = new Date(document.lastModified);
+    document.getElementById('last_modified').innerHTML = date.toLocaleDateString();
+}
+
+// https://stackoverflow.com/questions/4012112/
+// how-to-bring-the-selected-div-on-top-of-all-other-divs
 function bringNavBarToFront() {
     let navbar = document.getElementsByClassName('navbar')[0];
     navbar.style.zIndex = 1;
