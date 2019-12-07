@@ -3,10 +3,11 @@
 // actually do stuff
 addLoadEvent(displayLastModified);
 addLoadEvent(setUpCollapsibles);
-addLoadEvent(lazyLoad);
+addLoadEvent(setUpLazyLoading);
 addLoadEvent(bringNavBarToFront);
 
-// https://www.htmlgoodies.com/beyond/javascript/article.php/3724571/Using-Multiple-JavaScript-Onload-Functions.htm
+// https://www.htmlgoodies.com/beyond/javascript/article.php/3724571/
+// Using-Multiple-JavaScript-Onload-Functions.htm
 function addLoadEvent(onLoadEvent) {
     let oldOnload = window.onload;
 
@@ -47,49 +48,32 @@ function setUpCollapsibles() {
     }
 }
 
-function setUpLazyLoading() {
-    // https://stackoverflow.com/a/39993724/9171260
-    if (document.readyState !== 'loading') {
-        lazyLoad(); // DOMContentLoaded fired already
-    }
-    else {
-        document.addEventListener('DOMContentLoaded', lazyLoad);
-    }
-}
-
 // sources:
 // https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 // https://developers.google.com/web/fundamentals/performance/
 // lazy-loading-guidance/images-and-video/
-function lazyLoad() {
+function setUpLazyLoading() {
     if ('IntersectionObserver' in window) {
         let lazyObjects = document.querySelectorAll('.lazy');
 
+        let lazyLoad = function (entry) {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            let lazyObject = entry.target;
+
+            lazyObject.src = lazyObject.dataset.src;
+
+            lazyObject.classList.remove('lazy');
+            lazyObjectObserver.unobserve(lazyObject);
+        }
+
         let lazyObjectObserver = new IntersectionObserver(
-            // callback
-            function (entries) {
-                entries.forEach(
-                    function (entry) {
-                        if (!entry.isIntersecting) {
-                            return;
-                        }
-
-                        let lazyObject = entry.target;
-
-                        lazyObject.src = lazyObject.dataset.src;
-
-                        lazyObject.classList.remove('lazy');
-                        lazyObjectObserver.unobserve(lazyObject);
-                    }
-                );
-            }
+            (entries) => entries.forEach((entry) => lazyLoad(entry))
         );
 
-        lazyObjects.forEach(
-            function (lazyObject) {
-                lazyObjectObserver.observe(lazyObject);
-            }
-        );
+        lazyObjects.forEach((lazyObject) => lazyObjectObserver.observe(lazyObject));
     }
     else { // browser does not support IntersectionObserver
         window.alert("This browser does not support lazy loading.\nImages may not load properly");
