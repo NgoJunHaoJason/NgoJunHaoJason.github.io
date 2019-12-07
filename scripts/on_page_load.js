@@ -3,66 +3,30 @@
 // actually do stuff
 addLoadEvent(displayLastModified);
 addLoadEvent(setUpCollapsibles);
-addLoadEvent(setUpLazyLoading);
+addLoadEvent(lazyLoad);
 addLoadEvent(bringNavBarToFront);
 
-// sources:
-// https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
-// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
-function lazyLoad() {
-    if ('IntersectionObserver' in window) {
-        let lazyObjects = document.querySelectorAll('.lazy');
+// https://www.htmlgoodies.com/beyond/javascript/article.php/3724571/Using-Multiple-JavaScript-Onload-Functions.htm
+function addLoadEvent(onLoadEvent) {
+    let oldOnload = window.onload;
 
-        let lazyObjectObserver = new IntersectionObserver(
-            // callback
-            function (entries) {
-                entries.forEach(
-                    function (entry) {
-                        if (entry.isIntersecting) {
-                            let lazyObject = entry.target;
-
-                            lazyObject.src = lazyObject.dataset.src;
-                            // lazyObject.srcset = lazyObject.dataset.srcset;
-
-                            lazyObject.classList.remove('lazy');
-                            lazyObjectObserver.unobserve(lazyObject);
-                        }
-                    }
-                );
+    if (typeof oldOnload != 'function') {
+        window.onload = onLoadEvent;
+    } 
+    else {
+        window.onload = function() {
+            if (oldOnload) {
+                oldOnload();
             }
-        );
 
-        lazyObjects.forEach(
-            function (lazyObject) {
-                lazyObjectObserver.observe(lazyObject);
-            }
-        );
-    }
-    else // browser does not support IntersectionObserver
-    {
-        window.alert("This browser does not support lazy loading.\nImages may not load properly");
-
-        lazyObjects.forEach(
-            function (lazyObject) {
-                lazyObject.src = lazyObject.dataset.src;
-                lazyObject.srcset = lazyObject.dataset.srcset;
-            }
-        );
+            onLoadEvent();
+        }
     }
 }
 
-
-function setUpLazyLoading() {
-    // https://stackoverflow.com/a/39993724/9171260
-    if (document.readyState !== 'loading') {
-        lazyLoad(); // DOMContentLoaded may be fired already
-    }
-    else {
-        document.addEventListener(
-            'DOMContentLoaded', 
-            lazyLoad()
-        );
-    }
+function displayLastModified() {
+    let date = new Date(document.lastModified);
+    document.getElementById('last_modified').innerHTML = date.toLocaleDateString();
 }
 
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
@@ -88,30 +52,54 @@ function setUpCollapsibles() {
     }
 }
 
-function displayLastModified() {
-    let date = new Date(document.lastModified);
+// function setUpLazyLoading() {
+//     // https://stackoverflow.com/a/39993724/9171260
+//     if (document.readyState !== 'loading') {
+//         lazyLoad(); // DOMContentLoaded fired already
+//     }
+//     else {
+//         document.addEventListener('DOMContentLoaded', lazyLoad);
+//     }
+// }
 
-    document.getElementById('last_modified').innerHTML = date.toLocaleDateString();
-}
+// sources:
+// https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
+// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+function lazyLoad() {
+    if ('IntersectionObserver' in window) {
+        let lazyObjects = document.querySelectorAll('.lazy');
 
-// https://www.htmlgoodies.com/beyond/javascript/article.php/3724571/Using-Multiple-JavaScript-Onload-Functions.htm
-function addLoadEvent(onLoadEvent) {
-    let oldOnload = window.onload;
+        let lazyObjectObserver = new IntersectionObserver(
+            // callback
+            function (entries) {
+                entries.forEach(
+                    function (entry) {
+                        if (entry.isIntersecting) {
+                            return;
+                        }
 
-    if (typeof oldOnload != 'function') {
-        window.onload = onLoadEvent;
-    } 
-    else {
-        window.onload = function() {
-            if (oldOnload) {
-                oldOnload();
+                        let lazyObject = entry.target;
+
+                        lazyObject.src = lazyObject.dataset.src;
+
+                        lazyObject.classList.remove('lazy');
+                        lazyObjectObserver.unobserve(lazyObject);
+                    }
+                );
             }
+        );
 
-            onLoadEvent();
-        }
+        lazyObjects.forEach(
+            function (lazyObject) {
+                lazyObjectObserver.observe(lazyObject);
+            }
+        );
+    }
+    else { // browser does not support IntersectionObserver
+        window.alert("This browser does not support lazy loading.\nImages may not load properly");
+        lazyObjects.forEach((lazyObject) => lazyObject.src = lazyObject.dataset.src);
     }
 }
-
 
 // https://stackoverflow.com/questions/4012112/how-to-bring-the-selected-div-on-top-of-all-other-divs
 function bringNavBarToFront() {

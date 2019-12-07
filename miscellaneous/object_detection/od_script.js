@@ -58,6 +58,8 @@ let onLoadODPage = function () {
     // canvas is black on page load
     stopDisplay();
 }
+
+// actually do stuff
 addLoadEvent(onLoadODPage);
 
 // canvas functions
