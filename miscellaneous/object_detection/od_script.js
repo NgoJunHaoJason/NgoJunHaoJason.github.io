@@ -64,7 +64,7 @@ function setUpObjectDetection() {
         .then(() => loadScript(COCO_SSD_URL))
         .then(() => cocoSsd.load())
         .then((model) => detectionModel = model)
-        .catch(alert);
+        .catch((error) => alert(error.message));
 }
 
 function loadScript(src) {
