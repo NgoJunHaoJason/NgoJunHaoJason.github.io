@@ -8,16 +8,10 @@
 // canvas - https://www.w3schools.com/tags/canvas_drawimage.asp
 // object detection - https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
 
-// fallbacks for requestAnimationFrame
-if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = window.requestAnimationFrame ||
-        window.mozRequestAnimationFrame || 
-        window.webkitRequestAnimationFrame || 
-        window.msRequestAnimationFrame || 
-        function (func) { return setTimeout(func, 1000 / 60); }; // simulate calling code 60 
-}
-
 // initialise stuff
+const TENSORFLOW_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js';
+const COCO_SSD_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd';
+
 const CONFIDENCE_THRESHOLD = 0.2;
 const CANVAS_TEXT_FONT_SIZE = 12;
 
@@ -44,9 +38,6 @@ video.width = canvasWidth; // otherwise, will pass in video of 0 width to model
 video.height = canvasHeight; // otherwise, will pass in video of 0 height to model
 const startStopButton = document.getElementById('start-stop-button');
 
-const TENSORFLOW_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js';
-const COCO_SSD_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd';
-
 // set up detection model
 let detectionModel = null;
 
@@ -60,31 +51,32 @@ function setUpObjectDetection() {
     // canvas is black on page load
     darkenCanvas();
 
-    loadScript(TENSORFLOW_URL, function (error) {
-        if (error) {
-            window.alert(error);
-            return;
-        }
+    // fallbacks for requestAnimationFrame
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function (func) { return setTimeout(func, 1000 / 60); };
+    }
 
-        loadScript(COCO_SSD_URL, function (error) {
-            if (error) {
-                window.alert(error);
-                return;
-            }
-
-            cocoSsd.load().then((model) => detectionModel = model);
-        })
-    });
+    loadScript(TENSORFLOW_URL)
+        .then(() => loadScript(COCO_SSD_URL))
+        .then(() => cocoSsd.load())
+        .then((model) => detectionModel = model)
+        .catch(alert);
 }
 
-function loadScript(src, callback) {
-    let script = document.createElement('script');
-    script.src = src;
+function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+        let script = document.createElement('script');
+        script.src = src;
 
-    script.onload = () => callback(null);
-    script.onerror = () => callback(new Error(`error loading script: ${src}`));
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`error loading script: ${src}`));
 
-    document.head.append(script);
+        document.head.append(script);
+    });
 }
 
 // camera functions below
