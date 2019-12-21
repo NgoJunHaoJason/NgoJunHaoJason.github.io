@@ -72,7 +72,7 @@ function displayData(divId, csvPath) {
                 .attr('fill', 'black')
                 .attr('font-size', 15)
                 .attr('x', -HEIGHT / 2)
-                .attr('y', -50);;
+                .attr('y', -45);;
 
         // Add the line
         svg.append('path')
