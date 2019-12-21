@@ -39,10 +39,13 @@ function displayData(divId, csvPath) {
             .domain([0, d3.max(data, (datum) => datum.arraySize)])
             .range([0, WIDTH])
             .nice();
+        
+        const xAxis = d3.axisBottom(x)
+            .tickFormat(d3.format('s'));
 
         svg.append('g')
             .attr('transform', 'translate(0,' + HEIGHT + ')')
-            .call(d3.axisBottom(x))
+            .call(xAxis)
             .append('text')
                 .text('Array Size')
                 .attr('text-anchor', 'middle')
@@ -57,8 +60,11 @@ function displayData(divId, csvPath) {
             .range([HEIGHT, 0])
             .nice();
 
+        const yAxis = d3.axisLeft(y)
+            .tickFormat(d3.format('s'));
+
         svg.append('g')
-            .call(d3.axisLeft(y))
+            .call(yAxis)
             .append('text')
                 .text(yComponent)
                 .attr('transform', 'rotate(-90)')
