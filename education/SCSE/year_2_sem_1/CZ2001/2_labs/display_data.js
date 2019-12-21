@@ -41,7 +41,7 @@ function displayData(divId, csvPath) {
             .nice();
         
         const xAxis = d3.axisBottom(x)
-            .tickFormat(d3.format('s'));
+            .tickFormat(d3.format('.2s'));
 
         svg.append('g')
             .attr('transform', 'translate(0,' + HEIGHT + ')')
@@ -61,7 +61,7 @@ function displayData(divId, csvPath) {
             .nice();
 
         const yAxis = d3.axisLeft(y)
-            .tickFormat(d3.format('s'));
+            .tickFormat(d3.format('.2s'));
 
         svg.append('g')
             .call(yAxis)
