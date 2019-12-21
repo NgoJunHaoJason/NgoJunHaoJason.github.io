@@ -18,8 +18,8 @@ function displayData(divId, csvPath) {
             .attr('height', HEIGHT + MARGIN.top + MARGIN.bottom)
             .attr('viewBox', '0 0 ' + WIDTH + ' ' + HEIGHT)
             .attr('preserveAspectRatio', 'xMidYMid meet')
-        .append('g')
-            .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+        .append('g');
+            // .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
 
     d3.csv(
         csvPath,
@@ -43,7 +43,7 @@ function displayData(divId, csvPath) {
             .call(d3.axisBottom(x));
 
         // Add Y axis
-        let y = d3.scaleLinear()
+        const y = d3.scaleLinear()
             .domain([0, d3.max(data, (datum) => datum.numKeyComparisons)])
             .range([HEIGHT, 0]);
 
