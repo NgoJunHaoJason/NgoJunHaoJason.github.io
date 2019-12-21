@@ -2,10 +2,10 @@
 
 // set the dimensions and margins of the graph
 const MARGIN = {
-    top: Math.floor(window.innerHeight / 16),
-    right: Math.floor(window.innerWidth / 16),
-    bottom: Math.floor(window.innerHeight / 16),
-    left: Math.floor(window.innerWidth / 8),
+    top: 10,
+    right: 10,
+    bottom: 60,
+    left: 60,
 };
 const WIDTH = 720;
 const HEIGHT = 480;
@@ -72,7 +72,7 @@ function displayData(divId, csvPath) {
                 .attr('fill', 'black')
                 .attr('font-size', 15)
                 .attr('x', -HEIGHT / 2)
-                .attr('y', -40);;
+                .attr('y', -50);;
 
         // Add the line
         svg.append('path')
