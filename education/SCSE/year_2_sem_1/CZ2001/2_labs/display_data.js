@@ -41,7 +41,10 @@ function displayData(divId, csvPath) {
             .attr('transform', 'translate(0,' + HEIGHT + ')')
             .call(d3.axisBottom(x))
             .append('text')
-                .text('Array Size');
+                .text('Array Size')
+                .attr('text-anchor', 'middle')
+                .attr('x', WIDTH / 2);
+                .attr('y', 20);
 
         // Add Y axis
         const y = d3.scaleLinear()
