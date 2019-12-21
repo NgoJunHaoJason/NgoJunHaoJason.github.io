@@ -65,7 +65,7 @@ function displayData(divId, csvPath) {
                 .attr('text-anchor', 'middle')
                 .attr('fill', 'black')
                 .attr('font-size', 15)
-                .attr('x', HEIGHT / 2)
+                .attr('x', -HEIGHT / 2)
                 .attr('y', -40);;
 
         // Add the line
