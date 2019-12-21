@@ -32,9 +32,6 @@ function displayData(divId, csvPath) {
             };
         }
     ).then(function (data) {
-        // Add X axis --> it is a date format
-        // .domain([0, d3.max(data, (datum) => datum.arraySize)])
-        // .domain(d3.extent(data, (datum) => datum.arraySize))
         const x = d3.scaleLinear()
             .domain([0, d3.max(data, (datum) => datum.arraySize)])
             .range([0, WIDTH])
@@ -42,7 +39,9 @@ function displayData(divId, csvPath) {
 
         svg.append('g')
             .attr('transform', 'translate(0,' + HEIGHT + ')')
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x))
+            .append('text')
+                .text('Array Size');
 
         // Add Y axis
         const y = d3.scaleLinear()
@@ -60,8 +59,8 @@ function displayData(divId, csvPath) {
             .attr('stroke', 'steelblue')
             .attr('stroke-width', 1.5)
             .attr('d', d3.line()
-                .x((datum) => x(datum.arraySize))
-                .y((datum) => y(datum.numKeyComparisons))
+                .x(datum => x(datum.arraySize))
+                .y(datum => y(datum.numKeyComparisons))
             );
     });
 }
