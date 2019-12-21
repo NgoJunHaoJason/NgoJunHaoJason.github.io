@@ -12,14 +12,15 @@ const HEIGHT = 480;
 
 function displayData(divId, csvPath) {
     // append the svg object to the body of the page
-    let svg = d3.select('#' + divId)
+    const svgWidth = WIDTH + MARGIN.left + MARGIN.right;
+    const svgHeight = HEIGHT + MARGIN.top + MARGIN.bottom;
+
+    const svg = d3.select('#' + divId)
         .append('svg')
-            .attr('width', WIDTH + MARGIN.left + MARGIN.right)
-            .attr('height', HEIGHT + MARGIN.top + MARGIN.bottom)
-            .attr('viewBox', '0 0 ' + WIDTH + ' ' + HEIGHT)
+            .attr('viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
             .attr('preserveAspectRatio', 'xMidYMid meet')
-        .append('g');
-            // .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+        .append('g')
+            .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
 
     d3.csv(
         csvPath,
@@ -34,9 +35,10 @@ function displayData(divId, csvPath) {
         // Add X axis --> it is a date format
         // .domain([0, d3.max(data, (datum) => datum.arraySize)])
         // .domain(d3.extent(data, (datum) => datum.arraySize))
-        let x = d3.scaleLinear()
+        const x = d3.scaleLinear()
             .domain([0, d3.max(data, (datum) => datum.arraySize)])
-            .range([0, WIDTH]);
+            .range([0, WIDTH])
+            .nice();
 
         svg.append('g')
             .attr('transform', 'translate(0,' + HEIGHT + ')')
@@ -45,7 +47,8 @@ function displayData(divId, csvPath) {
         // Add Y axis
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, (datum) => datum.numKeyComparisons)])
-            .range([HEIGHT, 0]);
+            .range([HEIGHT, 0])
+            .nice();
 
         svg.append('g')
             .call(d3.axisLeft(y));
