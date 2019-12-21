@@ -10,6 +10,9 @@ const MARGIN = {
 const WIDTH = 720;
 const HEIGHT = 480;
 
+const xComponent = 'Array Size';
+const yComponent = 'Number of Key Comparisons';
+
 function displayData(divId, csvPath) {
     // append the svg object to the body of the page
     const svgWidth = WIDTH + MARGIN.left + MARGIN.right;
@@ -26,8 +29,8 @@ function displayData(divId, csvPath) {
         csvPath,
         function (datum) {
             return {
-                arraySize: Number(datum['Array Size']),
-                numKeyComparisons: Number(datum['Number of Key Comparisons']),
+                arraySize: Number(datum[xComponent]),
+                numKeyComparisons: Number(datum[yComponent]),
                 timeTaken: Number(datum['CPU time taken for sorting']),
             };
         }
@@ -44,8 +47,9 @@ function displayData(divId, csvPath) {
                 .text('Array Size')
                 .attr('text-anchor', 'middle')
                 .attr('fill', 'black')
+                .attr('font-size', 15)
                 .attr('x', WIDTH / 2)
-                .attr('y', 20);
+                .attr('y', 40);
 
         // Add Y axis
         const y = d3.scaleLinear()
@@ -54,7 +58,15 @@ function displayData(divId, csvPath) {
             .nice();
 
         svg.append('g')
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(y))
+            .append('text')
+                .text(yComponent)
+                .attr('transform', 'rotate(-90)')
+                .attr('text-anchor', 'middle')
+                .attr('fill', 'black')
+                .attr('font-size', 15)
+                .attr('x', HEIGHT / 2)
+                .attr('y', -40);;
 
         // Add the line
         svg.append('path')
