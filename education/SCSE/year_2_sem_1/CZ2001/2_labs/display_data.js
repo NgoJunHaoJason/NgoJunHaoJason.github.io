@@ -43,7 +43,7 @@ function displayData(divId, csvPath) {
             .append('text')
                 .text('Array Size')
                 .attr('text-anchor', 'middle')
-                .attr('x', WIDTH / 2);
+                .attr('x', WIDTH / 2)
                 .attr('y', 20);
 
         // Add Y axis
