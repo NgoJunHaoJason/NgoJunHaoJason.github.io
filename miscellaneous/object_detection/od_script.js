@@ -105,22 +105,22 @@ async function startStream(constraints, video) {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     video.srcObject = stream;
 
-    const tracks = video.srcObject.getVideoTracks();
-    tracks.forEach(track => track.onended = darkenCanvas());
+    for (const track of video.srcObject.getVideoTracks()) {
+        track.onended = () => darkenCanvas();
+    }
 };
 
 function stopStream(video) {
     if (!video.srcObject) return; // stop before giving permission
 
-    const tracks = video.srcObject.getVideoTracks();
-    tracks.forEach(track => {
+    for (const track of video.srcObject.getVideoTracks()) {
         track.stop();
 
         if (requestAnimationFrameId) {
             window.cancelAnimationFrame(requestAnimationFrameId);
             requestAnimationFrameId = null;
         }
-    });
+    };
 
     video.srcObject = null;
 }
@@ -132,9 +132,10 @@ function drawCanvas() {
 
     if (detectionModel) {
         detectionModel.detect(video)
-            .then(predictions => predictions
-                .forEach(detection => drawBBoxOnCanvas(detection))
-            );
+            .then(detections => {
+                for (const detection of detections)
+                    drawBBoxOnCanvas(detection); 
+        });
     }
     else displayTextOnCanvas('loading object detector...');
 
