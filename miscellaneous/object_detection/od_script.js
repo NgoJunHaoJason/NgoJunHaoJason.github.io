@@ -85,6 +85,7 @@ function loadScript(src) {
 
 function startCamera() {
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
+        video.onloadeddata = drawCanvas;
         startStream(CONSTRAINTS, video)
             .then(() => {
                 startStopButton.onclick = stopCamera;
@@ -96,11 +97,11 @@ function startCamera() {
 }
 
 function stopCamera() {
+    video.onloadeddata = darkenCanvas;
     stopStream(video)
         .then(() => {
             startStopButton.onclick = startCamera;
             startStopButton.innerHTML = 'start';
-            darkenCanvas();
         })
         .catch(console.log);
 }
