@@ -106,7 +106,7 @@ async function startStream(constraints, video) {
     video.srcObject = stream;
 
     const tracks = video.srcObject.getVideoTracks();
-    tracks.forEach(track.onended = () => darkenCanvas());
+    tracks.forEach(track => track.onended = darkenCanvas());
 };
 
 function stopStream(video) {
