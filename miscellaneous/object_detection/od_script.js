@@ -110,12 +110,10 @@ async function startStream(constraints, video) {
 };
 
 function stopStream(video) {
-    
-
     const tracks = video.srcObject.getVideoTracks();
     tracks.forEach(track => {
         track.stop();
-        
+
         if (requestAnimationFrameId) {
             window.cancelAnimationFrame(requestAnimationFrameId);
             requestAnimationFrameId = null;
@@ -141,7 +139,7 @@ function drawCanvas() {
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
     // https://stackoverflow.com/a/33835857/9171260
     // without this, canvas stuck on first frame
-    let requestAnimationFrameId = requestAnimationFrame(drawCanvas);
+    requestAnimationFrameId = requestAnimationFrame(drawCanvas);
 }
 
 function drawBBoxOnCanvas(detection) {
