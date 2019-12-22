@@ -63,13 +63,13 @@ function setUpObjectDetection() {
     loadScript(TENSORFLOW_URL)
         .then(() => loadScript(COCO_SSD_URL))
         .then(() => cocoSsd.load())
-        .then((model) => detectionModel = model)
-        .catch((error) => alert(error.message));
+        .then(model => detectionModel = model)
+        .catch(error => console.log(error.message));
 }
 
 function loadScript(src) {
     return new Promise(function (resolve, reject) {
-        let script = document.createElement('script');
+        const script = document.createElement('script');
         script.src = src;
 
         script.onload = () => resolve(script);
@@ -88,9 +88,7 @@ function startCamera() {
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
         startStream(CONSTRAINTS, video);
     }
-    else {
-        displayTextOnCanvas('no access to camera...');
-    }
+    else displayTextOnCanvas('no access to camera...');
 }
 
 function stopCamera() {
@@ -105,11 +103,16 @@ function stopCamera() {
 async function startStream(constraints, video) {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     video.srcObject = stream;
+
+    const tracks = video.srcObject.getVideoTracks();
+    tracks.forEach(track.onended = () => darkenCanvas());
 };
 
 function stopStream(video) {
-    video.srcObject.getVideoTracks()[0].stop();
-    darkenCanvas();
+    const tracks = video.srcObject.getVideoTracks();
+    tracks.forEach(track => track.stop);
+
+    video.srcObject = null;
 }
 
 // canvas functions below
@@ -119,30 +122,29 @@ function drawCanvas() {
 
     if (detectionModel) {
         detectionModel.detect(video)
-            .then((predictions) => predictions.forEach(
-                function (detection) {
-                    if (detection.score < CONFIDENCE_THRESHOLD) {
-                        return;
-                    }
-
-                    let bbox = detection.bbox;
-                    context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
-                    context.strokeText(
-                        detection.class + ' ' + detection.score.toFixed(2),
-                        bbox[0] + 2,
-                        bbox[1] + 12
-                    );
-                }
-            )
+            .then(predictions => predictions
+                .forEach(detection => drawBBoxOnCanvas(detection))
             );
     }
-    else {
-        displayTextOnCanvas('loading object detector...');
-    }
+    else displayTextOnCanvas('loading object detector...');
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
     // https://stackoverflow.com/a/33835857/9171260
     requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
+}
+
+function drawBBoxOnCanvas(detection) {
+    if (detection.score < CONFIDENCE_THRESHOLD) {
+        return;
+    }
+
+    const bbox = detection.bbox;
+    context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
+    context.strokeText(
+        detection.class + ' ' + detection.score.toFixed(2),
+        bbox[0] + 2,
+        bbox[1] + 12
+    );
 }
 
 function displayTextOnCanvas(text) {
