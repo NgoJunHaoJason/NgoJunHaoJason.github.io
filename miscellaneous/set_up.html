@@ -124,75 +124,88 @@
             </ul>
         </p>
 
-        <h3>deep learning environment (300 IQ move)</h3>
-        <p>
+        <h3>set up deep learning environment</h3>
+        <button class="collapsible">300 IQ move</button>
+        <div class="collapsible-content">
+            <ul>
+                <li>
+                    conda install cudatoolkit
+                </li>
+                <li>
+                    conda install cudnn
+                </li>
+            </ul>
+
+            reference:
             <a target="_blank" href="https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-468882301">
                 use conda for workaround
             </a>
-        </p>
+        </div>
+        <br>
+        <button class="collapsible">convoluted way</button>
+        <div class="collapsible-content">
+            <p>
+                note
+                <ul>
+                    <li>
+                        when logging in, screen flickers twice
+                    </li>
 
-        <h3>deep learning environment (convoluted way)</h3>
-        <p>
-            note
-            <ul>
-                <li>
-                    when logging in, screen flickers twice
-                </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://github.com/tensorflow/tensorflow/issues/30638#issuecomment-529976637">
+                            Could not dlopen library 'libcublas.so.10.0';
+                        </a>
+                    </li>
+                </ul>
 
-                <li>
-                    <a target="_blank"
-                        href="https://github.com/tensorflow/tensorflow/issues/30638#issuecomment-529976637">
-                        Could not dlopen library 'libcublas.so.10.0';
-                    </a>
-                </li>
-            </ul>
+                TODO
+                <ul>
+                    <li>
+                        list steps
+                    </li>
+                </ul>
 
-            TODO
-            <ul>
-                <li>
-                    list steps
-                </li>
-            </ul>
+                constraints
+                <ul>
+                    <li>
+                        gpu - nvidia rtx2060 - nvidia driver 430
+                    </li>
 
-            constraints
-            <ul>
-                <li>
-                    gpu - nvidia rtx2060 - nvidia driver 430
-                </li>
+                    <li>
+                        cuda 10.0
+                    </li>
 
-                <li>
-                    cuda 10.0
-                </li>
+                    <li>
+                        tensorflow 2.0.0
+                    </li>
+                </ul>
 
-                <li>
-                    tensorflow 2.0.0
-                </li>
-            </ul>
+                references
+                <ul>
+                    <li>
+                        <a target="_blank"
+                            href="https://hackernoon.com/deep-learning-software-setup-cuda-10-ubuntu-18-04-15548cefa30">
+                            Deep Learning Software Setup: CUDA 10 + Ubuntu 18.04
+                        </a>
+                    </li>
 
-            references
-            <ul>
-                <li>
-                    <a target="_blank"
-                        href="https://hackernoon.com/deep-learning-software-setup-cuda-10-ubuntu-18-04-15548cefa30">
-                        Deep Learning Software Setup: CUDA 10 + Ubuntu 18.04
-                    </a>
-                </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://medium.com/better-programming/how-to-install-nvidia-drivers-and-cuda-10-0-for-rtx-2080-ti-gpu-on-ubuntu-16-04-18-04-ce32e4edf1c0">
+                            How To Install Nvidia Drivers and CUDA-10.0 for RTX 2080 Ti GPU on Ubuntu-16.04/18.04
+                        </a>
+                    </li>
 
-                <li>
-                    <a target="_blank"
-                        href="https://medium.com/better-programming/how-to-install-nvidia-drivers-and-cuda-10-0-for-rtx-2080-ti-gpu-on-ubuntu-16-04-18-04-ce32e4edf1c0">
-                        How To Install Nvidia Drivers and CUDA-10.0 for RTX 2080 Ti GPU on Ubuntu-16.04/18.04
-                    </a>
-                </li>
-
-                <li>
-                    <a target="_blank"
-                        href="https://towardsdatascience.com/how-to-make-tensorflow-work-on-rtx-20xx-series-73eb409bd3c0">
-                        How to make Tensorflow work on RTX 20XX series GPUs
-                    </a>
-                </li>
-            </ul>
-        </p>
+                    <li>
+                        <a target="_blank"
+                            href="https://towardsdatascience.com/how-to-make-tensorflow-work-on-rtx-20xx-series-73eb409bd3c0">
+                            How to make Tensorflow work on RTX 20XX series GPUs
+                        </a>
+                    </li>
+                </ul>
+            </p>
+        </div>
 
         <h3>connect to NTUSecure</h3>
         <p>
