@@ -40,7 +40,7 @@ const startStopButton = document.getElementById('start-stop-button');
 
 // set up detection model
 let detectionModel = null;
-let isPlaying = false;
+let requestAnimationFrameId = null;
 
 addLoadEvent(setUpObjectDetection);
 
@@ -85,7 +85,6 @@ function loadScript(src) {
 function startCamera() {
     startStopButton.onclick = stopCamera;
     startStopButton.innerHTML = 'stop';
-    isPlaying = true;
 
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
         startStream(CONSTRAINTS, video);
@@ -96,7 +95,6 @@ function startCamera() {
 function stopCamera() {
     startStopButton.onclick = startCamera;
     startStopButton.innerHTML = 'start';
-    isPlaying = false;
 
     stopStream(video);
 }
@@ -112,6 +110,10 @@ async function startStream(constraints, video) {
 };
 
 function stopStream(video) {
+    if (requestAnimationFrameId) {
+        window.cancelAnimationFrame(requestAnimationFrameId);
+    }
+
     const tracks = video.srcObject.getVideoTracks();
     tracks.forEach(track => track.stop);
 
@@ -121,10 +123,6 @@ function stopStream(video) {
 // canvas functions below
 
 function drawCanvas() {
-    if (!isPlaying) {
-        darkenCanvas();
-        return;
-    }
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
 
     if (detectionModel) {
@@ -137,13 +135,12 @@ function drawCanvas() {
 
     // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
     // https://stackoverflow.com/a/33835857/9171260
-    requestAnimationFrame(drawCanvas); // without this, canvas stuck on first frame
+    // without this, canvas stuck on first frame
+    let requestAnimationFrameId = requestAnimationFrame(drawCanvas);
 }
 
 function drawBBoxOnCanvas(detection) {
-    if (detection.score < CONFIDENCE_THRESHOLD) {
-        return;
-    }
+    if (detection.score < CONFIDENCE_THRESHOLD) return;
 
     const bbox = detection.bbox;
     context.strokeRect(bbox[0], bbox[1], bbox[2], bbox[3]);
