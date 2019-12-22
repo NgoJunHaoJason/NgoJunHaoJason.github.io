@@ -100,6 +100,7 @@ function stopCamera() {
         .then(() => {
             startStopButton.onclick = startCamera;
             startStopButton.innerHTML = 'start';
+            darkenCanvas();
         })
         .catch(console.log);
 }
@@ -137,17 +138,24 @@ function drawCanvas() {
 
     if (detectionModel) {
         detectionModel.detect(video)
-            .then(detections => {
-                for (const detection of detections)
-                    drawBBoxOnCanvas(detection); 
-        });
+            .then(detections => handleDetections(detections))
+            .then(() => requestAnimationFrameId = requestAnimationFrame(drawCanvas))
+            .catch(console.log);
     }
-    else displayTextOnCanvas('loading object detector...');
+    else {
+        displayTextOnCanvas('loading object detector...');
 
-    // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
-    // https://stackoverflow.com/a/33835857/9171260
-    // without this, canvas stuck on first frame
-    requestAnimationFrameId = requestAnimationFrame(drawCanvas);
+        // http://www.javascriptkit.com/javatutors/requestanimationframe.shtml
+        // https://stackoverflow.com/a/33835857/9171260
+        // without this, canvas stuck on first frame
+        requestAnimationFrameId = requestAnimationFrame(drawCanvas);
+    }
+}
+
+async function handleDetections(detections) {
+    for (const detection of detections) {
+        drawBBoxOnCanvas(detection); 
+    }
 }
 
 function drawBBoxOnCanvas(detection) {
