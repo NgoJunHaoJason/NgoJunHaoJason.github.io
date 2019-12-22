@@ -110,12 +110,17 @@ async function startStream(constraints, video) {
 };
 
 function stopStream(video) {
-    if (requestAnimationFrameId) {
-        window.cancelAnimationFrame(requestAnimationFrameId);
-    }
+    
 
     const tracks = video.srcObject.getVideoTracks();
-    tracks.forEach(track => track.stop);
+    tracks.forEach(track => {
+        track.stop();
+        
+        if (requestAnimationFrameId) {
+            window.cancelAnimationFrame(requestAnimationFrameId);
+            requestAnimationFrameId = null;
+        }
+    });
 
     video.srcObject = null;
 }
