@@ -40,6 +40,7 @@ const startStopButton = document.getElementById('start-stop-button');
 
 // set up detection model
 let detectionModel = null;
+let isPlaying = false;
 
 addLoadEvent(setUpObjectDetection);
 
@@ -84,6 +85,7 @@ function loadScript(src) {
 function startCamera() {
     startStopButton.onclick = stopCamera;
     startStopButton.innerHTML = 'stop';
+    isPlaying = true;
 
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
         startStream(CONSTRAINTS, video);
@@ -94,6 +96,7 @@ function startCamera() {
 function stopCamera() {
     startStopButton.onclick = startCamera;
     startStopButton.innerHTML = 'start';
+    isPlaying = false;
 
     stopStream(video);
 }
@@ -118,6 +121,10 @@ function stopStream(video) {
 // canvas functions below
 
 function drawCanvas() {
+    if (!isPlaying) {
+        darkenCanvas();
+        return;
+    }
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight);
 
     if (detectionModel) {
