@@ -46,6 +46,15 @@ let requestAnimationFrameId = null;
 addLoadEvent(setUpObjectDetection);
 
 function setUpObjectDetection() {
+    setUpVideoPlayer()
+        .then(() => loadScript(TENSORFLOW_URL))
+        .then(() => loadScript(COCO_SSD_URL))
+        .then(() => cocoSsd.load())
+        .then(model => detectionModel = model)
+        .catch(error => console.log(error.message));
+}
+
+async function setUpVideoPlayer() {
     // add event handlers
     video.onloadeddata = drawCanvas;
     startStopButton.onclick = startCamera;
@@ -61,12 +70,6 @@ function setUpObjectDetection() {
             window.msRequestAnimationFrame ||
             function (func) { return setTimeout(func, 1000 / 60); };
     }
-
-    loadScript(TENSORFLOW_URL)
-        .then(() => loadScript(COCO_SSD_URL))
-        .then(() => cocoSsd.load())
-        .then(model => detectionModel = model)
-        .catch(error => console.log(error.message));
 }
 
 function loadScript(src) {
@@ -100,6 +103,11 @@ function stopCamera() {
     video.onloadeddata = darkenCanvas;
     stopStream(video)
         .then(() => {
+            if (requestAnimationFrameId) {
+                window.cancelAnimationFrame(requestAnimationFrameId);
+                requestAnimationFrameId = null;
+            }
+
             startStopButton.onclick = startCamera;
             startStopButton.innerHTML = 'start';
         })
@@ -113,7 +121,7 @@ async function startStream(constraints, video) {
     video.srcObject = stream;
 
     for (const track of video.srcObject.getVideoTracks()) {
-        track.onended = () => darkenCanvas();
+        track.onended = darkenCanvas;
     }
 };
 
@@ -122,11 +130,6 @@ async function stopStream(video) {
 
     for (const track of video.srcObject.getVideoTracks()) {
         track.stop();
-
-        if (requestAnimationFrameId) {
-            window.cancelAnimationFrame(requestAnimationFrameId);
-            requestAnimationFrameId = null;
-        }
     };
 
     video.srcObject = null;
