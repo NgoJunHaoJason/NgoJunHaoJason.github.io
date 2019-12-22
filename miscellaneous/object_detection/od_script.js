@@ -7,6 +7,7 @@
 // camera - https://stackoverflow.com/questions/49473678/accessing-device-camera-using-javascript
 // canvas - https://www.w3schools.com/tags/canvas_drawimage.asp
 // object detection - https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
+// MediaStreamTrack- https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack
 
 // initialise stuff
 const TENSORFLOW_URL = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js';
@@ -83,20 +84,24 @@ function loadScript(src) {
 // camera functions below
 
 function startCamera() {
-    startStopButton.onclick = stopCamera;
-    startStopButton.innerHTML = 'stop';
-
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        startStream(CONSTRAINTS, video);
+        startStream(CONSTRAINTS, video)
+            .then(() => {
+                startStopButton.onclick = stopCamera;
+                startStopButton.innerHTML = 'stop';
+            })
+            .catch(console.log);
     }
     else displayTextOnCanvas('no access to camera...');
 }
 
 function stopCamera() {
-    startStopButton.onclick = startCamera;
-    startStopButton.innerHTML = 'start';
-
-    stopStream(video);
+    stopStream(video)
+        .then(() => {
+            startStopButton.onclick = startCamera;
+            startStopButton.innerHTML = 'start';
+        })
+        .catch(console.log);
 }
 
 // stream functions below
@@ -106,11 +111,11 @@ async function startStream(constraints, video) {
     video.srcObject = stream;
 
     for (const track of video.srcObject.getVideoTracks()) {
-        track.onended = () => setTimeout(darkenCanvas, 1000);
+        track.onended = () => darkenCanvas();
     }
 };
 
-function stopStream(video) {
+async function stopStream(video) {
     if (!video.srcObject) return; // stop before giving permission
 
     for (const track of video.srcObject.getVideoTracks()) {
