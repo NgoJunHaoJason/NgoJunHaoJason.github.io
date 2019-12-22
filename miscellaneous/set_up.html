@@ -46,25 +46,63 @@
     <!--start of content-related code-->
     <div class="content">
         <h3>audio not working</h3>
-        <p>
+        <button class="collapsible">solution</button>
+        <div class="collapsible-content">
+            <ul>
+                <li>
+                    pactl load-module module-detect
+                </li>
+                <li>
+                    <i>restart computer</i>
+                </li>
+            </ul>
+
+            reference:
             <a target="_blank" href="https://askubuntu.com/a/1046133/998106">
                 fix hardware output devices not being detected
             </a>
-        </p>
+        </div>
 
         <h3>"wifi adapter not found"</h3>
-
         <button class="collapsible">solution</button>
         <div class="collapsible-content">
-            <p>
-                <script src="https://gist.github.com/NgoJunHaoJason/f014362c4ab15557a2288f30defcb24a.js"></script>
+            <ul>
+                <li>
+                    sudo apt update
+                </li>
+                <li>
+                    sudo apt install git build-essential
+                </li>
+                <li>
+                    git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
+                </li>
+                <li>
+                    cd backport-iwlwifi/
+                </li>
+                <li>
+                    make defconfig-iwlwifi-public
+                </li>
+                <li>
+                    sed -i 's/CPTCFG_IWLMVM_VENDOR_CMDS=y/# CPTCFG_IWLMVM_VENDOR_CMDS is not set/' .config
+                </li>
+                <li>
+                    make -j4
+                </li>
+                <li>
+                    sudo make install
+                </li>
+                <li>
+                    <i>restart computer</i>
+                </li>
+                <li>
+                    sudo modprobe iwlwifi
+                </li>
+            </ul>
 
-                reference: 
-                <a target="_blank"
-                    href="https://askubuntu.com/a/1156246/998106">
-                    chilli555's answer
-                </a>
-            </p>
+            reference:
+            <a target="_blank" href="https://askubuntu.com/a/1156246/998106">
+                chilli555's answer
+            </a>
         </div>
 
         <p>
