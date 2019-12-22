@@ -110,6 +110,8 @@ async function startStream(constraints, video) {
 };
 
 function stopStream(video) {
+    if (!video.srcObject) return; // stop before giving permission
+
     const tracks = video.srcObject.getVideoTracks();
     tracks.forEach(track => {
         track.stop();
