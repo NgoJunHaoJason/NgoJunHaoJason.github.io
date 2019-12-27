@@ -4,16 +4,14 @@
 
 ## TODO
 
-- complete cz2001 page
+1. complete cz2001 page
     - add lecture content
     - add tutorial content
 
-- fix D3 line plots
-    - fix graph size
-    - display axes labels
+2. fix D3 line plots
     - display details on hover
 
-- fix problems with object detection
+3. fix problems with object detection
     - fix slow response on page load
     - fix canvas displaying only the first frame on Safari on iPhone
 

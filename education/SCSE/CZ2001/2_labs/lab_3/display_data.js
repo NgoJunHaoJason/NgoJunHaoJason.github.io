@@ -90,32 +90,32 @@ function displayData(divId, csvPath) {
 let displaySortingResults = function () {
     displayData(
         'insertion_sort_ascending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_ascending_results.csv'
+        'data/cz2001_lab3_insertion_sort_ascending_results.csv'
     );
 
     displayData(
         'insertion_sort_random_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_random_results.csv'
+        'data/cz2001_lab3_insertion_sort_random_results.csv'
     );
 
     displayData(
         'insertion_sort_descending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_insertion_sort_descending_results.csv'
+        'data/cz2001_lab3_insertion_sort_descending_results.csv'
     );
 
     displayData(
         'merge_sort_ascending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_ascending_results.csv'
+        'data/cz2001_lab3_merge_sort_ascending_results.csv'
     );
 
     displayData(
         'merge_sort_random_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_random_results.csv'
+        'data/cz2001_lab3_merge_sort_random_results.csv'
     );
 
     displayData(
         'merge_sort_descending_results_visualisation',
-        'lab_3_csv/cz2001_lab3_merge_sort_descending_results.csv'
+        'data/cz2001_lab3_merge_sort_descending_results.csv'
     );
 }
 
