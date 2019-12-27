@@ -9,8 +9,8 @@ function displaySetsPicture() {
             .attr('viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
             .attr('preserveAspectRatio', 'xMidYMid meet');
     
-    const xOffset = 160;
-    const yOffset = 160;
+    const xOffset = 100;
+    const yOffset = 100;
     const circleRadius = 60;
 
     const alphabetSet = setsPictureSVG.append('g')
@@ -42,4 +42,10 @@ function displaySetsPicture() {
             .attr('y', 20 * index - 30)
             .text(alphabet);
     }
+
+    setsPictureSVG.append('text')
+        .attr('x', svgWidth - 300)
+        .attr('y', svgHeight - 20)
+        .attr('font-size', 24)
+        .text('TODO: add more examples');
 }
