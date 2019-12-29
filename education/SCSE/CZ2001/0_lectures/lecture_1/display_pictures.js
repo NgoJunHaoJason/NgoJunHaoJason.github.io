@@ -263,7 +263,7 @@ function displayFloorAndCeilingPicture(divId) {
     floorEnter.append('line')
         .attr('x1', datum => xScale(datum))
         .attr('y1', datum => yScale(datum))
-        .attr('x2', datum => xScale(datum + 1))
+        .attr('x2', datum => xScale(datum + 0.9))
         .attr('y2', datum => yScale(datum))
         .attr('stroke', 'steelBlue');
 
@@ -301,7 +301,7 @@ function displayFloorAndCeilingPicture(divId) {
 
     // reference: https://stackoverflow.com/a/19236813/9171260
     ceilingEnter.append('line')
-        .attr('x1', datum => xScale(datum - 1))
+        .attr('x1', datum => xScale(datum - 0.9))
         .attr('y1', datum => yScale(datum))
         .attr('x2', datum => xScale(datum))
         .attr('y2', datum => yScale(datum))
