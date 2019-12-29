@@ -1,5 +1,6 @@
 displaySetsPicture('sets_picture');
 displayFunctionPicture('function_picture');
+displayFloorAndCeilingPicture('floor_and_ceiling_picture');
 
 function displaySetsPicture(divId) {
     const svgWidth = 720;
@@ -60,8 +61,7 @@ function displaySetsPicture(divId) {
         .domain([1, numberSets.length])
         .range(['cyan', 'blue']);
 
-    const groupEnter = numberGroup.selectAll('g').data(numberSets)
-        .enter().append('g');
+    const groupEnter = numberGroup.selectAll('g').data(numberSets).enter();
 
     groupEnter.append('ellipse')
         .attr('cy', (datum, index) => index * 20)
@@ -191,4 +191,119 @@ function displayFunctionPicture(divId) {
         .attr('stroke', 'black')
         .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrowhead)');
+}
+
+function displayFloorAndCeilingPicture(divId) {
+    const svgWidth = 720;
+    const svgHeight = 240;
+
+    const margin = { left: 40, top: 40, right: 40, bottom: 40 };
+
+    const plotWidth = svgWidth / 2 - margin.left - margin.right;
+    const plotHeight = svgHeight - margin.top - margin.bottom;
+
+    let data = [-3, -2, -1, 0, 1, 2, 3];
+
+    const dataWithBuffer = [-4].concat(data).concat([4]);
+
+    const svg = d3.select('#' + divId)
+        .append('svg')
+        .attr('viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    const xScale = d3.scaleLinear()
+        .domain(d3.extent(dataWithBuffer))
+        .range([0, plotWidth]);
+
+    const yScale = d3.scaleLinear()
+        .domain(d3.extent(dataWithBuffer))
+        .range([plotHeight, 0]);
+
+    const xAxis = d3.axisBottom(xScale)
+        .tickValues(data)
+        .tickFormat(d3.format('.0f'));
+
+    const yAxis = d3.axisLeft(yScale)
+        .tickValues(data)
+        .tickFormat(d3.format('.0f'));
+
+    // floor function
+    const floorGroup = svg.append('g')
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+    floorGroup.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('x', plotWidth / 2)
+        .text('floor function');
+
+    floorGroup.append('g')
+        .attr('transform', `translate(0, ${plotHeight})`)
+        .call(xAxis);
+
+    floorGroup.append('g')
+        .call(yAxis);
+
+    const floorEnter = floorGroup.selectAll('circle').data(data).enter();
+
+    floorEnter.append('circle')
+        .attr('cx', datum => xScale(datum))
+        .attr('cy', datum => yScale(datum))
+        .attr('r', 2)
+        .attr('fill', 'steelBlue')
+        .attr('stroke', 'steelBlue');
+
+    floorEnter.append('circle')
+        .attr('cx', datum => xScale(datum + 1))
+        .attr('cy', datum => yScale(datum))
+        .attr('r', 2)
+        .attr('fill', 'white')
+        .attr('stroke', 'steelBlue');
+
+    // reference: https://stackoverflow.com/a/19236813/9171260
+    floorEnter.append('line')
+        .attr('x1', datum => xScale(datum))
+        .attr('y1', datum => yScale(datum))
+        .attr('x2', datum => xScale(datum + 1))
+        .attr('y2', datum => yScale(datum))
+        .attr('stroke', 'steelBlue');
+
+    // ceiling function
+    const ceilingGroup = svg.append('g')
+        .attr('transform', `translate(${svgWidth / 2 + margin.left}, ${margin.top})`);
+
+    ceilingGroup.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('x', plotWidth / 2)
+        .text('ceiling function');
+
+    ceilingGroup.append('g')
+        .attr('transform', `translate(0, ${plotHeight})`)
+        .call(xAxis);
+
+    ceilingGroup.append('g')
+        .call(yAxis);
+
+    const ceilingEnter = ceilingGroup.selectAll('circle').data(data).enter();
+
+    ceilingEnter.append('circle')
+        .attr('cx', datum => xScale(datum - 1))
+        .attr('cy', datum => yScale(datum))
+        .attr('r', 2)
+        .attr('fill', 'white')
+        .attr('stroke', 'steelBlue');
+
+    ceilingEnter.append('circle')
+        .attr('cx', datum => xScale(datum))
+        .attr('cy', datum => yScale(datum))
+        .attr('r', 2)
+        .attr('fill', 'steelBlue')
+        .attr('stroke', 'steelBlue');
+
+    // reference: https://stackoverflow.com/a/19236813/9171260
+    ceilingEnter.append('line')
+        .attr('x1', datum => xScale(datum - 1))
+        .attr('y1', datum => yScale(datum))
+        .attr('x2', datum => xScale(datum))
+        .attr('y2', datum => yScale(datum))
+        .attr('stroke', 'steelBlue');
 }
