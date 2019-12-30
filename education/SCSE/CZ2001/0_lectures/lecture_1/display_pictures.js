@@ -2,6 +2,7 @@ displaySetsPicture('sets_picture');
 displayFunctionPicture('function_picture');
 displayFloorAndCeilingPicture('floor_and_ceiling_picture');
 displayExponentiationPicture('exponentiation_picture');
+displayLogarithmPicture('logarithm_picture');
 
 function displaySetsPicture(divId) {
     const svgWidth = 720;
@@ -315,7 +316,7 @@ function displayExponentiationPicture(divId) {
 
     const margin = { left: 20, top: 20, right: 20, bottom: 20 };
 
-    const plotWidth = svgWidth / 2 - margin.left - margin.right;
+    const plotWidth = svgWidth - margin.left - margin.right;
     const plotHeight = svgHeight - margin.top - margin.bottom;
 
     let data = [-3, -2, -1, 0, 1, 2, 3];
@@ -375,4 +376,74 @@ function displayExponentiationPicture(divId) {
     plotGroup.append('text')
         .attr('y', -5)
         .text('TODO: complete plot');
+}
+
+function displayLogarithmPicture(divId) {
+    const svgWidth = 480;
+    const svgHeight = 240;
+
+    const margin = { left: 20, top: 20, right: 20, bottom: 10 };
+
+    const plotWidth = svgWidth - margin.left - margin.right;
+    const plotHeight = svgHeight - margin.top - margin.bottom;
+
+    let data = [0.000001, 0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const logarithmPictureSVG = d3.select('#' + divId)
+        .append('svg')
+        .attr('viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    const xScale = d3.scaleLinear()
+        .domain([0, d3.max(data)])
+        .range([0, plotWidth]);
+
+    const yScale = d3.scaleLinear()
+        .domain([-4, 4])
+        .range([plotHeight, 0]);
+
+    const xAxis = d3.axisBottom(xScale)
+        .tickValues(data.slice(11, data.length));
+
+    const yAxis = d3.axisLeft(yScale);
+
+    const plotGroup = logarithmPictureSVG.append('g')
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+    const xAxisGroup = plotGroup.append('g')
+        .attr('transform', `translate(0, ${plotHeight / 2})`)
+        .call(xAxis);
+
+    xAxisGroup.append('text')
+        .attr('x', plotWidth + 10)
+        .attr('y', 5)
+        .attr('fill', 'black')
+        .attr('font-size', 14)
+        .text('x');
+
+    const yAxisGroup = plotGroup.append('g')
+        .call(yAxis);
+
+    yAxisGroup.append('text')
+        .attr('y', -5)
+        .attr('fill', 'black')
+        .attr('font-size', 14)
+        .text('y');
+
+    const line = d3.line()
+        .x(datum => xScale(datum))
+        .y(datum => yScale(Math.log2(datum)))
+        .curve(d3.curveBasis);
+
+    plotGroup.append('path')
+        .attr('d', line(data))
+        .attr('fill', 'none')
+        .attr('stroke', 'steelBlue');
+
+    // correct way: https://stackoverflow.com/a/50942335/9171260
+    plotGroup.append('text')
+        .attr('x', plotWidth / 2)
+        .attr('y', -5)
+        .attr('text-anchor', 'middle')
+        .text('y = log\u2082 x')
 }
