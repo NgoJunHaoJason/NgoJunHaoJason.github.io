@@ -1,6 +1,7 @@
 displaySetsPicture('sets_picture');
 displayFunctionPicture('function_picture');
 displayFloorAndCeilingPicture('floor_and_ceiling_picture');
+displayExponentiationPicture('exponentiation_picture');
 
 function displaySetsPicture(divId) {
     const svgWidth = 720;
@@ -306,4 +307,72 @@ function displayFloorAndCeilingPicture(divId) {
         .attr('x2', datum => xScale(datum))
         .attr('y2', datum => yScale(datum))
         .attr('stroke', 'steelBlue');
+}
+
+function displayExponentiationPicture(divId) {
+    const svgWidth = 480;
+    const svgHeight = 240;
+
+    const margin = { left: 20, top: 20, right: 20, bottom: 20 };
+
+    const plotWidth = svgWidth / 2 - margin.left - margin.right;
+    const plotHeight = svgHeight - margin.top - margin.bottom;
+
+    let data = [-3, -2, -1, 0, 1, 2, 3];
+
+    const exponentiationPictureSVG = d3.select('#' + divId)
+        .append('svg')
+        .attr('viewBox', '0 0 ' + svgWidth + ' ' + svgHeight)
+        .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    const xScale = d3.scaleLinear()
+        .domain(d3.extent(data))
+        .range([0, plotWidth]);
+
+    const yScale = d3.scaleLinear()
+        .domain([0, 5])
+        .range([plotHeight, 0]);
+
+    const xAxis = d3.axisBottom(xScale)
+        .tickValues(data)
+        .tickFormat(d3.format('.0f'));
+
+    const yAxis = d3.axisLeft(yScale)
+        .tickValues([1, 2, 3, 4, 5])
+        .tickFormat(d3.format('.0f'));
+
+    const plotGroup = exponentiationPictureSVG.append('g')
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+    plotGroup.append('g')
+        .attr('transform', `translate(0, ${plotHeight})`)
+        .call(xAxis);
+
+    plotGroup.append('g')
+        .attr('transform', `translate(${plotWidth / 2}, 0)`)
+        .call(yAxis);
+
+    const base2Line = d3.line()
+        .x(datum => xScale(datum))
+        .y(datum => yScale(Math.pow(2, datum)))
+        .curve(d3.curveBasis);
+
+    plotGroup.append('path')
+        .attr('d', base2Line(data))
+        .attr('fill', 'none')
+        .attr('stroke', 'steelBlue');
+
+    const base10Line = d3.line()
+        .x(datum => xScale(datum))
+        .y(datum => yScale(Math.pow(10, datum)))
+        .curve(d3.curveBasis);
+
+    plotGroup.append('path')
+        .attr('d', base10Line(data))
+        .attr('fill', 'none')
+        .attr('stroke', 'steelBlue');
+
+    plotGroup.append('text')
+        .attr('y', -5)
+        .text('TODO: complete plot');
 }
