@@ -171,13 +171,82 @@
                     log<sub>b</sub> xy = log<sub>b</sub> x + log<sub>b</sub> y
                 </li>
                 <li>
-                    log<sub>b</sub> x = <sup>log<sub>k</sub> x</sup> / <sub>log<sub>k</sub> b</sub>
+                    log<sub>b</sub> x = <sup>log<sub>k</sub> x</sup> /
+                    <sub>log<sub>k</sub> b</sub>
                 </li>
             </ul>
         </p>
         <div id="logarithm_picture">
             <!--use D3-->
         </div>
+
+        <h4>Summations and Series</h4>
+        <p>
+            A series is, informally speaking, the sum of the terms of
+            a sequence.
+            <ul>
+                <li>
+                    finite series: S = 1 + 2 + 3 + ... + n =
+                    <sup>n (n + 1)</sup> / <sub>2</sub>
+                </li>
+                <li>
+                    infinite series: S = 1 + &frac12; + &frac14; + &frac18; +
+                    ... =
+                    &sum;<sub>n&rightarrow;&infin;</sub><sup>1</sup>/<sub>2<sup>n</sup></sub>
+                </li>
+            </ul>
+        </p>
+
+        <h4>Arithmetic Series</h4>
+        <p>
+            Each successive term is produced by adding a constant
+            number to the previous term.
+        </p>
+        <p>
+            &emsp;<sup>n-1</sup>&sum;<sub>i=0</sub> (a + i * d)<br>
+            = a + (a + d) + (a + 2d) + ... + (a + id) + ... + [a + (n-1)*d]<br>
+            = <sup>n</sup>/<sub>2</sub> * [2a + (n-1)*d]<br>
+            = <sup>n</sup>/<sub>2</sub> * (a + L)<br>
+            where:
+            <ul>
+                <li>
+                    n = number of terms
+                </li>
+                <li>
+                    a = first term
+                </li>
+                <li>
+                    d = common difference
+                </li>
+                <li>
+                    L = last term
+                </li>
+            </ul>
+        </p>
+
+        <h4>Geometric Series</h4>
+        <p>
+            Each successive term is produced by multiplying the
+            previous term by a constant number.
+        </p>
+        <p>
+            &emsp;<sup>n-1</sup>&sum;<sub>i=0</sub> a * r<sup>i</sup><br>
+            = a + ar + ar<sup>2</sup> + ... + ar<sup>i</sup> + ... + ar<sup>n-1</sup><br>
+            = a * <sup>1 - r<sup>n</sup></sup> / <sub>1 - r</sub><br>
+            = a * <sup>r<sup>n</sup> - 1</sup> / <sub>r - 1</sub><br>
+            where:
+            <ul>
+                <li>
+                    n = number of terms
+                </li>
+                <li>
+                    a = first term
+                </li>
+                <li>
+                    r = common ratio
+                </li>
+            </ul>
+        </p>
     </div>
     <!--end of content-related code-->
 
