@@ -128,14 +128,15 @@
                     <i>b</i><sup>1</sup> = <i>b</i>
                 </li>
                 <li>
-                    <i>b</i><sup>2</sup> = <i>b</i> &times; <i>b</i>
+                    <i>b</i><sup>2</sup> = <i>b</i>(<i>b</i>)
                 </li>
                 <li>
                     ...
                 </li>
                 <li>
-                    <i>b<sup>n</sup></i> = <i>b</i><sup><i>n</i>-1</sup> &times;
-                    <i>b</i>
+                    <i>b<sup>n</sup></i> =
+                    <i>b</i>(<i>b</i><sup><i>n</i>-1</sup>)
+
                 </li>
             </ul>
         </p>
@@ -150,8 +151,9 @@
             produce that number.
             <ul>
                 <li>
-                    y = log<sub>b</sub> x &DoubleLeftRightArrow; x =
-                    b<sup>y</sup>
+                    <i>y</i> = log<sub><i>b</i></sub> <i>x</i>
+                    &DoubleLeftRightArrow;
+                    <i>x</i> = <i>b<sup>y</sup></i>
                 </li>
             </ul>
         </p>
@@ -159,20 +161,24 @@
             formulas:
             <ul>
                 <li>
-                    log<sub>b</sub> 1 = 0 (since b<sup>0</sup> = 1)
+                    log<sub><i>b</i></sub> 1 = 0 (since b<sup>0</sup> = 1)
                 </li>
                 <li>
-                    log<sub>b</sub> 0 is undefined (since b<sup>?</sup> = 0)
+                    log<sub><i>b</i></sub> 0 is undefined (since
+                    <i>b</i><sup>?</sup> = 0)
                 </li>
                 <li>
-                    log<sub>b</sub> x<sup>n</sup> = n log<sub>b</sub> x
+                    log<sub><i>b</i></sub> <i>x<sup>n</sup></i> = <i>n</i>
+                    log<sub><i>b</i></sub> <i>x</i>
                 </li>
                 <li>
-                    log<sub>b</sub> xy = log<sub>b</sub> x + log<sub>b</sub> y
+                    log<sub><i>b</i></sub> <i>xy</i> = log<sub><i>b</i></sub>
+                    <i>x</i> + log<sub><i>b</i></sub> <i>y</i>
                 </li>
                 <li>
-                    log<sub>b</sub> x = <sup>log<sub>k</sub> x</sup> /
-                    <sub>log<sub>k</sub> b</sub>
+                    log<sub><i>b</i></sub> <i>x</i> =
+                    <sup>log<sub><i>c</i></sub> <i>x</i></sup> /
+                    <sub>log<sub><i>c</i></sub> <i>b</i></sub>
                 </li>
             </ul>
         </p>
@@ -186,13 +192,13 @@
             a sequence.
             <ul>
                 <li>
-                    finite series: S = 1 + 2 + 3 + ... + n =
-                    <sup>n (n + 1)</sup> / <sub>2</sub>
+                    finite series: S = 1 + 2 + 3 + ... + <i>n</i> =
+                    <sup><i>n</i>(<i>n</i> + 1)</sup> / <sub>2</sub>
                 </li>
                 <li>
                     infinite series: S = 1 + &frac12; + &frac14; + &frac18; +
                     ... =
-                    &sum;<sub>n&rightarrow;&infin;</sub><sup>1</sup>/<sub>2<sup>n</sup></sub>
+                    &sum;<sub><i>n</i>&rightarrow;&infin;</sub><sup>1</sup>/<sub>2<sup><i>n</i></sup></sub>
                 </li>
             </ul>
         </p>
@@ -203,23 +209,26 @@
             number to the previous term.
         </p>
         <p>
-            &emsp;<sup>n-1</sup>&sum;<sub>i=0</sub> (a + i * d)<br>
-            = a + (a + d) + (a + 2d) + ... + (a + id) + ... + [a + (n-1)*d]<br>
-            = <sup>n</sup>/<sub>2</sub> * [2a + (n-1)*d]<br>
-            = <sup>n</sup>/<sub>2</sub> * (a + L)<br>
+            &emsp;<sup><i>n</i>-1</sup>&sum;<sub><i>i</i>=0</sub> (<i>a</i> +
+            <i>id</i>)<br>
+            = <i>a</i> + (<i>a</i> + <i>d</i>) + (<i>a</i> + 2<i>d</i>) + ... +
+            (<i>a</i> + <i>id</i>) + ... + [<i>a</i> + (<i>n</i>-1)<i>d</i>]<br>
+            = <sup><i>n</i></sup>/<sub>2</sub>[2<i>a</i> +
+            (<i>n</i>-1)<i>d</i>]<br>
+            = <sup><i>n</i></sup>/<sub>2</sub>(<i>a</i> + <i>L</i>)<br>
             where:
             <ul>
                 <li>
-                    n = number of terms
+                    <i>n</i> = number of terms
                 </li>
                 <li>
-                    a = first term
+                    <i>a</i> = first term
                 </li>
                 <li>
-                    d = common difference
+                    <i>d</i> = common difference
                 </li>
                 <li>
-                    L = last term
+                    <i>L</i> = last term
                 </li>
             </ul>
         </p>
@@ -230,22 +239,64 @@
             previous term by a constant number.
         </p>
         <p>
-            &emsp;<sup>n-1</sup>&sum;<sub>i=0</sub> a * r<sup>i</sup><br>
-            = a + ar + ar<sup>2</sup> + ... + ar<sup>i</sup> + ... + ar<sup>n-1</sup><br>
-            = a * <sup>1 - r<sup>n</sup></sup> / <sub>1 - r</sub><br>
-            = a * <sup>r<sup>n</sup> - 1</sup> / <sub>r - 1</sub><br>
+            &emsp;<sup><i>n</i>-1</sup>&sum;<sub><i>i</i>=0</sub>
+            <i>ar<sup>i</sup></i><br>
+            = <i>a</i> + <i>ar</i> + <i>ar</i><sup>2</sup> + ... +
+            <i>ar<sup>i</sup></i> + ... + <i>ar</i><sup><i>n</i>-1</sup><br>
+            = <i>a</i>(<sup>1 - <i>r<sup>n</sup></i></sup> / <sub>1 -
+                <i>r</i></sub>)<br>
+            = <i>a</i>(<sup><i>r<sup>n</sup></i> - 1</sup> / <sub><i>r</i> -
+                1</sub>)<br>
             where:
             <ul>
                 <li>
-                    n = number of terms
+                    <i>n</i> = number of terms
                 </li>
                 <li>
-                    a = first term
+                    <i>a</i> = first term
                 </li>
                 <li>
-                    r = common ratio
+                    <i>r</i> = common ratio
                 </li>
             </ul>
+        </p>
+
+        <h4>Limits</h4>
+        <p>
+            A limit is the value that a function or sequence
+            "approaches" as the input or index approaches some
+            value.
+        </p>
+        <p>
+            TODO: plot chart
+        </p>
+
+        <h4>Differentiation</h4>
+        <p>
+            Differentiating a function is to find the derivative or rate
+            of change of the function.
+        </p>
+        <p>
+            formulas:
+            <ul>
+                <li>
+                    <sup>d</sup>/<sub>dx</sub> <i>cx<sup>n</sup></i> =
+                    <i>cnx</i><sup><i>n</i>-1</sup>
+                </li>
+                <li>
+                    <sup>d</sup>/<sub>dx</sub> <i>b</i><sup>f(<i>x</i>)</sup> =
+                    <i>b</i><sup>f(<i>x</i>)</sup> ln <i>b</i> f'(<i>x</i>)
+                </li>
+                <li>
+                    <sup>d</sup>/<sub>dx</sub> log<sub><i>b</i></sub>
+                    f(<i>x</i>) = <sup>f'(<i>x</i>)</sup> / <sub>f(<i>x</i>) ln <i>b</i></sub>
+                </li>
+            </ul>
+        </p>
+
+        <h4>Proof by Mathematical Induction</h4>
+        <p>
+            
         </p>
     </div>
     <!--end of content-related code-->
