@@ -319,7 +319,7 @@ function displayExponentiationPicture(divId) {
     const plotWidth = svgWidth - margin.left - margin.right;
     const plotHeight = svgHeight - margin.top - margin.bottom;
 
-    let data = [-3, -2, -1, 0, 1, 2, 3];
+    let data = [-3, -2, -1, -0.75, -0.5, -0.25, -0.05, -0.01, 0, 0.25, 0.5, 1, 2, 3];
 
     const exponentiationPictureSVG = d3.select('#' + divId)
         .append('svg')
@@ -335,7 +335,7 @@ function displayExponentiationPicture(divId) {
         .range([plotHeight, 0]);
 
     const xAxis = d3.axisBottom(xScale)
-        .tickValues(data)
+        .tickValues([-3, -2, -1, 0, 1, 2, 3])
         .tickFormat(d3.format('.0f'));
 
     const yAxis = d3.axisLeft(yScale)
@@ -345,9 +345,16 @@ function displayExponentiationPicture(divId) {
     const plotGroup = exponentiationPictureSVG.append('g')
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    plotGroup.append('g')
+    const xAxisGroup = plotGroup.append('g')
         .attr('transform', `translate(0, ${plotHeight})`)
         .call(xAxis);
+
+    xAxisGroup.append('text') // axis label
+        .attr('x', plotWidth + 10)
+        .attr('y', 5)
+        .attr('fill', 'black')
+        .attr('font-size', 14)
+        .text('n');
 
     plotGroup.append('g')
         .attr('transform', `translate(${plotWidth / 2}, 0)`)
@@ -374,8 +381,12 @@ function displayExponentiationPicture(divId) {
         .attr('stroke', 'steelBlue');
 
     plotGroup.append('text')
-        .attr('y', -5)
-        .text('TODO: complete plot');
+        .attr('x', 390)
+        .text('b = 2');
+
+    plotGroup.append('text')
+        .attr('x', 270)
+        .text('b = 10');
 }
 
 function displayLogarithmPicture(divId) {
@@ -387,7 +398,7 @@ function displayLogarithmPicture(divId) {
     const plotWidth = svgWidth - margin.left - margin.right;
     const plotHeight = svgHeight - margin.top - margin.bottom;
 
-    let data = [0.000001, 0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let data = [0.000001, 0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     const logarithmPictureSVG = d3.select('#' + divId)
         .append('svg')
@@ -403,7 +414,7 @@ function displayLogarithmPicture(divId) {
         .range([plotHeight, 0]);
 
     const xAxis = d3.axisBottom(xScale)
-        .tickValues(data.slice(11, data.length));
+        .tickValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
     const yAxis = d3.axisLeft(yScale);
 
@@ -414,7 +425,7 @@ function displayLogarithmPicture(divId) {
         .attr('transform', `translate(0, ${plotHeight / 2})`)
         .call(xAxis);
 
-    xAxisGroup.append('text')
+    xAxisGroup.append('text') // axis label
         .attr('x', plotWidth + 10)
         .attr('y', 5)
         .attr('fill', 'black')
@@ -424,7 +435,7 @@ function displayLogarithmPicture(divId) {
     const yAxisGroup = plotGroup.append('g')
         .call(yAxis);
 
-    yAxisGroup.append('text')
+    yAxisGroup.append('text') // axis label
         .attr('y', -5)
         .attr('fill', 'black')
         .attr('font-size', 14)
