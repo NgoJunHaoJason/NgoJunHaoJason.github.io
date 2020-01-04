@@ -4,6 +4,7 @@ input.onchange = function() { handleFiles(); };
 function handleFiles() {
     if (!(this.files && this.files[0])) {
         console.log('invalid file');
+        console.log(this.files);
         return;
     }
 
