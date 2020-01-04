@@ -1,7 +1,7 @@
 const input = document.getElementById('input');
-input.onchange = function () { handleFiles(); };
+input.onchange = function () { handleFiles(this); };
 
-function handleFiles() {
+function handleFiles(this) {
     if (this.files && this.files[0]) {
         const image = document.createElement('img')
         image.src = URL.createObjectURL(this.files[0]);
