@@ -1,5 +1,5 @@
 const input = document.getElementById('input');
-input.onchange = () => handleFiles();
+input.onchange = function() { handleFiles(); };
 
 function handleFiles() {
     if (!(this.files && this.files[0])) {
