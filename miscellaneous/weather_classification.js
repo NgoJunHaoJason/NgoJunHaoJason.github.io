@@ -1,5 +1,5 @@
 const input = document.getElementById('input');
-input.onchange = function (this) { handleFiles(this); };
+
 input.addEventListener('change', function () {
     if (this.files && this.files[0]) {
         const image = document.createElement('img')
@@ -13,7 +13,9 @@ input.addEventListener('change', function () {
         console.log(this.files);
         return;
     }
-})
+});
+
+// input.onchange = function (this) { handleFiles(this); };
 
 // function handleFiles() {
 //     if (this.files && this.files[0]) {
