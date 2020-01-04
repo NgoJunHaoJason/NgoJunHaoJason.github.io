@@ -1,12 +1,15 @@
 const input = document.getElementById('input');
-input.onchange = () => handleFiles(this.files);
+input.onchange = () => handleFiles();
 
-function handleFiles(files) {
-    const selectedFile = files[0];
-    const contentDiv = document.getElementsByClassName('content')[0];
+function handleFiles() {
+    if (!(this.files && this.files[0])) {
+        console.log('invalid file');
+        return;
+    }
 
     const image = document.createElement('img')
-    image.src = selectedFile;
+    image.src = URL.createObjectURL(this.files[0]);
     
+    const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 }
