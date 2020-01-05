@@ -10,7 +10,6 @@ function handleFiles(input) {
     }
 
     let image = document.getElementById('image');
-
     if (!image) {
         image = document.createElement('img');
         image.id = 'image';
@@ -23,6 +22,14 @@ function handleFiles(input) {
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
+    let classification = document.getElementById('classification');
+    if (!classification) {
+        classification = document.createElement('p');
+        classification.id = 'classification';
+    }
+
+    classification.innerHTML = 'classifying weather...';
+
     tf.loadLayersModel('weather_classification/model.json')
         .then(model => {
             let tensor = tf.browser.fromPixels(image);
@@ -30,20 +37,20 @@ function handleFiles(input) {
 
             const prediction = model.predict(tensor);
 
-            prediction.flatten().data()
-                .then(scores => {
-                    let highestConfidenceIndex = 0;
-                    let highestConfidence = 0;
+            return prediction.flatten().data();
+        })
+        .then(scores => {
+            let highestConfidenceIndex = 0;
+            let highestConfidence = 0;
 
-                    for (let index = 0; index < scores.length; ++index) {
-                        if (scores[index] > highestConfidence) {
-                            highestConfidenceIndex = index;
-                            highestConfidence = scores[index];
-                        }
-                    }
+            for (let index = 0; index < scores.length; ++index) {
+                if (scores[index] > highestConfidence) {
+                    highestConfidenceIndex = index;
+                    highestConfidence = scores[index];
+                }
+            }
 
-                    console.log(scores);
-                    console.log(WEATHER_CLASS[highestConfidenceIndex]);
-                });
+            const weather = WEATHER_CLASS[highestConfidenceIndex]
+            classification.innerHTML = 'weather classified as: ' + weather;
         });
 }
