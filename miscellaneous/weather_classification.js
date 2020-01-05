@@ -38,6 +38,7 @@ function handleFiles(input) {
                     for (let index = 0; index < scores.length; ++index) {
                         if (scores[index] > highestConfidence) {
                             highestConfidenceIndex = index;
+                            highestConfidence = scores[index];
                         }
                     }
 
