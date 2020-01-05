@@ -19,11 +19,6 @@ function handleFiles(input) {
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
-    if (tf.loadLayersModel) {
-        tf.loadLayersModel('weather_classification/model.json')
-            .then(model => console.log(model.predict(image)));
-    }
-    else {
-        console.log('loadLayersModel undefined');
-    }
+    tf.loadLayersModel('weather_classification/model.json')
+        .then(model => console.log(model.predict(tf.browser.fromPixels(image))));
 }
