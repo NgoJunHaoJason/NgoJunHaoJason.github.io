@@ -15,8 +15,8 @@ function handleFiles(input) {
     }
 
     image.src = URL.createObjectURL(input.files[0]);
-    image.width = 224;
-    image.height = 224;
+    image.width = '224';
+    image.height = '224';
 
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
