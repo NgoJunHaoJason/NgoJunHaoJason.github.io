@@ -42,6 +42,7 @@ function handleFiles(input) {
                         }
                     }
 
+                    console.log(scores);
                     console.log(WEATHER_CLASS[highestConfidenceIndex]);
                 });
         });
