@@ -13,13 +13,12 @@ function handleFiles(input) {
         image = document.createElement('img');
         image.id = 'image';
     }
-    
+
     image.src = URL.createObjectURL(input.files[0]);
 
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
-    const model = await loadLayersModel('model.json');
-    const prediction = model.predict(example);
-    console.log(prediction);
+    loadLayersModel('model.json')
+        .then(model => console.log(model.predict(image)));
 }
