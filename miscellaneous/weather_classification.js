@@ -15,10 +15,12 @@ function handleFiles(input) {
     }
 
     image.src = URL.createObjectURL(input.files[0]);
+    image.width = 224;
+    image.height = 224;
 
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
     tf.loadLayersModel('weather_classification/model.json')
-        .then(model => console.log(model.predict(tf.browser.fromPixels(image))));
+        .then(model => console.log(model.predict(tf.browser.fromPixels(image), batchSize=1)));
 }
