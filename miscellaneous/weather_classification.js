@@ -1,3 +1,5 @@
+const WEATHER_CLASS = ['cloudy', 'foggy', 'rain', 'snow', 'sunny'];
+
 const imageInput = document.getElementById('image-input');
 imageInput.onchange = () => handleFiles(imageInput);
 
@@ -15,9 +17,6 @@ function handleFiles(input) {
     }
 
     image.src = URL.createObjectURL(input.files[0]);
-    image.width = '224';
-    image.height = '224';
-
     image.style.width = '224px';
     image.style.height = '224px';
 
@@ -30,8 +29,16 @@ function handleFiles(input) {
             tensor = tf.reshape(tensor, [1, 224, 224, 3]);
 
             const prediction = model.predict(tensor);
-            prediction.print(true)
 
-            prediction.flatten().print()
+            prediction.flatten().data()
+                .then(values => {
+                    const arr = Array.from(values)
+
+                    const index = arr.reduce(
+                        (previousValue, currentValue) => Math.max(previousValue, currentValue)
+                    );
+
+                    console.log(WEATHER_CLASS[index]);
+                });
         });
 }
