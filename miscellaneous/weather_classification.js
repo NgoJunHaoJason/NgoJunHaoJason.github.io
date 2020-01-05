@@ -1,33 +1,21 @@
-const input = document.getElementById('input');
+const imageInput = document.getElementById('image-input');
+imageInput.onchange = () => handleFiles(imageInput);
 
-input.addEventListener('change', function () {
-    if (this.files && this.files[0]) {
-        const image = document.createElement('img')
-        image.src = URL.createObjectURL(this.files[0]);
-
-        const contentDiv = document.getElementsByClassName('content')[0];
-        contentDiv.appendChild(image);
-    }
-    else {
+function handleFiles(input) {
+    if (!(input.files && input.files[0])) {
         console.log('invalid file');
-        console.log(this.files);
         return;
     }
-});
 
-// input.onchange = function (this) { handleFiles(this); };
+    let image = document.getElementById('image');
 
-// function handleFiles() {
-//     if (this.files && this.files[0]) {
-//         const image = document.createElement('img')
-//         image.src = URL.createObjectURL(this.files[0]);
+    if (!image) {
+        image = document.createElement('img');
+        image.id = 'image';
+    }
+    
+    image.src = URL.createObjectURL(input.files[0]);
 
-//         const contentDiv = document.getElementsByClassName('content')[0];
-//         contentDiv.appendChild(image);
-//     }
-//     else {
-//         console.log('invalid file');
-//         console.log(this.files);
-//         return;
-//     }
-// }
+    const contentDiv = document.getElementsByClassName('content')[0];
+    contentDiv.appendChild(image);
+}
