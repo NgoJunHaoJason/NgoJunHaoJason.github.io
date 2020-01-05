@@ -19,11 +19,11 @@ function handleFiles(input) {
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
-    try {
-        loadLayersModel('model.json')
+    if (loadLayersModel) {
+        loadLayersModel('weather_classification/model.json')
             .then(model => console.log(model.predict(image)));
     }
-    catch (error) {
-        console.log(error);
+    else {
+        console.log('loadLayersModel undefined');
     }
 }
