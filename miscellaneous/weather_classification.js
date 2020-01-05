@@ -31,18 +31,17 @@ function handleFiles(input) {
             const prediction = model.predict(tensor);
 
             prediction.flatten().data()
-                .then(values => {
-                    console.log(values);
+                .then(scores => {
+                    let highestConfidenceIndex = 0;
+                    let highestConfidence = 0;
 
-                    const arr = Array.from(values)
-                    console.log(arr);
+                    for (let index = 0; index < scores.length; ++index) {
+                        if (scores[index] > highestConfidence) {
+                            highestConfidenceIndex = index;
+                        }
+                    }
 
-                    const index = arr.reduce(
-                        (previousValue, currentValue) => Math.max(previousValue, currentValue)
-                    );
-                    console.log(index);
-
-                    console.log(WEATHER_CLASS[index]);
+                    console.log(WEATHER_CLASS[highestConfidenceIndex]);
                 });
         });
 }
