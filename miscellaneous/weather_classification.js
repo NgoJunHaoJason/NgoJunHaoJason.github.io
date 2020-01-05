@@ -32,11 +32,15 @@ function handleFiles(input) {
 
             prediction.flatten().data()
                 .then(values => {
+                    console.log(values);
+
                     const arr = Array.from(values)
+                    console.log(arr);
 
                     const index = arr.reduce(
                         (previousValue, currentValue) => Math.max(previousValue, currentValue)
                     );
+                    console.log(index);
 
                     console.log(WEATHER_CLASS[index]);
                 });
