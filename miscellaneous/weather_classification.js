@@ -20,7 +20,7 @@ function handleFiles(input) {
     contentDiv.appendChild(image);
 
     try {
-        loadModel('model.json')
+        loadLayersModel('model.json')
             .then(model => console.log(model.predict(image)));
     }
     catch (error) {
