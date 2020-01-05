@@ -19,9 +19,6 @@ function handleFiles(input) {
     image.style.width = '224px';
     image.style.height = '224px';
 
-    const contentDiv = document.getElementsByClassName('content')[0];
-    contentDiv.appendChild(image);
-
     let classification = document.getElementById('classification');
     if (!classification) {
         classification = document.createElement('p');
@@ -29,6 +26,9 @@ function handleFiles(input) {
     }
 
     classification.innerHTML = 'classifying weather...';
+
+    const contentDiv = document.getElementsByClassName('content')[0];
+    contentDiv.appendChild(image);
 
     tf.loadLayersModel('weather_classification/model.json')
         .then(model => {
