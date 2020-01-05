@@ -24,8 +24,7 @@ function handleFiles(input) {
     tf.loadLayersModel('weather_classification/model.json')
         .then(model => {
             const tensor = tf.browser.fromPixels(image);
-            // console.log(tensor + ' has type of ' + typeof(tensor));
-            console.log(model.predict(tf.zeros([1, 224, 224, 3])))
-            console.log(model.predict(tensor));
+            console.log('tensor shape: ' + tensor.shape);
+            console.log(model.predict(tf.reshape(tensor, [1, 224, 224, 3])));
         });
 }
