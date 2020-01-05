@@ -32,6 +32,6 @@ function handleFiles(input) {
             tensor = tf.reshape(tensor, [1, 224, 224, 3]);
             console.log('tensor shape: ' + tensor.shape);
 
-            console.log(model.predict(tensor));
+            model.predict(tensor).print();
         });
 }
