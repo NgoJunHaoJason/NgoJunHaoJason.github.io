@@ -18,6 +18,9 @@ function handleFiles(input) {
     image.width = '224';
     image.height = '224';
 
+    image.style.width = '224px';
+    image.style.height = '224px';
+
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
