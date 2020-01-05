@@ -22,5 +22,9 @@ function handleFiles(input) {
     contentDiv.appendChild(image);
 
     tf.loadLayersModel('weather_classification/model.json')
-        .then(model => console.log(model.predict(tf.browser.fromPixels(image), batchSize=1)));
+        .then(model => function () {
+            const tensor = tf.browser.fromPixels(image)
+            console.log(tensor + ' has type of ' + typeof(tensor))
+            console.log(model.predict(tensor))
+        });
 }
