@@ -1,5 +1,3 @@
-import * as tf from '@tensorflow/tfjs';
-
 const imageInput = document.getElementById('image-input');
 imageInput.onchange = () => handleFiles(imageInput);
 
@@ -21,6 +19,11 @@ function handleFiles(input) {
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
 
-    tf.loadLayersModel('model.json')
-        .then(model => console.log(model.predict(image)));
+    try {
+        loadLayersModel('model.json')
+            .then(model => console.log(model.predict(image)));
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
