@@ -18,4 +18,8 @@ function handleFiles(input) {
 
     const contentDiv = document.getElementsByClassName('content')[0];
     contentDiv.appendChild(image);
+
+    const model = await loadLayersModel('model.json');
+    const prediction = model.predict(example);
+    console.log(prediction);
 }
