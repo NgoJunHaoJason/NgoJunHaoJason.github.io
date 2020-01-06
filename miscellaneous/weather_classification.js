@@ -5,7 +5,7 @@ imageInput.onchange = () => handleFiles(imageInput);
 
 const classificationResult = document.getElementById('classification-result');
 
-const model = tf.loadLayersModel('weather_classification/model.json')
+const model = await tf.loadLayersModel('weather_classification/model.json')
     .then(() => {
         imageInput.disabled = false;
         classificationResult.innerHTML = 'model loaded';
@@ -36,7 +36,7 @@ function handleFiles(input) {
     tensor = tf.reshape(tensor, [1, 224, 224, 3]);
 
     const prediction = model.predict(tensor);
-    
+
     prediction.flatten().data()
         .then(scores => {
             let highestConfidenceIndex = 0;
