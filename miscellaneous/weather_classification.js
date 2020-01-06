@@ -3,6 +3,14 @@ const WEATHER_CLASS = ['cloudy', 'foggy', 'rain', 'snow', 'sunny'];
 const imageInput = document.getElementById('image-input');
 imageInput.onchange = () => handleFiles(imageInput);
 
+const classificationResult = document.getElementById('classification-result');
+
+const model = tf.loadLayersModel('weather_classification/model.json')
+    .then(() => {
+        imageInput.disabled = false;
+        classificationResult.innerHTML = 'model loaded';
+    })
+
 function handleFiles(input) {
     if (!(input.files && input.files[0])) {
         console.log('invalid file');
@@ -19,27 +27,17 @@ function handleFiles(input) {
     image.style.width = '224px';
     image.style.height = '224px';
 
-    let classification = document.getElementById('classification');
-    if (!classification) {
-        classification = document.createElement('p');
-        classification.id = 'classification';
-    }
+    classificationResult.innerHTML = 'classifying weather...';
 
-    classification.innerHTML = 'classifying weather...';
+    const weatherClassificationDiv = document.getElementById('weather-classification');
+    weatherClassificationDiv.appendChild(image);
 
-    const contentDiv = document.getElementsByClassName('content')[0];
-    contentDiv.appendChild(image);
-    contentDiv.appendChild(classification);
+    let tensor = tf.browser.fromPixels(image);
+    tensor = tf.reshape(tensor, [1, 224, 224, 3]);
 
-    tf.loadLayersModel('weather_classification/model.json')
-        .then(model => {
-            let tensor = tf.browser.fromPixels(image);
-            tensor = tf.reshape(tensor, [1, 224, 224, 3]);
-
-            const prediction = model.predict(tensor);
-
-            return prediction.flatten().data();
-        })
+    const prediction = model.predict(tensor);
+    
+    prediction.flatten().data()
         .then(scores => {
             let highestConfidenceIndex = 0;
             let highestConfidence = 0;
