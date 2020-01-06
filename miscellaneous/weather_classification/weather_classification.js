@@ -6,7 +6,7 @@ imageInput.onchange = () => handleFiles(imageInput);
 const classificationResult = document.getElementById('classification-result');
 
 let model = null;
-tf.loadLayersModel('weather_classification/model.json')
+tf.loadLayersModel('model/model.json')
     .then(loadedModel => {
         model = loadedModel;
         imageInput.disabled = false;
