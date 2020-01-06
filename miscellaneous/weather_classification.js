@@ -52,8 +52,8 @@ function handleFiles(input) {
             }
 
             const weather = WEATHER_CLASS[highestConfidenceIndex]
-            classification.innerHTML = 'weather classified as: ' + weather;
-            console.log(scores);
-            console.log(weather);
+            classificationResult.innerHTML = 'weather classified as: ' + weather +
+                ', with confidence score of ' + highestConfidence.toFixed(2);
+
         });
 }
