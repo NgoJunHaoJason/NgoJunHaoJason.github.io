@@ -279,19 +279,32 @@
         <h4>split of training and evaluation sets</h4>
 
         <p>
-            random subsampling - sample without replacement <i>k</i> number of
+            random subsampling - sample <b>without</b> replacement <i>k</i>
+            number of
             times
 
             <ul>
                 <li>
-                    average accuracy = <sup>1</sup>/<sub><i>k</i></sub>
-                    <sup><i>k</i></sup>&sum;<sub><i>i</i>=1</sub>
-                    accuracy<sub>i</sub>
+                    sum_accuracy = 0<br>
+                    # k is number of times to do random subsampling<br>
+                    for i in range(k):<br>
+                    &nbsp; # N is number of examples in original training
+                    set<br>
+                    &nbsp; # split_ratio is ratio of data in new training set to
+                    original training set (e.g. &frac23;)<br>
+                    &nbsp; for j in range(split_ratio * N):
+                    <br>
+                    &nbsp; &nbsp; <b>move</b>_a_random_example_from_original_to_new_training_set()<br>
+                    &nbsp; transfer_the_rest_of_original_to_validation_set()<br>
+                    &nbsp; accuracy = train_model(train_data, val_data)<br>
+                    &nbsp; sum_accuracy += accuracy<br>
+                    &nbsp; average_accuracy = sum_accuracy / k
                 </li>
 
                 <li>
-                    <b>I don't really understand how random subsampling works;
-                        TODO: ask prof</b>
+                    average accuracy = <sup>1</sup>/<sub><i>k</i></sub>
+                    <sup><i>k</i></sup>&sum;<sub><i>i</i>=1</sub>
+                    accuracy<sub>i</sub>
                 </li>
             </ul>
         </p>
@@ -346,8 +359,20 @@
                 </li>
 
                 <li>
-                    <b>I don't really understand how random subsampling works;
-                        TODO: ask prof</b>
+                    sum_accuracy = 0<br>
+                    # k is number of times to do random subsampling<br>
+                    for i in range(k):<br>
+                    &nbsp; # N is number of examples in original training
+                    set<br>
+                    &nbsp; # split_ratio is ratio of data in new training set to
+                    original training set (e.g. &frac23;)<br>
+                    &nbsp; for j in range(split_ratio * N):
+                    <br>
+                    &nbsp; &nbsp; <b>copy</b>_a_random_example_from_original_to_new_training_set()<br>
+                    &nbsp; transfer_the_rest_of_original_to_validation_set()<br>
+                    &nbsp; accuracy = train_model(train_data, val_data)<br>
+                    &nbsp; sum_accuracy += accuracy<br>
+                    &nbsp; average_accuracy = sum_accuracy / k
                 </li>
             </ul>
         </p>
