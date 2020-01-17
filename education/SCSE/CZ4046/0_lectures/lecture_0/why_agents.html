@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8" />
+<!--remember to include the following for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Why Agents? | CZ4046 | Jason Ngo's website</title>
+    <link rel="icon" href="../../../../../images/sciurus_96.png">
+    <link rel="stylesheet" type="text/css"
+        href="../../../../../styles/default_style.css">
+</head>
+
+<body>
+    <h2 class="header">
+        CZ4046 Intelligent Agents
+    </h2>
+
+    <!--start of nav-related code-->
+    <ul class="navbar">
+        <li>
+            <a href="../../../../../index.html">
+                home
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../main.html">
+                education
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../experience.html">
+                internship
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../miscellaneous/main.html">
+                miscellaneous
+            </a>
+        </li>
+    </ul>
+    <!--end of nav-related code-->
+
+    <!--start of content-related code-->
+    <div class="content">
+        <h3>
+            Why Agents?
+        </h3>
+
+        <h4>trends</h4>
+
+        <p>
+            5 ongoing trends (increasing) have marked the history of computing:
+
+            <ul>
+                <li>ubiquity</li>
+                <li>interconnection</li>
+                <li>intelligence</li>
+                <li>delegation</li>
+                <li>human-orientation</li>
+            </ul>
+        </p>
+
+        <h4>ubiquity (pervasiveness)</h4>
+
+        <p>
+            The continual reduction in cost of computing capability has made it
+            possible to introduce processing power into places and devices that
+            would have once been uneconomic.
+        </p>
+
+        <p>
+            As processing capability spreads, sophistication (and intelligence
+            of sort) becomes ubiquitous.
+        </p>
+
+        <h4>interconnection</h4>
+
+        <p>
+            Computer systems today no longer stand alone, but are networked into
+            large distributed systems.
+        </p>
+
+        <p>
+            Since distributed and concurrent systems have become the norm, some
+            researchers are putting forward theoretical models that portray
+            computing as primarily a process of interaction.
+        </p>
+
+        <h4>intelligence</h4>
+
+        <p>
+            The complexity of tasks that we are capable of automating and
+            delegating to computers has grown steadily.
+        </p>
+
+        <h4>delegation</h4>
+
+        <p>
+            Computers are doing more for us - without our intervention (ties in
+            with intelligence).
+        </p>
+
+        <p>
+            We are giving control to computers, even in safety critical tasks.
+        </p>
+
+        <h4>human-orientation</h4>
+
+        <p>
+            We are moving away from machine-oriented views of programming,
+            towards concepts and metaphors that more closely reflect the way we
+            ourselves understand the world.
+        </p>
+
+        <p>
+            Programmers (and users) relate to machines differently.
+        </p>
+
+        <p>
+            Programmers conceptualise and implement software in terms of
+            higher-level (more human-oriented) abstractions.
+        </p>
+
+        <p>
+            Programming has passed through:
+
+            <ul>
+                <li>machine code</li>
+                <li>assembly language</li>
+                <li>machine-independent programming languages</li>
+                <li>subroutines</li>
+                <li>procedures and functions</li>
+                <li>abstract data types</li>
+                <li>objects</li>
+            </ul>
+
+            to agents.
+        </p>
+
+        <h4>implications</h4>
+
+        <p>
+            Delegation and intelligence imply the need to build computer systems
+            that can act effectively on our behalf.
+
+            <ul>
+                <li>
+                    Computer systems need to act independently.
+                </li>
+
+                <li>
+                    Computer systems need to act in a way that represents our
+                    best interests while interacting with other humans or
+                    systems.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Interconnection and distribution have become core motifs in computer
+            science.
+        </p>
+
+        <p>
+            Interconnection and distribution, coupled with the need for systems
+            to represent our best interests, implies that systems should
+            cooperate and reach agreements (or even compete) with other systems
+            that have different interests, much as we do with people.
+        </p>
+
+        <p>
+            These issues were not studied in computer science until recently.
+        </p>
+
+        <p>
+            All of these trends have led to the emergence of a new field in
+            computer science: multi-agent systems.
+        </p>
+
+        <h4>agents</h4>
+
+        <p>
+            definitions:
+
+            <ol>
+                <li>
+                    An agent is a computer system that is capable of independent
+                    action on behalf of its user or owner - it figures out what
+                    need to be done to satisfy designated objectives, rather
+                    than constantly being told.
+                </li>
+
+                <li>
+                    An agent is a computer system that is situated in some
+                    environment, and is capable of taking autonomous action in
+                    the environment to meet its delegated objectives.
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            There is a lack of standardised definition - agent means many things
+            to many people.
+        </p>
+
+        <h4>multi-agent systems</h4>
+
+        <p>
+            A multi-agent system is one that consists of a number of agents,
+            which interact with one another.
+        </p>
+
+        <p>
+            In the most general use case, agents will be acting on behalf of
+            users with different goals and motivations
+        </p>
+
+        <p>
+            In order to successfully interact, they require the ability to
+            cooperate, coordinate and negotiate with each other, just like
+            people.
+        </p>
+
+        <p>
+            This course covers 2 key problems:
+
+            <ol>
+                <li>
+                    (single) agent design - How do we build agents capable of
+                    independent, autonomous action, so that they can
+                    successfully carry out tasks that we delegate to them?
+                </li>
+
+                <li>
+                    society design - How do we build agents that are capable of
+                    interacting (cooperating, coordinating, negotiating) with
+                    other agents in order to successfully carry out those
+                    delegated tasks, especially when the other agents cannot be
+                    assumed to share the same interests or goals?
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            While these questions are all addressed in part by other disciplines
+            (notably economics and social sciences), what makes the multi-agent
+            systems field unique is that it emphasises that the agents in
+            question are computational, information processing entities.
+        </p>
+
+        <h4>the interdisciplinary nature of multi-agent systems</h4>
+
+        <p>
+            The field of multi-agent systems is influenced and inspired by many
+            other fields:
+
+            <ul>
+                <li>economics</li>
+                <li>philosophy</li>
+                <li>game theory</li>
+                <li>logic</li>
+                <li>ecology</li>
+                <li>social sciences</li>
+            </ul>
+        </p>
+
+        <p>
+            Being interdisciplinary led to well-founded methodologies being
+            infused into the field.
+        </p>
+
+        <p>
+            However, weaknesses arise as well, such as there being many
+            different views as to what the field is about, and different
+            researchers have different visions.
+        </p>
+
+        <h4>agents as a paradigm for software engineering</h4>
+
+        <p>
+            Software engineers have derived a progressively better understanding
+            of the characteristics of complexity in software.
+        </p>
+
+        <p>
+            It is now widely recognised that interaction is probably the most
+            important single characteristic of complex software.
+        </p>
+
+        <p>
+            Over the last two decades, a major computer science research topic
+            has been the development of tools and techniques to model,
+            understand and implement systems in which interaction is the norm.
+        </p>
+
+        <h4>agents as a tool for understanding human societies</h4>
+
+        <p>
+            Multi-agent systems provide a novel new tool for simulating
+            societies, which may help shed some light on various kinds of social
+            processes.
+        </p>
+
+        <h4>differences in comparison to other fields</h4>
+
+        <p>
+            distributed / concurrent systems:
+
+            <ul>
+                <li>
+                    Agents are assumed to be autonomous, capable of making
+                    independent decisions - so they need mechanisms to
+                    synchronise and coordinate their activites at run time.
+                </li>
+
+                <li>
+                    Agents are / can be self-interested, so their interactions
+                    are 'economic' encounters.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            artificial intelligence:
+
+            <ul>
+                <li>
+                    we do not need to solve all problems of artificial
+                    intelligence in order to build really useful agents.
+                </li>
+
+                <li>
+                    Classical artificial intelligence ignored social aspects of
+                    agency; these are important parts of intelligent activity in
+                    real-world settings.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            economics / game theory:
+
+            <ul>
+                <li>
+                    insofar as game theory provides descriptive concepts, it
+                    does not always tell us how to compute solutions - we are
+                    concerned with computational, resource-bounded agents.
+                </li>
+
+                <li>
+                    Some assumptions in economics / game theory (such as
+                    rational agent) may not be valid in building artificial
+                    agents.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            social science:
+
+            <ul>
+                <li>
+                    We can draw insights from the study of human societies, but
+                    there is no particular reason to believe that artificial
+                    societies will be constructed in the same way.
+                </li>
+            </ul>
+        </p>
+
+        <h4>applications of individual agents</h4>
+
+        <p>
+            Individual / single agents are used in domains where autonomous
+            action is required.
+
+            <ul>
+                <li>
+                    Agents (and their physical instantiation in robots) have a
+                    role to play in high-risk situations that are unsuitable or
+                    impossible for humans.
+                </li>
+
+                <li>
+                    Agents, as personal software assistants, play the role of
+                    proactive assistants to users working on some applications.
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            The degree of autonomy will differ depending on the situation -
+            human intervention may be an alternative, but not always.
+        </p>
+
+        <h4>applications of multi-agent systems</h4>
+
+        <p>
+            Multi-agent systems are useful in domains where:
+
+            <ul>
+                <li>
+                    control, data, expertise are distributed
+                </li>
+
+                <li>
+                    centralised control is impossible or impractical
+                </li>
+
+                <li>
+                    processing nodes have competing or conflicting viewpoints or objectives
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Examples: TODO
+        </p>
+    </div>
+    <!--end of content-related code-->
+
+    <!--start of nav-buttons code-->
+    <div class="nav-buttons">
+        <a href="../../main.html">
+            content
+        </a>
+
+        <a class="disabled">
+            TODO &#8250;
+        </a>
+    </div>
+    <!--end of nav-buttons code-->
+
+    <!--start of footer-related code-->
+    <div class="footer">
+        <div class="github">
+            <img src="../../../../../images/GitHub-Mark-120px-plus.png">
+
+            <a target="_blank" href="https://github.com/NgoJunHaoJason">
+                GitHub profile
+            </a>
+        </div>
+
+        <div class="last-modified">
+            last modified:
+            <span id="last_modified">null</span>
+        </div>
+    </div>
+    <!--end of footer-related code-->
+
+    <script defer="defer" src="../../../../../scripts/on_page_load.js"></script>
+</body>
+
+</html>
