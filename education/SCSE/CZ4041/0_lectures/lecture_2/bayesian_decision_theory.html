@@ -310,7 +310,7 @@
         </p>
 
         <p>
-            Among the 39 victories for Manchester United, 32 of them come from
+            Among the 59 victories for Manchester United, 32 of them come from
             playing at home.
         </p>
 
@@ -404,7 +404,8 @@
 
                 <ul>
                     <li>
-                        predict <i>Y</i> = <i>y<sub>i</sub></i> if P(<i>Y</i> =
+                        Decision rule: predict <i>Y</i> = <i>y<sub>i</sub></i>
+                        if P(<i>Y</i> =
                         <i>y<sub>i</sub></i> | <i>X</i> = 0) =
                         max<sub><i>k</i></sub> P(<i>Y</i> = <i>y<sub>k</sub></i>
                         | <i>X</i> = 0)
@@ -416,6 +417,22 @@
                         <i>X</i> = 0) = 0.267
                     </li>
                 </ul>
+            </p>
+
+            <h4>decision based on posteriors</h4>
+
+            <p>
+                The denominator (evidence) used to calculate the posterior
+                probability is the same. Therefore, if only decision making is
+                required instead of actual probabilistic values, then one can
+                simply ignore the evidence, and use likelihood and prior only.
+            </p>
+
+            <p>
+                Revised decision rule: predict <i>Y</i> = <i>y<sub>i</sub></i>
+                if <i>y<sub>i</sub></i> = arg max<sub><i>k</i></sub> P(<i>X</i>
+                = x | <i>Y</i> = <i>y<sub>k</sub></i>) &times; P(<i>Y</i> =
+                <i>y<sub>k</sub></i>)
             </p>
         </div>
     </div>
