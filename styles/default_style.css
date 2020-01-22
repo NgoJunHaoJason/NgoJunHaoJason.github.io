@@ -81,6 +81,7 @@ h2 .header {
     font-size: 18px;
     margin-left: 10vw;
     margin-right: 10vw;
+    overflow-x: auto;
 }
 
 .content h3 {
@@ -93,18 +94,15 @@ h2 .header {
 
 .content .table {
     table-layout: fixed;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
 }
 
-.content .table {
-    border: 1px solid black;
-}
-
 .content .table th, td {
     border: 1px solid black;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .content img {
