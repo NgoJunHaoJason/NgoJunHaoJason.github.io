@@ -141,28 +141,14 @@
 
         <h4>OSI 7-layer model</h4>
 
-        <table>
-            <tr>
-                <td>application</td>
-            </tr>
-            <tr>
-                <td>presentation</td>
-            </tr>
-            <tr>
-                <td>session</td>
-            </tr>
-            <tr>
-                <td>transport</td>
-            </tr>
-            <tr>
-                <td>network</td>
-            </tr>
-            <tr>
-                <td>data link</td>
-            </tr>
-            <tr>
-                <td>physical</td>
-            </tr>
+        <table class="table">
+            <tr><td>application</td></tr>
+            <tr><td>presentation</td></tr>
+            <tr><td>session</td></tr>
+            <tr><td>transport</td></tr>
+            <tr><td>network</td></tr>
+            <tr><td>data link</td></tr>
+            <tr><td>physical</td></tr>
         </table>
 
         <p>
@@ -175,7 +161,8 @@
         <h4>OSI in action</h4>
 
         <p>
-            A message begins at the top (application layer) and moves down the OSI layers to the bottom (physical) layer.
+            A message begins at the top (application layer) and moves down the
+            OSI layers to the bottom (physical) layer.
         </p>
 
         <p>
@@ -183,29 +170,35 @@
         </p>
 
         <p>
-            The header is header-specific information that explains what functions the layer carries out.
+            The header is header-specific information that explains what
+            functions the layer carries out.
         </p>
 
         <p>
-            At the receiving end, headers are stripped from the message as it travels up the OSI layers.
+            At the receiving end, headers are stripped from the message as it
+            travels up the OSI layers.
         </p>
 
         <h4>OSI protocols</h4>
 
         <p>
-            Layer <i>n</i> in one machine interacts with layer <i>n</i> in another machine to provide a service to layer <i>n</i> + 1.
+            Layer <i>n</i> in one machine interacts with layer <i>n</i> in
+            another machine to provide a service to layer <i>n</i> + 1.
         </p>
 
         <p>
-            The entities comprising the corresponding layers on different machines are called peer processes.
+            The entities comprising the corresponding layers on different
+            machines are called peer processes.
         </p>
 
         <p>
-            The machines use a set of rules and conventions called the layer <i>n</i> protocol.
+            The machines use a set of rules and conventions called the layer
+            <i>n</i> protocol.
         </p>
 
         <p>
-            Layer <i>n</i> peer processes communicate by exchanging Protocol Data Units.
+            Layer <i>n</i> peer processes communicate by exchanging Protocol
+            Data Units.
         </p>
 
         <h4>OSI services</h4>
@@ -215,7 +208,8 @@
         </p>
 
         <p>
-            Layer <i>n</i> + 1 transfers information by invoking the services provided by layer <i>n</i>.
+            Layer <i>n</i> + 1 transfers information by invoking the services
+            provided by layer <i>n</i>.
         </p>
 
         <p>
@@ -223,16 +217,18 @@
         </p>
 
         <p>
-            Each layer passes data and control information to the layer below it until the physical layer is reached and transfer occurs.
+            Each layer passes data and control information to the layer below it
+            until the physical layer is reached and transfer occurs.
         </p>
 
         <p>
-            The data passed to the layer below it is called Service Data Unit. Service Data Units are encapsulated in Protocol Data Units.
+            The data passed to the layer below it is called Service Data Unit.
+            Service Data Units are encapsulated in Protocol Data Units.
         </p>
 
         <h4>TCP/IP model</h4>
 
-        <table>
+        <table class="table">
             <tr><td>application</td></tr>
             <tr><td>transport</td></tr>
             <tr><td>network</td></tr>
@@ -241,11 +237,14 @@
         </table>
 
         <p>
-            The Transmission Control Protocol / Internet Protocol model has the same behaviour as the OSI model.
+            The Transmission Control Protocol / Internet Protocol model has the
+            same behaviour as the OSI model.
         </p>
 
         <p>
-            The implementation of network architecture as a 5-layers model is a compromise between OSI model's 7 layers (easy to maintain, but too much overhead) and 1 layer (too complex to maintain).
+            The implementation of network architecture as a 5-layers model is a
+            compromise between OSI model's 7 layers (easy to maintain, but too
+            much overhead) and 1 layer (too complex to maintain).
         </p>
     </div>
     <!--end of content-related code-->
