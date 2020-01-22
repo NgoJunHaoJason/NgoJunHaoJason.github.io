@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8" />
+<!--remember to include the following for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Bayesian Decision Theory | CZ4041 | Jason Ngo's website</title>
+    <link rel="icon" href="../../../../../images/sciurus_96.png">
+    <link rel="stylesheet" type="text/css"
+        href="../../../../../styles/default_style.css">
+</head>
+
+<body>
+    <h2 class="header">
+        CZ4041 Machine Learning
+    </h2>
+
+    <!--start of nav-related code-->
+    <ul class="navbar">
+        <li>
+            <a href="../../../../../index.html">
+                home
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../main.html">
+                education
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../experience.html">
+                internship
+            </a>
+        </li>
+
+        <li>
+            <a href="../../../../../miscellaneous/main.html">
+                miscellaneous
+            </a>
+        </li>
+    </ul>
+    <!--end of nav-related code-->
+
+    <!--start of content-related code-->
+    <div class="content">
+        <h3>
+            Bayesian Decision Theory
+        </h3>
+
+        <p>
+            In supervised learning, given a set of {<i>x<sub>i</sub></i>,
+            <i>y<sub>i</sub></i>} for <i>i</i> = 1, 2, ..., <i>N</i>, the goal
+            is to learn a mapping &fnof;: <i>x</i> &rightarrow; <i>y</i> by
+            requiring &fnof; (<i>x<sub>i</sub></i>) = <i>y<sub>i</sub></i>.
+        </p>
+
+        <p>
+            In many applications, the mapping or relationship &fnof; between
+            input features and output labels is non-deterministic (i.e.
+            uncertain).
+        </p>
+
+        <h4>probability concepts</h4>
+
+        <p>
+            Let <i>A</i> be a random variable.
+
+            <ul>
+                <li>
+                    a feature / label in machine learning
+                </li>
+
+                <li>
+                    can take different values depending on context
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Marginal probability P(<i>A</i> = <i>a</i>) refers to the
+            probability that variable <i>A</i> = <i>a</i>.
+
+            <ul>
+                <li>
+                    <i>a</i> is a specific value for variable <i>A</i>
+                </li>
+
+                <li>
+                    0 &le; P(<i>A</i> = <i>a</i>) &le; 1
+                </li>
+
+                <li>
+                    &sum;<sub><i>a<sub>i</sub></i></sub> P(<i>A</i> =
+                    <i>a<sub>i</sub></i>) = 1
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Let <i>A</i> and <i>B</i> be a pair of random variables.
+        </p>
+
+        <p>
+            Their joint probability P(<i>A</i> = <i>a</i>, <i>B</i> = <i>b</i>)
+            refers to the probability that variable <i>A</i> = <i>a</i> and
+            variable <i>B</i> = <i>b</i>.
+        </p>
+
+        <p>
+            Conditional probability P(<i>B</i> = <i>b</i> | <i>A</i> = <i>a</i>)
+            refers to the probability that the variable <i>B</i> will take on
+            the value <i>b</i>, given that the variable <i>A</i> is observed to
+            have the value of <i>a</i>.
+
+            <ul>
+                <li>
+                    &sum;<sub><i>b<sub>i</sub></i></sub> P(<i>B</i> =
+                    <i>b<sub>i</sub></i> | <i>A</i> = <i>a</i>) = 1
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Sum rule: the marginal probability of <i>A</i> is equal to the sum
+            of joint probability of <i>A</i> and
+            <i>B</i>, over all values of <i>B</i>.
+
+            <ul>
+                <li>
+                    P(<i>A</i> = <i>a</i>) =
+                    &sum;<sub><i>b<sub>i</sub></i></sub> P(<i>A</i> = <i>a</i>,
+                    <i>B</i> = <i>b<sub>i</sub></i>)
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Product rule: the joint probability of <i>A</i> and <i>B</i> is
+            equal to the product of the conditional probability of <i>B</i>
+            given <i>A</i> and the marginal probability of <i>A</i>, and vice
+            versa.
+
+            <ul>
+                <li>
+                    P(<i>A</i> = <i>a</i>, <i>B</i> = <i>b</i>) = P(<i>B</i> =
+                    <i>b</i> | <i>A</i> = <i>a</i>) &times; P(<i>A</i> =
+                    <i>a</i>) = P(<i>A</i> = <i>a</i> | <i>B</i> = <i>b</i>)
+                    &times; P(<i>B</i> = <i>b</i>)
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Bayes Rule (or Bayes Theorem):
+            <br>
+            P(<i>A</i> | <i>B</i>) = <sup>P(<i>B</i> | <i>A</i>) &times;
+                P(<i>A</i>)</sup>/<sub>P(<i>B</i>)</sub>, where:
+
+            <ul>
+                <li>
+                    P(<i>A</i> | <i>B</i>) is the posterior, derived using
+                    product rule
+                </li>
+
+                <li>
+                    P(<i>B</i> | <i>A</i>) is the likelihood - the probability
+                    of observing the data if the target variable would have the
+                    current state
+                </li>
+
+                <li>
+                    P(<i>A</i>) is the prior
+                </li>
+
+                <li>
+                    P(<i>B</i>) is the evidence, which can be calculated using
+                    the sum rule, given the likelihood and prior
+                </li>
+            </ul>
+        </p>
+
+        <h4>example</h4>
+
+        <p>
+            Suppose the next match between the two following teams will be on
+            the next weekend.
+        </p>
+
+        <p>Head-to-head statistics:</p>
+        <table class="table">
+            <tr>
+                <th>Team</th>
+                <th>Played</th>
+                <th>Win</th>
+                <th>Draw</th>
+                <th>Lose</th>
+            </tr>
+
+            <tr>
+                <td>Manchester United</td>
+                <td>151</td>
+                <td>59</td>
+                <td>47</td>
+                <td>45</td>
+            </tr>
+
+            <tr>
+                <td>Manchester City</td>
+                <td>151</td>
+                <td>45</td>
+                <td>47</td>
+                <td>59</td>
+            </tr>
+        </table>
+
+        <p>
+            What is the most likely result for the game on next weekend -
+            Manchester United wins, Manchester City wins, or a draw?
+        </p>
+
+        <button class="collapsible">Solution</button>
+        <div class="collapsible-content">
+            <h4>variable definition</h4>
+
+            <p>
+                Let <i>Y</i> be the random variable that represents the result
+                of the match, with values = {0, 1, 2}.
+
+                <ul>
+                    <li>
+                        <i>Y</i> = 0 &rightarrow; Manchester United wins the
+                        match
+                    </li>
+
+                    <li>
+                        <i>Y</i> = 1 &rightarrow; Manchester City wins the match
+                    </li>
+
+                    <li>
+                        <i>Y</i> = 2 &rightarrow; draw
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                Calculating prior probability based on historical data, we get:
+
+                <ul>
+                    <li>
+                        P(<i>Y</i> = 0) = <sup>59</sup>/<sub>151</sub>
+                        &TildeTilde; 39%
+                    </li>
+
+                    <li>
+                        P(<i>Y</i> = 1) = <sup>45</sup>/<sub>151</sub>
+                        &TildeTilde; 30%
+                    </li>
+
+                    <li>
+                        P(<i>Y</i> = 2) = 1 - P(<i>Y</i> = 0) - P(<i>Y</i> = 1)
+                        = 31% (&because; &sum;<sub><i>y<sub>i</sub></i></sub>
+                        P(<i>Y</i> = <i>y<sub>i</sub></i>) = 1)
+                    </li>
+                </ul>
+            </p>
+
+            <h4>decision with priors</h4>
+
+            <p>
+                A decision rule prescribes what action to take based on observed
+                input.
+            </p>
+
+            <p>
+                If the only available information is the prior and the cost of
+                any incorrect classification is equal, then a reasonable
+                decision rule is to maximise prior probability.
+
+                <ul>
+                    <li>
+                        predict <i>Y</i> = <i>y<sub>i</sub></i> if P(<i>Y</i> =
+                        <i>y<sub>i</sub></i>) = max<sub>k</sub> P(<i>Y</i> =
+                        <i>y<sub>k</sub></i>)
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                P(<i>Y</i> = 0) = 39% &gt; P(<i>Y</i> = 2) = 31% &gt; P(<i>Y</i>
+                = 1) = 30%
+                <br>
+                &therefore; predict <i>Y</i> = 0 &rightarrow; Manchester United
+                wins
+            </p>
+
+            <p>
+                This decision rule seems reasonable, but it will always predict
+                that Manchester United wins.
+            </p>
+        </div>
+
+        <h4>more information for example</h4>
+
+        <p>
+            Manchester United will host the next match between the two teams.
+        </p>
+
+        <p>
+            Among the 39 victories for Manchester United, 32 of them come from
+            playing at home.
+        </p>
+
+        <p>
+            Among the games won by Manchester City, 20 of them are obtained
+            while playing on Manchester United home ground.
+        </p>
+
+        <p>
+            Among the drawn games, 23 of them were played on Manchester United
+            home ground.
+        </p>
+
+        <button class="collapsible">Revised Solution</button>
+        <div class="collapsible-content">
+            <h4>new variable definition</h4>
+
+            <p>
+                Let <i>X</i> be the random variable that represents the team
+                hosting the match, with values = {0, 1}.
+
+                <ul>
+                    <li>
+                        <i>X</i> = 0 &rightarrow; Manchester United hosts the
+                        match
+                    </li>
+
+                    <li>
+                        <i>X</i> = 1 &rightarrow; Manchester City hosts the
+                        match
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                Estimating probabilities based on new information:
+
+                <ul>
+                    <li>
+                        P(<i>X</i> = 0 | <i>Y</i> = 0) =
+                        <sup>32</sup>/<sub>59</sub> &TildeTilde; 54%
+                    </li>
+
+                    <li>
+                        P(<i>X</i> = 0 | <i>Y</i> = 1) =
+                        <sup>20</sup>/<sub>45</sub> &TildeTilde; 44%
+                    </li>
+
+                    <li>
+                        P(<i>X</i> = 0 | <i>Y</i> = 2) =
+                        <sup>23</sup>/<sub>47</sub> &TildeTilde; 49%
+                    </li>
+                </ul>
+            </p>
+
+            <h4>apply Bayes rule</h4>
+
+            <p>
+                &nbsp;&nbsp; P(<i>Y</i> = 1 | <i>X</i> = 0) &leftarrow; Bayes
+                rule
+                <br>
+                = P(<i>X</i> = 0 | <i>Y</i> = 1) &times; P(<i>Y</i> = 1) /
+                P(<i>X</i> = 0) &leftarrow; sum rule for evidence
+                <br>
+                = P(<i>X</i> = 0 | <i>Y</i> = 1) &times; P(<i>Y</i> = 1) /
+                [P(<i>X</i> = 0, <i>Y</i> = 0) + P(<i>X</i> = 0, <i>Y</i> = 1) +
+                P(<i>X</i> = 0, <i>Y</i> = 02)] &leftarrow; product rule for
+                evidence
+                <br>
+                = P(<i>X</i> = 0 | <i>Y</i> = 1) &times; P(<i>Y</i> = 1) /
+                [P(<i>X</i> = 0 | <i>Y</i> = 0) &times; P(<i>Y</i> = 0) +
+                P(<i>X</i> = 0 | <i>Y</i> = 1) &times; P(<i>Y</i> = 1) +
+                P(<i>X</i> = 0 | <i>Y</i> = 2) &times; P(<i>Y</i> = 2)]
+                <br>
+                = 0.44 &times; 0.3 / (0.54 &times; 0.39 + 0.44 &times; 0.3 +
+                0.49 &times; 0.31)
+                <br>
+                = <sup>0.132</sup>/<sub>0.4945</sub>
+                <br>
+                = 0.267
+            </p>
+
+            <p>
+                Similarly, P(<i>Y</i> = 0 | <i>X</i> = 0) = 0.426 and P(<i>Y</i>
+                = 2 | <i>X</i> = 0) = 0.307
+            </p>
+
+            <p>
+                If the decision rule is to maximise posterior probability, then
+                predict <i>Y</i> = 0 &rightarrow; Manchester United wins.
+
+                <ul>
+                    <li>
+                        predict <i>Y</i> = <i>y<sub>i</sub></i> if P(<i>Y</i> =
+                        <i>y<sub>i</sub></i> | <i>X</i> = 0) =
+                        max<sub><i>k</i></sub> P(<i>Y</i> = <i>y<sub>k</sub></i>
+                        | <i>X</i> = 0)
+                    </li>
+
+                    <li>
+                        P(<i>Y</i> = 0 | <i>X</i> = 0) = 0.426 &gt; P(<i>Y</i>
+                        = 2 | <i>X</i> = 0) = 0.307 &gt; P(<i>Y</i> = 1 |
+                        <i>X</i> = 0) = 0.267
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <!--end of content-related code-->
+
+    <br>
+
+    <!--start of nav-buttons code-->
+    <div class="nav-buttons">
+        <a href="../lecture_1/supervised_learning.html">
+            &#8249; prev
+        </a>
+
+        <a href="../../main.html">
+            content
+        </a>
+
+        <a class="disabled">
+            next &#8250;
+        </a>
+    </div>
+    <!--end of nav-buttons code-->
+
+    <!--start of footer-related code-->
+    <div class="footer">
+        <div class="github">
+            <img src="../../../../../images/GitHub-Mark-120px-plus.png">
+
+            <a target="_blank" href="https://github.com/NgoJunHaoJason">
+                GitHub profile
+            </a>
+        </div>
+
+        <div class="last-modified">
+            last modified:
+            <span id="last_modified">null</span>
+        </div>
+    </div>
+    <!--end of footer-related code-->
+
+    <script defer="defer" src="../../../../../scripts/on_page_load.js"></script>
+</body>
+
+</html>
