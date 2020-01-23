@@ -719,7 +719,46 @@
         <h4>optimal decision rule</h4>
 
         <p>
-            TODO
+            If R(<i>a<sub>i</sub> | X</i>) &lt; R(<i>a<sub>k</sub> | X</i>) for
+            all <i>k &le; K</i> and <i>i &ne; k</i>, and R(<i>a<sub>i</sub> |
+                X</i>) &lt; R(<i>a</i><sub><i>K</i>+1</sub> | <i>X</i>), then
+            take action <i>a<sub>i</sub></i>.
+        </p>
+
+        <p>
+            If R(<i>a</i><sub><i>K</i>+1</sub> | <i>X</i>) &lt;
+            R(<i>a<sub>k</sub> | X</i>) for <i>k</i> = 1, 2, ..., <i>K</i>, then
+            reject.
+
+            <ul>
+                <li>
+                    R(<i>a</i><sub><i>K</i>+1</sub> | <i>X</i>) =
+                    <sup><i>K</i></sup>&sum;<sub><i>k</i>=1</sub>
+                    &lambda;<sub>(<i>K</i>+1)<i>k</i></sub> P(<i>Y =
+                        y<sub>k</sub> | X</i>) =
+                    <sup><i>K</i></sup>&sum;<sub><i>k</i>=1</sub> &theta; P(<i>Y
+                        = y<sub>k</sub> | X</i>) = &theta;
+                </li>
+            </ul>
+        </p>
+
+        <h4>rewritten optimal decision rule</h4>
+
+        <p>
+            If P(<i>Y = y<sub>i</sub> | X</i>) &gt; P(<i>Y = y<sub>k</sub> |
+                X</i>) for all <i>k &le; K</i> and <i>i &ne; k</i>, and P(<i>Y =
+                y<sub>i</sub> | X</i>) &gt; 1 - &theta;, then predict <i>Y =
+                y<sub>i</sub></i>.
+        </p>
+
+        <p>
+            If P(<i>Y = y<sub>k</sub> | X</i>) &lt; 1 - &theta; for <i>k</i> =
+            1, 2, ..., <i>K</i>, then reject.
+        </p>
+
+        <p>
+            Based on these formulas, if &theta; = 0, always reject; if &theta;
+            &ge; 1, never reject. &therefore; 0 &lt; &theta; &lt; 1
         </p>
     </div>
     <!--end of content-related code-->
