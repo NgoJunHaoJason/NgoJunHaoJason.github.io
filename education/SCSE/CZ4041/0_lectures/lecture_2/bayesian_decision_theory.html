@@ -431,10 +431,296 @@
             <p>
                 Revised decision rule: predict <i>Y</i> = <i>y<sub>i</sub></i>
                 if <i>y<sub>i</sub></i> = arg max<sub><i>k</i></sub> P(<i>X</i>
-                = x | <i>Y</i> = <i>y<sub>k</sub></i>) &times; P(<i>Y</i> =
+                = <i>x</i> | <i>Y</i>x</i>> = <i>y<sub>k</sub></i>) &times;
+                P(<i>Y</i> =
                 <i>y<sub>k</sub></i>)
             </p>
         </div>
+
+        <h4>general case</h4>
+
+        <p>
+            given:
+
+            <ul>
+                <li>
+                    a set of input features <b>X</b> = {<i>X</i><sub>1</sub>,
+                    <i>X</i><sub>2</sub>, ..., <i>X<sub>d</sub></i>}
+                </li>
+
+                <li>
+                    output class <i>Y</i> &in; {<i>y</i><sub>1</sub>,
+                    <i>y</i><sub>2</sub>, ..., <i>y<sub>K</sub></i>}
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            posterior probability P(<i>Y</i> = <i>y<sub>i</sub></i> | <b>X</b> =
+            <b>x</b>) = <sup>P(<b>X</b> = <b>x</b> | <i>Y</i> =
+                <i>y<sub>i</sub></i>) P(<i>Y</i> = <i>y<sub>i</sub></i>)</sup> /
+            <sub>P(<b>X</b> = <b>x</b>)</sub>
+        </p>
+
+        <p>
+            predict <i>Y</i> = <i>y<sub>i</sub></i> if <i>y<sub>i</sub></i> =
+            arg max<sub><i>k</i></sub> P(<b>X</b> = <b>x</b> | <i>Y</i> =
+            <i>y<sub>k</sub></i>) &times; P(<i>Y</i> = <i>y<sub>k</sub></i>)
+        </p>
+
+        <h4>limitations of decisions with posteriors</h4>
+
+        <p>
+            The decisions made are assumed to be equally good or costly.
+            However, in some applications, the cost of misclassification on
+            different classes may be different. Also, no decisions are of high
+            confidence, but making a wrong decision may have a very high cost.
+        </p>
+
+        <h4>losses and risks</h4>
+
+        <p>
+            Let <i>a<sub>i</sub></i> be the action of predicting <i>Y</i> =
+            <i>y<sub>i</sub></i>, where <i>i</i> = 1, 2, ..., <i>K</i>.
+        </p>
+
+        <p>
+            Define &lambda;<sub><i>ik</i></sub> as the loss (cost) of
+            <i>a<sub>i</sub></i> when the class value is actually
+            <i>y<sub>k</sub></i>, where <i>i</i> &ne; <i>k</i> (i.e. predict
+            <i>Y</i> = <i>y<sub>i</sub></i> when true value of <i>Y</i> is
+            <i>y<sub>k</sub></i>).
+        </p>
+
+        <p>
+            Expect risk for taking action <i>a<sub>i</sub></i>,
+            R(<i>a<sub>i</sub></i> | <i>X</i>) =
+            <sup><i>K</i></sup>&sum;<sub><i>k</i>=1</sub>
+            &lambda;<sub><i>ik</i></sub> P(<i>Y</i> = <i>y<sub>k</sub></i> |
+            <i>X</i>)
+        </p>
+
+        <p>
+            We choose the action with minimum risk.
+
+            <ul>
+                <li>
+                    choose <i>a<sub>i</sub></i> if R(<i>a<sub>i</sub></i> |
+                    <i>X</i>) = min<sub>k</sub> R(<i>a<sub>k</sub></i> |
+                    <i>X</i>)
+                </li>
+            </ul>
+        </p>
+
+        <h4>why expected risk</h4>
+
+        <p>
+            To make a decision (prediction) on <i>X</i>, one needs to consider
+            all possible losses caused by different actions.
+
+            <ul>
+                <li>
+                    for example, one can take the average of all possible losses
+                    for each action <i>a<sub>i</sub></i>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            However, the probability of each loss occurring is different, so the
+            weighted average of all possible losses is used instead, where the
+            weight of each loss is the probability of that loss occurring
+            (misclassification).
+        </p>
+
+        <h4>another example</h4>
+
+        <p>
+            The situation is to diagnose if a patient has cancer based on a
+            medical test.
+        </p>
+
+        <p>
+            let
+            <ul>
+                <li>
+                    <i>Y</i> = 1 if the patient has cancer
+                </li>
+
+                <li>
+                    <i>Y</i> = 0 if the patient does not have cancer
+                </li>
+
+                <li>
+                    <i>X</i> = 1 if result for the medical test is positive
+                </li>
+
+                <li>
+                    <i>X</i> = 0 if result for the medical test is negative
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Given P(<i>Y</i> = 0 | <i>X</i> = 1) = 0.9 and the medical test for
+            a patient returns positive (<i>X</i> = 1), should the doctor
+            diagnose the patient with cancer?
+        </p>
+
+        <p>
+            cost:
+
+            <ul>
+                <li>
+                    misclassifying a healthy patient as one with cancer - higher
+                    hospital bill for patient to stay in hospital and take more
+                    tests
+                </li>
+
+                <li>
+                    misclassifying a patient with cancer as a healthy patient -
+                    death due to lack of timely treatment
+                </li>
+            </ul>
+        </p>
+
+        <button class="collapsible">Solution</button>
+        <div class="collapsible-content">
+            <p>
+                define cost / loss:
+
+                <ul>
+                    <li>
+                        &lambda;<sub>00</sub> = 0 - predict correctly
+                    </li>
+
+                    <li>
+                        &lambda;<sub>11</sub> = 0 - predict correctly
+                    </li>
+
+                    <li>
+                        &lambda;<sub>10</sub> = 10 - misclassify cancer patient
+                        as healthy
+                    </li>
+
+                    <li>
+                        &lambda;<sub>01</sub> = 1 - misclassify healthy patient
+                        as having cancer
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                &nbsp;&nbsp;P(<i>Y</i> = 1 | <i>X</i> = 1)
+                <br>
+                = 1 - P(<i>Y</i> = 0 | <i>X</i> = 1)
+                <br>
+                = 1 - 0.9
+                <br>
+                = 0.1
+            </p>
+
+            <p>
+                &nbsp;&nbsp;R(<i>a<sub>0</sub></i> | <i>X</i> = 1)
+                <br>
+                = &lambda;<sub>00</sub> P(<i>Y</i> = 0 | <i>X</i> = 1) +
+                &lambda;<sub>01</sub> P(<i>Y</i> = 1 | <i>X</i> = 1)
+                <br>
+                = 0(0.9) + 10(0.1)
+                <br>
+                = 1
+            </p>
+
+            <p>
+                &nbsp;&nbsp;R(<i>a<sub>1</sub></i> | <i>X</i> = 1)
+                <br>
+                = &lambda;<sub>10</sub> P(<i>Y</i> = 0 | <i>X</i> = 1) +
+                &lambda;<sub>11</sub> P(<i>Y</i> = 1 | <i>X</i> = 1)
+                <br>
+                = 1(0.9) + 0(0.1)
+                <br>
+                = 0.9
+            </p>
+
+            <p>
+                &because; R(<i>a<sub>1</sub></i> | <i>X</i> = 1) &lt;
+                R(<i>a<sub>0</sub></i> | <i>X</i> = 1)
+                <br>
+                &therefore; pick action <i>a<sub>1</sub></i> &rightarrow;
+                classify patient as having cancer
+            </p>
+        </div>
+
+        <h4>0/1 loss</h4>
+
+        <p>
+            A special case of loss where all correct decisions have no loss
+            (&lambda;<sub><i>ik</i></sub> = 0 if <i>i</i> = <i>k</i>) and all
+            errors are equally costly (&lambda;<sub><i>ik</i></sub> = 1 if
+            <i>i</i> &ne; <i>k</i>).
+        </p>
+
+        <p>
+            With the 0/1 loss, the risk of taking action <i>a<sub>i</sub></i> is
+            revised as such:
+            <br>
+            &nbsp;&nbsp;R(<i>a<sub>i</sub></i> | <i>X</i>)
+            <br>
+            = <sup><i>K</i></sup>&sum;<sub><i>k</i>=1</sub>
+            &lambda;<sub><i>ik</i></sub> P(<i>Y</i> = <i>y<sub>k</sub></i> |
+            <i>X</i>)
+            <br>
+            = &sum;<sub><i>i</i>&ne;<i>k</i></sub> P(<i>Y</i> =
+            <i>y<sub>k</sub></i> |
+            <i>X</i>)
+            <br>
+            = 1 - P(<i>Y</i> = <i>y<sub>i</sub></i> | <i>X</i>)
+        </p>
+
+        <p>
+            In this case, minimising risk is equivalent to choosing most
+            probable outcome.
+        </p>
+
+        <h4>reject or doubt</h4>
+
+        <p>
+            If the automatic system has low certainty of its decision and making
+            a wrong decision has very high cost, manual decision is required.
+        </p>
+
+        <p>
+            Define an additional action of reject (doubt),
+            <i>a</i><sub><i>K</i>+1</sub>, with <i>a<sub>i</sub></i> being the
+            usual action of predicting on classes <i>y<sub>i</sub></i>, for
+            <i>i</i> = 1, 2, ..., <i>K</i>.
+        </p>
+
+        <p>
+            Revised 0/1 loss function &lambda;<sub>ik</sub> = {
+
+            <ul>
+                <li>
+                    0 if <i>i</i> = <i>k</i>
+                </li>
+
+                <li>
+                    &theta; if <i>i</i> = <i>K</i> + 1
+                </li>
+
+                <li>
+                    1 otherwise
+                </li>
+            </ul>
+            where &theta; is the loss incurred for choosing the reject action
+            <i>a</i><sub><i>K</i>+1</sub>, with &theta; &in; (0, 1).
+        </p>
+
+        <h4>optimal decision rule</h4>
+
+        <p>
+            TODO
+        </p>
     </div>
     <!--end of content-related code-->
 
