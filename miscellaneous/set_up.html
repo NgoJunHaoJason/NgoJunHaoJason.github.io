@@ -50,21 +50,19 @@
         <div class="collapsible-content">
             <ul>
                 <li>
-                    pactl load-module module-detect
+                    sudo gedit /etc/modprobe.d/alsa-base.conf
                 </li>
                 <li>
-                    <b><i>restart computer</i></b>
+                    add to bottom of file: options snd-hda-intel model=auto
                 </li>
                 <li>
-                    <a target="_blank" href="https://askubuntu.com/a/1199753/998106">
-                        add to start up applications so that there's no need to use this command upon reboot all the time
-                    </a>
+                    restart computer
                 </li>
             </ul>
 
             reference:
-            <a target="_blank" href="https://askubuntu.com/a/1046133/998106">
-                fix hardware output devices not being detected
+            <a target="_blank" href="https://ubuntuforums.org/showthread.php?t=1825882">
+                Digital Output (SPDIF) not working with HDA Intel ALC269VB 
             </a>
         </div>
 
