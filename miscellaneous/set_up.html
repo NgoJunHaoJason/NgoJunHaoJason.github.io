@@ -7,7 +7,8 @@
 <head>
     <title>set up | Jason Ngo's website</title>
     <link rel="icon" target="_blank" href="../images/sciurus_96.png">
-    <link rel="stylesheet" type="text/css" target="_blank" href="../styles/default_style.css">
+    <link rel="stylesheet" type="text/css" target="_blank"
+        href="../styles/default_style.css">
 </head>
 
 <body>
@@ -58,12 +59,27 @@
                 <li>
                     restart computer
                 </li>
+                <li>
+                    if need be: pactl load-module module-detect
+                </li>
             </ul>
 
             reference:
-            <a target="_blank" href="https://ubuntuforums.org/showthread.php?t=1825882">
-                Digital Output (SPDIF) not working with HDA Intel ALC269VB 
-            </a>
+            <ul>
+                <li>
+                    <a target="_blank"
+                        href="https://ubuntuforums.org/showthread.php?t=1825882">
+                        Digital Output (SPDIF) not working with HDA Intel
+                        ALC269VB
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://askubuntu.com/a/1046133/998106">
+                        fix hardware output devices not being detected
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <h3>"wifi adapter not found"</h3>
@@ -77,7 +93,8 @@
                     sudo apt install git build-essential
                 </li>
                 <li>
-                    git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
+                    git clone
+                    https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
                 </li>
                 <li>
                     cd backport-iwlwifi/
@@ -86,7 +103,8 @@
                     make defconfig-iwlwifi-public
                 </li>
                 <li>
-                    sed -i 's/CPTCFG_IWLMVM_VENDOR_CMDS=y/# CPTCFG_IWLMVM_VENDOR_CMDS is not set/' .config
+                    sed -i 's/CPTCFG_IWLMVM_VENDOR_CMDS=y/#
+                    CPTCFG_IWLMVM_VENDOR_CMDS is not set/' .config
                 </li>
                 <li>
                     make -j4
@@ -140,7 +158,8 @@
             </ul>
 
             reference:
-            <a target="_blank" href="https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-468882301">
+            <a target="_blank"
+                href="https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-468882301">
                 use conda for workaround
             </a>
         </div>
@@ -196,7 +215,8 @@
                     <li>
                         <a target="_blank"
                             href="https://medium.com/better-programming/how-to-install-nvidia-drivers-and-cuda-10-0-for-rtx-2080-ti-gpu-on-ubuntu-16-04-18-04-ce32e4edf1c0">
-                            How To Install Nvidia Drivers and CUDA-10.0 for RTX 2080 Ti GPU on Ubuntu-16.04/18.04
+                            How To Install Nvidia Drivers and CUDA-10.0 for RTX
+                            2080 Ti GPU on Ubuntu-16.04/18.04
                         </a>
                     </li>
 
@@ -212,7 +232,8 @@
 
         <h3>connect to NTUSecure</h3>
         <p>
-            <a target="_blank" href="https://soumyabratadev.files.wordpress.com/2016/07/autontuwl.pdf">
+            <a target="_blank"
+                href="https://soumyabratadev.files.wordpress.com/2016/07/autontuwl.pdf">
                 reference
             </a>
         </p>
