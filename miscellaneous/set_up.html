@@ -47,7 +47,26 @@
     <!--start of content-related code-->
     <div class="content">
         <h3>audio not working</h3>
-        <button class="collapsible">solution</button>
+        <button class="collapsible">possible fix 1</button>
+        <div class="collapsible-content">
+            <ul>
+                <li>
+                    pactl load-module module-detect
+                </li>
+            </ul>
+
+            reference:
+            <ul>
+                <li>
+                    <a target="_blank"
+                        href="https://askubuntu.com/a/1046133/998106">
+                        fix hardware output devices not being detected
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="collapsible">possible fix 2</button>
         <div class="collapsible-content">
             <ul>
                 <li>
@@ -58,9 +77,6 @@
                 </li>
                 <li>
                     restart computer
-                </li>
-                <li>
-                    if need be: pactl load-module module-detect
                 </li>
             </ul>
 
@@ -73,10 +89,35 @@
                         ALC269VB
                     </a>
                 </li>
+            </ul>
+        </div>
+
+        <button class="collapsible">possible fix 3</button>
+        <div class="collapsible-content">
+            <ul>
                 <li>
-                    <a target="_blank"
-                        href="https://askubuntu.com/a/1046133/998106">
-                        fix hardware output devices not being detected
+                    sudo gedit /etc/pulse/default.pa
+                </li>
+                <li>
+                    comment out (#):
+                    <ul>
+                        <li>
+                            .ifexists module-switch-on-connect.so
+                        </li>
+                        <li>
+                            load-module module-switch-on-connect
+                        </li>
+                        <li>
+                            .endif
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            reference:
+            <ul>
+                <li>
+                    <a target="_blank" href="https://askubuntu.com/a/993967/998106">
+                        (K)Ubuntu 17.10 - No Audio devices found, no settings, no sound
                     </a>
                 </li>
             </ul>
