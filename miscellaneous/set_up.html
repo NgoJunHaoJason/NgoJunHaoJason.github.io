@@ -116,8 +116,47 @@
             reference:
             <ul>
                 <li>
-                    <a target="_blank" href="https://askubuntu.com/a/993967/998106">
-                        (K)Ubuntu 17.10 - No Audio devices found, no settings, no sound
+                    <a target="_blank"
+                        href="https://askubuntu.com/a/993967/998106">
+                        (K)Ubuntu 17.10 - No Audio devices found, no settings,
+                        no sound
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="collapsible">possible fix 4</button>
+        <div class="collapsible-content">
+            <ul>
+                <li>
+                    lspci -nn | grep -i audio
+                </li>
+                <li>
+                    look for [xxxx:xxxx] in the listing - the first xxxx is VID
+                    - vendor, and the second xxxx is PID - product/part.
+                </li>
+                <li>
+                    sudo gedit /etc/modprobe.d/'file name'.conf
+                </li>
+                <li>
+                    add the following lines:
+                    <ul>
+                        <li>
+                            options snd_hda_intel enable=1,0 vid=8086,10de pid='on-board pid','nvidia pid'
+
+                        </li>
+                        <li>
+                            options snd_hda_intel index=0 vid=8086 pid='on-board pid'
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            reference:
+            <ul>
+                <li>
+                    <a target="_blank"
+                        href="https://bbs.archlinux.org/viewtopic.php?id=196472">
+                        PulseAudio doesn't detect HDA Intel, only HDA NVidia
                     </a>
                 </li>
             </ul>
