@@ -46,123 +46,56 @@
 
     <!--start of content-related code-->
     <div class="content">
-        <h3>audio not working</h3>
-        <button class="collapsible">possible fix 1</button>
+        <h3>login loop (Ubuntu 18.04, Nvidia GPU) - fixes audio too</h3>
+        <button class="collapsible">solution</button>
         <div class="collapsible-content">
             <ul>
                 <li>
-                    pactl load-module module-detect
-                </li>
-            </ul>
-
-            reference:
-            <ul>
-                <li>
-                    <a target="_blank"
-                        href="https://askubuntu.com/a/1046133/998106">
-                        fix hardware output devices not being detected
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <button class="collapsible">possible fix 2</button>
-        <div class="collapsible-content">
-            <ul>
-                <li>
-                    sudo gedit /etc/modprobe.d/alsa-base.conf
+                    sudo prime-select nvidia
                 </li>
                 <li>
-                    add to bottom of file: options snd-hda-intel model=auto
+                    sudo gedit /etc/default/grub
+                    <ul>
+                        <li>
+                            GRUB_CMDLINE_LINUX_DEFAULT="nogpumanager quiet splash"
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    sudo gedit /etc/X11/xorg.conf
+                    <ul>
+                        <li>
+                            Section "Device"<br>
+                            &emsp;Identifier     "intel"<br>
+                            &emsp;Driver         "modesetting"<br>
+                            &emsp;BusID          "PCI:0:2:0"<br>
+                            EndSection
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     restart computer
                 </li>
             </ul>
 
-            reference:
+            references:
             <ul>
                 <li>
                     <a target="_blank"
-                        href="https://ubuntuforums.org/showthread.php?t=1825882">
-                        Digital Output (SPDIF) not working with HDA Intel
-                        ALC269VB
+                        href="https://forums.developer.nvidia.com/t/ubuntu-18-04-headless-390-intel-igpu-after-prime-select-intel-lost-contact-to-geforce-1050ti/66698/2">
+                        prime-select intel turns off the nvidia gpu
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://forums.developer.nvidia.com/t/ubuntu-18-04-login-loop-after-installing-nvidia-driver/81280">
+                        nogpumanager
                     </a>
                 </li>
             </ul>
         </div>
 
-        <button class="collapsible">possible fix 3</button>
-        <div class="collapsible-content">
-            <ul>
-                <li>
-                    sudo gedit /etc/pulse/default.pa
-                </li>
-                <li>
-                    comment out (#):
-                    <ul>
-                        <li>
-                            .ifexists module-switch-on-connect.so
-                        </li>
-                        <li>
-                            load-module module-switch-on-connect
-                        </li>
-                        <li>
-                            .endif
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            reference:
-            <ul>
-                <li>
-                    <a target="_blank"
-                        href="https://askubuntu.com/a/993967/998106">
-                        (K)Ubuntu 17.10 - No Audio devices found, no settings,
-                        no sound
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <button class="collapsible">possible fix 4</button>
-        <div class="collapsible-content">
-            <ul>
-                <li>
-                    lspci -nn | grep -i audio
-                </li>
-                <li>
-                    look for [xxxx:xxxx] in the listing - the first xxxx is VID
-                    - vendor, and the second xxxx is PID - product/part.
-                </li>
-                <li>
-                    sudo gedit /etc/modprobe.d/'file name'.conf
-                </li>
-                <li>
-                    add the following lines:
-                    <ul>
-                        <li>
-                            options snd_hda_intel enable=1,0 vid=8086,10de pid='on-board pid','nvidia pid'
-
-                        </li>
-                        <li>
-                            options snd_hda_intel index=0 vid=8086 pid='on-board pid'
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            reference:
-            <ul>
-                <li>
-                    <a target="_blank"
-                        href="https://bbs.archlinux.org/viewtopic.php?id=196472">
-                        PulseAudio doesn't detect HDA Intel, only HDA NVidia
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <h3>"wifi adapter not found"</h3>
+        <h3>wifi adapter not found</h3>
         <button class="collapsible">solution</button>
         <div class="collapsible-content">
             <ul>
