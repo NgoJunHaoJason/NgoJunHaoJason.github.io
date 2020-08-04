@@ -11,9 +11,9 @@ import Experience from './experience/Experience';
 import Projects from './projects/Projects';
 
 import 'semantic-ui-css/semantic.min.css'
-import './App.css'
+import './Resume.css'
 
-function App() {
+function Resume() {
     return (
         <Container fluid className='App'>
             <About />
@@ -27,4 +27,4 @@ function App() {
     );
 }
 
-export default App;
+export default Resume;

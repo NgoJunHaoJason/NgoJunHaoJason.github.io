@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './resume/App';
+import Resume from './resume/Resume';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Resume />
     </React.StrictMode>,
     document.getElementById('root')
 );
