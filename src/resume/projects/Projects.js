@@ -5,6 +5,7 @@ import {
     Container,
     Header,
     Label,
+    Icon,
 } from 'semantic-ui-react';
 
 function Projects() {
@@ -22,7 +23,14 @@ function Projects() {
                 <Card fluid>
                     <Card.Content>
                         <Card.Header>
-                            Machine Learning Group Project
+                            <Icon name='github' />
+                            <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href='https://github.com/NgoJunHaoJason/CZ4041'
+                            >
+                                Machine Learning Group Project
+                            </a>
                         </Card.Header>
                         <Card.Description>
                             Kaggle Challenge (IEEE-CIS Fraud Detection)
@@ -54,7 +62,14 @@ function Projects() {
                 <Card fluid>
                     <Card.Content>
                         <Card.Header>
-                            Virtual Reality Group Project
+                            <Icon name='github' />
+                            <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href='https://github.com/NgoJunHaoJason/CZ4001'
+                            >
+                                Virtual Reality Group Project
+                            </a>
                         </Card.Header>
                         <Card.Description>
                             &nbsp;
@@ -119,7 +134,14 @@ function Projects() {
                 <Card fluid>
                     <Card.Content>
                         <Card.Header>
-                            Software Engineering Group Project
+                            <Icon name='github' />
+                            <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href='https://github.com/NgoJunHaoJason/CZ2006'
+                            >
+                                Software Engineering Group Project
+                            </a>
                         </Card.Header>
                         <Card.Description>
                             &nbsp;
