@@ -1,0 +1,1 @@
+{"version":3,"sources":["About.css","App.css"],"names":[],"mappings":"AAAA,gBACI,gBAAiB,CACjB,iBAAkB,CAClB,eACJ,CCJA,KACI,uDACJ","file":"main.5397ad30.chunk.css","sourcesContent":[".ProfilePicture {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n}\n",".App {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n}\n"]}
