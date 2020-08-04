@@ -1,8 +1,10 @@
 import React from 'react';
 
 import {
+    Card,
     Container,
-    Header
+    Header,
+    Label,
 } from 'semantic-ui-react';
 
 function Projects() {
@@ -16,9 +18,133 @@ function Projects() {
                 </Header.Content>
             </Header>
 
-            <Container text>
-                Coming Soon
-            </Container>
+            <Card.Group itemsPerRow={2} centered doubling stackable>
+                <Card fluid>
+                    <Card.Content>
+                        <Card.Header>
+                            Machine Learning Group Project
+                        </Card.Header>
+                        <Card.Description>
+                            Kaggle Challenge (IEEE-CIS Fraud Detection)
+                        </Card.Description>
+                        <Card.Meta>
+                            Jan 2020 – Mar 2020
+                        </Card.Meta>
+
+                        <Card.Description>
+                            <ul>
+                                <li>
+                                    Performed data preprocessing, model evaluation and ensemble learning to train a model which
+                                    predicts if a transaction is fraudulent
+                                </li>
+                            </ul>
+                        </Card.Description>
+                    </Card.Content>
+
+                    <Card.Content extra>
+                        <Label.Group>
+                            <Label>Jupyter Notebook</Label>
+                            <Label>Pandas</Label>
+                            <Label>Scikit-Learn</Label>
+                            <Label>LightGBM</Label>
+                        </Label.Group>
+                    </Card.Content>
+                </Card>
+
+                <Card fluid>
+                    <Card.Content>
+                        <Card.Header>
+                            Virtual Reality Group Project
+                        </Card.Header>
+                        <Card.Description>
+                            &nbsp;
+                        </Card.Description>
+                        <Card.Meta>
+                            Jan 2020 – Mar 2020
+                        </Card.Meta>
+
+                        <Card.Description>
+                            <ul>
+                                <li>
+                                    Set up the project with proper project management and workflow
+                                </li>
+                                <li>
+                                    Developed a virtual reality game where the player hunts animals for points
+                                </li>
+                            </ul>
+                        </Card.Description>
+                    </Card.Content>
+
+                    <Card.Content extra>
+                        <Label.Group>
+                            <Label>Unity</Label>
+                        </Label.Group>
+                    </Card.Content>
+                </Card>
+
+                <Card fluid>
+                    <Card.Content>
+                        <Card.Header>
+                            Undergraduate Research Experience on Campus (URECA)
+                        </Card.Header>
+                        <Card.Description>
+                            An Augmented Virtuality Approach To 3D Videoconferencing
+                        </Card.Description>
+                        <Card.Meta>
+                            Aug 2018 – Jul 2019
+                        </Card.Meta>
+
+                        <Card.Description>
+                            <ul>
+                                <li>
+                                    Carried out research on narrowcasting
+                                </li>
+                                <li>
+                                    Developed a software for real-time audio transmission in a 3D virtual environment,
+                                    with narrowcasting-based privacy controls
+                                </li>
+                            </ul>
+                        </Card.Description>
+                    </Card.Content>
+
+                    <Card.Content extra>
+                        <Label.Group>
+                            <Label>Unity</Label>
+                            <Label>Photon Unity Networking</Label>
+                            <Label>Photon Voice</Label>
+                        </Label.Group>
+                    </Card.Content>
+                </Card>
+
+                <Card fluid>
+                    <Card.Content>
+                        <Card.Header>
+                            Software Engineering Group Project
+                        </Card.Header>
+                        <Card.Description>
+                            &nbsp;
+                        </Card.Description>
+                        <Card.Meta>
+                            Jan 2019 – Apr 2019
+                        </Card.Meta>
+
+                        <Card.Description>
+                            <ul>
+                                <li>
+                                    Handled part of back-end development for a mobile application that finds events in Singapore
+                                </li>
+                            </ul>
+                        </Card.Description>
+                    </Card.Content>
+
+                    <Card.Content extra>
+                        <Label.Group>
+                            <Label>Flutter</Label>
+                            <Label>Postman</Label>
+                        </Label.Group>
+                    </Card.Content>
+                </Card>
+            </Card.Group>
         </Container>
     );
 }
