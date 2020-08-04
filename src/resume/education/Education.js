@@ -10,7 +10,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faLaptop,
+    faLaptopCode,
     faRobot,
     faBrain,
 } from '@fortawesome/free-solid-svg-icons';
@@ -62,7 +62,7 @@ function Education() {
                                         Core
                                     </Item.Header>
                                     <Item.Meta>
-                                        <FontAwesomeIcon icon={faLaptop} />
+                                        <FontAwesomeIcon icon={faLaptopCode} />
                                         &nbsp;
                                         Computer Science
                                     </Item.Meta>
