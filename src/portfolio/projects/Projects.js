@@ -9,7 +9,6 @@ function Projects() {
     return (
         <Container>
             <Header
-                textAlign="center"
                 size="large"
             >
                 <Header.Content>

@@ -9,7 +9,6 @@ function Education() {
     return (
         <Container>
             <Header
-                textAlign="center"
                 size="large"
             >
                 <Header.Content>

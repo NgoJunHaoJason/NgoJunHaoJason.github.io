@@ -22,7 +22,6 @@ function Experience() {
     return (
         <Container>
             <Header
-                textAlign="center"
                 size="large"
             >
                 <Header.Content>
