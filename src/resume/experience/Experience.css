@@ -1,5 +1,13 @@
+.AutoscrapeLink{
+    color: white;
+}
+
+.AutoscrapeLink:hover {
+    text-decoration: underline;
+}
+
 .VerticalTimeline:before {
-    background-color: gray;
+    background-color: gray; /* line colour */
 }
 
 .TimelineText {

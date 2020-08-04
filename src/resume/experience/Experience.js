@@ -31,7 +31,7 @@ function Experience() {
 
             <VerticalTimeline className="VerticalTimeline">
                 <VerticalTimelineElement
-                className="VerticalTimelineElement"
+                    className="VerticalTimelineElement"
                     contentStyle={{ background: 'dodgerblue', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid dodgerblue' }}
                     date="May 2020 - Jul 2020"
@@ -43,7 +43,14 @@ function Experience() {
                     <h4 className="TimelineText">Software Development Intern</h4>
                     <ul>
                         <li>
-                            Contributed to full-stack development of a web-scraping website
+                            Contributed to full-stack development of <a
+                                className="AutoscrapeLink"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://autoscrape.com"
+                            >
+                                <u>a web-scraping website</u>
+                            </a>
                         </li>
                         <li>
                             Developed mobile app front-end that serves as a remote control for iris doors
