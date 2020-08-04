@@ -42,6 +42,7 @@ function About() {
                                 <List.Content>
                                     <a
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         href="mailto:c170127@e.ntu.edu.sg"
                                     >
                                         c170127@e.ntu.edu.sg
@@ -54,6 +55,7 @@ function About() {
                                 <List.Content>
                                     <a
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         href="https://github.com/NgoJunHaoJason"
                                     >
                                         GitHub
@@ -66,6 +68,7 @@ function About() {
                                 <List.Content>
                                     <a
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         href="https://www.linkedin.com/in/ngo-jun-hao-jason/"
                                     >
                                         LinkedIn
