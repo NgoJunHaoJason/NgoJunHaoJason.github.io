@@ -43,17 +43,20 @@ function Experience() {
                     <h4 className="TimelineText">Software Development Intern</h4>
                     <ul>
                         <li>
-                            Contributed to full-stack development of <a
+                            Contributed to full-stack development of a web-scraping website (<a
                                 className="AutoscrapeLink"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href="https://autoscrape.com"
                             >
-                                <u>a web-scraping website</u>
-                            </a>
+                                <u>autoscrape.com</u>
+                            </a>)
                         </li>
                         <li>
                             Developed mobile app front-end that serves as a remote control for iris doors
+                        </li>
+                        <li>
+                            Received letter of commendation
                         </li>
                     </ul>
 
