@@ -7,6 +7,11 @@ import {
     Image,
 } from 'semantic-ui-react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faBriefcase,
+} from '@fortawesome/free-solid-svg-icons';
+
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -25,6 +30,8 @@ function Experience() {
                 size='large'
             >
                 <Header.Content>
+                    <FontAwesomeIcon icon={faBriefcase} />
+                    &nbsp;
                     Experience
                 </Header.Content>
             </Header>

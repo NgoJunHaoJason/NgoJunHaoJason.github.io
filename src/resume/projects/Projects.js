@@ -8,6 +8,11 @@ import {
     Icon,
 } from 'semantic-ui-react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faTasks,
+} from '@fortawesome/free-solid-svg-icons';
+
 function Projects() {
     return (
         <Container>
@@ -15,6 +20,8 @@ function Projects() {
                 size='large'
             >
                 <Header.Content>
+                    <FontAwesomeIcon icon={faTasks} />
+                    &nbsp;
                     Projects
                 </Header.Content>
             </Header>
