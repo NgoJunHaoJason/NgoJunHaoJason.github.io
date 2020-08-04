@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.d07475dd.chunk.css",
-    "main.js": "./static/js/main.f9e2b74f.chunk.js",
-    "main.js.map": "./static/js/main.f9e2b74f.chunk.js.map",
+    "main.css": "./static/css/main.8a5df352.chunk.css",
+    "main.js": "./static/js/main.31ed2492.chunk.js",
+    "main.js.map": "./static/js/main.31ed2492.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.b9c32cb2.js",
     "runtime-main.js.map": "./static/js/runtime-main.b9c32cb2.js.map",
     "static/css/2.668d3b5a.chunk.css": "./static/css/2.668d3b5a.chunk.css",
     "static/js/2.2ff2f56b.chunk.js": "./static/js/2.2ff2f56b.chunk.js",
     "static/js/2.2ff2f56b.chunk.js.map": "./static/js/2.2ff2f56b.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.00665537a8c48b8ecafb2c34a64feee2.js": "./precache-manifest.00665537a8c48b8ecafb2c34a64feee2.js",
+    "precache-manifest.fe5e1877fb1bf577f5097139cb8520cd.js": "./precache-manifest.fe5e1877fb1bf577f5097139cb8520cd.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.668d3b5a.chunk.css.map": "./static/css/2.668d3b5a.chunk.css.map",
-    "static/css/main.d07475dd.chunk.css.map": "./static/css/main.d07475dd.chunk.css.map",
+    "static/css/main.8a5df352.chunk.css.map": "./static/css/main.8a5df352.chunk.css.map",
     "static/js/2.2ff2f56b.chunk.js.LICENSE.txt": "./static/js/2.2ff2f56b.chunk.js.LICENSE.txt",
     "static/media/auralaid_logo.png": "./static/media/auralaid_logo.ad2bc1fb.png",
     "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.b9c32cb2.js",
     "static/css/2.668d3b5a.chunk.css",
     "static/js/2.2ff2f56b.chunk.js",
-    "static/css/main.d07475dd.chunk.css",
-    "static/js/main.f9e2b74f.chunk.js"
+    "static/css/main.8a5df352.chunk.css",
+    "static/js/main.31ed2492.chunk.js"
   ]
 }
