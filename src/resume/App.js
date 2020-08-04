@@ -15,7 +15,7 @@ import './App.css'
 
 function App() {
     return (
-        <Container fluid className="App">
+        <Container fluid className='App'>
             <About />
             <Divider />
             <Education />

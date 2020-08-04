@@ -15,14 +15,14 @@ function About() {
     return (
         <Container>
             <Header
-                textAlign="center"
-                size="huge"
+                textAlign='center'
+                size='huge'
             >
                 <Header.Content>
                     <Image
-                        className="ProfilePicture"
+                        className='ProfilePicture'
                         src={ProfilePicture}
-                        size="tiny"
+                        size='tiny'
                         rounded
                     />
                     Jason Ngo
@@ -38,12 +38,12 @@ function About() {
                     <Card.Description>
                         <List>
                             <List.Item>
-                                <List.Icon name="mail" />
+                                <List.Icon name='mail' />
                                 <List.Content>
                                     <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="mailto:c170127@e.ntu.edu.sg"
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        href='mailto:c170127@e.ntu.edu.sg'
                                     >
                                         c170127@e.ntu.edu.sg
                                     </a>
@@ -51,12 +51,12 @@ function About() {
                             </List.Item>
 
                             <List.Item>
-                                <List.Icon name="github" />
+                                <List.Icon name='github' />
                                 <List.Content>
                                     <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://github.com/NgoJunHaoJason"
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        href='https://github.com/NgoJunHaoJason'
                                     >
                                         GitHub
                                     </a>
@@ -64,12 +64,12 @@ function About() {
                             </List.Item>
 
                             <List.Item>
-                                <List.Icon name="linkedin" />
+                                <List.Icon name='linkedin' />
                                 <List.Content>
                                     <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://www.linkedin.com/in/ngo-jun-hao-jason/"
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        href='https://www.linkedin.com/in/ngo-jun-hao-jason/'
                                     >
                                         LinkedIn
                                     </a>

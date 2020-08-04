@@ -9,7 +9,7 @@ function Education() {
     return (
         <Container>
             <Header
-                size="large"
+                size='large'
             >
                 <Header.Content>
                     Education

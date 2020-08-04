@@ -22,32 +22,32 @@ function Experience() {
     return (
         <Container>
             <Header
-                size="large"
+                size='large'
             >
                 <Header.Content>
                     Experience
                 </Header.Content>
             </Header>
 
-            <VerticalTimeline className="VerticalTimeline">
+            <VerticalTimeline className='VerticalTimeline'>
                 <VerticalTimelineElement
-                    className="VerticalTimelineElement"
+                    className='VerticalTimelineElement'
                     contentStyle={{ background: 'dodgerblue', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid dodgerblue' }}
-                    date="May 2020 - Jul 2020"
-                    dateClassName="TimelineDate"
+                    date='May 2020 - Jul 2020'
+                    dateClassName='TimelineDate'
                     icon={<Image src={AuralAidLogo} circular />}
-                    iconClassName="TimelineIcon"
+                    iconClassName='TimelineIcon'
                 >
-                    <h3 className="TimelineText">Aural-Aid</h3>
-                    <h4 className="TimelineText">Software Development Intern</h4>
+                    <h3 className='TimelineText'>Aural-Aid</h3>
+                    <h4 className='TimelineText'>Software Development Intern</h4>
                     <ul>
                         <li>
                             Contributed to full-stack development of a web-scraping website (<a
-                                className="AutoscrapeLink"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://autoscrape.com"
+                                className='AutoscrapeLink'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href='https://autoscrape.com'
                             >
                                 <u>autoscrape.com</u>
                             </a>)
@@ -73,12 +73,12 @@ function Experience() {
                 <VerticalTimelineElement
                     contentStyle={{ background: '#EA1102', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid #EA1102' }}
-                    date="Aug 2019 - Dec 2019"
-                    dateClassName="TimelineDate"
+                    date='Aug 2019 - Dec 2019'
+                    dateClassName='TimelineDate'
                     icon={<Image src={OVTLogo} circular />}
                 >
-                    <h3 className="TimelineText">Omnivision Technologies</h3>
-                    <h4 className="TimelineText">Computer Vision Intern</h4>
+                    <h3 className='TimelineText'>Omnivision Technologies</h3>
+                    <h4 className='TimelineText'>Computer Vision Intern</h4>
                     <ul>
                         <li>
                             Developed a data visualisation website that aids engineers in qualitative analysis of object detection models
