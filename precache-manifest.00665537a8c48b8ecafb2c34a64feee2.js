@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b13cbed908753223d753e5d7466efb3",
+    "revision": "8f5f8f1ca5680101762fb2d7d10f6b18",
     "url": "./index.html"
   },
   {
-    "revision": "f41b47966a2e865fb9f5",
-    "url": "./static/css/2.22fb1efa.chunk.css"
+    "revision": "dd900af0f49b820cf26b",
+    "url": "./static/css/2.668d3b5a.chunk.css"
   },
   {
-    "revision": "73785d015729418e9c08",
-    "url": "./static/css/main.5397ad30.chunk.css"
+    "revision": "e0fab89d59f2a99fdefb",
+    "url": "./static/css/main.d07475dd.chunk.css"
   },
   {
-    "revision": "f41b47966a2e865fb9f5",
-    "url": "./static/js/2.6b2d93e9.chunk.js"
+    "revision": "dd900af0f49b820cf26b",
+    "url": "./static/js/2.2ff2f56b.chunk.js"
   },
   {
     "revision": "4d47ffde3dc69784e8e23fd910817ef8",
-    "url": "./static/js/2.6b2d93e9.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.2ff2f56b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "73785d015729418e9c08",
-    "url": "./static/js/main.5b200a8d.chunk.js"
+    "revision": "e0fab89d59f2a99fdefb",
+    "url": "./static/js/main.f9e2b74f.chunk.js"
   },
   {
     "revision": "4b9f6a745dd20c61e584",
     "url": "./static/js/runtime-main.b9c32cb2.js"
+  },
+  {
+    "revision": "ad2bc1fb29e9f07c443ab1d97b8cea53",
+    "url": "./static/media/auralaid_logo.ad2bc1fb.png"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -90,6 +94,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "./static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "78bd831b6aee7b67b8d9c0ec1d614d32",
+    "url": "./static/media/ovt_logo.78bd831b.png"
   },
   {
     "revision": "02b0215dcc4b9cfa04e35297c288aaeb",
