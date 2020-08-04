@@ -1,3 +1,3 @@
-# Personal Portfolio
+# My Resume
 
-[visit my portfolio website here](https://ngojunhaojason.github.io)
+[view my resume here](https://ngojunhaojason.github.io)
