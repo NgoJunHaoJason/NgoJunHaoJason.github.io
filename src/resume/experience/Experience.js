@@ -33,7 +33,7 @@ function Experience() {
                 <VerticalTimelineElement
                 className="VerticalTimelineElement"
                     contentStyle={{ background: 'dodgerblue', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                    contentArrowStyle={{ borderRight: '7px solid dodgerblue' }}
                     date="May 2020 - Jul 2020"
                     dateClassName="TimelineDate"
                     icon={<Image src={AuralAidLogo} circular />}
