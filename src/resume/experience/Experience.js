@@ -23,7 +23,9 @@ import './Experience.css';
 import AuralAidLogo from '../../assets/images/auralaid_logo.png';
 import OVTLogo from '../../assets/images/ovt_logo.png';
 
-function Experience() {
+function Experience(props) {
+    const { t } = props;
+
     return (
         <Container>
             <Header
@@ -32,7 +34,7 @@ function Experience() {
                 <Header.Content>
                     <FontAwesomeIcon icon={faBriefcase} />
                     &nbsp;
-                    Experience
+                    {t('experience.header')}
                 </Header.Content>
             </Header>
 
@@ -41,16 +43,16 @@ function Experience() {
                     className='VerticalTimelineElement'
                     contentStyle={{ background: 'dodgerblue', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid dodgerblue' }}
-                    date='May 2020 - Jul 2020'
+                    date={t('experience.aural-aid.date')}
                     dateClassName='TimelineDate'
                     icon={<Image src={AuralAidLogo} circular />}
                     iconClassName='TimelineIcon'
                 >
-                    <h3 className='TimelineText'>Aural-Aid</h3>
-                    <h4 className='TimelineText'>Software Development Intern</h4>
+                    <h3 className='TimelineText'>{t('experience.aural-aid.company-name')}</h3>
+                    <h4 className='TimelineText'>{t('experience.aural-aid.job-title')}</h4>
                     <ul>
                         <li>
-                            Contributed to full-stack development of a web-scraping website (<a
+                            {t('experience.aural-aid.point1')} (<a
                                 className='AutoscrapeLink'
                                 target='_blank'
                                 rel='noopener noreferrer'
@@ -60,10 +62,10 @@ function Experience() {
                             </a>)
                         </li>
                         <li>
-                            Developed mobile app front-end that serves as a remote control for iris doors
+                            {t('experience.aural-aid.point2')}
                         </li>
                         <li>
-                            Received letter of commendation
+                            {t('experience.aural-aid.point3')}
                         </li>
                     </ul>
 
@@ -80,18 +82,18 @@ function Experience() {
                 <VerticalTimelineElement
                     contentStyle={{ background: '#EA1102', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid #EA1102' }}
-                    date='Aug 2019 - Dec 2019'
+                    date={t('experience.omnivision.date')}
                     dateClassName='TimelineDate'
                     icon={<Image src={OVTLogo} circular />}
                 >
-                    <h3 className='TimelineText'>Omnivision Technologies</h3>
-                    <h4 className='TimelineText'>Computer Vision Intern</h4>
+                    <h3 className='TimelineText'>{t('experience.omnivision.company-name')}</h3>
+                    <h4 className='TimelineText'>{t('experience.omnivision.job-title')}</h4>
                     <ul>
                         <li>
-                            Developed a data visualisation website that aids engineers in qualitative analysis of object detection models
+                        {t('experience.omnivision.point1')}
                         </li>
                         <li>
-                            Collected and cleaned more than 10000 images with the help of scripts
+                        {t('experience.omnivision.point2')}
                         </li>
                     </ul>
 

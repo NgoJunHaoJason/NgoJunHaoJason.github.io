@@ -49,5 +49,23 @@
             "so-sci": "Fundamentals of Social Science Research",
             "cog-psy": "Cognitive Psychology"
         }
+    },
+    "experience" : {
+        "header": "Experience",
+        "aural-aid": {
+            "company-name": "Aural-Aid",
+            "job-title": "Software Development Intern",
+            "date": "May 2020 - Jul 2020",
+            "point1": "Contributed to full-stack development of a web-scraping website",
+            "point2": "Developed a prototype mobile app that serves as a remote control for iris doors",
+            "point3": "Received letter of commendation"
+        },
+        "omnivision": {
+            "company-name": "Omnivision Technologies",
+            "job-title": "Computer Vision Intern",
+            "date": "Aug 2019 - Dec 2019",
+            "point1": "Developed a data visualisation website for qualitative analysis of object detection models",
+            "point2": "Collected and cleaned more than 10000 images with the help of scripts"
+        }
     }
 }
