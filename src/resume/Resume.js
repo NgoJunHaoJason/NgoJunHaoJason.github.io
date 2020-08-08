@@ -45,7 +45,7 @@ function Resume() {
             <Experience t={t} />
             <Divider />
 
-            <Projects />
+            <Projects t={t} />
         </Container>
     );
 }

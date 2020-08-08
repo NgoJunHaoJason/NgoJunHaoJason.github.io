@@ -13,7 +13,9 @@ import {
     faTasks,
 } from '@fortawesome/free-solid-svg-icons';
 
-function Projects() {
+function Projects(props) {
+    const { t } = props;
+
     return (
         <Container>
             <Header
@@ -22,7 +24,7 @@ function Projects() {
                 <Header.Content>
                     <FontAwesomeIcon icon={faTasks} />
                     &nbsp;
-                    Projects
+                    {t('projects.header')}
                 </Header.Content>
             </Header>
 
@@ -36,21 +38,20 @@ function Projects() {
                                 rel='noopener noreferrer'
                                 href='https://github.com/NgoJunHaoJason/CZ4041'
                             >
-                                Machine Learning Group Project
+                                {t('projects.ml.header')}
                             </a>
                         </Card.Header>
                         <Card.Description>
-                            Kaggle Challenge (IEEE-CIS Fraud Detection)
+                            {t('projects.ml.subheader')}
                         </Card.Description>
                         <Card.Meta>
-                            Jan 2020 – Mar 2020
+                            {t('projects.ml.date')}
                         </Card.Meta>
 
                         <Card.Description>
                             <ul>
                                 <li>
-                                    Performed data preprocessing, model evaluation and ensemble learning to train a model which
-                                    predicts if a transaction is fraudulent
+                                    {t('projects.ml.point1')}
                                 </li>
                             </ul>
                         </Card.Description>
@@ -75,23 +76,23 @@ function Projects() {
                                 rel='noopener noreferrer'
                                 href='https://github.com/NgoJunHaoJason/CZ4001'
                             >
-                                Virtual Reality Group Project
+                                {t('projects.vr.header')}
                             </a>
                         </Card.Header>
                         <Card.Description>
                             &nbsp;
                         </Card.Description>
                         <Card.Meta>
-                            Jan 2020 – Mar 2020
+                            {t('projects.vr.date')}
                         </Card.Meta>
 
                         <Card.Description>
                             <ul>
                                 <li>
-                                    Set up the project with proper project management and workflow
+                                    {t('projects.vr.point1')}
                                 </li>
                                 <li>
-                                    Developed a virtual reality game where the player hunts animals for points
+                                    {t('projects.vr.point2')}
                                 </li>
                             </ul>
                         </Card.Description>
@@ -107,23 +108,22 @@ function Projects() {
                 <Card fluid>
                     <Card.Content>
                         <Card.Header>
-                            Undergraduate Research Experience on Campus (URECA)
+                            {t('projects.ureca.header')} (URECA)
                         </Card.Header>
                         <Card.Description>
-                            An Augmented Virtuality Approach To 3D Videoconferencing
+                            {t('projects.ureca.subheader')}
                         </Card.Description>
                         <Card.Meta>
-                            Aug 2018 – Jul 2019
+                            {t('projects.ureca.date')}
                         </Card.Meta>
 
                         <Card.Description>
                             <ul>
                                 <li>
-                                    Carried out research on narrowcasting
+                                    {t('projects.ureca.point1')}
                                 </li>
                                 <li>
-                                    Developed a software for real-time audio transmission in a 3D virtual environment,
-                                    with narrowcasting-based privacy controls
+                                    {t('projects.ureca.point2')}
                                 </li>
                             </ul>
                         </Card.Description>
@@ -147,20 +147,20 @@ function Projects() {
                                 rel='noopener noreferrer'
                                 href='https://github.com/NgoJunHaoJason/CZ2006'
                             >
-                                Software Engineering Group Project
+                                {t('projects.se.header')}
                             </a>
                         </Card.Header>
                         <Card.Description>
                             &nbsp;
                         </Card.Description>
                         <Card.Meta>
-                            Jan 2019 – Apr 2019
+                            {t('projects.se.date')}
                         </Card.Meta>
 
                         <Card.Description>
                             <ul>
                                 <li>
-                                    Handled part of back-end development for a mobile application that finds events in Singapore
+                                    {t('projects.se.point1')}
                                 </li>
                             </ul>
                         </Card.Description>

@@ -67,5 +67,32 @@
             "point1": "Developed a data visualisation website for qualitative analysis of object detection models",
             "point2": "Collected and cleaned more than 10000 images with the help of scripts"
         }
+    },
+    "projects": {
+        "header": "Projects",
+        "ml": {
+            "header": "Machine Learning Group Project",
+            "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
+            "date": "Jan 2020 – Mar 2020",
+            "point1": "Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"
+        },
+        "vr": {
+            "header": "Virtual Reality Group Project",
+            "date": "Jan 2020 – Mar 2020",
+            "point1": "Set up the project with proper project management and workflow",
+            "point2": "Developed a virtual reality game where the player hunts animals for points"
+        },
+        "ureca": {
+            "header": "Undergraduate Research Experience on Campus",
+            "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
+            "date": "Aug 2018 – Jul 2019",
+            "point1": "Carried out research on narrowcasting",
+            "point2": "Developed a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls"
+        },
+        "se": {
+            "header": "Software Engineering Group Project",
+            "date": "Jan 2019 – Apr 2019",
+            "point1": "Handled part of back-end development for a mobile application that finds events in Singapore"
+        }
     }
 }
