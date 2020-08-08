@@ -60,7 +60,7 @@ function About(props) {
                                         rel='noopener noreferrer'
                                         href='https://github.com/NgoJunHaoJason'
                                     >
-                                        GitHub
+                                        {t('about.github')}
                                     </a>
                                 </List.Content>
                             </List.Item>
@@ -73,7 +73,7 @@ function About(props) {
                                         rel='noopener noreferrer'
                                         href='https://www.linkedin.com/in/ngo-jun-hao-jason/'
                                     >
-                                        LinkedIn
+                                        {t('about.linkedin')}
                                     </a>
                                 </List.Content>
                             </List.Item>

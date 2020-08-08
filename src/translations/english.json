@@ -2,6 +2,8 @@
     "translate": "中文",
     "about": {
         "name": "Ngo Jun Hao Jason",
-        "description": "CS undergraduate at NTU"
+        "description": "CS undergraduate at NTU",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
     }
 }

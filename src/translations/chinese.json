@@ -2,6 +2,8 @@
     "translate": "English",
     "about": {
         "name": "伍俊豪",
-        "description": "南大计算机科学本科生"
+        "description": "南大计算机科学本科生",
+        "github": "代码库",
+        "linkedin": "领英"
     }
 }
