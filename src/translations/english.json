@@ -5,5 +5,49 @@
         "description": "CS undergraduate at NTU",
         "github": "GitHub",
         "linkedin": "LinkedIn"
+    },
+    "education": {
+        "header": "Education",
+        "university": {
+            "name": "Nanyang Technological University, Singapore",
+            "date": "Aug 2017 – May 2021 (Expected)",
+            "degree": "Bachelor of Engineering (Computer Science)",
+            "honours": "Expected Honours (Distinction)"
+        },
+        "core": {
+            "header": "Core",
+            "subheader": "Computer Science",
+            "calc": "Calculus",
+            "lin-alg": "Linear Algebra",
+            "seq-series": "Sequences and Series",
+            "prob-stats": "Probability and Statistics",
+            "discrete-math": "Discrete Mathematics",
+            "com-thinking": "Computational Thinking",
+            "coa": "Computer Organisation and Architecture",
+            "data-struct": "Data Structures",
+            "algo": "Algorithms",
+            "oodp": "Object-Oriented Design and Programming",
+            "com-graph": "Computer Graphics",
+            "hci": "Human-Computer Interaction",
+            "os": "Operating Systems",
+            "se": "Software Engineering",
+            "db": "Databases",
+            "ssad": "Software Systems Analysis and Design",
+            "net": "Computer Networks"
+        },
+        "specialisation": {
+            "header": "Specialisation",
+            "subheader": "Artificial Intelligence",
+            "ml": "Machine Learning",
+            "var": "Virtual and Augmented Reality",
+            "ia": "Intelligent Agents"
+        },
+        "minor": {
+            "header": "Minor (in-progress)",
+            "subheader": "Psychology",
+            "intro": "Introduction to Psychology",
+            "so-sci": "Fundamentals of Social Science Research",
+            "cog-psy": "Cognitive Psychology"
+        }
     }
 }

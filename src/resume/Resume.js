@@ -39,7 +39,7 @@ function Resume() {
             <About t={t} />
             <Divider />
 
-            <Education />
+            <Education t={t} />
             <Divider />
 
             <Experience />

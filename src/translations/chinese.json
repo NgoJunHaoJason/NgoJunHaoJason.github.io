@@ -5,5 +5,49 @@
         "description": "南大计算机科学本科生",
         "github": "代码库",
         "linkedin": "领英"
+    },
+    "education": {
+        "header": "学历",
+        "university": {
+            "name": "南洋理工大学, 新加坡",
+            "date": "2017年 8月 – 2021年 5月 (预期)",
+            "degree": "工程学士 (计算机科学)",
+            "honours": "预期荣誉 (优等)"
+        },
+        "core": {
+            "header": "主修课程",
+            "subheader": "计算机科学",
+            "calc": "微积分学",
+            "lin-alg": "线性代数",
+            "seq-series": "顺序与系列",
+            "prob-stats": "概率统计",
+            "discrete-math": "离散数学",
+            "com-thinking": "计算思想",
+            "coa": "计算机组织与架构",
+            "data-struct": "数据结构",
+            "algo": "算法",
+            "oodp": "面向对象设计与编程",
+            "com-graph": "计算机图形学",
+            "hci": "人机交互",
+            "os": "操作系统",
+            "se": "软件工程",
+            "db": "数据库",
+            "ssad": "软件系统分析与设计",
+            "net": "计算机网络"
+        },
+        "specialisation": {
+            "header": "专业科目",
+            "subheader": "人工智能",
+            "ml": "机器学习",
+            "var": "虚拟与增强现实",
+            "ia": "智能代理"
+        },
+        "minor": {
+            "header": "副修科目 (进行中)",
+            "subheader": "心理学",
+            "intro": "心理学概论",
+            "so-sci": "社会科学研究的基础",
+            "cog-psy": "认知心理学"
+        }
     }
 }
