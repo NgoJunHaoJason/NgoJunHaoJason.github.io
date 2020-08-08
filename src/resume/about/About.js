@@ -11,7 +11,9 @@ import {
 import ProfilePicture from '../../assets/images/sciurus_96.png';
 import './About.css';
 
-function About() {
+function About(props) {
+    const { t } = props;
+
     return (
         <Container>
             <Header
@@ -25,11 +27,11 @@ function About() {
                         size='tiny'
                         rounded
                     />
-                    Jason Ngo
+                    {t('about.name')}
                 </Header.Content>
 
                 <Header.Subheader>
-                    CS undergraduate at NTU
+                    {t('about.description')}
                 </Header.Subheader>
             </Header>
 

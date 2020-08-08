@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+
 import Resume from './resume/Resume';
+import LoadingScreen from './LoadingScreen';
+
 import * as serviceWorker from './serviceWorker';
+import './i18n';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Resume />
+        <Suspense fallback={<LoadingScreen />}>
+            <Resume />
+        </Suspense>
     </React.StrictMode>,
     document.getElementById('root')
 );
