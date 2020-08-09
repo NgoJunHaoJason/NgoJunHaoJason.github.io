@@ -28,6 +28,15 @@ function Resume() {
 
     return (
         <Container fluid className='App'>
+            {/* this button does nothing, except to centre the header on mobile */}
+            <Button
+                className='TranslateCounterWeight'
+                floated='left'
+                size='mini'
+            >
+                {t('translate')}
+            </Button>
+            
             <Button
                 floated='right'
                 size='mini'
