@@ -33,13 +33,17 @@
             "se": "Software Engineering",
             "db": "Databases",
             "ssad": "Software Systems Analysis and Design",
-            "net": "Computer Networks"
+            "net": "Computer Networks",
+            "compiler": "Compiler Techniques"
         },
         "specialisation": {
             "header": "Specialisation",
             "subheader": "Artificial Intelligence",
-            "ml": "Machine Learning",
             "var": "Virtual and Augmented Reality",
+            "cv": "Computer Vision",
+            "ml": "Machine Learning",
+            "nn": "Neural Networks and Deep Learning",
+            "nlp": "Natural Language Processing",
             "ia": "Intelligent Agents"
         },
         "minor": {
@@ -47,7 +51,8 @@
             "subheader": "Psychology",
             "intro": "Introduction to Psychology",
             "so-sci": "Fundamentals of Social Science Research",
-            "cog-psy": "Cognitive Psychology"
+            "cog-psy": "Cognitive Psychology",
+            "sense-percept": "Sensation and Perception"
         }
     },
     "experience" : {

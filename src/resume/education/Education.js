@@ -125,6 +125,9 @@ function Education(props) {
                                                 <List.Item>
                                                     {t('education.core.net')}
                                                 </List.Item>
+                                                <List.Item>
+                                                    {t('education.core.compiler')}
+                                                </List.Item>
                                             </List>
                                         </Item.Description>
                                     </Item.Content>
@@ -151,7 +154,16 @@ function Education(props) {
                                                     {t('education.specialisation.var')}
                                                 </List.Item>
                                                 <List.Item>
+                                                    {t('education.specialisation.cv')}
+                                                </List.Item>
+                                                <List.Item>
                                                     {t('education.specialisation.ml')}
+                                                </List.Item>
+                                                <List.Item>
+                                                    {t('education.specialisation.nn')}
+                                                </List.Item>
+                                                <List.Item>
+                                                    {t('education.specialisation.nlp')}
                                                 </List.Item>
                                                 <List.Item>
                                                     {t('education.specialisation.ia')}
@@ -186,6 +198,9 @@ function Education(props) {
                                                 </List.Item>
                                                 <List.Item>
                                                     {t('education.minor.cog-psy')}
+                                                </List.Item>
+                                                <List.Item>
+                                                    {t('education.minor.sense-percept')}
                                                 </List.Item>
                                             </List>
                                         </Item.Description>
