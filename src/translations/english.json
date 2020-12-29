@@ -61,9 +61,8 @@
             "company-name": "Aural-Aid",
             "job-title": "Software Development Intern",
             "date": "May 2020 - Jul 2020",
-            "point1": "Contributed to full-stack development of a web-scraping website",
-            "point2": "Developed a prototype mobile app that serves as a remote control for iris doors",
-            "point3": "Received letter of commendation"
+            "point1": "Contributed to full-stack development of a website that scrapes for companies’ contact information",
+            "point2": "Developed a prototype mobile app that serves as a remote control for iris doors"
         },
         "omnivision": {
             "company-name": "Omnivision Technologies",
@@ -75,6 +74,11 @@
     },
     "projects": {
         "header": "Projects",
+        "nn": {
+            "header": "Neural Network and Deep Learning Group Project",
+            "date": "Sep 2020 – Nov 2020",
+            "point1": "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 0.934 on Adience’s test set"
+        },
         "ml": {
             "header": "Machine Learning Group Project",
             "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
@@ -93,11 +97,6 @@
             "date": "Aug 2018 – Jul 2019",
             "point1": "Carried out research on narrowcasting",
             "point2": "Developed a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls"
-        },
-        "se": {
-            "header": "Software Engineering Group Project",
-            "date": "Jan 2019 – Apr 2019",
-            "point1": "Handled part of back-end development for a mobile application that finds events in Singapore"
         }
     }
 }

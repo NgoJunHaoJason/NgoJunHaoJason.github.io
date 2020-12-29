@@ -50,7 +50,7 @@ function Education(props) {
                                             {t('education.university.degree')}
                                         </Item.Description>
                                         <Item.Extra>
-                                            {t('education.university.honours')}, GPA: 4.38 / 5.00
+                                            {t('education.university.honours')}, GPA: 4.41 / 5.00
                                     </Item.Extra>
                                     </Item.Content>
                                 </Item>

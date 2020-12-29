@@ -29,6 +29,43 @@ function Projects(props) {
             </Header>
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
+            <Card fluid>
+                    <Card.Content>
+                        <Card.Header>
+                            <Icon name='github' />
+                            <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href='https://github.com/NgoJunHaoJason/CZ4042'
+                            >
+                                {t('projects.nn.header')}
+                            </a>
+                        </Card.Header>
+                        <Card.Description>
+                            &nbsp;
+                        </Card.Description>
+                        <Card.Meta>
+                            {t('projects.nn.date')}
+                        </Card.Meta>
+
+                        <Card.Description>
+                            <ul>
+                                <li>
+                                    {t('projects.nn.point1')}
+                                </li>
+                            </ul>
+                        </Card.Description>
+                    </Card.Content>
+
+                    <Card.Content extra>
+                        <Label.Group>
+                            <Label>Tensorflow</Label>
+                            <Label>Google Colaboratory</Label>
+                            <Label>Weights and Biases</Label>
+                        </Label.Group>
+                    </Card.Content>
+                </Card>
+
                 <Card fluid>
                     <Card.Content>
                         <Card.Header>
@@ -134,42 +171,6 @@ function Projects(props) {
                             <Label>Unity</Label>
                             <Label>Photon Unity Networking</Label>
                             <Label>Photon Voice</Label>
-                        </Label.Group>
-                    </Card.Content>
-                </Card>
-
-                <Card fluid>
-                    <Card.Content>
-                        <Card.Header>
-                            <Icon name='github' />
-                            <a
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                href='https://github.com/NgoJunHaoJason/CZ2006'
-                            >
-                                {t('projects.se.header')}
-                            </a>
-                        </Card.Header>
-                        <Card.Description>
-                            &nbsp;
-                        </Card.Description>
-                        <Card.Meta>
-                            {t('projects.se.date')}
-                        </Card.Meta>
-
-                        <Card.Description>
-                            <ul>
-                                <li>
-                                    {t('projects.se.point1')}
-                                </li>
-                            </ul>
-                        </Card.Description>
-                    </Card.Content>
-
-                    <Card.Content extra>
-                        <Label.Group>
-                            <Label>Flutter</Label>
-                            <Label>Postman</Label>
                         </Label.Group>
                     </Card.Content>
                 </Card>

@@ -64,9 +64,6 @@ function Experience(props) {
                         <li>
                             {t('experience.aural-aid.point2')}
                         </li>
-                        <li>
-                            {t('experience.aural-aid.point3')}
-                        </li>
                     </ul>
 
                     <Label.Group>
