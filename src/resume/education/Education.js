@@ -50,7 +50,7 @@ function Education(props) {
                                             {t('education.university.degree')}
                                         </Item.Description>
                                         <Item.Extra>
-                                            {t('education.university.honours')}, GPA: 4.41 / 5.00
+                                            {t('education.university.honours')}, GPA: 4.46 / 5.00
                                     </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -128,6 +128,9 @@ function Education(props) {
                                                 <List.Item>
                                                     {t('education.core.compiler')}
                                                 </List.Item>
+                                                <List.Item>
+                                                    {t('education.core.embedded')}
+                                                </List.Item>
                                             </List>
                                         </Item.Description>
                                     </Item.Content>
@@ -191,9 +194,6 @@ function Education(props) {
                                         <Item.Description>
                                             <List bulleted>
                                                 <List.Item>
-                                                    {t('education.minor.intro')}
-                                                </List.Item>
-                                                <List.Item>
                                                     {t('education.minor.so-sci')}
                                                 </List.Item>
                                                 <List.Item>
@@ -201,6 +201,9 @@ function Education(props) {
                                                 </List.Item>
                                                 <List.Item>
                                                     {t('education.minor.sense-percept')}
+                                                </List.Item>
+                                                <List.Item>
+                                                    {t('education.minor.human-lang')}
                                                 </List.Item>
                                             </List>
                                         </Item.Description>

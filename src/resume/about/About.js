@@ -8,7 +8,7 @@ import {
     List,
 } from 'semantic-ui-react';
 
-import ProfilePicture from '../../assets/images/sciurus_96.png';
+import ProfilePicture from '../../assets/images/smiley_face.jpg';
 import './About.css';
 
 function About(props) {
@@ -26,6 +26,7 @@ function About(props) {
                         src={ProfilePicture}
                         size='tiny'
                         rounded
+                        bordered
                     />
                     {t('about.name')}
                 </Header.Content>

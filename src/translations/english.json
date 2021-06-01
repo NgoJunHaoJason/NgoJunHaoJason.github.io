@@ -2,7 +2,7 @@
     "translate": "中文",
     "about": {
         "name": "Jason Ngo",
-        "description": "CS undergraduate at NTU",
+        "description": "NTU CS graduate",
         "github": "GitHub",
         "linkedin": "LinkedIn"
     },
@@ -10,9 +10,9 @@
         "header": "Education",
         "university": {
             "name": "Nanyang Technological University, Singapore",
-            "date": "Aug 2017 – May 2021 (Expected)",
+            "date": "Aug 2017 – May 2021",
             "degree": "Bachelor of Engineering (Computer Science)",
-            "honours": "Expected Honours (Distinction)"
+            "honours": "Honours: Distinction"
         },
         "core": {
             "header": "Core",
@@ -34,7 +34,8 @@
             "db": "Databases",
             "ssad": "Software Systems Analysis and Design",
             "net": "Computer Networks",
-            "compiler": "Compiler Techniques"
+            "compiler": "Compiler Techniques",
+            "embedded": "Embedded Programming"
         },
         "specialisation": {
             "header": "Specialisation",
@@ -49,14 +50,20 @@
         "minor": {
             "header": "Minor",
             "subheader": "Psychology",
-            "intro": "Introduction to Psychology",
-            "so-sci": "Fundamentals of Social Science Research",
+            "so-sci": "Social Science Research",
             "cog-psy": "Cognitive Psychology",
-            "sense-percept": "Sensation and Perception"
+            "sense-percept": "Sensation and Perception",
+            "human-lang": "Human Language"
         }
     },
     "experience" : {
         "header": "Experience",
+        "dbs": {
+            "company-name": "Development Bank of Singapore",
+            "job-title": "?",
+            "date": "Jul 2021 - present",
+            "point1": "Skill Enhancement Education & Development Programme (SEED)"
+        },
         "aural-aid": {
             "company-name": "Aural-Aid",
             "job-title": "Software Development Intern",
@@ -65,7 +72,7 @@
             "point2": "Developed a prototype mobile app that serves as a remote control for iris doors"
         },
         "omnivision": {
-            "company-name": "Omnivision Technologies",
+            "company-name": "Omnivision Technologies Singapore",
             "job-title": "Computer Vision Intern",
             "date": "Aug 2019 - Dec 2019",
             "point1": "Developed a data visualisation website for qualitative analysis of object detection models",
@@ -74,6 +81,24 @@
     },
     "projects": {
         "header": "Projects",
+        "fyp": {
+            "header": "Joint Industry Final Year Project",
+            "subheader": "with Omnivision Technologies Singapore",
+            "date": "Aug 2020 – May 2021",
+            "point1": "Collected more than 2500 images of Singapore vehicle license plates",
+            "point2": "Fine-tuned a license plate detector to achieve average precision of ~0.99",
+            "point3": "Modified and trained license plate recogniser to achieve accuracy of ~0.93",
+            "point4": "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of ~0.86"
+        },
+        "ureca": {
+            "header": "Undergraduate Research Experience on Campus",
+            "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
+            "date": "Aug 2018 – Jul 2019",
+            "point1": "Carried out research on narrowcasting",
+            "point2": "Contributed to development of a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls",
+            "point3": "Designed and implemented user interface",
+            "point4": "Re-implemented logic for 'select' and 'attend' according to specifications"
+        },
         "nn": {
             "header": "Neural Network and Deep Learning Group Project",
             "date": "Sep 2020 – Nov 2020",
@@ -84,19 +109,6 @@
             "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
             "date": "Jan 2020 – Mar 2020",
             "point1": "Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"
-        },
-        "vr": {
-            "header": "Virtual Reality Group Project",
-            "date": "Jan 2020 – Mar 2020",
-            "point1": "Set up the project with proper project management and workflow",
-            "point2": "Developed a virtual reality game where the player hunts animals for points"
-        },
-        "ureca": {
-            "header": "Undergraduate Research Experience on Campus",
-            "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
-            "date": "Aug 2018 – Jul 2019",
-            "point1": "Carried out research on narrowcasting",
-            "point2": "Developed a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls"
         }
     }
 }

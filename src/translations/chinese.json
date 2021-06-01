@@ -2,17 +2,17 @@
     "translate": "English",
     "about": {
         "name": "伍俊豪",
-        "description": "南大计算机科学本科生",
+        "description": "南大计算机科学毕业生",
         "github": "GitHub",
-        "linkedin": "领英"
+        "linkedin": "LinkedIn"
     },
     "education": {
         "header": "学历",
         "university": {
             "name": "南洋理工大学, 新加坡",
-            "date": "2017年 8月 – 2021年 5月 (预期)",
+            "date": "2017年 8月 – 2021年 5月",
             "degree": "工程学士 (计算机科学)",
-            "honours": "预期荣誉 (优等)"
+            "honours": "荣誉: (优等)"
         },
         "core": {
             "header": "主修",
@@ -34,7 +34,8 @@
             "db": "数据库",
             "ssad": "软件系统分析与设计",
             "net": "计算机网络",
-            "compiler": "编译器技术"
+            "compiler": "编译器技术",
+            "embedded": "嵌入式编程"
         },
         "specialisation": {
             "header": "专业",
@@ -49,14 +50,20 @@
         "minor": {
             "header": "副修",
             "subheader": "心理学",
-            "intro": "心理学概论",
-            "so-sci": "社会科学研究的基础",
+            "so-sci": "社会科学研究",
             "cog-psy": "认知心理学",
-            "sense-percept": "感觉与知觉"
+            "sense-percept": "感觉与知觉",
+            "human-lang": "人类语言"
         }
     },
     "experience" : {
         "header": "工作经验",
+        "dbs": {
+            "company-name": "新加坡发展银行",
+            "job-title": "?",
+            "date": "Jul 2021 - present",
+            "point1": "技能提升教育与发展计划 (SEED)"
+        },
         "aural-aid": {
             "company-name": "Aural-Aid",
             "job-title": "软件开发实习生",
@@ -65,7 +72,7 @@
             "point2": "开发了可作为虹膜门遥控器的原型手机应用程序"
         },
         "omnivision": {
-            "company-name": "Omnivision Technologies",
+            "company-name": "Omnivision Technologies Singapore",
             "job-title": "计算机视觉实习生",
             "date": "2019年 8月 - 2019年 12月",
             "point1": "开发了数据可视化网站以对物体检测模型进行定性分析",
@@ -74,6 +81,24 @@
     },
     "projects": {
         "header": "项目",
+        "fyp": {
+            "header": "Joint Industry Final Year Project",
+            "subheader": "与Omnivision Technologies Singapore",
+            "date": "2020年 8月 – 2021年 5月",
+            "point1": "收集了2500多张新加坡车牌图片",
+            "point2": "微调车牌检测器，以达到~0.99的平均精度",
+            "point3": "修改及训练车牌识别器以达到~0.93的准确度",
+            "point4": "集成车牌检测器和识别器，以获得精度为~0.86 的轻巧快速的车牌识别系统 "
+        },
+        "ureca": {
+            "header": "校园本科生研究经验",
+            "subheader": "3D视频会议的增强虚拟化方法",
+            "date": "2018年 8月 – 2019年 7月",
+            "point1": "进行窄播研究",
+            "point2": "通过基于窄播的隐私控制，致力于在3D虚拟环境中实时音频传输的软件开发",
+            "point3": "设计和实现的用户界面",
+            "point4": "根据规范重新实现“选择”和“参加”的逻辑"
+        },
         "nn": {
             "header": "神经网络与深度学习小组项目",
             "date": "2020年 9月 – 2020年 11月",
@@ -84,19 +109,6 @@
             "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
             "date": "2020年 1月 – 2020年 3月",
             "point1": "执行数据预处理，模型评估和整体学习，以训练可预测交易是否欺诈的模型"
-        },
-        "vr": {
-            "header": "虚拟现实小组项目",
-            "date": "2020年 1月 – 2020年 3月",
-            "point1": "通过适当的项目管理和工作流程设置项目",
-            "point2": "开发了虚拟现实游戏，玩家在游戏中狩猎动物以获取积分"
-        },
-        "ureca": {
-            "header": "校园本科生研究经验",
-            "subheader": "3D视频会议的增强虚拟化方法",
-            "date": "2018年 8月 – 2019年 7月",
-            "point1": "进行窄播研究",
-            "point2": "开发了一种用于3D虚拟环境中实时音频传输的软件，并具有基于窄播的隐私控制"
         }
     }
 }
