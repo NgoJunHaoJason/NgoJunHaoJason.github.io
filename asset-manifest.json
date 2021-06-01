@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "./static/css/main.ba908024.chunk.css",
-    "main.js": "./static/js/main.fa7d4471.chunk.js",
-    "main.js.map": "./static/js/main.fa7d4471.chunk.js.map",
+    "main.css": "./static/css/main.bf560081.chunk.css",
+    "main.js": "./static/js/main.ca2177da.chunk.js",
+    "main.js.map": "./static/js/main.ca2177da.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.b9c32cb2.js",
     "runtime-main.js.map": "./static/js/runtime-main.b9c32cb2.js.map",
-    "static/css/2.668d3b5a.chunk.css": "./static/css/2.668d3b5a.chunk.css",
-    "static/js/2.f874cf8e.chunk.js": "./static/js/2.f874cf8e.chunk.js",
-    "static/js/2.f874cf8e.chunk.js.map": "./static/js/2.f874cf8e.chunk.js.map",
+    "static/css/2.96b22bc8.chunk.css": "./static/css/2.96b22bc8.chunk.css",
+    "static/js/2.a491b1fd.chunk.js": "./static/js/2.a491b1fd.chunk.js",
+    "static/js/2.a491b1fd.chunk.js.map": "./static/js/2.a491b1fd.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.a12c71b68e75f7cfe2b7d784e71e7f7f.js": "./precache-manifest.a12c71b68e75f7cfe2b7d784e71e7f7f.js",
+    "precache-manifest.c55be208786dd96e2d8749046535fef4.js": "./precache-manifest.c55be208786dd96e2d8749046535fef4.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.668d3b5a.chunk.css.map": "./static/css/2.668d3b5a.chunk.css.map",
-    "static/css/main.ba908024.chunk.css.map": "./static/css/main.ba908024.chunk.css.map",
-    "static/js/2.f874cf8e.chunk.js.LICENSE.txt": "./static/js/2.f874cf8e.chunk.js.LICENSE.txt",
+    "static/css/2.96b22bc8.chunk.css.map": "./static/css/2.96b22bc8.chunk.css.map",
+    "static/css/main.bf560081.chunk.css.map": "./static/css/main.bf560081.chunk.css.map",
+    "static/js/2.a491b1fd.chunk.js.LICENSE.txt": "./static/js/2.a491b1fd.chunk.js.LICENSE.txt",
     "static/media/auralaid_logo.png": "./static/media/auralaid_logo.ad2bc1fb.png",
     "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
+    "static/media/dbs_logo.png": "./static/media/dbs_logo.e0b12553.png",
     "static/media/ovt_logo.png": "./static/media/ovt_logo.78bd831b.png",
-    "static/media/sciurus_96.png": "./static/media/sciurus_96.02b0215d.png"
+    "static/media/smiley_face.jpg": "./static/media/smiley_face.146a285c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b9c32cb2.js",
-    "static/css/2.668d3b5a.chunk.css",
-    "static/js/2.f874cf8e.chunk.js",
-    "static/css/main.ba908024.chunk.css",
-    "static/js/main.fa7d4471.chunk.js"
+    "static/css/2.96b22bc8.chunk.css",
+    "static/js/2.a491b1fd.chunk.js",
+    "static/css/main.bf560081.chunk.css",
+    "static/js/main.ca2177da.chunk.js"
   ]
 }

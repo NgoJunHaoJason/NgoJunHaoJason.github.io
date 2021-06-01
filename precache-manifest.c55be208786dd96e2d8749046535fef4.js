@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa32331a21bd4531d59546eaf2de0b4e",
+    "revision": "e1cba955184370cfebb8ac8443f13204",
     "url": "./index.html"
   },
   {
-    "revision": "05764bdbce51b3e66217",
-    "url": "./static/css/2.668d3b5a.chunk.css"
+    "revision": "b46870710550bab39471",
+    "url": "./static/css/2.96b22bc8.chunk.css"
   },
   {
-    "revision": "3146ea86cca7ead1075f",
-    "url": "./static/css/main.ba908024.chunk.css"
+    "revision": "5c6fc72bd79c09f0577d",
+    "url": "./static/css/main.bf560081.chunk.css"
   },
   {
-    "revision": "05764bdbce51b3e66217",
-    "url": "./static/js/2.f874cf8e.chunk.js"
+    "revision": "b46870710550bab39471",
+    "url": "./static/js/2.a491b1fd.chunk.js"
   },
   {
     "revision": "4d47ffde3dc69784e8e23fd910817ef8",
-    "url": "./static/js/2.f874cf8e.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.a491b1fd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3146ea86cca7ead1075f",
-    "url": "./static/js/main.fa7d4471.chunk.js"
+    "revision": "5c6fc72bd79c09f0577d",
+    "url": "./static/js/main.ca2177da.chunk.js"
   },
   {
     "revision": "4b9f6a745dd20c61e584",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "./static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "e0b125534d067835383105ecbd662135",
+    "url": "./static/media/dbs_logo.e0b12553.png"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -100,7 +104,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/ovt_logo.78bd831b.png"
   },
   {
-    "revision": "02b0215dcc4b9cfa04e35297c288aaeb",
-    "url": "./static/media/sciurus_96.02b0215d.png"
+    "revision": "146a285c9057fe02a3a4189b0039eaa7",
+    "url": "./static/media/smiley_face.146a285c.jpg"
   }
 ]);
