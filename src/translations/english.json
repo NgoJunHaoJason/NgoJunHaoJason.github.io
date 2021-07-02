@@ -59,7 +59,7 @@
     "experience" : {
         "header": "Experience",
         "dbs": {
-            "company-name": "Development Bank of Singapore",
+            "company-name": "DBS Bank",
             "job-title": "?",
             "date": "Jul 2021 - present",
             "point1": "Skill Enhancement Education & Development Programme (SEED)"
@@ -84,11 +84,11 @@
         "fyp": {
             "header": "Joint Industry Final Year Project",
             "subheader": "with Omnivision Technologies Singapore",
-            "date": "Aug 2020 – May 2021",
+            "date": "Aug 2020 – Jun 2021",
             "point1": "Collected more than 2500 images of Singapore vehicle license plates",
-            "point2": "Fine-tuned a license plate detector to achieve average precision of ~0.99",
-            "point3": "Modified and trained license plate recogniser to achieve accuracy of ~0.93",
-            "point4": "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of ~0.86"
+            "point2": "Fine-tuned a license plate detector to achieve average precision of 96.9% at an intersection-over-union threshold of 0.7",
+            "point3": "Modified and trained license plate recogniser to achieve accuracy of 97.2%",
+            "point4": "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of 96.1%"
         },
         "ureca": {
             "header": "Undergraduate Research Experience on Campus",
@@ -102,7 +102,7 @@
         "nn": {
             "header": "Neural Network and Deep Learning Group Project",
             "date": "Sep 2020 – Nov 2020",
-            "point1": "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 0.934 on Adience’s test set"
+            "point1": "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"
         },
         "ml": {
             "header": "Machine Learning Group Project",

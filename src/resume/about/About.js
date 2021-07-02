@@ -46,9 +46,9 @@ function About(props) {
                                     <a
                                         target='_blank'
                                         rel='noopener noreferrer'
-                                        href='mailto:c170127@e.ntu.edu.sg'
+                                        href='mailto:njhjason@protonmail.com'
                                     >
-                                        c170127@e.ntu.edu.sg
+                                        njhjason@protonmail.com
                                     </a>
                                 </List.Content>
                             </List.Item>
