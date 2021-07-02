@@ -115,7 +115,7 @@ function Projects(props) {
                             <a
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                href='https://github.com/NgoJunHaoJason/CZ4042'
+                                href='https://github.com/NgoJunHaoJason/CZ4042/tree/master/project'
                             >
                                 {t('projects.nn.header')}
                             </a>
@@ -152,7 +152,7 @@ function Projects(props) {
                             <a
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                href='https://github.com/NgoJunHaoJason/CZ4041'
+                                href='https://github.com/NgoJunHaoJason/CZ4041/tree/master/project'
                             >
                                 {t('projects.ml.header')}
                             </a>
