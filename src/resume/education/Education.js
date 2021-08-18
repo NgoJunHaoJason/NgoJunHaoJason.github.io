@@ -56,7 +56,7 @@ function Education(props) {
                                             <a
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                href='../../assets/docs/degree_transcript_ngo_jun_hao_jason.opencert'
+                                                href='https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/degree_transcript_ngo_jun_hao_jason.opencert'
                                             >
                                                 {t('education.university.cert')}
                                             </a>
