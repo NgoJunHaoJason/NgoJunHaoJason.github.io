@@ -1,30 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.bf560081.chunk.css",
-    "main.js": "./static/js/main.8836b20b.chunk.js",
-    "main.js.map": "./static/js/main.8836b20b.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.b9c32cb2.js",
-    "runtime-main.js.map": "./static/js/runtime-main.b9c32cb2.js.map",
-    "static/css/2.96b22bc8.chunk.css": "./static/css/2.96b22bc8.chunk.css",
-    "static/js/2.a491b1fd.chunk.js": "./static/js/2.a491b1fd.chunk.js",
-    "static/js/2.a491b1fd.chunk.js.map": "./static/js/2.a491b1fd.chunk.js.map",
+    "main.css": "./static/css/main.a4fe85c2.chunk.css",
+    "main.js": "./static/js/main.1a3b7db2.chunk.js",
+    "main.js.map": "./static/js/main.1a3b7db2.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.0b9ca5ae.js",
+    "runtime-main.js.map": "./static/js/runtime-main.0b9ca5ae.js.map",
+    "static/css/2.1346c5b6.chunk.css": "./static/css/2.1346c5b6.chunk.css",
+    "static/js/2.23fd77c6.chunk.js": "./static/js/2.23fd77c6.chunk.js",
+    "static/js/2.23fd77c6.chunk.js.map": "./static/js/2.23fd77c6.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.813429530984217aa45aba941f1a475b.js": "./precache-manifest.813429530984217aa45aba941f1a475b.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/2.96b22bc8.chunk.css.map": "./static/css/2.96b22bc8.chunk.css.map",
-    "static/css/main.bf560081.chunk.css.map": "./static/css/main.bf560081.chunk.css.map",
-    "static/js/2.a491b1fd.chunk.js.LICENSE.txt": "./static/js/2.a491b1fd.chunk.js.LICENSE.txt",
-    "static/media/auralaid_logo.png": "./static/media/auralaid_logo.ad2bc1fb.png",
-    "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
-    "static/media/dbs_logo.png": "./static/media/dbs_logo.e0b12553.png",
-    "static/media/ovt_logo.png": "./static/media/ovt_logo.78bd831b.png",
-    "static/media/smiley_face.jpg": "./static/media/smiley_face.146a285c.jpg"
+    "static/css/2.1346c5b6.chunk.css.map": "./static/css/2.1346c5b6.chunk.css.map",
+    "static/css/main.a4fe85c2.chunk.css.map": "./static/css/main.a4fe85c2.chunk.css.map",
+    "static/js/2.23fd77c6.chunk.js.LICENSE.txt": "./static/js/2.23fd77c6.chunk.js.LICENSE.txt",
+    "static/media/auralaid_logo.ddc2f44d.png": "./static/media/auralaid_logo.ddc2f44d.png",
+    "static/media/semantic.min.css": "./static/media/outline-icons.ddae9b1b.woff",
+    "static/media/dbs_logo.55729c35.png": "./static/media/dbs_logo.55729c35.png",
+    "static/media/ovt_logo.da68fb14.png": "./static/media/ovt_logo.da68fb14.png",
+    "static/media/smiley_face.110edfed.jpg": "./static/media/smiley_face.110edfed.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9c32cb2.js",
-    "static/css/2.96b22bc8.chunk.css",
-    "static/js/2.a491b1fd.chunk.js",
-    "static/css/main.bf560081.chunk.css",
-    "static/js/main.8836b20b.chunk.js"
+    "static/js/runtime-main.0b9ca5ae.js",
+    "static/css/2.1346c5b6.chunk.css",
+    "static/js/2.23fd77c6.chunk.js",
+    "static/css/main.a4fe85c2.chunk.css",
+    "static/js/main.1a3b7db2.chunk.js"
   ]
 }
