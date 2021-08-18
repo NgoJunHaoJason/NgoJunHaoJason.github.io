@@ -57,7 +57,7 @@ function Experience(props) {
                     </ul>
 
                     <Label.Group>
-                        <Label>?</Label>
+                        <Label>Spring</Label>
                     </Label.Group>
                 </VerticalTimelineElement>
 

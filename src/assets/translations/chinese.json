@@ -2,17 +2,20 @@
     "translate": "English",
     "about": {
         "name": "伍俊豪",
-        "description": "南大计算机科学毕业生",
+        "description": "后端开发师@星展银行 ",
         "github": "GitHub",
-        "linkedin": "LinkedIn"
+        "linkedin": "LinkedIn",
+        "pdf-version": "PDF版"
     },
     "education": {
         "header": "学历",
         "university": {
             "name": "南洋理工大学, 新加坡",
-            "date": "2017年 8月 – 2021年 5月",
+            "date": "2017年 8月 – 2021年 6月",
             "degree": "工程学士 (计算机科学)",
-            "honours": "荣誉: (优等)"
+            "honours": "荣誉: (优等)",
+            "cert": "证书 ",
+            "verify": "可以在这里验证"
         },
         "core": {
             "header": "主修",
@@ -37,8 +40,8 @@
             "compiler": "编译器技术",
             "embedded": "嵌入式编程"
         },
-        "specialisation": {
-            "header": "专业",
+        "elect-focus": {
+            "header": "选修",
             "subheader": "人工智能",
             "var": "虚拟与增强现实",
             "cv": "计算机视觉",
@@ -59,10 +62,10 @@
     "experience" : {
         "header": "工作经验",
         "dbs": {
-            "company-name": "新加坡发展银行",
-            "job-title": "?",
+            "company-name": "星展银行",
+            "job-title": "研究生助理 (后端开发师)",
             "date": "Jul 2021 - present",
-            "point1": "技能提升教育与发展计划 (SEED)"
+            "point1": "加入了技能提升教育与发展计划(SEED)计划"
         },
         "aural-aid": {
             "company-name": "Aural-Aid",

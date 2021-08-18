@@ -2,17 +2,20 @@
     "translate": "中文",
     "about": {
         "name": "Jason Ngo",
-        "description": "NTU CS graduate",
+        "description": "Backend Dev @ DBS Bank",
         "github": "GitHub",
-        "linkedin": "LinkedIn"
+        "linkedin": "LinkedIn",
+        "pdf-version": "PDF version"
     },
     "education": {
         "header": "Education",
         "university": {
             "name": "Nanyang Technological University, Singapore",
-            "date": "Aug 2017 – May 2021",
+            "date": "Aug 2017 – Jun 2021",
             "degree": "Bachelor of Engineering (Computer Science)",
-            "honours": "Honours: Distinction"
+            "honours": "Honours: Distinction",
+            "cert": "certificate",
+            "verify": "can be verified here"
         },
         "core": {
             "header": "Core",
@@ -37,8 +40,8 @@
             "compiler": "Compiler Techniques",
             "embedded": "Embedded Programming"
         },
-        "specialisation": {
-            "header": "Specialisation",
+        "elect-focus": {
+            "header": "Elective Focus",
             "subheader": "Artificial Intelligence",
             "var": "Virtual and Augmented Reality",
             "cv": "Computer Vision",
@@ -60,9 +63,9 @@
         "header": "Experience",
         "dbs": {
             "company-name": "DBS Bank",
-            "job-title": "?",
+            "job-title": "Graduate Associate (Backend Developer)",
             "date": "Jul 2021 - present",
-            "point1": "Skill Enhancement Education & Development Programme (SEED)"
+            "point1": "Joined under the Skill Enhancement Education & Development Programme (SEED) programme"
         },
         "aural-aid": {
             "company-name": "Aural-Aid",

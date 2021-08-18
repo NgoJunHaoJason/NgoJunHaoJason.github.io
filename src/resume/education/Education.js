@@ -49,9 +49,25 @@ function Education(props) {
                                         <Item.Description>
                                             {t('education.university.degree')}
                                         </Item.Description>
-                                        <Item.Extra>
+                                        <Item.Description>
                                             {t('education.university.honours')}, GPA: 4.46 / 5.00
-                                    </Item.Extra>
+                                        </Item.Description>
+                                        <Item.Extra>
+                                            <a
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                href='../../assets/docs/degree_transcript_ngo_jun_hao_jason.opencert'
+                                            >
+                                                {t('education.university.cert')}
+                                            </a>
+                                            (<a
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                href='https://www.opencerts.io/'
+                                            >
+                                                {t('education.university.verify')}
+                                            </a>)
+                                        </Item.Extra>
                                     </Item.Content>
                                 </Item>
                             </Item.Group>
@@ -143,33 +159,33 @@ function Education(props) {
                                 <Item>
                                     <Item.Content>
                                         <Item.Header>
-                                            {t('education.specialisation.header')}
+                                            {t('education.elect-focus.header')}
                                         </Item.Header>
                                         <Item.Meta>
                                             <FontAwesomeIcon icon={faRobot} />
                                             &nbsp;
-                                            {t('education.specialisation.subheader')}
+                                            {t('education.elect-focus.subheader')}
                                         </Item.Meta>
 
                                         <Item.Description>
                                             <List bulleted>
                                                 <List.Item>
-                                                    {t('education.specialisation.var')}
+                                                    {t('education.elect-focus.var')}
                                                 </List.Item>
                                                 <List.Item>
-                                                    {t('education.specialisation.cv')}
+                                                    {t('education.elect-focus.cv')}
                                                 </List.Item>
                                                 <List.Item>
-                                                    {t('education.specialisation.ml')}
+                                                    {t('education.elect-focus.ml')}
                                                 </List.Item>
                                                 <List.Item>
-                                                    {t('education.specialisation.nn')}
+                                                    {t('education.elect-focus.nn')}
                                                 </List.Item>
                                                 <List.Item>
-                                                    {t('education.specialisation.nlp')}
+                                                    {t('education.elect-focus.nlp')}
                                                 </List.Item>
                                                 <List.Item>
-                                                    {t('education.specialisation.ia')}
+                                                    {t('education.elect-focus.ia')}
                                                 </List.Item>
                                             </List>
                                         </Item.Description>

@@ -1,0 +1,465 @@
+{
+  "version": "https://schema.openattestation.com/2.0/schema.json",
+  "data": {
+    "id": "0526203d-2edf-487e-a764-d9ed80229b74:string:CSC HD 2021 070",
+    "issuedOn": "463b344a-0a09-4e87-995f-a51948a208ce:string:2021-08-16T00:00:00+08:00",
+    "attainmentDate": "134b4ac9-bd29-4f97-b44f-b90a8cfeb3e5:string:2021-06-30T00:00:00+08:00",
+    "name": "baf3f555-fb9b-45ae-8135-a7d2f7cccb63:string:ENGINEERING (COMPUTER SCIENCE)",
+    "recipient": {
+      "name": "5199a478-7b12-4152-bfb6-90b660e9dddd:string:Ngo Jun Hao Jason",
+      "nric": "970679fe-cb4c-495b-aa6e-7b5a05515566:string:S9644703E",
+      "studentId": "b594a6f3-2f7b-43fe-a548-6fa44cb540fb:string:U1721978B",
+      "dob": "537c5443-d5b4-458c-856e-2d65d6ea07b9:string:30 NOVEMBER 1996",
+      "email": "6172e32b-023b-49b1-9985-0d519f6bc64b:string:C170127@e.ntu.edu.sg",
+      "idType": "1af370d2-7dcd-44fe-a021-29313b5c43ae:string:SP"
+    },
+    "$template": {
+      "name": "1562180b-db87-404b-a401-348930a4d45d:string:NTU-2021-OAS-UG-NONMED-2",
+      "type": "8fd85f10-0e19-4e5c-af72-1ab0aebbfce9:string:EMBEDDED_RENDERER",
+      "url": "94e34d2e-e355-4196-9612-76a45864657c:string:https://render.ntu.edu.sg"
+    },
+    "issuers": [
+      {
+        "name": "c8b00fea-346a-41a6-bff6-f1b815baa12d:string:Nanyang Technological University",
+        "documentStore": "4c42bc9c-3f06-4cf0-afef-f226116e7900:string:0x61783202d023fd08dcc7d7ca8a196697c46c9d57",
+        "network": "9032fe46-3c12-4cfe-8270-165474de5ad4:string:ETHEREUM",
+        "identityProof": {
+          "type": "1d3c420c-c27a-466d-b792-aa7f3f9f7aeb:string:DNS-TXT",
+          "location": "68bc88da-2cc9-45ed-9215-8df0c81796c9:string:ntu.edu.sg"
+        }
+      }
+    ],
+    "qualificationLevel": [
+      {
+        "frameworkName": "c0639806-44e0-4b58-9f6e-cedc8ac17f44:string:singapore/ssec-eqa",
+        "frameworkVersion": "0e97005b-43e5-4763-9f89-3b96e1bca894:string:2020",
+        "code": "811c843e-11b7-4a28-9e1e-b801acd58bc0:string:71",
+        "description": "ce75e585-49b5-467f-9dc5-2b6571464a24:string:First degree or equivalent"
+      }
+    ],
+    "transcript": [
+      {
+        "name": "4621d286-4a25-442e-97e5-73b80fb0b8d9:string:INTRODUCTION TO COMPUTATIONAL THINKING",
+        "grade": "d1202d97-0e31-422e-b41a-8e02ec1d5def:string:B",
+        "courseCode": "d0dc0697-4169-48dc-b32f-d0b39fefec33:string:CE1003",
+        "courseCredit": "2ee5cd1e-3382-42a5-bb30-fd8e57026dfa:string:3",
+        "academicYear": "1a960827-4cc1-47f7-9752-dbfbbed32a0d:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "03df608a-68d9-45c4-8f35-fae80e9c0d73:string:INTRODUCTION TO COMPUTING SYSTEMS",
+        "grade": "f95f5634-fbce-45a3-80ab-a5ff50a23378:string:B+",
+        "courseCode": "13556355-6482-4f1e-af1d-4df84b521efa:string:CE1004",
+        "courseCredit": "a9a3b170-99f1-46c5-bb31-f7f0fc0134ce:string:2",
+        "academicYear": "71119be3-c85d-4293-9bd8-751ce22dffe5:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "9e4d1f71-3acd-4e73-902a-0479839d9de9:string:DIGITAL LOGIC",
+        "grade": "b051747d-1223-48a6-9194-682383cae991:string:A-",
+        "courseCode": "c0f78f40-2067-4763-b0f9-9fad6440c5fd:string:CE1005",
+        "courseCredit": "27f7af74-6037-46c0-b671-662b7b9d586d:string:3",
+        "academicYear": "dd83a85f-1d21-4713-b39f-aee218c9a21a:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "871b6f57-ee52-481e-b919-5bcd331a07c3:string:ENGINEERING MATHEMATICS I",
+        "grade": "3fe0d568-3dbc-48f8-bdfe-b988d6cbdc26:string:A",
+        "courseCode": "91641f46-5432-4926-9c81-575786d098c0:string:CE1011",
+        "courseCredit": "02b11621-2d90-4c46-ab88-aaef9c243860:string:3",
+        "academicYear": "3ec221e4-57c3-4486-b06c-e38aa5820f0f:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "4efde46b-1464-49bd-a8aa-06a6f3863de6:string:ENGINEERING MATHEMATICS II",
+        "grade": "76cb2bac-674a-4f87-b84a-6e5eed6f60a2:string:A-",
+        "courseCode": "0d0d6594-da74-4c89-ae66-ede06ecce55b:string:CE1012",
+        "courseCredit": "941c8e60-a822-4618-bd96-1b69a1a37143:string:3",
+        "academicYear": "5543f47f-b7f3-43c7-a01a-6ac7d4624432:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "9594ffc3-22ab-4982-b5b8-fae84b89b6f6:string:SUSTAINABILITY: SEEING THROUGH THE HAZE",
+        "grade": "b68e2314-f680-48f2-bb2e-8df4be930c41:string:PASS",
+        "courseCode": "41bffddf-6718-49b8-a7ec-38b8ca70121c:string:GC0001",
+        "courseCredit": "d3663bf2-4b83-453d-b063-a2ea64213683:string:1",
+        "satisfactoryUnsatisfactory": "07fc8e9f-52f0-4101-aeee-1daef1d560c3:string:*",
+        "academicYear": "3e4a030c-efd5-42e2-a9b8-f46efdad6c53:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "dde5e92a-b9dc-4f8d-918c-f641b111b7f6:string:ENGINEERING COMMUNICATION I",
+        "grade": "4138caa5-5233-4514-8c86-39f94d5279a7:string:A-",
+        "courseCode": "cc5edaf2-55ce-4742-b670-f79b7bfe2bf7:string:HW0188",
+        "courseCredit": "9ef2b33c-a62c-4853-9d9c-b699af27bb13:string:2",
+        "academicYear": "a3223d01-09a3-4827-ade5-5e516d3c2eb2:string:2017-2018 SEMESTER 1"
+      },
+      {
+        "name": "a4172ce3-e1e7-4560-9315-28b2a929a73d:string:HUMAN BODY FUNCTION & DISEASE",
+        "grade": "b79ad4d8-caa8-4a89-b889-9cf45cb482a8:string:A-",
+        "courseCode": "58804a27-3b3b-436a-ab83-e001db979da4:string:BS8001",
+        "courseCredit": "0b08889e-ce55-42ce-898e-9b1b5679e8f5:string:3",
+        "academicYear": "448f5521-eefa-47de-bdb9-5148e82d83a3:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "f3aec609-495e-496f-a511-d9ad2f140964:string:ENGINEERS & SOCIETY",
+        "grade": "ed4e1c2f-8855-4562-b09d-95819399d932:string:B+",
+        "courseCode": "3f507f95-b435-437f-a681-57c2f8e123ba:string:CE0001",
+        "courseCredit": "4b77d90b-fcb7-4b58-ab2b-2b87e58773cd:string:3",
+        "academicYear": "e4751347-c9e2-4f33-b71d-96090e70a1a4:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "60ef1715-f2a1-4a5a-a443-0df2b9534c6d:string:COMPUTER ORGANISATION & ARCHITECTURE",
+        "grade": "ff0dea57-9a06-4ccb-97f3-2721a39a6ffe:string:B",
+        "courseCode": "90ae59ad-97ed-4e19-88d1-078d8989b78c:string:CE1006",
+        "courseCredit": "0e35f18b-cc2c-43c4-9455-11413579b1c0:string:3",
+        "academicYear": "479966d6-69d2-4bd1-8ecb-3fad85694cab:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "27943615-deff-4cde-b4f1-c0823f2429dd:string:DATA STRUCTURES",
+        "grade": "a91e9fd9-ad1f-45f1-8ff9-78f1723fff61:string:B+",
+        "courseCode": "5fd5a9aa-dbb7-4d28-b21d-4f41d83d9ee5:string:CE1007",
+        "courseCredit": "2cda3c36-9900-418b-b61f-bb96faafa7d9:string:3",
+        "academicYear": "fd0841c5-8c79-4fee-92ee-4f080ede78f9:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "118e78c8-d39a-4550-a32a-a30e51e6c062:string:INTRODUCTION TO PSYCHOLOGY",
+        "grade": "17440d5b-379a-4a28-8cf3-5d4bf51142c0:string:B",
+        "courseCode": "ded3c69a-890c-4de3-a699-98e370b5c71a:string:HP1000",
+        "courseCredit": "f490d619-1a6d-4495-8291-a165f801459e:string:3",
+        "academicYear": "a568d97e-3335-4bbe-b1a5-6fbac5a2881f:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "c7ca80a8-a74a-4554-8c08-5197e4e120da:string:DISCRETE MATHEMATICS",
+        "grade": "3b0ccef1-70f7-40dd-9a36-e6086c399932:string:B+",
+        "courseCode": "c528faa1-18a6-495d-98d2-d372e8dc28bd:string:MH1812",
+        "courseCredit": "050323de-7793-4801-bfd8-9d4c10e38edb:string:3",
+        "academicYear": "b3cfd8c9-721a-4b4c-9d6d-91a45e22fbab:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "be0b30a5-4cb8-43a9-8665-cea031ff1962:string:ABSOLUTE BASICS FOR CAREER",
+        "grade": "25dff0a0-1da2-492f-95d2-426d8d119718:string:PASS",
+        "courseCode": "73a76030-8fbe-4e74-86ea-969ffa1a14d9:string:ML0001",
+        "courseCredit": "00ea0502-31c6-40d2-968d-4823fde42073:string:1",
+        "satisfactoryUnsatisfactory": "b5a18acb-dc58-468e-83e8-02f2e33f56de:string:*",
+        "academicYear": "251f63eb-0106-476f-80c2-25b472bb8929:string:2017-2018 SEMESTER 2"
+      },
+      {
+        "name": "712d908d-8e53-4fe7-8ada-8f87098c1d8b:string:ALGORITHMS",
+        "grade": "66897da9-0d1f-4be6-abe8-d80acdde160b:string:A",
+        "courseCode": "69a7195e-d068-48e8-83f3-3a85bc9776a8:string:CZ2001",
+        "courseCredit": "6530f3f5-e269-4e32-a28c-224c44ac4e0c:string:3",
+        "academicYear": "2a4c8158-67f9-4b07-be92-f9bcd7047599:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "770d9ec3-1e0e-4391-8e9c-756494ab54f6:string:OBJECT ORIENTED DESIGN & PROGRAMMING",
+        "grade": "78d9aef6-b39a-496a-9876-4d55284b37d2:string:A-",
+        "courseCode": "24f8d65f-a5c1-4e9a-9f3c-50e66de3a933:string:CZ2002",
+        "courseCredit": "5c13a863-2568-4912-8d59-e5d7fac55877:string:3",
+        "academicYear": "2383a6a4-3779-4b73-8d12-8f901d075a2b:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "ef65a160-4598-416d-a421-d9fc51c3e062:string:HUMAN COMPUTER INTERACTION",
+        "grade": "31a98f84-c2ab-45e1-83f9-ab578a0b0f61:string:A-",
+        "courseCode": "8d481c1a-6f77-485f-aec0-1cdac4a16940:string:CZ2004",
+        "courseCredit": "92c22e4f-5522-4b48-b7ab-a74bd0995cd5:string:3",
+        "academicYear": "c50f52ef-3c25-4892-a6c8-ed9494c7cee5:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "0ac6bfcb-1715-4ef1-b160-8cf0c0dbd66b:string:OPERATING SYSTEMS",
+        "grade": "2e6af01b-71c6-4672-a3ed-2adcba736ee1:string:A",
+        "courseCode": "50e93abb-af13-4fd0-be5b-6132557d1b82:string:CZ2005",
+        "courseCredit": "8d9abc46-2efa-4ff0-81e2-df370370cf05:string:3",
+        "academicYear": "322bcfcd-fee4-4ea7-978b-5f219485d370:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "e22b332f-f606-4205-af1a-bce8f2fab74b:string:INTRODUCTION TO DATABASES",
+        "grade": "b14729df-f7b4-4f0b-97a0-06ce16ca12b5:string:A-",
+        "courseCode": "451d4f0e-6385-4f39-8865-db8c347591fa:string:CZ2007",
+        "courseCredit": "510b4f94-4ed3-465b-9afa-2bc2a2a2ecdf:string:3",
+        "academicYear": "5def1f74-6302-4e4a-adf1-cab4ae2cb9b6:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "b4161cad-eba7-4c6c-87db-a5f6ae470a79:string:FUNDAMENTALS OF SOCIAL SCIENCE RESEARCH",
+        "grade": "0b893f6c-f5a3-4750-ba7d-9cbb9f892b16:string:A-",
+        "courseCode": "d0dee760-c1de-41c3-811e-a7f7c20a9238:string:HP1100",
+        "courseCredit": "35f3a38a-27b6-4cb4-b44f-1e87b473a2bf:string:3",
+        "academicYear": "be4d05d9-ce8d-49d2-9ab8-eefaf9c1fbb2:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "bc4eb7d3-fb5e-4a63-be28-080087ed18dc:string:ETHICS & MORAL REASONING",
+        "grade": "fdfdc977-158d-4a8f-a6a9-d9c8f9e3ec0d:string:PASS",
+        "courseCode": "77639331-c1ff-41ad-bb4b-6676b35b3785:string:HY0001",
+        "courseCredit": "2c897dc0-a1c6-4d5d-ad45-78b027748d8b:string:1",
+        "satisfactoryUnsatisfactory": "8788d5f4-50d5-4924-94f7-1786af06b834:string:*",
+        "academicYear": "0376202d-961a-41e7-b2b4-6228a2c45112:string:2018-2019 SEMESTER 1"
+      },
+      {
+        "name": "4e906b9c-7dd0-41a4-9538-9199f73bb9fe:string:UNDERGRADUATE RESEARCH",
+        "grade": "aef6fb36-ec0f-45d0-a75d-a71f5dd9122f:string:PASS",
+        "courseCode": "72e20caa-e06c-4736-8076-0448838b1085:string:CE9015",
+        "courseCredit": "8f92db5c-23ca-4985-846c-3cc0a1f5e4d2:string:4",
+        "satisfactoryUnsatisfactory": "66c40d47-a37a-4c7c-87da-b0c4fdb7c3ef:string:*",
+        "academicYear": "1586bce5-965d-49c8-bbf5-c0bde92fd08e:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "9e6da7bc-1f7c-4341-a038-36c36b5e2a8e:string:COMPUTER GRAPHICS & VISUALISATION",
+        "grade": "6d06f70a-c0b7-4edf-8cd2-44b1ddff080b:string:A",
+        "courseCode": "92cc6d98-fe29-42fc-a1a0-43e226a65d17:string:CZ2003",
+        "courseCredit": "a9bc6c49-8173-4409-90ec-75a67476a20e:string:3",
+        "academicYear": "5bde7256-fdb3-498d-95f3-996c0b7186ea:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "cc45f94e-657c-4c2e-b0e4-6d572c0859f3:string:SOFTWARE ENGINEERING",
+        "grade": "e584e83e-17f1-42d5-a787-f044aee056a8:string:A-",
+        "courseCode": "239d5452-cfc0-459c-9d94-ed0f98284bc1:string:CZ2006",
+        "courseCredit": "a8f5d637-7036-4b64-9390-e93085a9ff60:string:3",
+        "academicYear": "ee4c35ef-1e2c-4ab0-b380-1936174808f8:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "04e901b5-21b9-4a47-aa88-18270b8e7d40:string:ADVANCED COMPUTER ARCHITECTURE",
+        "grade": "21ba9e3c-48a0-4d92-96ce-0f3d96e76d0b:string:A-",
+        "courseCode": "e0eaf849-7416-4724-a758-06d501634b0c:string:CZ3001",
+        "courseCredit": "08f6f80f-9b5a-492c-9fad-c238b9ac258e:string:3",
+        "academicYear": "16e4b5f2-a531-4a22-98d6-7f8a8643f0cd:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "a28145a3-1bc0-4e5d-9cf4-ae2ab0e5c936:string:SOFTWARE SYSTEMS ANALYSIS & DESIGN",
+        "grade": "a4a49e0b-3c8f-4fac-8fad-9cc57f9536f9:string:A-",
+        "courseCode": "6b33d4f1-f0cb-4078-8178-b1b16b1ff0a0:string:CZ3003",
+        "courseCredit": "77e4b206-c31b-4f52-afb6-54722b09db5b:string:3",
+        "academicYear": "08aff45e-4a12-44f9-ba52-59d8b3b5d2ef:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "1c7267c8-fef9-46b2-b29a-648f9fb1ba1a:string:ARTIFICIAL INTELLIGENCE",
+        "grade": "310a9a59-1463-4ad6-b279-7be18b711549:string:B+",
+        "courseCode": "e545839b-ff89-492a-84ea-22b304e88e3e:string:CZ3005",
+        "courseCredit": "914cc9f2-3506-4d9e-9bae-6fcb012d171e:string:3",
+        "academicYear": "3108563e-1921-4b1b-8105-d8c378917101:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "2d89a61d-e8bc-4aa9-9d7c-47ea532f5913:string:COGNITIVE PSYCHOLOGY",
+        "grade": "855a215e-f2bd-49d0-99c3-1f91c9ad2e25:string:B+",
+        "courseCode": "36949107-5eca-45da-b853-9f600e96e7b9:string:HP2600",
+        "courseCredit": "0bac8a5b-93fe-4044-8f67-76dfbbdb4687:string:3",
+        "academicYear": "18f3d01f-b897-4040-8275-54229858a8c3:string:2018-2019 SEMESTER 2"
+      },
+      {
+        "name": "0440fd04-6cb7-44cb-9511-33fd2a39a50e:string:PROFESSIONAL INTERNSHIP",
+        "grade": "34901d02-d3fd-4c0d-99c3-5ccdd94e45f9:string:PASS",
+        "courseCode": "fefed869-679b-4385-8832-d07f1318370b:string:CZ3179",
+        "courseCredit": "42aa5645-c169-4ed5-a442-2786bceab29e:string:10",
+        "satisfactoryUnsatisfactory": "4c2760d8-5bfe-4f40-a17a-c138cac39cf4:string:*",
+        "academicYear": "4ffd498b-0c5f-49a3-96b8-fca62a4ec073:string:2019-2020 SEMESTER 1"
+      },
+      {
+        "name": "c43301a0-b030-4add-b411-5a3d4c2f3c40:string:CAREER POWER UP!",
+        "grade": "1681c723-0db0-456d-b035-94e211613101:string:PASS",
+        "courseCode": "e68bc853-5682-4faf-a959-780640659588:string:ML0002",
+        "courseCredit": "f94f6f48-7805-4189-8b84-cec31ebb66d3:string:1",
+        "satisfactoryUnsatisfactory": "3ccee297-0a38-479b-b146-09bb4bc5902f:string:*",
+        "academicYear": "22584595-00a5-4544-ba71-854e7327d555:string:2019-2020 SEMESTER 1"
+      },
+      {
+        "name": "89ae8c95-a8d8-4dbb-bab2-18d24ace3c83:string:MULTIDISCIPLINARY DESIGN PROJECT",
+        "grade": "2f7f5039-7f92-4eb4-a1b7-217771225dfe:string:S",
+        "courseCode": "4fa00c9a-0544-4ca1-bdb8-8f19cf680b11:string:CZ3004",
+        "courseCredit": "f6ae83ed-7776-419b-bcbb-0628fbe7733b:string:4",
+        "academicYear": "c7bce5e6-fba4-4f30-a255-f6b99e9b0159:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "6297ee47-c914-47a0-a5af-c5dee0c00b84:string:NET CENTRIC COMPUTING",
+        "grade": "e14de9ec-1fb7-4e36-9ef7-01c1a6b32a85:string:A-",
+        "courseCode": "9468e870-7304-40fb-b250-d654b9a1339d:string:CZ3006",
+        "courseCredit": "07af2375-24d1-4164-abf0-a67917905bcf:string:3",
+        "academicYear": "38e44acb-9bfa-4f29-8404-6237f8bc5d45:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "dcb03627-c3e1-4751-b22c-9e92d2f697f1:string:VIRTUAL & AUGMENTED REALITY",
+        "grade": "8bdb73e3-1711-48ee-a9b8-3e2ac2ee59a5:string:A",
+        "courseCode": "2ec04f27-5ed2-4f6c-906c-cc75967fe202:string:CZ4001",
+        "courseCredit": "3002e2e2-5ec6-429d-9eb4-9661fe3e660c:string:3",
+        "academicYear": "4f2ff847-b65d-42c9-bbee-c16ad8144575:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "e198045d-aefa-434b-8c83-661af4303d67:string:MACHINE LEARNING",
+        "grade": "4370ad33-cfb2-4372-8d22-73f300951fa4:string:A+",
+        "courseCode": "ef153636-a6fc-4ba5-9d3d-cd658cbc32f9:string:CZ4041",
+        "courseCredit": "6fb81a5c-b759-4f12-9649-856f15115a9d:string:3",
+        "academicYear": "87ddc4ba-e6da-44ed-bd26-c86f252881eb:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "139d5ecc-2b51-4210-ba3e-15776741033d:string:INTELLIGENT AGENTS",
+        "grade": "09b4a91d-4cc8-4d5c-a8c0-b554b61ad0dc:string:B+",
+        "courseCode": "4c0541f5-e49a-42c4-8e7b-14423c13ebf8:string:CZ4046",
+        "courseCredit": "46be6687-768b-47a2-a610-ee057cc6952f:string:3",
+        "academicYear": "9f5bcbe2-78e3-491e-bb5f-1fa8b0a9dac9:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "18940a68-cc8f-430d-8cd0-66118642ee34:string:ENGINEERING COMMUNICATION II",
+        "grade": "89216207-7c00-4d12-bb2a-dcef0ff84510:string:A-",
+        "courseCode": "a621ed60-e13e-431c-bff7-0afb5adf3d84:string:HW0288",
+        "courseCredit": "8fba7ae8-d979-4020-a401-81aa629a1387:string:2",
+        "academicYear": "157f80c8-f500-4cbe-b1de-9249c2bc8bb0:string:2019-2020 SEMESTER 2"
+      },
+      {
+        "name": "e9edf6cf-1665-4ebb-a9a5-500630a3e9e6:string:COMPILER TECHNIQUES",
+        "grade": "cfc23328-91fb-4b60-a0d6-7c4eb2f81ce0:string:A",
+        "courseCode": "9835f68f-3d18-41bb-8824-733adc3c53af:string:CZ3007",
+        "courseCredit": "a8d15c92-a4cf-4a5f-ac96-a55faf564ac0:string:3",
+        "academicYear": "2bf71ed4-2178-4c68-a699-0fdbae3df2f4:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "dbc0b35b-0312-4b27-80cb-ebaf79b187e9:string:COMPUTER VISION",
+        "grade": "c4bf3bb1-8713-45e7-bc5e-f727e9c12029:string:A-",
+        "courseCode": "12ef8996-e159-433d-a556-52ca79614b8d:string:CZ4003",
+        "courseCredit": "bf5b5783-dc70-4a32-a8fb-5433b90b4d18:string:3",
+        "academicYear": "ecd61395-44b0-4e25-bc2f-981acb64db2d:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "743f376b-640d-4eb7-92f5-179708237607:string:NEURAL NETWORK & DEEP LEARNING",
+        "grade": "333c2869-2eee-431d-92e4-e0ccc0d814c1:string:A-",
+        "courseCode": "3f1aab9f-3717-42a3-b646-a35572251120:string:CZ4042",
+        "courseCredit": "04f1ef50-b47c-4095-9b88-fa95071d3344:string:3",
+        "academicYear": "6e713fc7-f01d-41d7-8024-eb2900a9a8f2:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "c785e6b9-ad34-44fc-be9c-eba0cde7d285:string:NATURAL LANGUAGE PROCESSING",
+        "grade": "c4897bfb-079b-4629-961a-fa1cb272e70a:string:A-",
+        "courseCode": "e6223d13-0667-4fb9-b706-85d4e18a43f1:string:CZ4045",
+        "courseCredit": "22f589f2-0d80-4576-bdbb-eb65bdb6b067:string:3",
+        "academicYear": "3eaa2bf2-3d92-4537-8c7a-eb26094c6bc8:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "6b41e026-7b0d-4779-856c-d8f5fddf9e74:string:FINAL YEAR PROJECT",
+        "grade": "b93264b2-f1fb-45dd-8404-af546e3f5197:string:IP",
+        "courseCode": "788f4c4a-549f-47a6-ae1a-c97ae87b3b79:string:CZ4079",
+        "courseCredit": "3e5d053f-78da-4027-bf57-47583f8099e3:string:8",
+        "academicYear": "ec380a0c-fe50-4d60-a76c-4ca49ec649a8:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "1d72d61f-4dbc-4b4c-bc14-d358a6119ee7:string:SENSATION & PERCEPTION",
+        "grade": "c67a4ed6-b901-46f0-8668-c44986d9b468:string:A-",
+        "courseCode": "2e9ae7d7-d9bb-4ea5-be99-80859f6d6ea1:string:HP3603",
+        "courseCredit": "42e66902-6d66-46a7-a129-88f302013670:string:3",
+        "academicYear": "5793dd2e-9181-43dc-941e-6d5995340305:string:2020-2021 SEMESTER 1"
+      },
+      {
+        "name": "b1f6792a-3983-4b11-a146-2535b6ee7251:string:EMBEDDED PROGRAMMING",
+        "grade": "2507ec77-1bed-465b-b327-8f1c95a7db59:string:B",
+        "courseCode": "7b7bc5ce-2751-4fe3-82db-dff681333b06:string:CE3103",
+        "courseCredit": "a40a1075-9310-4158-b0be-c03f4cd31ab5:string:3",
+        "academicYear": "0c111b21-5ea8-4505-9e30-19737da35fe6:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "f3afdfea-d51c-41f0-813d-3652a3f05024:string:INTRODUCTION TO ADVERTISING",
+        "grade": "ae314602-a34b-4e2d-bc77-1341055b90df:string:S",
+        "courseCode": "963b3d2d-d54e-4e76-b97e-50f029cce7ed:string:CS8060",
+        "courseCredit": "33b7fe1e-e1fc-4ab0-a6f5-5e4bc035e0c6:string:3",
+        "academicYear": "9cba6fc5-32d8-4c15-a32e-a2b720859d11:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "0615b054-1324-44eb-846d-82d94b3ab327:string:ADVANCED SOFTWARE ENGINEERING",
+        "grade": "94a2a1e6-aa02-4b2c-b8f3-4ec4699afdef:string:A-",
+        "courseCode": "c6778bf1-f6ff-407d-a266-4214d87704fc:string:CZ3002",
+        "courseCredit": "19ffe578-f9f8-44f9-b8a4-befbcc11cdd6:string:3",
+        "academicYear": "4cff4859-1639-41ec-8966-7c08a97241cb:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "7258244b-dc41-4c33-a3ac-12de7f038093:string:FINAL YEAR PROJECT",
+        "grade": "3d11aa78-91c1-4fe0-8ad2-8ac78c7dd406:string:A",
+        "courseCode": "789d4d73-dad8-4197-add4-12459c76c696:string:CZ4079",
+        "courseCredit": "238d4b4d-c062-4037-9b74-b0e06bb8262d:string:8",
+        "academicYear": "76cf5760-225c-4b27-8588-f6a92a359387:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "ce9f4ce1-02f2-4023-9271-98d45328a1ef:string:ENTERPRISE & INNOVATION",
+        "grade": "e4914614-76a0-47f2-8690-27d452acb3af:string:PASS",
+        "courseCode": "25497678-3112-4daf-a7dc-787187fa98b9:string:ET0001",
+        "courseCredit": "c188aa9f-0032-4c8d-b679-584490a68aa3:string:1",
+        "satisfactoryUnsatisfactory": "fcf435c3-92a6-4768-b8b4-f6c1ad9d54cf:string:*",
+        "academicYear": "226e9303-a79b-49c3-aad6-9b5efdc7e4de:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "284a869e-2eb5-4434-a4a0-c29fc9b5f618:string:AN APE'S GUIDE TO HUMAN LANGUAGE",
+        "grade": "e0ae5864-d1f8-4a3f-85ad-95d7b5fcfba3:string:A",
+        "courseCode": "95b8239b-f766-434e-a209-86f56a66ec6c:string:HP3204",
+        "courseCredit": "3f7cdaf4-2a98-4abd-a581-30e181490a95:string:3",
+        "academicYear": "3d0f7e38-95cc-4134-b58b-d507545e60d8:string:2020-2021 SEMESTER 2"
+      },
+      {
+        "name": "586db2e8-1779-4254-8e08-f32d8227932f:string:LOGIC & CRITICAL THINKING",
+        "grade": "d6fa6a03-257a-48fc-bb51-6ee25bc57433:string:A",
+        "courseCode": "d0192fc2-f92d-448b-8ba4-85f2efe190c3:string:HY8002",
+        "courseCredit": "18e1abbc-f1e3-4b9e-9a62-6ecee27049a9:string:3",
+        "academicYear": "3f81ea92-343e-467f-a007-b334e7c56995:string:2020-2021 SEMESTER 2"
+      }
+    ],
+    "additionalData": {
+      "academicYear": {
+        "2017-2018 SEMESTER 1": {
+          "academicUnits": "98fe2fb7-93ac-495e-b9f1-d7c3149fce32:string:17",
+          "cgpa": "32e5a169-4be7-40e3-b1b7-5eb55e6dc905:string:4.34"
+        },
+        "2017-2018 SEMESTER 2": {
+          "academicUnits": "c49bf95b-acef-419e-870a-4c1985aa5741:string:19",
+          "cgpa": "ad21dac6-a980-483b-b5d1-79525f053311:string:4.12"
+        },
+        "2018-2019 SEMESTER 1": {
+          "academicUnits": "4d031e58-7a79-4f39-bbdd-820c5568c5e5:string:19",
+          "cgpa": "5df8e8e3-581e-4507-bc8a-703e70c1c784:string:4.31"
+        },
+        "2018-2019 SEMESTER 2": {
+          "academicUnits": "a2cadad1-65e3-4d25-a6be-db0933e65341:string:22",
+          "cgpa": "e89bdf80-0d53-4206-b7f4-ce90c8af50dd:string:4.34"
+        },
+        "2019-2020 SEMESTER 1": {
+          "academicUnits": "677e5649-192a-4eec-b83b-40e2a8f81906:string:11",
+          "cgpa": "662a42f4-7ca4-4ecf-a96a-ef342f54270f:string:4.34"
+        },
+        "2019-2020 SEMESTER 2": {
+          "academicUnits": "019ce180-9e2f-4383-8e59-ba8720fef373:string:18",
+          "cgpa": "ca3be16e-e2bc-41ab-a28d-6910df4f3149:string:4.38"
+        },
+        "2020-2021 SEMESTER 1": {
+          "academicUnits": "25810a26-0702-4bde-a2d5-166088cae1c1:string:15",
+          "cgpa": "3cf469d6-6cae-4e8e-9e7f-87c3d9e6cd8f:string:4.41"
+        },
+        "2020-2021 SEMESTER 2": {
+          "academicUnits": "a1e8726d-570a-4c29-b314-836e6017f141:string:24",
+          "cgpa": "3254dfc7-a078-4aac-8517-415e2e1017e2:string:4.46"
+        }
+      },
+      "remarks": [
+        "3357e08e-ecdc-40a1-b87d-0147621b86a3:string:COMPLETED THE DEGREE OF BACHELOR OF ENGINEERING (COMPUTER SCIENCE), HONOURS (DISTINCTION) WITH AN ELECTIVE FOCUS IN ARTIFICIAL INTELLIGENCE AND A MINOR IN PSYCHOLOGY"
+      ],
+      "internshipCompany": [
+        {
+          "name": "bea77e51-d446-414e-894f-18322fbc36e7:string:OMNIVISION TECHNOLOGIES SINGAPORE PTE. LTD."
+        }
+      ],
+      "totalAU": "60f2a500-2ca7-4f53-803c-35f900dc8a8b:string:145",
+      "courseTitle": [
+        "acc3c3b4-127e-415a-8597-7da6d40dffdf:string:Bachelor of Engineering ",
+        "31ab1ae4-9561-4581-96ea-63e522a647cd:string:(Computer Science)"
+      ],
+      "classification": "17435b2d-83bd-43a1-8172-6acd3fba45a6:string:Honours (Distinction)",
+      "transcriptName": "3687010f-7234-4308-8199-37331156b467:string:NGO JUN HAO JASON"
+    }
+  },
+  "schema": "https://raw.githubusercontent.com/OpenCerts/open-certificate/master/schema/transcripts/2.0/schema.json",
+  "signature": {
+    "type": "SHA3MerkleProof",
+    "targetHash": "e3ed3a410618d14f5c9cc1051bd949990f617554721034bacf27018527f4dc88",
+    "proof": [
+      "fded2ac89b9d54f04e887488a9e686deec91820fb50af2ac80cdb58c239fe8f7",
+      "3796318abe4921f477cbe91557e976eaf030b6017fab6bf7da74a3bd2b48b34a",
+      "930e61a082004112d8843c5afb9aa70425fcca6a75d32144b9fc75cd2fbde15b",
+      "c72f15eb92cebcce92a80568317914b64e6f16d3ca442b05af11219ed2091b5b",
+      "dcb5cb75170defd6b719ec37fdf1875ab4a530941c5b68c80873d47f070aaef9",
+      "3c4411c55c55ad7acf3f043f69ad52d5830f588e9acb5dc7a634aeb6b21f1e7b",
+      "d318cf19bf26467c38d02f4feb5672762c3520ce11385856fc42b87e76d974f6",
+      "54ab7438fcb40650bd81033c7e4a6d3b222fb90234bd15d8e6152f7feb37283b",
+      "27553da06f07f677292e588b36eceed000b6084244e555b240fca8a2fc3db926",
+      "4af948029c9e0f3ccc6e280d4bf6c1b7907ed124ec466545ed9ef4a773faf209",
+      "54cde94094e5def3d51e74932e41151faf6919d6a3379ee559dafc14222ec5a6",
+      "945d00065ed1a06be352f0d23a8ae544031b9323e363728f14b598928242be02",
+      "90af7c6ba181f08ec7c37a2dd92f5f55dec150f0b996e9a5ad3b9567eb11ff69"
+    ],
+    "merkleRoot": "29c8d1be1e6c4b0b5e1b00cf8916e5e08e4be88be7154346ab311527bda6057c"
+  }
+}

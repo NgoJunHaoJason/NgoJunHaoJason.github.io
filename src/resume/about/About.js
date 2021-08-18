@@ -78,6 +78,19 @@ function About(props) {
                                     </a>
                                 </List.Content>
                             </List.Item>
+
+                            <List.Item>
+                                <List.Icon name='file pdf' />
+                                <List.Content>
+                                    <a
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        href='../../assets/docs/resume_ngo_jun_hao_jason_no_phone.pdf'
+                                    >
+                                        {t('about.pdf-version')}
+                                    </a>
+                                </List.Content>
+                            </List.Item>
                         </List>
                     </Card.Description>
                 </Card.Content>
