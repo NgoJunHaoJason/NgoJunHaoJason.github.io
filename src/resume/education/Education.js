@@ -75,158 +75,32 @@ function Education(props) {
                     </Grid.Row>
 
                     <Grid.Row columns={3} divided>
-                        <Grid.Column>
-                            <Item.Group>
-                                <Item>
-                                    <Item.Content>
-                                        <Item.Header>
-                                            {t('education.core.header')}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            <FontAwesomeIcon icon={faLaptopCode} />
-                                            &nbsp;
-                                            {t('education.core.subheader')}
-                                        </Item.Meta>
+                        {t('education.sections', {returnObjects: true}).map(section => (
+                            <Grid.Column>
+                                <Item.Group>
+                                    <Item>
+                                        <Item.Content>
+                                            <Item.Header>
+                                                {section.header}
+                                            </Item.Header>
+                                            <Item.Meta>
+                                                <FontAwesomeIcon icon={section.icon} />
+                                                &nbsp;
+                                                {section.subheader}
+                                            </Item.Meta>
 
-                                        <Item.Description>
-                                            <List bulleted>
-                                                <List.Item>
-                                                    {t('education.core.calc')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.lin-alg')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.seq-series')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.prob-stats')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.discrete-math')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.com-thinking')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.coa')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.data-struct')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.algo')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.oodp')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.com-graph')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.hci')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.os')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.se')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.db')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.ssad')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.net')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.compiler')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.core.embedded')}
-                                                </List.Item>
-                                            </List>
-                                        </Item.Description>
-                                    </Item.Content>
-                                </Item>
-                            </Item.Group>
-                        </Grid.Column>
-
-                        <Grid.Column>
-                            <Item.Group>
-                                <Item>
-                                    <Item.Content>
-                                        <Item.Header>
-                                            {t('education.elect-focus.header')}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            <FontAwesomeIcon icon={faRobot} />
-                                            &nbsp;
-                                            {t('education.elect-focus.subheader')}
-                                        </Item.Meta>
-
-                                        <Item.Description>
-                                            <List bulleted>
-                                                <List.Item>
-                                                    {t('education.elect-focus.var')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.elect-focus.cv')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.elect-focus.ml')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.elect-focus.nn')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.elect-focus.nlp')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.elect-focus.ia')}
-                                                </List.Item>
-                                            </List>
-                                        </Item.Description>
-                                    </Item.Content>
-                                </Item>
-                            </Item.Group>
-                        </Grid.Column>
-
-                        <Grid.Column>
-                            <Item.Group>
-                                <Item>
-                                    <Item.Content>
-                                        <Item.Header>
-                                            {t('education.minor.header')}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            <FontAwesomeIcon icon={faBrain} />
-                                            &nbsp;
-                                            {t('education.minor.subheader')}
-                                        </Item.Meta>
-
-                                        <Item.Description>
-                                            <List bulleted>
-                                                <List.Item>
-                                                    {t('education.minor.so-sci')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.minor.cog-psy')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.minor.sense-percept')}
-                                                </List.Item>
-                                                <List.Item>
-                                                    {t('education.minor.human-lang')}
-                                                </List.Item>
-                                            </List>
-                                        </Item.Description>
-                                    </Item.Content>
-                                </Item>
-                            </Item.Group>
-                        </Grid.Column>
+                                            <Item.Description>
+                                                <List bulleted>
+                                                    {section.subjects.map(subject => (
+                                                        <List.Item>{subject}</List.Item>
+                                                    ))}
+                                                </List>
+                                            </Item.Description>
+                                        </Item.Content>
+                                    </Item>
+                                </Item.Group>
+                            </Grid.Column>
+                        ))}
                     </Grid.Row>
                 </Grid>
             </Container>

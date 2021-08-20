@@ -17,6 +17,52 @@
             "cert": "证书 ",
             "verify": "可以在这里验证"
         },
+        "sections": [{
+            "header": "Core",
+            "icon": "faLaptopCode",
+            "subheader": "Computer Science",
+            "subjects": [
+                "微积分学",
+                "线性代数",
+                "顺序与系列",
+                "概率统计",
+                "离散数学",
+                "计算思想",
+                "计算机组织与架构",
+                "数据结构",
+                "算法",
+                "面向对象设计与编程",
+                "计算机图形学",
+                "人机交互",
+                "操作系统",
+                "软件工程",
+                "数据库",
+                "软件系统分析与设计",
+                "计算机网络",
+                "编译器技术",
+                "嵌入式编程"
+            ]}, {
+            "header": "Elective Focus",
+            "icon": "faRobot",
+            "subheader": "Artificial Intelligence",
+            "subjects": [
+                "虚拟与增强现实",
+                "计算机视觉",
+                "机器学习",
+                "神经网络与深度学习",
+                "自然语言处理",
+                "智能代理"
+            ]}, {
+            "header": "Minor",
+            "icon": "faBrain",
+            "subheader": "Psychology",
+            "subjects": [
+                "社会科学研究",
+                "认知心理学",
+                "感觉与知觉",
+                "人类语言"
+            ]}
+        ],
         "core": {
             "header": "主修",
             "subheader": "计算机科学",
