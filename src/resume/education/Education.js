@@ -16,6 +16,8 @@ import {
     faBrain,
 } from '@fortawesome/free-solid-svg-icons';
 
+let sectionIcons = [faLaptopCode, faRobot, faBrain];
+
 function Education(props) {
     const { t } = props;
 
@@ -32,8 +34,6 @@ function Education(props) {
             </Header>
 
             <Container>
-
-
                 <Grid stackable doubling padded='horizontally'>
                     <Grid.Row columns={1}>
                         <Grid.Column>
@@ -50,7 +50,7 @@ function Education(props) {
                                             {t('education.university.degree')}
                                         </Item.Description>
                                         <Item.Description>
-                                            {t('education.university.honours')}, GPA: 4.46 / 5.00
+                                            {t('education.university.honours')}, {t('education.university.gpa')}
                                         </Item.Description>
                                         <Item.Extra>
                                             <a
@@ -84,7 +84,7 @@ function Education(props) {
                                                 {section.header}
                                             </Item.Header>
                                             <Item.Meta>
-                                                <FontAwesomeIcon icon={section.icon} />
+                                                <FontAwesomeIcon icon={sectionIcons[section.index]} />
                                                 &nbsp;
                                                 {section.subheader}
                                             </Item.Meta>

@@ -14,12 +14,13 @@
             "date": "Aug 2017 – Jun 2021",
             "degree": "Bachelor of Engineering (Computer Science)",
             "honours": "Honours: Distinction",
+            "gpa": "GPA: 4.46 / 5.00",
             "cert": "certificate",
             "verify": "can be verified here"
         },
         "sections": [{
             "header": "Core",
-            "icon": "faLaptopCode",
+            "index": 0,
             "subheader": "Computer Science",
             "subjects": [
                 "Calculus",
@@ -43,7 +44,7 @@
                 "Embedded Programming"
             ]}, {
             "header": "Elective Focus",
-            "icon": "faRobot",
+            "index": 1,
             "subheader": "Artificial Intelligence",
             "subjects": [
                 "Virtual and Augmented Reality",
@@ -54,7 +55,7 @@
                 "Intelligent Agents"
             ]}, {
             "header": "Minor",
-            "icon": "faBrain",
+            "index": 2,
             "subheader": "Psychology",
             "subjects": [
                 "Social Science Research",
@@ -62,52 +63,12 @@
                 "Sensation and Perception",
                 "Human Language"
             ]}
-        ],
-        "core": {
-            "header": "Core",
-            "subheader": "Computer Science",
-            "calc": "Calculus",
-            "lin-alg": "Linear Algebra",
-            "seq-series": "Sequences and Series",
-            "prob-stats": "Probability and Statistics",
-            "discrete-math": "Discrete Mathematics",
-            "com-thinking": "Computational Thinking",
-            "coa": "Computer Organisation and Architecture",
-            "data-struct": "Data Structures",
-            "algo": "Algorithms",
-            "oodp": "Object-Oriented Design and Programming",
-            "com-graph": "Computer Graphics",
-            "hci": "Human-Computer Interaction",
-            "os": "Operating Systems",
-            "se": "Software Engineering",
-            "db": "Databases",
-            "ssad": "Software Systems Analysis and Design",
-            "net": "Computer Networks",
-            "compiler": "Compiler Techniques",
-            "embedded": "Embedded Programming"
-        },
-        "elect-focus": {
-            "header": "Elective Focus",
-            "subheader": "Artificial Intelligence",
-            "var": "Virtual and Augmented Reality",
-            "cv": "Computer Vision",
-            "ml": "Machine Learning",
-            "nn": "Neural Networks and Deep Learning",
-            "nlp": "Natural Language Processing",
-            "ia": "Intelligent Agents"
-        },
-        "minor": {
-            "header": "Minor",
-            "subheader": "Psychology",
-            "so-sci": "Social Science Research",
-            "cog-psy": "Cognitive Psychology",
-            "sense-percept": "Sensation and Perception",
-            "human-lang": "Human Language"
-        }
+        ]
     },
     "experience" : {
         "header": "Experience",
         "dbs": {
+            "content-style": { "background": "#ee2f2f", "color": "white" },
             "company-name": "DBS Bank",
             "job-title": "Graduate Associate (Backend Developer)",
             "date": "Jul 2021 - present",

@@ -14,12 +14,13 @@
             "date": "2017年 8月 – 2021年 6月",
             "degree": "工程学士 (计算机科学)",
             "honours": "荣誉: (优等)",
+            "gpa": "平均成绩 : 4.46 / 5.00",
             "cert": "证书 ",
             "verify": "可以在这里验证"
         },
         "sections": [{
             "header": "Core",
-            "icon": "faLaptopCode",
+            "index": 0,
             "subheader": "Computer Science",
             "subjects": [
                 "微积分学",
@@ -43,7 +44,7 @@
                 "嵌入式编程"
             ]}, {
             "header": "Elective Focus",
-            "icon": "faRobot",
+            "index": 1,
             "subheader": "Artificial Intelligence",
             "subjects": [
                 "虚拟与增强现实",
@@ -54,7 +55,7 @@
                 "智能代理"
             ]}, {
             "header": "Minor",
-            "icon": "faBrain",
+            "index": 2,
             "subheader": "Psychology",
             "subjects": [
                 "社会科学研究",
@@ -62,52 +63,12 @@
                 "感觉与知觉",
                 "人类语言"
             ]}
-        ],
-        "core": {
-            "header": "主修",
-            "subheader": "计算机科学",
-            "calc": "微积分学",
-            "lin-alg": "线性代数",
-            "seq-series": "顺序与系列",
-            "prob-stats": "概率统计",
-            "discrete-math": "离散数学",
-            "com-thinking": "计算思想",
-            "coa": "计算机组织与架构",
-            "data-struct": "数据结构",
-            "algo": "算法",
-            "oodp": "面向对象设计与编程",
-            "com-graph": "计算机图形学",
-            "hci": "人机交互",
-            "os": "操作系统",
-            "se": "软件工程",
-            "db": "数据库",
-            "ssad": "软件系统分析与设计",
-            "net": "计算机网络",
-            "compiler": "编译器技术",
-            "embedded": "嵌入式编程"
-        },
-        "elect-focus": {
-            "header": "选修",
-            "subheader": "人工智能",
-            "var": "虚拟与增强现实",
-            "cv": "计算机视觉",
-            "ml": "机器学习",
-            "nn": "神经网络与深度学习",
-            "nlp": "自然语言处理",
-            "ia": "智能代理"
-        },
-        "minor": {
-            "header": "副修",
-            "subheader": "心理学",
-            "so-sci": "社会科学研究",
-            "cog-psy": "认知心理学",
-            "sense-percept": "感觉与知觉",
-            "human-lang": "人类语言"
-        }
+        ]
     },
     "experience" : {
         "header": "工作经验",
         "dbs": {
+            "content-style": { "background": "#ee2f2f", "color": "white" },
             "company-name": "星展银行",
             "job-title": "研究生助理 (后端开发师)",
             "date": "Jul 2021 - present",
