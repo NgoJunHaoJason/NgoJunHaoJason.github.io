@@ -65,7 +65,7 @@
             "company-name": "DBS Bank",
             "job-title": "Graduate Associate (Backend Developer)",
             "date": "Jul 2021 - present",
-            "point1": "Joined under the Skill Enhancement Education & Development Programme (SEED) programme"
+            "point1": "Joined under the Skill Enhancement Education & Development (SEED) programme"
         },
         "aural-aid": {
             "company-name": "Aural-Aid",
@@ -84,34 +84,44 @@
     },
     "projects": {
         "header": "Projects",
-        "fyp": {
-            "header": "Joint Industry Final Year Project",
-            "subheader": "with Omnivision Technologies Singapore",
-            "date": "Aug 2020 – Jun 2021",
-            "point1": "Collected more than 2500 images of Singapore vehicle license plates",
-            "point2": "Fine-tuned a license plate detector to achieve average precision of 96.9% at an intersection-over-union threshold of 0.7",
-            "point3": "Modified and trained license plate recogniser to achieve accuracy of 97.2%",
-            "point4": "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of 96.1%"
-        },
-        "ureca": {
-            "header": "Undergraduate Research Experience on Campus",
-            "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
-            "date": "Aug 2018 – Jul 2019",
-            "point1": "Carried out research on narrowcasting",
-            "point2": "Contributed to development of a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls",
-            "point3": "Designed and implemented user interface",
-            "point4": "Re-implemented logic for 'select' and 'attend' according to specifications"
-        },
-        "nn": {
-            "header": "Neural Network and Deep Learning Group Project",
-            "date": "Sep 2020 – Nov 2020",
-            "point1": "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"
-        },
-        "ml": {
-            "header": "Machine Learning Group Project",
-            "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
-            "date": "Jan 2020 – Mar 2020",
-            "point1": "Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"
-        }
+        "list": [{
+                "url": "",
+                "header": "Joint Industry Final Year Project",
+                "subheader": "with Omnivision Technologies Singapore",
+                "date": "Aug 2020 – Jun 2021",
+                "desc" : [
+            	    "Collected more than 2500 images of Singapore vehicle license plates",
+            	    "Fine-tuned a license plate detector to achieve average precision of 96.9% at an intersection-over-union threshold of 0.7",
+            	    "Modified and trained license plate recogniser to achieve accuracy of 97.2%",
+            	    "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of 96.1%"
+                ],
+                "tech": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
+            }, {
+                "url": "",
+                "header": "Undergraduate Research Experience on Campus",
+                "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
+                "date": "Aug 2018 – Jul 2019",
+                "desc": [
+                	"Carried out research on narrowcasting",
+                	"Contributed to development of a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls",
+                	"Designed and implemented user interface",
+                	"Re-implemented logic for 'select' and 'attend' according to specifications"
+                ],
+                "tech": ["Unity", "Photon Unity Networking", "Photon Voice"]
+            }, {
+                "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
+                "header": "Neural Network and Deep Learning Group Project",
+                "date": "Sep 2020 – Nov 2020",
+                "desc": ["Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"],
+                "tech": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
+            }, {
+                "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
+                "header": "Machine Learning Group Project",
+                "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
+                "date": "Jan 2020 – Mar 2020",
+                "desc": ["Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"],
+                "tech": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
+            }
+        ]
     }
 }

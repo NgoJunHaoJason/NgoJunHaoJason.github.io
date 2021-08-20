@@ -65,7 +65,7 @@
             "company-name": "星展银行",
             "job-title": "研究生助理 (后端开发师)",
             "date": "Jul 2021 - present",
-            "point1": "加入了技能提升教育与发展计划(SEED)计划"
+            "point1": "加入了技能提升教育与发展(SEED)计划"
         },
         "aural-aid": {
             "company-name": "Aural-Aid",
@@ -84,34 +84,45 @@
     },
     "projects": {
         "header": "项目",
-        "fyp": {
-            "header": "Joint Industry Final Year Project",
-            "subheader": "与Omnivision Technologies Singapore",
-            "date": "2020年 8月 – 2021年 6月",
-            "point1": "收集了 2500 多张新加坡车牌图片",
-            "point2": "微调车牌检测器，以在 0.7 的交集阈值上实现 96.9% 的平均精度",
-            "point3": "修改及训练车牌识别器以达到 97.2% 的准确度",
-            "point4": "集成车牌检测器和识别器，以获得精度为 96.1% 的轻巧快速的车牌识别系统 "
-        },
-        "ureca": {
-            "header": "校园本科生研究经验",
-            "subheader": "3D视频会议的增强虚拟化方法",
-            "date": "2018年 8月 – 2019年 7月",
-            "point1": "进行窄播研究",
-            "point2": "通过基于窄播的隐私控制，致力于在3D虚拟环境中实时音频传输的软件开发",
-            "point3": "设计和实现的用户界面",
-            "point4": "根据规范重新实现“选择”和“参加”的逻辑"
-        },
-        "nn": {
-            "header": "神经网络与深度学习小组项目",
-            "date": "2020年 9月 – 2020年 11月",
-            "point1": "对以MobileNetV2为基础模型的神经网络进行了评估并执行了超参数调整，在Adience的测试集上其精度达到 93.4%"
-        },
-        "ml": {
-            "header": "机器学习小组项目",
-            "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
-            "date": "2020年 1月 – 2020年 3月",
-            "point1": "执行数据预处理，模型评估和整体学习，以训练可预测交易是否欺诈的模型"
-        }
+        "list": [
+            {
+                "url": "",
+                "header": "Joint Industry Final Year Project",
+                "subheader": "与Omnivision Technologies Singapore",
+                "date": "2020年 8月 – 2021年 6月",
+                "desc": [
+                	"收集了 2500 多张新加坡车牌图片",
+                	"微调车牌检测器，以在 0.7 的交集阈值上实现 96.9% 的平均精度",
+                	"修改及训练车牌识别器以达到 97.2% 的准确度",
+                	"集成车牌检测器和识别器，以获得精度为 96.1% 的轻巧快速的车牌识别系统"
+                ],
+                "tech": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
+            }, {
+                "url": "",
+                "header": "校园本科生研究经验",
+                "subheader": "3D视频会议的增强虚拟化方法",
+                "date": "2018年 8月 – 2019年 7月",
+                "desc": [
+                	"进行窄播研究",
+                	"通过基于窄播的隐私控制，致力于在3D虚拟环境中实时音频传输的软件开发",
+                	"设计和实现的用户界面",
+                	"根据规范重新实现“选择”和“参加”的逻辑"
+                ],
+                "tech": ["Unity", "Photon Unity Networking", "Photon Voice"]
+            }, {
+                "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
+                "header": "神经网络与深度学习小组项目",
+                "date": "2020年 9月 – 2020年 11月",
+                "desc": ["对以MobileNetV2为基础模型的神经网络进行了评估并执行了超参数调整，在Adience的测试集上其精度达到 93.4%"],
+                "tech": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
+            }, {
+                "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
+                "header": "机器学习小组项目",
+                "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
+                "date": "2020年 1月 – 2020年 3月",
+                "desc": ["执行数据预处理，模型评估和整体学习，以训练可预测交易是否欺诈的模型"],
+                "tech": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
+            }
+        ]
     }
 }
