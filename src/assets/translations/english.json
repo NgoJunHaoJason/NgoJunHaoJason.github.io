@@ -3,9 +3,23 @@
     "about": {
         "name": "Jason Ngo",
         "description": "Backend Dev @ DBS Bank",
-        "github": "GitHub",
-        "linkedin": "LinkedIn",
-        "pdfVersion": "PDF version"
+        "items": [{
+            "icon": "mail",
+            "url": "mailto:njhjason@protonmail.com",
+            "text": "njhjason@protonmail.com"
+        }, {
+            "icon": "github",
+            "url": "https://github.com/NgoJunHaoJason",
+            "text": "GitHub profile"
+        }, {
+            "icon": "linkedin",
+            "url": "https://www.linkedin.com/in/ngo-jun-hao-jason/",
+            "text": "LinkedIn profile"
+        }, {
+            "icon": "file pdf",
+            "url": "https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/resume_ngo_jun_hao_jason_no_phone.pdf",
+            "text": "PDF version"
+        }]
     },
     "education": {
         "header": "Education",

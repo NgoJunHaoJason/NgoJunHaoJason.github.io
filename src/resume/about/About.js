@@ -40,57 +40,20 @@ function About(props) {
                 <Card.Content>
                     <Card.Description>
                         <List>
-                            <List.Item>
-                                <List.Icon name='mail' />
-                                <List.Content>
-                                    <a
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        href='mailto:njhjason@protonmail.com'
-                                    >
-                                        njhjason@protonmail.com
-                                    </a>
-                                </List.Content>
-                            </List.Item>
-
-                            <List.Item>
-                                <List.Icon name='github' />
-                                <List.Content>
-                                    <a
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        href='https://github.com/NgoJunHaoJason'
-                                    >
-                                        {t('about.github')}
-                                    </a>
-                                </List.Content>
-                            </List.Item>
-
-                            <List.Item>
-                                <List.Icon name='linkedin' />
-                                <List.Content>
-                                    <a
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        href='https://www.linkedin.com/in/ngo-jun-hao-jason/'
-                                    >
-                                        {t('about.linkedin')}
-                                    </a>
-                                </List.Content>
-                            </List.Item>
-
-                            <List.Item>
-                                <List.Icon name='file pdf' />
-                                <List.Content>
-                                    <a
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        href='https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/resume_ngo_jun_hao_jason_no_phone.pdf'
-                                    >
-                                        {t('about.pdfVersion')}
-                                    </a>
-                                </List.Content>
-                            </List.Item>
+                            {t('about.items', { returnObjects: true }).map(item => (
+                                <List.Item>
+                                    <List.Icon name={item.icon} />
+                                    <List.Content>
+                                        <a
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            href={item.url}
+                                        >
+                                            {item.text}
+                                        </a>
+                                    </List.Content>
+                                </List.Item>
+                            ))}
                         </List>
                     </Card.Description>
                 </Card.Content>
