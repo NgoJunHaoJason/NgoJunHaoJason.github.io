@@ -11,6 +11,25 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTasks } from '@fortawesome/free-solid-svg-icons';
 
+// display title as a link only if it exists
+function ProjectTitle(props) {
+    const { header, url } = props;
+
+    if (url === '') {
+        return header;
+    } else {
+        return (
+            <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={url}
+            >
+                {header}
+            </a> 
+        )
+    }
+}
+
 function Projects(props) {
     const { t } = props;
 
@@ -31,13 +50,7 @@ function Projects(props) {
                     <Card fluid>
                         <Card.Content>
                             <Card.Header>
-                                <a
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    href={project.url}
-                                >
-                                    {project.header}
-                                </a> 
+                                <ProjectTitle header={project.header} url={project.url} />
                             </Card.Header>
                             <Card.Description>
                                 {t(project.subheader)}
