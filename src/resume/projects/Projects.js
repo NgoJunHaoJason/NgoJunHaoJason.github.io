@@ -48,14 +48,14 @@ function Projects(props) {
 
                             <Card.Description>
                                 <ul>
-                                    {project.desc.map(item => (<li>{item}</li>))}
+                                    {project.description.map(item => (<li>{item}</li>))}
                                 </ul>
                             </Card.Description>
                         </Card.Content>
 
                         <Card.Content extra>
                             <Label.Group>
-                                {project.tech.map(item => (<Label>{item}</Label>))}
+                                {project.technologies.map(item => (<Label>{item}</Label>))}
                             </Label.Group>
                         </Card.Content>
                     </Card>

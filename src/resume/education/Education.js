@@ -16,7 +16,11 @@ import {
     faBrain,
 } from '@fortawesome/free-solid-svg-icons';
 
-let sectionIcons = [faLaptopCode, faRobot, faBrain];
+const sectionIcons = {
+    'faLaptopCode': faLaptopCode,
+    'faRobot': faRobot,
+    'faBrain': faBrain,
+};
 
 function Education(props) {
     const { t } = props;
@@ -84,7 +88,7 @@ function Education(props) {
                                                 {section.header}
                                             </Item.Header>
                                             <Item.Meta>
-                                                <FontAwesomeIcon icon={sectionIcons[section.index]} />
+                                                <FontAwesomeIcon icon={sectionIcons[section.icon]} />
                                                 &nbsp;
                                                 {section.subheader}
                                             </Item.Meta>

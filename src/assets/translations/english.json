@@ -1,11 +1,11 @@
 {
-    "translate": "中文",
+    "language": "中文",
     "about": {
         "name": "Jason Ngo",
         "description": "Backend Dev @ DBS Bank",
         "github": "GitHub",
         "linkedin": "LinkedIn",
-        "pdf-version": "PDF version"
+        "pdfVersion": "PDF version"
     },
     "education": {
         "header": "Education",
@@ -20,7 +20,7 @@
         },
         "sections": [{
             "header": "Core",
-            "index": 0,
+            "icon": "faLaptopCode",
             "subheader": "Computer Science",
             "subjects": [
                 "Calculus",
@@ -44,7 +44,7 @@
                 "Embedded Programming"
             ]}, {
             "header": "Elective Focus",
-            "index": 1,
+            "icon": "faRobot",
             "subheader": "Artificial Intelligence",
             "subjects": [
                 "Virtual and Augmented Reality",
@@ -55,7 +55,7 @@
                 "Intelligent Agents"
             ]}, {
             "header": "Minor",
-            "index": 2,
+            "icon": "faBrain",
             "subheader": "Psychology",
             "subjects": [
                 "Social Science Research",
@@ -67,27 +67,40 @@
     },
     "experience" : {
         "header": "Experience",
-        "dbs": {
-            "content-style": { "background": "#ee2f2f", "color": "white" },
-            "company-name": "DBS Bank",
-            "job-title": "Graduate Associate (Backend Developer)",
+        "jobs": [{
+            "contentStyle": { "background": "#ee2f2f", "color": "white" },
+            "contentArrowStyle": { "borderRight": "7px solid #ee2f2f" },
             "date": "Jul 2021 - present",
-            "point1": "Joined under the Skill Enhancement Education & Development (SEED) programme"
-        },
-        "aural-aid": {
-            "company-name": "Aural-Aid",
-            "job-title": "Software Development Intern",
+            "logo": "dbsLogo",
+            "companyName": "DBS Bank",
+            "jobTitle": "Graduate Associate (Backend Developer)",
+            "description": ["Joined under the Skill Enhancement Education & Development (SEED) programme"],
+            "technologies": ["Spring Boot"]
+        }, {
+            "contentStyle": { "background": "dodgerblue", "color": "white" },
+            "contentArrowStyle": { "borderRight": "7px solid dodgerblue" },
             "date": "May 2020 - Jul 2020",
-            "point1": "Contributed to full-stack development of a website that scrapes for companies’ contact information",
-            "point2": "Developed a prototype mobile app that serves as a remote control for iris doors"
-        },
-        "omnivision": {
-            "company-name": "Omnivision Technologies Singapore",
-            "job-title": "Computer Vision Intern",
+            "logo": "auralaidLogo",
+            "companyName": "Aural-Aid",
+            "jobTitle": "Software Development Intern",
+            "description": [
+                "Contributed to full-stack development of a website that scrapes for companies’ contact information (autoscrape.com)",
+                "Developed a prototype mobile app that serves as a remote control for iris doors"
+            ],
+            "technologies": ["Django", "Bootstrap", "Scrapy", "Pyppeteer", "Flutter", "AWS"]
+        },{
+            "contentStyle": { "background": "#ea1102", "color": "white" },
+            "contentArrowStyle": { "borderRight": "7px solid #ea1102" },
             "date": "Aug 2019 - Dec 2019",
-            "point1": "Developed a data visualisation website for qualitative analysis of object detection models",
-            "point2": "Collected and cleaned more than 10000 images with the help of scripts"
-        }
+            "logo": "ovtLogo",
+            "companyName": "Omnivision Technologies Singapore",
+            "jobTitle": "Computer Vision Intern",
+            "description": [
+                "Developed a data visualisation website for qualitative analysis of object detection models",
+                "Collected and cleaned more than 10000 images with the help of scripts"
+            ],
+            "technologies": ["Django", "Bootstrap", "D3.js", "Nginx", "uWSGI"]
+        }]
     },
     "projects": {
         "header": "Projects",
@@ -96,38 +109,42 @@
                 "header": "Joint Industry Final Year Project",
                 "subheader": "with Omnivision Technologies Singapore",
                 "date": "Aug 2020 – Jun 2021",
-                "desc" : [
+                "description" : [
             	    "Collected more than 2500 images of Singapore vehicle license plates",
             	    "Fine-tuned a license plate detector to achieve average precision of 96.9% at an intersection-over-union threshold of 0.7",
             	    "Modified and trained license plate recogniser to achieve accuracy of 97.2%",
             	    "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of 96.1%"
                 ],
-                "tech": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
+                "technologies": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
             }, {
                 "url": "",
                 "header": "Undergraduate Research Experience on Campus",
                 "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
                 "date": "Aug 2018 – Jul 2019",
-                "desc": [
+                "description": [
                 	"Carried out research on narrowcasting",
                 	"Contributed to development of a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls",
                 	"Designed and implemented user interface",
                 	"Re-implemented logic for 'select' and 'attend' according to specifications"
                 ],
-                "tech": ["Unity", "Photon Unity Networking", "Photon Voice"]
+                "technologies": ["Unity", "Photon Unity Networking", "Photon Voice"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
                 "header": "Neural Network and Deep Learning Group Project",
                 "date": "Sep 2020 – Nov 2020",
-                "desc": ["Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"],
-                "tech": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
+                "description": [
+                    "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"
+                ],
+                "technologies": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
                 "header": "Machine Learning Group Project",
                 "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
                 "date": "Jan 2020 – Mar 2020",
-                "desc": ["Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"],
-                "tech": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
+                "description": [
+                    "Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"
+                ],
+                "technologies": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
             }
         ]
     }

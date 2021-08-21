@@ -87,7 +87,7 @@ function About(props) {
                                         rel='noopener noreferrer'
                                         href='https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/resume_ngo_jun_hao_jason_no_phone.pdf'
                                     >
-                                        {t('about.pdf-version')}
+                                        {t('about.pdfVersion')}
                                     </a>
                                 </List.Content>
                             </List.Item>

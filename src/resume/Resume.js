@@ -32,7 +32,7 @@ function Resume() {
                 floated='left'
                 size='mini'
             >
-                {t('translate')}
+                {t('language')}
             </Button>
             
             <Button
@@ -40,7 +40,7 @@ function Resume() {
                 size='mini'
                 onClick={() => translateButtonOnClick()}
             >
-                {t('translate')}
+                {t('language')}
             </Button>
 
             <About t={t} />
