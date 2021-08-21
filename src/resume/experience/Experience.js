@@ -54,6 +54,7 @@ function Experience(props) {
                         date={job.date}
                         dateClassName='TimelineDate'
                         icon={<Image src={companyLogos[job.logo]} circular />}
+                        iconClassName={job.iconClassName}
                     >
                         <h3 className='TimelineText'>{job.companyName}</h3>
                         <h4 className='TimelineText'>{job.jobTitle}</h4>

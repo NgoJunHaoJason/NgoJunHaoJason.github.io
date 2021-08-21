@@ -72,6 +72,7 @@
             "contentArrowStyle": { "borderRight": "7px solid #ee2f2f" },
             "date": "Jul 2021 - present",
             "logo": "dbsLogo",
+            "iconClassName": "DBSLogo",
             "companyName": "DBS Bank",
             "jobTitle": "Graduate Associate (Backend Developer)",
             "description": ["Joined under the Skill Enhancement Education & Development (SEED) programme"],
@@ -81,6 +82,7 @@
             "contentArrowStyle": { "borderRight": "7px solid dodgerblue" },
             "date": "May 2020 - Jul 2020",
             "logo": "auralaidLogo",
+            "iconClassName": "AuralAidLogo",
             "companyName": "Aural-Aid",
             "jobTitle": "Software Development Intern",
             "description": [
@@ -93,6 +95,7 @@
             "contentArrowStyle": { "borderRight": "7px solid #ea1102" },
             "date": "Aug 2019 - Dec 2019",
             "logo": "ovtLogo",
+            "iconClassName": "OVTLogo",
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "Computer Vision Intern",
             "description": [

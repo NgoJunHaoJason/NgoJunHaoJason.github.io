@@ -72,6 +72,7 @@
             "contentArrowStyle": { "borderRight": "7px solid #ee2f2f" },
             "date": "Jul 2021 - present",
             "logo": "dbsLogo",
+            "iconClassName": "DBSLogo",
             "companyName": "星展银行",
             "jobTitle": "研究生助理 (后端开发师)",
             "description": ["加入了技能提升教育与发展(SEED)计划"],
@@ -81,6 +82,7 @@
             "contentArrowStyle": { "borderRight": "7px solid dodgerblue" },
             "date": "2020年 5月 - 2020年 7月",
             "logo": "auralaidLogo",
+            "iconClassName": "AuralAidLogo",
             "companyName": "Aural-Aid",
             "jobTitle": "软件开发实习生",
             "description": [
@@ -93,6 +95,7 @@
             "contentArrowStyle": { "borderRight": "7px solid #ea1102" },
             "date": "2019年 8月 - 2019年 12月",
             "logo": "ovtLogo",
+            "iconClassName": "OVTLogo",
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "计算机视觉实习生",
             "description": [
