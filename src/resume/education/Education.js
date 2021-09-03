@@ -22,6 +22,80 @@ const sectionIcons = {
     'faBrain': faBrain,
 };
 
+function University(props) {
+    const { university } = props;
+
+    return (
+        <Grid.Column>
+            <Item.Group>
+                <Item>
+                    <Item.Content>
+                        <Item.Header>
+                            {university.name}
+                        </Item.Header>
+                        <Item.Meta>
+                            {university.date}
+                        </Item.Meta>
+                        <Item.Description>
+                            {university.degree}
+                        </Item.Description>
+                        <Item.Description>
+                            {university.honours}, {university.gpa}
+                        </Item.Description>
+                        <Item.Extra>
+                            <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href={university.certURL}
+                            >
+                                {university.cert}
+                            </a>
+                            (<a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href={university.verifyURL}
+                            >
+                                {university.verify}
+                            </a>)
+                        </Item.Extra>
+                    </Item.Content>
+                </Item>
+            </Item.Group>
+        </Grid.Column>
+    );
+}
+
+function Section(props) {
+    const { section } = props;
+
+    return (
+        <Grid.Column>
+            <Item.Group>
+                <Item>
+                    <Item.Content>
+                        <Item.Header>
+                            {section.header}
+                        </Item.Header>
+                        <Item.Meta>
+                            <FontAwesomeIcon icon={sectionIcons[section.icon]} />
+                            &nbsp;
+                            {section.subheader}
+                        </Item.Meta>
+
+                        <Item.Description>
+                            <List bulleted>
+                                {section.subjects.map(subject => (
+                                    <List.Item>{subject}</List.Item>
+                                ))}
+                            </List>
+                        </Item.Description>
+                    </Item.Content>
+                </Item>
+            </Item.Group>
+        </Grid.Column>
+    );
+}
+
 function Education(props) {
     const { t } = props;
 
@@ -40,70 +114,12 @@ function Education(props) {
             <Container>
                 <Grid stackable doubling padded='horizontally'>
                     <Grid.Row columns={1}>
-                        <Grid.Column>
-                            <Item.Group>
-                                <Item>
-                                    <Item.Content>
-                                        <Item.Header>
-                                            {t('education.university.name')}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            {t('education.university.date')}
-                                        </Item.Meta>
-                                        <Item.Description>
-                                            {t('education.university.degree')}
-                                        </Item.Description>
-                                        <Item.Description>
-                                            {t('education.university.honours')}, {t('education.university.gpa')}
-                                        </Item.Description>
-                                        <Item.Extra>
-                                            <a
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                href='https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/degree_transcript_ngo_jun_hao_jason.opencert'
-                                            >
-                                                {t('education.university.cert')}
-                                            </a>
-                                            (<a
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                href='https://www.opencerts.io/'
-                                            >
-                                                {t('education.university.verify')}
-                                            </a>)
-                                        </Item.Extra>
-                                    </Item.Content>
-                                </Item>
-                            </Item.Group>
-                        </Grid.Column>
+                        <University university={t('education.university', { returnObjects: true })} />
                     </Grid.Row>
 
                     <Grid.Row columns={3} divided>
-                        {t('education.sections', {returnObjects: true}).map(section => (
-                            <Grid.Column>
-                                <Item.Group>
-                                    <Item>
-                                        <Item.Content>
-                                            <Item.Header>
-                                                {section.header}
-                                            </Item.Header>
-                                            <Item.Meta>
-                                                <FontAwesomeIcon icon={sectionIcons[section.icon]} />
-                                                &nbsp;
-                                                {section.subheader}
-                                            </Item.Meta>
-
-                                            <Item.Description>
-                                                <List bulleted>
-                                                    {section.subjects.map(subject => (
-                                                        <List.Item>{subject}</List.Item>
-                                                    ))}
-                                                </List>
-                                            </Item.Description>
-                                        </Item.Content>
-                                    </Item>
-                                </Item.Group>
-                            </Grid.Column>
+                        {t('education.sections', { returnObjects: true }).map(section => (
+                            <Section section={section} />
                         ))}
                     </Grid.Row>
                 </Grid>

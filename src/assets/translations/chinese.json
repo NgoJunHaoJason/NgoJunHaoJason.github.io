@@ -30,7 +30,9 @@
             "honours": "荣誉: (优等)",
             "gpa": "平均成绩 : 4.46 / 5.00",
             "cert": "证书 ",
-            "verify": "可以在这里验证"
+            "certURL": "https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/degree_transcript_ngo_jun_hao_jason.opencert",
+            "verify": "可以在这里验证",
+            "verifyURL": "https://www.opencerts.io/"
         },
         "sections": [{
             "header": "Core",

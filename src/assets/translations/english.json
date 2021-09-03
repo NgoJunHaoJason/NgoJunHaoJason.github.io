@@ -30,7 +30,9 @@
             "honours": "Honours: Distinction",
             "gpa": "GPA: 4.46 / 5.00",
             "cert": "certificate",
-            "verify": "can be verified here"
+            "certURL": "https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io/tree/develop/documents/degree_transcript_ngo_jun_hao_jason.opencert",
+            "verify": "can be verified here",
+            "verifyURL": "https://www.opencerts.io/"
         },
         "sections": [{
             "header": "Core",
