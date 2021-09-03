@@ -14,15 +14,16 @@ import {
     faLaptopCode,
     faRobot,
     faBrain,
+    IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 
-const sectionIcons = {
+const sectionIcons: { [key: string]: IconDefinition } = {
     'faLaptopCode': faLaptopCode,
     'faRobot': faRobot,
     'faBrain': faBrain,
 };
 
-function University(props) {
+function University(props: any) {
     const { university } = props;
 
     return (
@@ -65,7 +66,7 @@ function University(props) {
     );
 }
 
-function Section(props) {
+function Section(props: any) {
     const { section } = props;
 
     return (
@@ -84,7 +85,7 @@ function Section(props) {
 
                         <Item.Description>
                             <List bulleted>
-                                {section.subjects.map(subject => (
+                                {section.subjects.map((subject: any) => (
                                     <List.Item>{subject}</List.Item>
                                 ))}
                             </List>
@@ -96,7 +97,7 @@ function Section(props) {
     );
 }
 
-function Education(props) {
+function Education(props: any) {
     const { t } = props;
 
     return (
@@ -118,9 +119,10 @@ function Education(props) {
                     </Grid.Row>
 
                     <Grid.Row columns={3} divided>
-                        {t('education.sections', { returnObjects: true }).map(section => (
-                            <Section section={section} />
-                        ))}
+                        {t('education.sections', { returnObjects: true })
+                            .map((section: any) => (
+                                <Section section={section} />
+                            ))}
                     </Grid.Row>
                 </Grid>
             </Container>

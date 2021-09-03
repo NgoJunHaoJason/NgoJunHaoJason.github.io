@@ -24,13 +24,13 @@ import dbsLogo from '../../assets/images/dbs_logo.png';
 import auralaidLogo from '../../assets/images/auralaid_logo.png';
 import ovtLogo from '../../assets/images/ovt_logo.png';
 
-const companyLogos = {
+const companyLogos: { [key: string]: string } = {
     'dbsLogo': dbsLogo,
     'auralaidLogo': auralaidLogo,
     'ovtLogo': ovtLogo,
 };
 
-function Experience(props) {
+function Experience(props: any) {
     const { t } = props;
 
     return (
@@ -46,7 +46,7 @@ function Experience(props) {
             </Header>
 
             <VerticalTimeline className='VerticalTimeline'>
-                {t('experience.jobs', {returnObjects: true}).map(job => (
+                {t('experience.jobs', { returnObjects: true }).map((job: any) => (
                     <VerticalTimelineElement
                         className='VerticalTimelineElement'
                         contentStyle={job.contentStyle}
@@ -59,11 +59,11 @@ function Experience(props) {
                         <h3 className='TimelineText'>{job.companyName}</h3>
                         <h4 className='TimelineText'>{job.jobTitle}</h4>
                         <ul>
-                            {job.description.map(item => (<li>{item}</li>))}
+                            {job.description.map((item: any) => (<li>{item}</li>))}
                         </ul>
 
                         <Label.Group>
-                            {job.technologies.map(item => (<Label>{item}</Label>))}
+                            {job.technologies.map((item: any) => (<Label>{item}</Label>))}
                         </Label.Group>
                     </VerticalTimelineElement>
                 ))}

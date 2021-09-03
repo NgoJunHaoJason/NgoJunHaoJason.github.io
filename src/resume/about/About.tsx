@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
     Card,
     Container,
@@ -11,7 +9,7 @@ import {
 import ProfilePicture from '../../assets/images/smiley_face.jpg';
 import './About.css';
 
-function About(props) {
+function About(props: any) {
     const { t } = props;
 
     return (
@@ -40,7 +38,7 @@ function About(props) {
                 <Card.Content>
                     <Card.Description>
                         <List>
-                            {t('about.items', { returnObjects: true }).map(item => (
+                            {t('about.items', { returnObjects: true }).map((item: any) => (
                                 <List.Item>
                                     <List.Icon name={item.icon} />
                                     <List.Content>

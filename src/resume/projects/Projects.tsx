@@ -1,22 +1,19 @@
-import React from 'react';
-
 import {
     Card,
     Container,
     Header,
     Label,
-    Icon,
 } from 'semantic-ui-react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTasks } from '@fortawesome/free-solid-svg-icons';
 
 // display title as a link only if it exists
-function ProjectTitle(props) {
+function ProjectTitle(props: any) {
     const { header, url } = props;
 
     if (url === '') {
-        return header;
+        return (header);
     } else {
         return (
             <a
@@ -26,11 +23,11 @@ function ProjectTitle(props) {
             >
                 {header}
             </a> 
-        )
+        );
     }
 }
 
-function Projects(props) {
+function Projects(props: any) {
     const { t } = props;
 
     return (
@@ -46,7 +43,7 @@ function Projects(props) {
             </Header>
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
-                {t('projects.list', {returnObjects: true}).map(project => (
+                {t('projects.list', { returnObjects: true }).map((project: any) => (
                     <Card fluid>
                         <Card.Content>
                             <Card.Header>
@@ -61,14 +58,14 @@ function Projects(props) {
 
                             <Card.Description>
                                 <ul>
-                                    {project.description.map(item => (<li>{item}</li>))}
+                                    {project.description.map((item: any) => (<li>{item}</li>))}
                                 </ul>
                             </Card.Description>
                         </Card.Content>
 
                         <Card.Content extra>
                             <Label.Group>
-                                {project.technologies.map(item => (<Label>{item}</Label>))}
+                                {project.technologies.map((item: any) => (<Label>{item}</Label>))}
                             </Label.Group>
                         </Card.Content>
                     </Card>
