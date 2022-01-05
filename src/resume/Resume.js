@@ -20,7 +20,7 @@ function Resume() {
     const { t, i18n } = useTranslation();
 
     const translateButtonOnClick = () => {
-        const language = (i18n.language === 'en')? 'cn' : 'en';
+        const language = (i18n.language === 'en') ? 'cn' : 'en';
         i18n.changeLanguage(language);
     };
 
@@ -34,7 +34,7 @@ function Resume() {
             >
                 {t('language')}
             </Button>
-            
+
             <Button
                 floated='right'
                 size='mini'
@@ -46,10 +46,10 @@ function Resume() {
             <About t={t} />
             <Divider />
 
-            <Education t={t} />
+            <Experience t={t} />
             <Divider />
 
-            <Experience t={t} />
+            <Education t={t} />
             <Divider />
 
             <Projects t={t} />

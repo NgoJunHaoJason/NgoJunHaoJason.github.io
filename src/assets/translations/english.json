@@ -25,7 +25,7 @@
         "header": "Education",
         "university": {
             "name": "Nanyang Technological University, Singapore",
-            "date": "Aug 2017 – Jun 2021",
+            "date": "Aug 2017 - Jun 2021",
             "degree": "Bachelor of Engineering (Computer Science)",
             "honours": "Honours: Distinction",
             "gpa": "GPA: 4.46 / 5.00",
@@ -91,7 +91,7 @@
             "iconClassName": "DBSLogo",
             "companyName": "DBS Bank",
             "jobTitle": "Graduate Associate (Backend Developer)",
-            "description": ["Joined under the Skill Enhancement Education & Development (SEED) programme"],
+            "description": ["Contributed clean code with 100% unit test coverage towards the development of microservices"],
             "technologies": ["Spring Boot"]
         }, {
             "contentStyle": { "background": "dodgerblue", "color": "white" },
@@ -102,8 +102,8 @@
             "companyName": "Aural-Aid",
             "jobTitle": "Software Development Intern",
             "description": [
-                "Contributed to full-stack development of a website that scrapes for companies’ contact information (autoscrape.com)",
-                "Developed a prototype mobile app that serves as a remote control for iris doors"
+                "Contributed to full-stack development of a website that scrapes for companies' contact information (autoscrape.com)",
+                "Developed a prototype mobile app that controls iris doors remotely"
             ],
             "technologies": ["Django", "Bootstrap", "Scrapy", "Pyppeteer", "Flutter", "AWS"]
         },{
@@ -115,8 +115,8 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "Computer Vision Intern",
             "description": [
-                "Developed a data visualisation website for qualitative analysis of object detection models",
-                "Collected and cleaned more than 10000 images with the help of scripts"
+                "Developed and deployed a website for displaying bounding boxes of object detection models",
+                "Collected and pre-processed more than 10000 training images with the help of scripts"
             ],
             "technologies": ["Django", "Bootstrap", "D3.js", "Nginx", "uWSGI"]
         }]
@@ -127,41 +127,39 @@
                 "url": "",
                 "header": "Joint Industry Final Year Project",
                 "subheader": "with Omnivision Technologies Singapore",
-                "date": "Aug 2020 – Jun 2021",
+                "date": "Aug 2020 - Jun 2021",
                 "description" : [
-            	    "Collected more than 2500 images of Singapore vehicle license plates",
-            	    "Fine-tuned a license plate detector to achieve average precision of 96.9% at an intersection-over-union threshold of 0.7",
-            	    "Modified and trained license plate recogniser to achieve accuracy of 97.2%",
-            	    "Integrated license plate detector and recogniser to get a lightweight and fast license plate recognition system with an accuracy of 96.1%"
+            	    "Fine-tuned a license plate detector to get an average precision of 96.9% for an IOU threshold of 0.7",
+            	    "Improved upon a license plate recogniser to reach an accuracy of 97.2%",
+            	    "Created a lightweight and fast license plate recognition system that has an accuracy of 96.1%"
                 ],
                 "technologies": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
             }, {
                 "url": "",
                 "header": "Undergraduate Research Experience on Campus",
                 "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
-                "date": "Aug 2018 – Jul 2019",
+                "date": "Aug 2018 - Jul 2019",
                 "description": [
                 	"Carried out research on narrowcasting",
-                	"Contributed to development of a software for real-time audio transmission in a 3D virtual environment, with narrowcasting-based privacy controls",
-                	"Designed and implemented user interface",
-                	"Re-implemented logic for 'select' and 'attend' according to specifications"
+                	"Contributed to the development of a proof of concept for 3D virtual meeting apps"
                 ],
                 "technologies": ["Unity", "Photon Unity Networking", "Photon Voice"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
                 "header": "Neural Network and Deep Learning Group Project",
-                "date": "Sep 2020 – Nov 2020",
+                "subheader": "-",
+                "date": "Sep 2020 - Nov 2020",
                 "description": [
-                    "Evaluated and performed hyperparameter tuning for a neural network with MobileNetV2 as the base model, which achieved an accuracy of 93.4% on Adience’s test set"
+                    "Tuned a MobileNetV2-based neural network to get an accuracy of 93.4% on Adience's test set"
                 ],
                 "technologies": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
                 "header": "Machine Learning Group Project",
                 "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
-                "date": "Jan 2020 – Mar 2020",
+                "date": "Jan 2020 - Mar 2020",
                 "description": [
-                    "Performed data preprocessing, model evaluation and ensemble learning to train a model which predicts if a transaction is fraudulent"
+                    "Performed data preprocessing, model evaluation and ensemble learning to train a model that predicts if a transaction is fraudulent"
                 ],
                 "technologies": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
             }

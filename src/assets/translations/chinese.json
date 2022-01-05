@@ -25,7 +25,7 @@
         "header": "学历",
         "university": {
             "name": "南洋理工大学, 新加坡",
-            "date": "2017年 8月 – 2021年 6月",
+            "date": "2017年 8月 - 2021年 6月",
             "degree": "工程学士 (计算机科学)",
             "honours": "荣誉: (优等)",
             "gpa": "平均成绩 : 4.46 / 5.00",
@@ -91,7 +91,7 @@
             "iconClassName": "DBSLogo",
             "companyName": "星展银行",
             "jobTitle": "研究生助理 (后端开发师)",
-            "description": ["加入了技能提升教育与发展(SEED)计划"],
+            "description": ["为微服务的开发贡献了具有 100% 单元测试覆盖率的干净代码"],
             "technologies": ["Spring Boot"]
         }, {
             "contentStyle": { "background": "dodgerblue", "color": "white" },
@@ -103,7 +103,7 @@
             "jobTitle": "软件开发实习生",
             "description": [
                 "致力于网络抓取网站(autoscrape.com)的全栈开发",
-                "开发了可作为虹膜门遥控器的原型手机应用程序"
+                "开发了远程控制虹膜门的原型移动应用程序"
             ],
             "technologies": ["Django", "Bootstrap", "Scrapy", "Pyppeteer", "Flutter", "AWS"]
         }, {
@@ -115,8 +115,8 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "计算机视觉实习生",
             "description": [
-                "开发了数据可视化网站以对物体检测模型进行定性分析",
-                "借助脚本收集和清理了 10000 多个图像"
+                "开发并部署了一个网站，用于显示对象检测模型的边界框",
+                "借助脚本收集并预处理了 10000 多张训练图像"
             ],
             "technologies": ["Django", "Bootstrap", "D3.js", "Nginx", "uWSGI"]
         }]
@@ -128,41 +128,38 @@
                 "url": "",
                 "header": "Joint Industry Final Year Project",
                 "subheader": "与Omnivision Technologies Singapore",
-                "date": "2020年 8月 – 2021年 6月",
+                "date": "2020年 8月 - 2021年 6月",
                 "description": [
-                	"收集了 2500 多张新加坡车牌图片",
-                	"微调车牌检测器，以在 0.7 的交集阈值上实现 96.9% 的平均精度",
-                	"修改及训练车牌识别器以达到 97.2% 的准确度",
-                	"集成车牌检测器和识别器，以获得精度为 96.1% 的轻巧快速的车牌识别系统"
+                	"对车牌检测器进行微调，以在 0.7 的 IOU 阈值下获得 96.9% 的平均精度",
+                	"改进了车牌识别器，准确率达到 97.2%",
+                	"打造轻量级快速车牌识别系统，准确率达96.1%"
                 ],
                 "technologies": ["MXNet", "Tensorflow", "LFFD", "LPRNet"]
             }, {
                 "url": "",
                 "header": "校园本科生研究经验",
                 "subheader": "3D视频会议的增强虚拟化方法",
-                "date": "2018年 8月 – 2019年 7月",
+                "date": "2018年 8月 - 2019年 7月",
                 "description": [
                 	"进行窄播研究",
-                	"通过基于窄播的隐私控制，致力于在3D虚拟环境中实时音频传输的软件开发",
-                	"设计和实现的用户界面",
-                	"根据规范重新实现“选择”和“参加”的逻辑"
+                	"有助于开发 3D 虚拟会议应用程序的概念验证"
                 ],
                 "technologies": ["Unity", "Photon Unity Networking", "Photon Voice"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
                 "header": "神经网络与深度学习小组项目",
-                "date": "2020年 9月 – 2020年 11月",
+                "date": "2020年 9月 - 2020年 11月",
                 "description": [
-                    "对以MobileNetV2为基础模型的神经网络进行了评估并执行了超参数调整，在Adience的测试集上其精度达到 93.4%"
+                    "调整了基于 MobileNetV2 的神经网络，在 Adience 的测试集上获得了 93.4% 的准确率"
                 ],
                 "technologies": ["Tensorflow", "Google Colaboratory", "Weights and Biases"]
             }, {
                 "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
                 "header": "机器学习小组项目",
                 "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
-                "date": "2020年 1月 – 2020年 3月",
+                "date": "2020年 1月 - 2020年 3月",
                 "description": [
-                    "执行数据预处理，模型评估和整体学习，以训练可预测交易是否欺诈的模型"
+                    "执行数据预处理、模型评估和集成学习，以训练预测交易是否欺诈的模型"
                 ],
                 "technologies": ["Jupyter Notebook", "Pandas", "Scikit-Learn", "LightGBM"]
             }
