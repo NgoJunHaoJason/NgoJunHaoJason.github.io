@@ -6,7 +6,7 @@ import {
     List,
 } from 'semantic-ui-react';
 
-import ProfilePicture from '../../assets/images/smiley_face.jpg';
+import ProfilePicture from '../../assets/images/profile_picture.png';
 import './About.css';
 
 function About(props: any) {
