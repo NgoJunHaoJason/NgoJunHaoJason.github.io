@@ -1,17 +1,15 @@
-import React from 'react';
-
 import {
     Container,
     Header,
     Label,
     Image,
 } from 'semantic-ui-react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    FontAwesomeIcon,
+} from '@fortawesome/react-fontawesome';
 import {
     faBriefcase,
 } from '@fortawesome/free-solid-svg-icons';
-
 import {
     VerticalTimeline,
     VerticalTimelineElement,

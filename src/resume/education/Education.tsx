@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
     Container,
     Header,
@@ -7,8 +5,9 @@ import {
     Item,
     List,
 } from 'semantic-ui-react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    FontAwesomeIcon,
+} from '@fortawesome/react-fontawesome';
 import {
     faGraduationCap,
     faLaptopCode,

@@ -4,9 +4,12 @@ import {
     Header,
     Label,
 } from 'semantic-ui-react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTasks } from '@fortawesome/free-solid-svg-icons';
+import {
+    FontAwesomeIcon,
+} from '@fortawesome/react-fontawesome';
+import {
+    faTasks,
+} from '@fortawesome/free-solid-svg-icons';
 
 // display title as a link only if it exists
 function ProjectTitle(props: any) {
