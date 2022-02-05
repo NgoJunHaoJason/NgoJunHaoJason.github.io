@@ -34,7 +34,7 @@ function About(props: any) {
                 </Header.Subheader>
             </Header>
 
-            <Card centered>
+            <Card centered className='Card'>
                 <Card.Content>
                     <Card.Description>
                         <List>

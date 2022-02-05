@@ -44,7 +44,7 @@ function Projects(props: any) {
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
                 {t('projects.list', { returnObjects: true }).map((project: any) => (
-                    <Card fluid>
+                    <Card fluid className='Card'>
                         <Card.Content>
                             <Card.Header>
                                 <ProjectTitle header={project.header} url={project.url} />
@@ -65,7 +65,7 @@ function Projects(props: any) {
 
                         <Card.Content extra>
                             <Label.Group>
-                                {project.technologies.map((item: any) => (<Label>{item}</Label>))}
+                                {project.technologies.map((item: any) => (<Label className='Label'>{item}</Label>))}
                             </Label.Group>
                         </Card.Content>
                     </Card>

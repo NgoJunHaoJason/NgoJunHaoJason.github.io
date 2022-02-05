@@ -25,7 +25,7 @@ function Resume() {
     };
 
     return (
-        <Container fluid className='App'>
+        <Container fluid className='Resume TextContainer'>
             {/* this button does nothing, except to centre the header on mobile */}
             <Button
                 className='TranslateCounterWeight'

@@ -23,6 +23,41 @@ const sectionIcons: { [key: string]: IconDefinition } = {
     'faBrain': faBrain,
 };
 
+function Education(props: any) {
+    const { t } = props;
+
+    return (
+        <Container>
+            <Header size='large'>
+                <Header.Content>
+                    <FontAwesomeIcon icon={faGraduationCap} />
+                    &nbsp;
+                    {t('education.header')}
+                </Header.Content>
+            </Header>
+
+            <Container>
+                <Grid
+                    stackable
+                    doubling
+                    padded='horizontally'
+                >
+                    <Grid.Row columns={1}>
+                        <University university={t('education.university', { returnObjects: true })} />
+                    </Grid.Row>
+
+                    <Grid.Row columns={3} divided>
+                        {t('education.sections', { returnObjects: true })
+                            .map((section: any) => (
+                                <Section section={section} />
+                            ))}
+                    </Grid.Row>
+                </Grid>
+            </Container>
+        </Container>
+    );
+}
+
 function University(props: any) {
     const { university } = props;
 
@@ -94,39 +129,6 @@ function Section(props: any) {
                 </Item>
             </Item.Group>
         </Grid.Column>
-    );
-}
-
-function Education(props: any) {
-    const { t } = props;
-
-    return (
-        <Container>
-            <Header
-                size='large'
-            >
-                <Header.Content>
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                    &nbsp;
-                    {t('education.header')}
-                </Header.Content>
-            </Header>
-
-            <Container>
-                <Grid stackable doubling padded='horizontally'>
-                    <Grid.Row columns={1}>
-                        <University university={t('education.university', { returnObjects: true })} />
-                    </Grid.Row>
-
-                    <Grid.Row columns={3} divided>
-                        {t('education.sections', { returnObjects: true })
-                            .map((section: any) => (
-                                <Section section={section} />
-                            ))}
-                    </Grid.Row>
-                </Grid>
-            </Container>
-        </Container>
     );
 }
 

@@ -63,7 +63,7 @@ function Experience(props: any) {
                         </ul>
 
                         <Label.Group>
-                            {job.technologies.map((item: any) => (<Label>{item}</Label>))}
+                            {job.technologies.map((item: any) => (<Label className='Label'>{item}</Label>))}
                         </Label.Group>
                     </VerticalTimelineElement>
                 ))}

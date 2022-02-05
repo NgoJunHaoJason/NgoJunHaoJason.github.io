@@ -3,3 +3,9 @@
     margin-right: auto;
     margin-top: 15px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .ProfilePicture {
+        border-color: white !important;
+    }
+}
