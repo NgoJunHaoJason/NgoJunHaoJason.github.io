@@ -4,7 +4,7 @@
 
 ## instructions
 
-- install modules: `npm install`
+- install modules: `npm install` or `npm ci`
 - update dependencies: `npm update`
 - view locally: `npm start`
 - deploy:

@@ -13,7 +13,7 @@ import Education from './education/Education';
 import Experience from './experience/Experience';
 import Projects from './projects/Projects';
 
-import 'semantic-ui-css/semantic.min.css'
+import 'fomantic-ui-css/semantic.min.css'
 import './Resume.css'
 
 function Resume() {
