@@ -19,6 +19,12 @@
     color: black;
 }
 
+@media only screen and (max-width: 1160px) {
+    .TimelineDate {
+        color: white;
+    }
+}
+
 .DBSLogo {
     box-shadow: 0 0 0 4px white, 
     inset 0 2px 0 rgba(0, 0, 0, 0.08), 

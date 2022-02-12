@@ -91,7 +91,7 @@
             "iconClassName": "DBSLogo",
             "companyName": "DBS Bank",
             "jobTitle": "Graduate Associate (Backend Developer)",
-            "description": ["Contributed clean code with 100% unit test coverage towards the development of microservices"],
+            "description": ["Contributed clean code with 100% unit test coverage for the development of microservices"],
             "technologies": ["Spring Boot"]
         }, {
             "contentStyle": { "background": "dodgerblue", "color": "white" },
