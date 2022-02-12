@@ -3,43 +3,52 @@ import {
     Container,
     Header,
     Image,
-    List,
+    List
 } from 'semantic-ui-react';
-
 import ProfilePicture from '../../assets/images/profile_picture.png';
 import './About.css';
 
-function About(props: any) {
-    const { t } = props;
-
+export default function About({ t }: any) {
     return (
         <Container>
-            <Header
-                textAlign='center'
-                size='huge'
-            >
-                <Header.Content>
-                    <Image
-                        className='ProfilePicture'
-                        src={ProfilePicture}
-                        size='tiny'
-                        rounded
-                        bordered
-                    />
-                    {t('about.name')}
-                </Header.Content>
+            <AboutHeader t={t} />
+            <AboutLinks t={t} />
+        </Container>
+    );
+}
 
-                <Header.Subheader>
-                    {t('about.description')}
-                </Header.Subheader>
-            </Header>
+function AboutHeader({ t }: any) {
+    return (
+        <Header
+            textAlign='center'
+            size='huge'>
+            <Header.Content>
+                <Image
+                    className='ProfilePicture'
+                    src={ProfilePicture}
+                    size='tiny'
+                    rounded
+                    bordered
+                />
+                {t('about.name')}
+            </Header.Content>
 
-            <Card centered className='Card'>
-                <Card.Content>
-                    <Card.Description>
-                        <List>
-                            {t('about.items', { returnObjects: true }).map((item: any) => (
-                                <List.Item>
+            <Header.Subheader>
+                {t('about.description')}
+            </Header.Subheader>
+        </Header>
+    );
+}
+
+function AboutLinks({ t }: any) {
+    return (
+        <Card centered className='Card'>
+            <Card.Content>
+                <Card.Description>
+                    <List>
+                        {t('about.items', { returnObjects: true }).map(
+                            (item: any, index: number) => (
+                                <List.Item key={index}>
                                     <List.Icon name={item.icon} />
                                     <List.Content>
                                         <a
@@ -51,13 +60,11 @@ function About(props: any) {
                                         </a>
                                     </List.Content>
                                 </List.Item>
-                            ))}
-                        </List>
-                    </Card.Description>
-                </Card.Content>
-            </Card>
-        </Container>
+                            )
+                        )}
+                    </List>
+                </Card.Description>
+            </Card.Content>
+        </Card>
     );
 }
-
-export default About;

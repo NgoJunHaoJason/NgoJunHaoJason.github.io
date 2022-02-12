@@ -1,50 +1,37 @@
 import {
-    Container,
-    Header,
-    Label,
-    Image,
-} from 'semantic-ui-react';
-import {
-    FontAwesomeIcon,
-} from '@fortawesome/react-fontawesome';
-import {
-    faBriefcase,
+    faBriefcase
 } from '@fortawesome/free-solid-svg-icons';
 import {
     VerticalTimeline,
-    VerticalTimelineElement,
+    VerticalTimelineElement
 } from 'react-vertical-timeline-component';
-
 import 'react-vertical-timeline-component/style.min.css';
+import {
+    Container,
+    Image,
+} from 'semantic-ui-react';
+import auralaidLogo from '../../assets/images/auralaid_logo.png';
+import dbsLogo from '../../assets/images/dbs_logo.png';
+import ovtLogo from '../../assets/images/ovt_logo.png';
+import BulletedList from '../components/Description';
+import IconHeader from '../components/IconHeader';
+import Labels from '../components/Technologies';
 import './Experience.css';
 
-import dbsLogo from '../../assets/images/dbs_logo.png';
-import auralaidLogo from '../../assets/images/auralaid_logo.png';
-import ovtLogo from '../../assets/images/ovt_logo.png';
+export default function Experience({ t }: any) {
 
-const companyLogos: { [key: string]: string } = {
-    'dbsLogo': dbsLogo,
-    'auralaidLogo': auralaidLogo,
-    'ovtLogo': ovtLogo,
-};
-
-function Experience(props: any) {
-    const { t } = props;
+    const companyLogos: { [key: string]: string } = {
+        'dbsLogo': dbsLogo,
+        'auralaidLogo': auralaidLogo,
+        'ovtLogo': ovtLogo,
+    };
 
     return (
         <Container>
-            <Header
-                size='large'
-            >
-                <Header.Content>
-                    <FontAwesomeIcon icon={faBriefcase} />
-                    &nbsp;
-                    {t('experience.header')}
-                </Header.Content>
-            </Header>
+            <IconHeader icon={faBriefcase} text={t('experience.header')} />
 
             <VerticalTimeline className='VerticalTimeline'>
-                {t('experience.jobs', { returnObjects: true }).map((job: any) => (
+                {t('experience.jobs', { returnObjects: true }).map((job: any, index: number) => (
                     <VerticalTimelineElement
                         className='VerticalTimelineElement'
                         contentStyle={job.contentStyle}
@@ -53,21 +40,17 @@ function Experience(props: any) {
                         dateClassName='TimelineDate'
                         icon={<Image src={companyLogos[job.logo]} circular />}
                         iconClassName={job.iconClassName}
-                    >
+                        key={index}>
+
                         <h3 className='TimelineText'>{job.companyName}</h3>
                         <h4 className='TimelineText'>{job.jobTitle}</h4>
-                        <ul>
-                            {job.description.map((item: any) => (<li>{item}</li>))}
-                        </ul>
 
-                        <Label.Group>
-                            {job.technologies.map((item: any) => (<Label className='Label'>{item}</Label>))}
-                        </Label.Group>
+                        <BulletedList list={job.description} />
+                        <Labels labels={job.technologies} />
+
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
         </Container>
     );
 }
-
-export default Experience;

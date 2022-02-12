@@ -1,55 +1,42 @@
 import {
-    Container,
-    Header,
-    Grid,
-    Item,
-    List,
-} from 'semantic-ui-react';
-import {
-    FontAwesomeIcon,
-} from '@fortawesome/react-fontawesome';
-import {
+    faBrain,
     faGraduationCap,
     faLaptopCode,
     faRobot,
-    faBrain,
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
+import {
+    FontAwesomeIcon
+} from '@fortawesome/react-fontawesome';
+import {
+    Container,
+    Grid,
+    Item,
+} from 'semantic-ui-react';
+import BulletedList from '../components/Description';
+import IconHeader from '../components/IconHeader';
 
-const sectionIcons: { [key: string]: IconDefinition } = {
-    'faLaptopCode': faLaptopCode,
-    'faRobot': faRobot,
-    'faBrain': faBrain,
-};
-
-function Education(props: any) {
-    const { t } = props;
-
+export default function Education({ t }: any) {
     return (
         <Container>
-            <Header size='large'>
-                <Header.Content>
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                    &nbsp;
-                    {t('education.header')}
-                </Header.Content>
-            </Header>
+            <IconHeader icon={faGraduationCap} text={t('education.header')} />
 
             <Container>
                 <Grid
                     stackable
                     doubling
-                    padded='horizontally'
-                >
+                    padded='horizontally'>
+
                     <Grid.Row columns={1}>
                         <University university={t('education.university', { returnObjects: true })} />
                     </Grid.Row>
 
                     <Grid.Row columns={3} divided>
-                        {t('education.sections', { returnObjects: true })
-                            .map((section: any) => (
-                                <Section section={section} />
-                            ))}
+                        {t('education.sections', { returnObjects: true }).map(
+                            (section: any, index: number) => (
+                                <Section section={section} key={index} />
+                            )
+                        )}
                     </Grid.Row>
                 </Grid>
             </Container>
@@ -57,26 +44,16 @@ function Education(props: any) {
     );
 }
 
-function University(props: any) {
-    const { university } = props;
-
+function University({ university }: any) {
     return (
         <Grid.Column>
             <Item.Group>
                 <Item>
                     <Item.Content>
-                        <Item.Header>
-                            {university.name}
-                        </Item.Header>
-                        <Item.Meta>
-                            {university.date}
-                        </Item.Meta>
-                        <Item.Description>
-                            {university.degree}
-                        </Item.Description>
-                        <Item.Description>
-                            {university.honours}, {university.gpa}
-                        </Item.Description>
+                        <Item.Header>{university.name}</Item.Header>
+                        <Item.Meta>{university.date}</Item.Meta>
+                        <Item.Description>{university.degree}</Item.Description>
+                        <Item.Description>{university.honours}, {university.gpa}</Item.Description>
                         <Item.Extra>
                             <a
                                 target='_blank'
@@ -100,8 +77,13 @@ function University(props: any) {
     );
 }
 
-function Section(props: any) {
-    const { section } = props;
+function Section({ section }: any) {
+
+    const sectionIcons: { [key: string]: IconDefinition } = {
+        'faLaptopCode': faLaptopCode,
+        'faRobot': faRobot,
+        'faBrain': faBrain,
+    };
 
     return (
         <Grid.Column>
@@ -118,11 +100,7 @@ function Section(props: any) {
                         </Item.Meta>
 
                         <Item.Description>
-                            <List bulleted>
-                                {section.subjects.map((subject: any) => (
-                                    <List.Item>{subject}</List.Item>
-                                ))}
-                            </List>
+                            <BulletedList list={section.subjects} />
                         </Item.Description>
                     </Item.Content>
                 </Item>
@@ -130,5 +108,3 @@ function Section(props: any) {
         </Grid.Column>
     );
 }
-
-export default Education;
