@@ -8,14 +8,19 @@ import english from './assets/translations/english.json';
 import aboutCN from './assets/translations/cn/about.json';
 import aboutEN from './assets/translations/en/about.json';
 
+import educationCN from './assets/translations/cn/education.json';
+import educationEN from './assets/translations/en/education.json';
+
 const resources = {
     cn: {
         translation: chinese,
         about: aboutCN,
+        education: educationCN,
     },
     en: {
         translation: english,
         about: aboutEN,
+        education: educationEN,
     },
 };
 

@@ -8,6 +8,8 @@ import {
 import {
     FontAwesomeIcon
 } from '@fortawesome/react-fontawesome';
+import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     Container,
     Grid,
@@ -16,64 +18,92 @@ import {
 import BulletedList from '../components/Description';
 import IconHeader from '../components/IconHeader';
 
-export default function Education({ t }: any) {
+export default function Education() {
+    const { t } = useTranslation('education');
     return (
         <Container>
-            <IconHeader icon={faGraduationCap} text={t('education.header')} />
-
-            <Container>
-                <Grid
-                    stackable
-                    doubling
-                    padded='horizontally'>
-
-                    <Grid.Row columns={1}>
-                        <University university={t('education.university', { returnObjects: true })} />
-                    </Grid.Row>
-
-                    <Grid.Row columns={3} divided>
-                        {t('education.sections', { returnObjects: true }).map(
-                            (section: any, index: number) => (
-                                <Section section={section} key={index} />
-                            )
-                        )}
-                    </Grid.Row>
-                </Grid>
-            </Container>
+            <IconHeader icon={faGraduationCap} text={t('header')} />
+            <University />
         </Container>
     );
 }
 
-function University({ university }: any) {
+function University() {
     return (
-        <Grid.Column>
-            <Item.Group>
-                <Item>
-                    <Item.Content>
-                        <Item.Header>{university.name}</Item.Header>
-                        <Item.Meta>{university.date}</Item.Meta>
-                        <Item.Description>{university.degree}</Item.Description>
-                        <Item.Description>{university.honours}, {university.gpa}</Item.Description>
-                        <Item.Extra>
-                            <a
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                href={university.certURL}
-                            >
-                                {university.cert}
-                            </a>
-                            (<a
-                                target='_blank'
-                                rel='noopener noreferrer'
-                                href={university.verifyURL}
-                            >
-                                {university.verify}
-                            </a>)
-                        </Item.Extra>
-                    </Item.Content>
-                </Item>
-            </Item.Group>
-        </Grid.Column>
+        <Grid
+            stackable
+            doubling
+            padded='horizontally'>
+
+            <UniversitySummary />
+            <UniversityDetails />
+        </Grid>
+    );
+}
+
+function UniversitySummary() {
+    const { t } = useTranslation('education');
+    return (
+        <Grid.Row columns={1}>
+            <Grid.Column>
+                <Item.Group>
+                    <Item>
+                        <Item.Content>
+                            <Item.Header>
+                                {t('university.name')}
+                            </Item.Header>
+                            <Item.Meta>
+                                {t('university.date')}
+                            </Item.Meta>
+                            <Item.Description>
+                                {t('university.degree')}
+                            </Item.Description>
+                            <Item.Description>
+                                {t('university.honours')}, {t('university.gpa')}
+                            </Item.Description>
+                            <Item.Extra>
+                                <Certificate />
+                            </Item.Extra>
+                        </Item.Content>
+                    </Item>
+                </Item.Group>
+            </Grid.Column>
+        </Grid.Row>
+    );
+}
+
+function Certificate() {
+    const { t } = useTranslation('education');
+    return (
+        <Fragment>
+            <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={t('university.certURL')}
+            >
+                {t('university.cert')}
+            </a>
+            (<a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={t('university.verifyURL')}
+            >
+                {t('university.verify')}
+            </a>)
+        </Fragment>
+    );
+}
+
+function UniversityDetails() {
+    const { t } = useTranslation('education');
+    return (
+        <Grid.Row columns={3} divided>
+            {(t('sections', { returnObjects: true }) as []).map(
+                (section: any, index: number) => (
+                    <Section section={section} key={index} />
+                )
+            )}
+        </Grid.Row>
     );
 }
 

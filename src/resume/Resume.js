@@ -47,7 +47,7 @@ function Resume() {
             <Experience t={t} />
             <Divider />
 
-            <Education t={t} />
+            <Education />
             <Divider />
 
             <Projects t={t} />
