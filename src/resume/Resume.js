@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -43,7 +41,7 @@ function Resume() {
                 {t('language')}
             </Button>
 
-            <About t={t} />
+            <About />
             <Divider />
 
             <Experience t={t} />

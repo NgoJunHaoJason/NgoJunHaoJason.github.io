@@ -1,0 +1,26 @@
+{
+    "name": "伍俊豪",
+    "description": "后端开发师@星展银行",
+    "items": [
+        {
+            "icon": "mail",
+            "url": "mailto:njhjason@protonmail.com",
+            "text": "njhjason@protonmail.com"
+        },
+        {
+            "icon": "github",
+            "url": "https://github.com/NgoJunHaoJason",
+            "text": "GitHub简介"
+        },
+        {
+            "icon": "linkedin",
+            "url": "https://www.linkedin.com/in/ngo-jun-hao-jason/",
+            "text": "LinkedIn简介"
+        },
+        {
+            "icon": "file pdf",
+            "url": "./documents/resume_ngo_jun_hao_jason_no_phone.pdf",
+            "text": "PDF版"
+        }
+    ]
+}

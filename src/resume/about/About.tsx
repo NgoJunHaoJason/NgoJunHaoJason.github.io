@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
     Card,
     Container,
@@ -8,16 +9,17 @@ import {
 import ProfilePicture from '../../assets/images/profile_picture.png';
 import './About.css';
 
-export default function About({ t }: any) {
+export default function About() {
     return (
         <Container>
-            <AboutHeader t={t} />
-            <AboutLinks t={t} />
+            <AboutHeader />
+            <AboutLinks />
         </Container>
     );
 }
 
-function AboutHeader({ t }: any) {
+function AboutHeader() {
+    const { t } = useTranslation('about');
     return (
         <Header
             textAlign='center'
@@ -30,41 +32,46 @@ function AboutHeader({ t }: any) {
                     rounded
                     bordered
                 />
-                {t('about.name')}
+                {t('name')}
             </Header.Content>
 
             <Header.Subheader>
-                {t('about.description')}
+                {t('description')}
             </Header.Subheader>
         </Header>
     );
 }
 
-function AboutLinks({ t }: any) {
+function AboutLinks() {
+    const { t } = useTranslation('about');
     return (
         <Card centered className='Card'>
             <Card.Content>
                 <Card.Description>
                     <List>
-                        {t('about.items', { returnObjects: true }).map(
-                            (item: any, index: number) => (
-                                <List.Item key={index}>
-                                    <List.Icon name={item.icon} />
-                                    <List.Content>
-                                        <a
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            href={item.url}
-                                        >
-                                            {item.text}
-                                        </a>
-                                    </List.Content>
-                                </List.Item>
-                            )
+                        {(t('items', { returnObjects: true }) as []).map(
+                            (item: any, index: number) => <AboutLink key={index} item={item} />
                         )}
                     </List>
                 </Card.Description>
             </Card.Content>
         </Card>
+    );
+}
+
+function AboutLink({ key, item }: any) {
+    return (
+        <List.Item key={key}>
+            <List.Icon name={item.icon} />
+            <List.Content>
+                <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href={item.url}
+                >
+                    {item.text}
+                </a>
+            </List.Content>
+        </List.Item>
     );
 }
