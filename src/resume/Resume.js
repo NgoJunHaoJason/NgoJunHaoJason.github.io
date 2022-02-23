@@ -15,7 +15,7 @@ import 'fomantic-ui-css/semantic.min.css'
 import './Resume.css'
 
 function Resume() {
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation('common');
 
     const translateButtonOnClick = () => {
         const language = (i18n.language === 'en') ? 'cn' : 'en';
@@ -30,7 +30,7 @@ function Resume() {
                 floated='left'
                 size='mini'
             >
-                {t('language')}
+                {t('changeLanguage')}
             </Button>
 
             <Button
@@ -38,7 +38,7 @@ function Resume() {
                 size='mini'
                 onClick={() => translateButtonOnClick()}
             >
-                {t('language')}
+                {t('changeLanguage')}
             </Button>
 
             <About />

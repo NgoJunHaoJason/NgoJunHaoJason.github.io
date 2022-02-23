@@ -2,8 +2,8 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-import chinese from './assets/translations/chinese.json';
-import english from './assets/translations/english.json';
+import commonCN from './assets/translations/cn/common.json';
+import commonEN from './assets/translations/en/common.json';
 
 import aboutCN from './assets/translations/cn/about.json';
 import aboutEN from './assets/translations/en/about.json';
@@ -19,14 +19,14 @@ import projectsEN from './assets/translations/en/projects.json';
 
 const resources = {
     cn: {
-        translation: chinese,
+        common: commonCN,
         about: aboutCN,
         education: educationCN,
         experience: experienceCN,
         projects: projectsCN,
     },
     en: {
-        translation: english,
+        common: commonEN,
         about: aboutEN,
         education: educationEN,
         experience: experienceEN,
@@ -41,8 +41,8 @@ i18n
         interpolation: { escapeValue: false },
         lng: 'en',
         fallbackLng: 'en',
-        ns: ['translation', 'about'],
-        defaultNS: 'translation',
+        ns: ['common', 'about'],
+        defaultNS: 'common',
         resources,
     });
 
