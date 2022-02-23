@@ -44,7 +44,7 @@ function Resume() {
             <About />
             <Divider />
 
-            <Experience t={t} />
+            <Experience />
             <Divider />
 
             <Education />

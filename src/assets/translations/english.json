@@ -1,45 +1,5 @@
 {
     "language": "中文",
-    "experience" : {
-        "header": "Experience",
-        "jobs": [{
-            "contentStyle": { "background": "#ee2f2f", "color": "white" },
-            "contentArrowStyle": { "borderRight": "7px solid #ee2f2f" },
-            "date": "Jul 2021 - present",
-            "logo": "dbsLogo",
-            "iconClassName": "DBSLogo",
-            "companyName": "DBS Bank",
-            "jobTitle": "Graduate Associate (Backend Developer)",
-            "description": ["Contributed clean code with 100% unit test coverage for the development of microservices"],
-            "technologies": ["Spring Boot"]
-        }, {
-            "contentStyle": { "background": "dodgerblue", "color": "white" },
-            "contentArrowStyle": { "borderRight": "7px solid dodgerblue" },
-            "date": "May 2020 - Jul 2020",
-            "logo": "auralaidLogo",
-            "iconClassName": "AuralAidLogo",
-            "companyName": "Aural-Aid",
-            "jobTitle": "Software Development Intern",
-            "description": [
-                "Contributed to full-stack development of a website that scrapes for companies' contact information (autoscrape.com)",
-                "Developed a prototype mobile app that controls iris doors remotely"
-            ],
-            "technologies": ["Django", "Bootstrap", "Scrapy", "Pyppeteer", "Flutter", "AWS"]
-        },{
-            "contentStyle": { "background": "#ea1102", "color": "white" },
-            "contentArrowStyle": { "borderRight": "7px solid #ea1102" },
-            "date": "Aug 2019 - Dec 2019",
-            "logo": "ovtLogo",
-            "iconClassName": "OVTLogo",
-            "companyName": "Omnivision Technologies Singapore",
-            "jobTitle": "Computer Vision Intern",
-            "description": [
-                "Developed and deployed a website for displaying bounding boxes of object detection models",
-                "Collected and pre-processed more than 10000 training images with the help of scripts"
-            ],
-            "technologies": ["Django", "Bootstrap", "D3.js", "Nginx", "uWSGI"]
-        }]
-    },
     "projects": {
         "header": "Projects",
         "list": [{

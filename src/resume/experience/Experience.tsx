@@ -1,6 +1,7 @@
 import {
     faBriefcase
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 import {
     VerticalTimeline,
     VerticalTimelineElement
@@ -18,7 +19,28 @@ import IconHeader from '../components/IconHeader';
 import Labels from '../components/Technologies';
 import './Experience.css';
 
-export default function Experience({ t }: any) {
+export default function Experience() {
+    const { t } = useTranslation('experience');
+    return (
+        <Container>
+            <IconHeader icon={faBriefcase} text={t('header')} />
+            <Jobs />
+        </Container>
+    );
+}
+
+function Jobs() {
+    const { t } = useTranslation('experience');
+    return (
+        <VerticalTimeline className='VerticalTimeline'>
+            {(t('jobs', { returnObjects: true }) as []).map(
+                (job: any, index: number) => <Job job={job} key={index} />
+            )}
+        </VerticalTimeline>
+    );
+}
+
+function Job({ job, key }: any) {
 
     const companyLogos: { [key: string]: string } = {
         'dbsLogo': dbsLogo,
@@ -27,30 +49,22 @@ export default function Experience({ t }: any) {
     };
 
     return (
-        <Container>
-            <IconHeader icon={faBriefcase} text={t('experience.header')} />
+        <VerticalTimelineElement
+            className='VerticalTimelineElement'
+            contentStyle={job.contentStyle}
+            contentArrowStyle={job.contentArrowStyle}
+            date={job.date}
+            dateClassName='TimelineDate'
+            icon={<Image src={companyLogos[job.logo]} circular />}
+            iconClassName={job.iconClassName}
+            key={key}>
 
-            <VerticalTimeline className='VerticalTimeline'>
-                {t('experience.jobs', { returnObjects: true }).map((job: any, index: number) => (
-                    <VerticalTimelineElement
-                        className='VerticalTimelineElement'
-                        contentStyle={job.contentStyle}
-                        contentArrowStyle={job.contentArrowStyle}
-                        date={job.date}
-                        dateClassName='TimelineDate'
-                        icon={<Image src={companyLogos[job.logo]} circular />}
-                        iconClassName={job.iconClassName}
-                        key={index}>
+            <h3 className='TimelineText'>{job.companyName}</h3>
+            <h4 className='TimelineText'>{job.jobTitle}</h4>
 
-                        <h3 className='TimelineText'>{job.companyName}</h3>
-                        <h4 className='TimelineText'>{job.jobTitle}</h4>
+            <BulletedList list={job.description} />
+            <Labels labels={job.technologies} />
 
-                        <BulletedList list={job.description} />
-                        <Labels labels={job.technologies} />
-
-                    </VerticalTimelineElement>
-                ))}
-            </VerticalTimeline>
-        </Container>
+        </VerticalTimelineElement>
     );
 }

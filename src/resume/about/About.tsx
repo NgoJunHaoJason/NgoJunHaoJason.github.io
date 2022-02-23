@@ -50,7 +50,7 @@ function AboutLinks() {
                 <Card.Description>
                     <List>
                         {(t('items', { returnObjects: true }) as []).map(
-                            (item: any, index: number) => <AboutLink key={index} item={item} />
+                            (item: any, index: number) => <AboutLink item={item} key={index} />
                         )}
                     </List>
                 </Card.Description>
@@ -59,7 +59,7 @@ function AboutLinks() {
     );
 }
 
-function AboutLink({ key, item }: any) {
+function AboutLink({ item, key }: any) {
     return (
         <List.Item key={key}>
             <List.Icon name={item.icon} />

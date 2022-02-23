@@ -1,0 +1,76 @@
+{
+    "header": "工作经验",
+    "jobs": [
+        {
+            "contentStyle": {
+                "background": "#ee2f2f",
+                "color": "white"
+            },
+            "contentArrowStyle": {
+                "borderRight": "7px solid #ee2f2f"
+            },
+            "date": "Jul 2021 - present",
+            "logo": "dbsLogo",
+            "iconClassName": "DBSLogo",
+            "companyName": "星展银行",
+            "jobTitle": "研究生助理 (后端开发师)",
+            "description": [
+                "为微服务的开发贡献了具有 100% 单元测试覆盖率的干净代码"
+            ],
+            "technologies": [
+                "Spring Boot"
+            ]
+        },
+        {
+            "contentStyle": {
+                "background": "dodgerblue",
+                "color": "white"
+            },
+            "contentArrowStyle": {
+                "borderRight": "7px solid dodgerblue"
+            },
+            "date": "2020年 5月 - 2020年 7月",
+            "logo": "auralaidLogo",
+            "iconClassName": "AuralAidLogo",
+            "companyName": "Aural-Aid",
+            "jobTitle": "软件开发实习生",
+            "description": [
+                "致力于网络抓取网站(autoscrape.com)的全栈开发",
+                "开发了远程控制虹膜门的原型移动应用程序"
+            ],
+            "technologies": [
+                "Django",
+                "Bootstrap",
+                "Scrapy",
+                "Pyppeteer",
+                "Flutter",
+                "AWS"
+            ]
+        },
+        {
+            "contentStyle": {
+                "background": "#ea1102",
+                "color": "white"
+            },
+            "contentArrowStyle": {
+                "borderRight": "7px solid #ea1102"
+            },
+            "date": "2019年 8月 - 2019年 12月",
+            "logo": "ovtLogo",
+            "iconClassName": "OVTLogo",
+            "companyName": "Omnivision Technologies Singapore",
+            "jobTitle": "计算机视觉实习生",
+            "description": [
+                "开发并部署了一个网站，用于显示对象检测模型的边界框",
+                "借助脚本收集并预处理了 10000 多张训练图像"
+            ],
+            "technologies": [
+                "Django",
+                "Bootstrap",
+                "D3.js",
+                "Nginx",
+                "uWSGI"
+            ]
+        }
+    ]
+}
