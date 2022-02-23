@@ -1,0 +1,66 @@
+{
+    "header": "Projects",
+    "list": [
+        {
+            "url": "",
+            "header": "Joint Industry Final Year Project",
+            "subheader": "with Omnivision Technologies Singapore",
+            "date": "Aug 2020 - Jun 2021",
+            "description": [
+                "Fine-tuned a license plate detector to get an average precision of 96.9% for an IOU threshold of 0.7",
+                "Improved upon a license plate recogniser to reach an accuracy of 97.2%",
+                "Created a lightweight and fast license plate recognition system that has an accuracy of 96.1%"
+            ],
+            "technologies": [
+                "MXNet",
+                "Tensorflow",
+                "LFFD",
+                "LPRNet"
+            ]
+        },
+        {
+            "url": "",
+            "header": "Undergraduate Research Experience on Campus",
+            "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
+            "date": "Aug 2018 - Jul 2019",
+            "description": [
+                "Carried out research on narrowcasting",
+                "Contributed to the development of a proof of concept for 3D virtual meeting apps"
+            ],
+            "technologies": [
+                "Unity",
+                "Photon Unity Networking",
+                "Photon Voice"
+            ]
+        },
+        {
+            "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
+            "header": "Neural Network and Deep Learning Group Project",
+            "subheader": "-",
+            "date": "Sep 2020 - Nov 2020",
+            "description": [
+                "Tuned a MobileNetV2-based neural network to get an accuracy of 93.4% on Adience's test set"
+            ],
+            "technologies": [
+                "Tensorflow",
+                "Google Colaboratory",
+                "Weights and Biases"
+            ]
+        },
+        {
+            "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
+            "header": "Machine Learning Group Project",
+            "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
+            "date": "Jan 2020 - Mar 2020",
+            "description": [
+                "Performed data preprocessing, model evaluation and ensemble learning to train a model that predicts if a transaction is fraudulent"
+            ],
+            "technologies": [
+                "Jupyter Notebook",
+                "Pandas",
+                "Scikit-Learn",
+                "LightGBM"
+            ]
+        }
+    ]
+}

@@ -50,7 +50,7 @@ function Resume() {
             <Education />
             <Divider />
 
-            <Projects t={t} />
+            <Projects />
         </Container>
     );
 }

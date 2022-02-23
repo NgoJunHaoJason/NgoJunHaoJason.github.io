@@ -14,18 +14,23 @@ import educationEN from './assets/translations/en/education.json';
 import experienceCN from './assets/translations/cn/experience.json';
 import experienceEN from './assets/translations/en/experience.json';
 
+import projectsCN from './assets/translations/cn/projects.json';
+import projectsEN from './assets/translations/en/projects.json';
+
 const resources = {
     cn: {
         translation: chinese,
         about: aboutCN,
         education: educationCN,
         experience: experienceCN,
+        projects: projectsCN,
     },
     en: {
         translation: english,
         about: aboutEN,
         education: educationEN,
         experience: experienceEN,
+        projects: projectsEN,
     },
 };
 

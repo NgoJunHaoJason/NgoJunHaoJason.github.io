@@ -1,0 +1,65 @@
+{
+    "header": "项目",
+    "list": [
+        {
+            "url": "",
+            "header": "Joint Industry Final Year Project",
+            "subheader": "与Omnivision Technologies Singapore",
+            "date": "2020年 8月 - 2021年 6月",
+            "description": [
+                "对车牌检测器进行微调，以在 0.7 的 IOU 阈值下获得 96.9% 的平均精度",
+                "改进了车牌识别器，准确率达到 97.2%",
+                "打造轻量级快速车牌识别系统，准确率达96.1%"
+            ],
+            "technologies": [
+                "MXNet",
+                "Tensorflow",
+                "LFFD",
+                "LPRNet"
+            ]
+        },
+        {
+            "url": "",
+            "header": "校园本科生研究经验",
+            "subheader": "3D视频会议的增强虚拟化方法",
+            "date": "2018年 8月 - 2019年 7月",
+            "description": [
+                "进行窄播研究",
+                "有助于开发 3D 虚拟会议应用程序的概念验证"
+            ],
+            "technologies": [
+                "Unity",
+                "Photon Unity Networking",
+                "Photon Voice"
+            ]
+        },
+        {
+            "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
+            "header": "神经网络与深度学习小组项目",
+            "date": "2020年 9月 - 2020年 11月",
+            "description": [
+                "调整了基于 MobileNetV2 的神经网络，在 Adience 的测试集上获得了 93.4% 的准确率"
+            ],
+            "technologies": [
+                "Tensorflow",
+                "Google Colaboratory",
+                "Weights and Biases"
+            ]
+        },
+        {
+            "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
+            "header": "机器学习小组项目",
+            "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
+            "date": "2020年 1月 - 2020年 3月",
+            "description": [
+                "执行数据预处理、模型评估和集成学习，以训练预测交易是否欺诈的模型"
+            ],
+            "technologies": [
+                "Jupyter Notebook",
+                "Pandas",
+                "Scikit-Learn",
+                "LightGBM"
+            ]
+        }
+    ]
+}
