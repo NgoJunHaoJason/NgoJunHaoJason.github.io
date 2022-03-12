@@ -8,8 +8,8 @@ export default function BulletedList({ list }: BulletedListProps) {
     return (
         <List bulleted>
             {list.map(
-                (item: any, index: number) => (
-                    <List.Item key={index}>{item}</List.Item>
+                (text: string, index: number) => (
+                    <List.Item key={index}>{text}</List.Item>
                 )
             )}
         </List>

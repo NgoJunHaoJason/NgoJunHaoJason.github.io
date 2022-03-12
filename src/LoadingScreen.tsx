@@ -1,12 +1,10 @@
-import React from 'react';
-
 import {
     Container,
     Dimmer,
     Loader,
 } from 'semantic-ui-react';
 
-function LoadingScreen() {
+export default function LoadingScreen() {
     return (
         <Container fluid>
             <Dimmer active>
@@ -15,5 +13,3 @@ function LoadingScreen() {
         </Container>
     );
 }
-
-export default LoadingScreen;

@@ -4,9 +4,11 @@ import {
     Container,
     Header,
     Image,
-    List
+    List,
+    SemanticICONS
 } from 'semantic-ui-react';
 import ProfilePicture from '../../assets/images/profile_picture.png';
+import Link from '../utils/Link';
 import './About.css';
 
 export default function About() {
@@ -50,7 +52,7 @@ function AboutLinks() {
                 <Card.Description>
                     <List>
                         {(t('items', { returnObjects: true }) as []).map(
-                            (item: any, index: number) => <AboutLink item={item} key={index} />
+                            (item, index) => <AboutLink item={item} key={index} />
                         )}
                     </List>
                 </Card.Description>
@@ -59,18 +61,23 @@ function AboutLinks() {
     );
 }
 
-function AboutLink({ item, key }: any) {
+interface AboutItem {
+    icon: SemanticICONS,
+    url: string,
+    text: string,
+}
+
+interface AboutLinkProps {
+    item: AboutItem,
+    key: number,
+}
+
+function AboutLink({ item, key }: AboutLinkProps) {
     return (
         <List.Item key={key}>
             <List.Icon name={item.icon} />
             <List.Content>
-                <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    href={item.url}
-                >
-                    {item.text}
-                </a>
+                <Link text={item.text} href={item.url} />
             </List.Content>
         </List.Item>
     );

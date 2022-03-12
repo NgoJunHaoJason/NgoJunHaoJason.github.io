@@ -9,16 +9,17 @@
             "contentArrowStyle": {
                 "borderRight": "7px solid #ee2f2f"
             },
-            "date": "Jul 2021 - present",
+            "date": "2021年 7月 - 现在",
             "logo": "dbsLogo",
             "iconClassName": "DBSLogo",
             "companyName": "星展银行",
-            "jobTitle": "研究生助理 (后端开发师)",
+            "jobTitle": "研究生助理 (全栈开发人员)",
             "description": [
-                "为微服务的开发贡献了具有 100% 单元测试覆盖率的干净代码"
+                "贡献了具有 100% 单元测试覆盖率的干净代码"
             ],
             "technologies": [
-                "Spring Boot"
+                "Spring Boot",
+                "React"
             ]
         },
         {

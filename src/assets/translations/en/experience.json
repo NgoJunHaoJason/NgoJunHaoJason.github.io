@@ -13,12 +13,13 @@
             "logo": "dbsLogo",
             "iconClassName": "DBSLogo",
             "companyName": "DBS Bank",
-            "jobTitle": "Graduate Associate (Backend Developer)",
+            "jobTitle": "Graduate Associate (Full Stack Developer)",
             "description": [
-                "Contributed clean code with 100% unit test coverage for the development of microservices"
+                "Contributed clean code with 100% unit test coverage"
             ],
             "technologies": [
-                "Spring Boot"
+                "Spring Boot",
+                "React"
             ]
         },
         {

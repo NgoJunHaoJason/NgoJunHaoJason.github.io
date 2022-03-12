@@ -6,9 +6,10 @@ import {
     Card,
     Container,
 } from 'semantic-ui-react';
-import BulletedList from '../components/Description';
-import IconHeader from '../components/IconHeader';
-import Labels from '../components/Technologies';
+import BulletedList from '../utils/Description';
+import IconHeader from '../utils/IconHeader';
+import Link from '../utils/Link';
+import Labels from '../utils/Technologies';
 
 export default function Projects() {
     const { t } = useTranslation('projects');
@@ -18,18 +19,23 @@ export default function Projects() {
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
                 {(t('list', { returnObjects: true }) as []).map(
-                    (project: any, index: number) => <Project project={project} key={index} />
+                    (project, index) => <Project project={project} key={index} />
                 )}
             </Card.Group>
         </Container>
     );
 }
 
-function Project({ project, key }: any) {
+interface ProjectProps {
+    project: any,
+    key: number,
+}
+
+function Project({ project, key }: ProjectProps) {
     return (
         <Card fluid className='Card' key={key}>
             <Card.Content>
-                <ProjectTitle header={project.header} url={project.url} />
+                <ProjectTitle text={project.header} url={project.url} />
                 <Card.Description>
                     {project.subheader}
                 </Card.Description>
@@ -49,17 +55,17 @@ function Project({ project, key }: any) {
     );
 }
 
+interface ProjectTitleProps {
+    text: string,
+    url: string
+}
+
 // display title as a link only if it exists
-function ProjectTitle({ header, url }: any) {
+function ProjectTitle({ text, url }: ProjectTitleProps) {
     return (
         <Card.Header>
-            {url === '' ? (header) : (
-                <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    href={url}>
-                    {header}
-                </a>
+            {url === '' ? (text) : (
+                <Link text={text} href={url} />
             )}
         </Card.Header>
     );

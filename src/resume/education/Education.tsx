@@ -15,8 +15,9 @@ import {
     Grid,
     Item,
 } from 'semantic-ui-react';
-import BulletedList from '../components/Description';
-import IconHeader from '../components/IconHeader';
+import BulletedList from '../utils/Description';
+import IconHeader from '../utils/IconHeader';
+import Link from '../utils/Link';
 
 export default function Education() {
     const { t } = useTranslation('education');
@@ -76,20 +77,8 @@ function Certificate() {
     const { t } = useTranslation('education');
     return (
         <Fragment>
-            <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={t('university.certURL')}
-            >
-                {t('university.cert')}
-            </a>
-            (<a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={t('university.verifyURL')}
-            >
-                {t('university.verify')}
-            </a>)
+            <Link text={t('university.cert')} href={t('university.certURL')} />
+            (<Link text={t('university.verify')} href={t('university.verifyURL')} />)
         </Fragment>
     );
 }
@@ -99,15 +88,18 @@ function UniversityDetails() {
     return (
         <Grid.Row columns={3} divided>
             {(t('sections', { returnObjects: true }) as []).map(
-                (section: any, index: number) => (
-                    <Section section={section} key={index} />
-                )
+                (section, index) => <Section section={section} key={index} />
             )}
         </Grid.Row>
     );
 }
 
-function Section({ section }: any) {
+interface SectionProps {
+    section: any,
+    key: number,
+}
+
+function Section({ section, key }: SectionProps) {
 
     const sectionIcons: { [key: string]: IconDefinition } = {
         'faLaptopCode': faLaptopCode,
@@ -116,7 +108,7 @@ function Section({ section }: any) {
     };
 
     return (
-        <Grid.Column>
+        <Grid.Column key={key}>
             <Item.Group>
                 <Item>
                     <Item.Content>

@@ -14,7 +14,7 @@ import Projects from './projects/Projects';
 import 'fomantic-ui-css/semantic.min.css'
 import './Resume.css'
 
-function Resume() {
+export default function Resume() {
     const { t, i18n } = useTranslation('common');
 
     const translateButtonOnClick = () => {
@@ -54,5 +54,3 @@ function Resume() {
         </Container>
     );
 }
-
-export default Resume;

@@ -14,9 +14,9 @@ import {
 import auralaidLogo from '../../assets/images/auralaid_logo.png';
 import dbsLogo from '../../assets/images/dbs_logo.png';
 import ovtLogo from '../../assets/images/ovt_logo.png';
-import BulletedList from '../components/Description';
-import IconHeader from '../components/IconHeader';
-import Labels from '../components/Technologies';
+import BulletedList from '../utils/Description';
+import IconHeader from '../utils/IconHeader';
+import Labels from '../utils/Technologies';
 import './Experience.css';
 
 export default function Experience() {
@@ -34,13 +34,18 @@ function Jobs() {
     return (
         <VerticalTimeline className='VerticalTimeline'>
             {(t('jobs', { returnObjects: true }) as []).map(
-                (job: any, index: number) => <Job job={job} key={index} />
+                (job, index) => <Job job={job} key={index} />
             )}
         </VerticalTimeline>
     );
 }
 
-function Job({ job, key }: any) {
+interface JobProps {
+    job: any,
+    key: number,
+}
+
+function Job({ job, key }: JobProps) {
 
     const companyLogos: { [key: string]: string } = {
         'dbsLogo': dbsLogo,

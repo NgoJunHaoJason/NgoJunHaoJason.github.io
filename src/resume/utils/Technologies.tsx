@@ -8,8 +8,8 @@ export default function Labels({ labels }: LabelsProps) {
     return (
         <Label.Group>
             {labels.map(
-                (item: any, index: number) => (
-                    <Label className='Label' key={index}>{item}</Label>
+                (text: string, index: number) => (
+                    <Label className='Label' key={index}>{text}</Label>
                 )
             )}
         </Label.Group>
