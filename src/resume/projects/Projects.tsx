@@ -6,10 +6,10 @@ import {
     Card,
     Container,
 } from 'semantic-ui-react';
-import BulletedList from '../utils/Description';
+import BulletedList from '../utils/BulletedList';
 import IconHeader from '../utils/IconHeader';
 import Link from '../utils/Link';
-import Labels from '../utils/Technologies';
+import Labels from '../utils/Labels';
 
 export default function Projects() {
     const { t } = useTranslation('projects');
@@ -18,38 +18,47 @@ export default function Projects() {
             <IconHeader icon={faTasks} text={t('header')} />
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
-                {(t('list', { returnObjects: true }) as []).map(
-                    (project, index) => <Project project={project} key={index} />
-                )}
+                {(t('list', { returnObjects: true }) as []).map(project => <Project {...project} />)}
             </Card.Group>
         </Container>
     );
 }
 
 interface ProjectProps {
-    project: any,
-    key: number,
+    header: string,
+    url: string,
+    subheader: string,
+    date: string,
+    description: Array<string>,
+    technologies: Array<string>,
 }
 
-function Project({ project, key }: ProjectProps) {
+function Project({
+    header,
+    url,
+    subheader,
+    date,
+    description,
+    technologies,
+}: ProjectProps) {
     return (
-        <Card fluid className='Card' key={key}>
+        <Card fluid className='Card' key={header}>
             <Card.Content>
-                <ProjectTitle text={project.header} url={project.url} />
+                <ProjectTitle text={header} url={url} />
                 <Card.Description>
-                    {project.subheader}
+                    {subheader}
                 </Card.Description>
                 <Card.Meta>
-                    {project.date}
+                    {date}
                 </Card.Meta>
 
                 <Card.Description>
-                    <BulletedList list={project.description} />
+                    <BulletedList list={description} />
                 </Card.Description>
             </Card.Content>
 
             <Card.Content extra>
-                <Labels labels={project.technologies} />
+                <Labels labels={technologies} />
             </Card.Content>
         </Card>
     );
@@ -64,9 +73,7 @@ interface ProjectTitleProps {
 function ProjectTitle({ text, url }: ProjectTitleProps) {
     return (
         <Card.Header>
-            {url === '' ? (text) : (
-                <Link text={text} href={url} />
-            )}
+            {url === '' ? (text) : (<Link text={text} href={url} />)}
         </Card.Header>
     );
 }

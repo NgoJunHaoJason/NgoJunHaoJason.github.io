@@ -7,11 +7,7 @@ interface BulletedListProps {
 export default function BulletedList({ list }: BulletedListProps) {
     return (
         <List bulleted>
-            {list.map(
-                (text: string, index: number) => (
-                    <List.Item key={index}>{text}</List.Item>
-                )
-            )}
+            {list.map((text, index) => <List.Item key={index}>{text}</List.Item>)}
         </List>
     );
 }

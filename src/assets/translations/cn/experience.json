@@ -10,8 +10,7 @@
                 "borderRight": "7px solid #ee2f2f"
             },
             "date": "2021年 7月 - 现在",
-            "logo": "dbsLogo",
-            "iconClassName": "DBSLogo",
+            "iconName": "DBSLogo",
             "companyName": "星展银行",
             "jobTitle": "研究生助理 (全栈开发人员)",
             "description": [
@@ -31,8 +30,7 @@
                 "borderRight": "7px solid dodgerblue"
             },
             "date": "2020年 5月 - 2020年 7月",
-            "logo": "auralaidLogo",
-            "iconClassName": "AuralAidLogo",
+            "iconName": "AuralAidLogo",
             "companyName": "Aural-Aid",
             "jobTitle": "软件开发实习生",
             "description": [
@@ -57,8 +55,7 @@
                 "borderRight": "7px solid #ea1102"
             },
             "date": "2019年 8月 - 2019年 12月",
-            "logo": "ovtLogo",
-            "iconClassName": "OVTLogo",
+            "iconName": "OVTLogo",
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "计算机视觉实习生",
             "description": [

@@ -51,9 +51,7 @@ function AboutLinks() {
             <Card.Content>
                 <Card.Description>
                     <List>
-                        {(t('items', { returnObjects: true }) as []).map(
-                            (item, index) => <AboutLink item={item} key={index} />
-                        )}
+                        {(t('items', { returnObjects: true }) as []).map(item => <AboutItem {...item} />)}
                     </List>
                 </Card.Description>
             </Card.Content>
@@ -61,23 +59,22 @@ function AboutLinks() {
     );
 }
 
-interface AboutItem {
+interface AboutItemProps {
     icon: SemanticICONS,
     url: string,
     text: string,
 }
 
-interface AboutLinkProps {
-    item: AboutItem,
-    key: number,
-}
-
-function AboutLink({ item, key }: AboutLinkProps) {
+function AboutItem({
+    icon,
+    url,
+    text,
+}: AboutItemProps) {
     return (
-        <List.Item key={key}>
-            <List.Icon name={item.icon} />
+        <List.Item key={text}>
+            <List.Icon name={icon} />
             <List.Content>
-                <Link text={item.text} href={item.url} />
+                <Link text={text} href={url} />
             </List.Content>
         </List.Item>
     );

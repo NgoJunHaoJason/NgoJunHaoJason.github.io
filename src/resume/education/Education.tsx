@@ -15,7 +15,7 @@ import {
     Grid,
     Item,
 } from 'semantic-ui-react';
-import BulletedList from '../utils/Description';
+import BulletedList from '../utils/BulletedList';
 import IconHeader from '../utils/IconHeader';
 import Link from '../utils/Link';
 
@@ -87,19 +87,24 @@ function UniversityDetails() {
     const { t } = useTranslation('education');
     return (
         <Grid.Row columns={3} divided>
-            {(t('sections', { returnObjects: true }) as []).map(
-                (section, index) => <Section section={section} key={index} />
-            )}
+            {(t('sections', { returnObjects: true }) as []).map(section => <Section {...section} />)}
         </Grid.Row>
     );
 }
 
 interface SectionProps {
-    section: any,
-    key: number,
+    header: string,
+    icon: string,
+    subheader: string,
+    subjects: Array<string>,
 }
 
-function Section({ section, key }: SectionProps) {
+function Section({
+    header,
+    icon,
+    subheader,
+    subjects,
+}: SectionProps) {
 
     const sectionIcons: { [key: string]: IconDefinition } = {
         'faLaptopCode': faLaptopCode,
@@ -108,21 +113,21 @@ function Section({ section, key }: SectionProps) {
     };
 
     return (
-        <Grid.Column key={key}>
+        <Grid.Column key={header}>
             <Item.Group>
                 <Item>
                     <Item.Content>
                         <Item.Header>
-                            {section.header}
+                            {header}
                         </Item.Header>
                         <Item.Meta>
-                            <FontAwesomeIcon icon={sectionIcons[section.icon]} />
+                            <FontAwesomeIcon icon={sectionIcons[icon]} />
                             &nbsp;
-                            {section.subheader}
+                            {subheader}
                         </Item.Meta>
 
                         <Item.Description>
-                            <BulletedList list={section.subjects} />
+                            <BulletedList list={subjects} />
                         </Item.Description>
                     </Item.Content>
                 </Item>

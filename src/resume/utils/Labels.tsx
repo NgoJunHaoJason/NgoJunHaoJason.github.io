@@ -7,11 +7,7 @@ interface LabelsProps {
 export default function Labels({ labels }: LabelsProps) {
     return (
         <Label.Group>
-            {labels.map(
-                (text: string, index: number) => (
-                    <Label className='Label' key={index}>{text}</Label>
-                )
-            )}
+            {labels.map((text, index) => <Label className='Label' key={index}>{text}</Label>)}
         </Label.Group>
     );
 };
