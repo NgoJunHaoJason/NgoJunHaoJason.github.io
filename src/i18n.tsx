@@ -17,7 +17,9 @@ import experienceEN from './assets/translations/en/experience.json';
 import projectsCN from './assets/translations/cn/projects.json';
 import projectsEN from './assets/translations/en/projects.json';
 
-const resources = {
+export const defaultNS = 'common';
+
+export const resources = {
     cn: {
         common: commonCN,
         about: aboutCN,
@@ -32,7 +34,7 @@ const resources = {
         experience: experienceEN,
         projects: projectsEN,
     },
-};
+} as const;
 
 i18n
     .use(initReactI18next)
@@ -41,8 +43,8 @@ i18n
         interpolation: { escapeValue: false },
         lng: 'en',
         fallbackLng: 'en',
-        ns: ['common', 'about'],
-        defaultNS: 'common',
+        ns: Object.keys(resources.en),
+        defaultNS,
         resources,
     });
 
