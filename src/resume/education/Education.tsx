@@ -87,7 +87,9 @@ function UniversityDetails() {
     const { t } = useTranslation('education');
     return (
         <Grid.Row columns={3} divided>
-            {(t('sections', { returnObjects: true }) as []).map(section => <Section {...section} />)}
+            {(t('sections', { returnObjects: true }) as Array<SectionProps>).map(
+                (section, index) => <Section {...section} key={index} />
+            )}
         </Grid.Row>
     );
 }
@@ -113,7 +115,7 @@ function Section({
     };
 
     return (
-        <Grid.Column key={header}>
+        <Grid.Column>
             <Item.Group>
                 <Item>
                     <Item.Content>

@@ -18,7 +18,9 @@ export default function Projects() {
             <IconHeader icon={faTasks} text={t('header')} />
 
             <Card.Group itemsPerRow={2} centered doubling stackable>
-                {(t('list', { returnObjects: true }) as []).map(project => <Project {...project} />)}
+                {(t('list', { returnObjects: true }) as Array<ProjectProps>).map(
+                    (project, index) => <Project {...project} key={index} />
+                )}
             </Card.Group>
         </Container>
     );
@@ -42,7 +44,7 @@ function Project({
     technologies,
 }: ProjectProps) {
     return (
-        <Card fluid className='Card' key={header}>
+        <Card fluid className='Card'>
             <Card.Content>
                 <ProjectTitle text={header} url={url} />
                 <Card.Description>

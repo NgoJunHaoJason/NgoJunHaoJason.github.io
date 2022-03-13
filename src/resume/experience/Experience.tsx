@@ -34,7 +34,9 @@ function Jobs() {
     const { t } = useTranslation('experience');
     return (
         <VerticalTimeline className='VerticalTimeline'>
-            {(t('jobs', { returnObjects: true }) as []).map(job => <Job {...job} />)}
+            {(t('jobs', { returnObjects: true }) as Array<JobProps>).map(
+                (job, index) => <Job {...job} key={index} />
+            )}
         </VerticalTimeline>
     );
 }
@@ -75,8 +77,7 @@ function Job({
             date={date}
             dateClassName='TimelineDate'
             icon={<Image src={companyLogos[iconName]} circular />}
-            iconClassName={iconName}
-            key={companyName + jobTitle}>
+            iconClassName={iconName}>
 
             <h3 className='TimelineText'>{companyName}</h3>
             <h4 className='TimelineText'>{jobTitle}</h4>

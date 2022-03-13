@@ -51,7 +51,9 @@ function AboutLinks() {
             <Card.Content>
                 <Card.Description>
                     <List>
-                        {(t('items', { returnObjects: true }) as []).map(item => <AboutItem {...item} />)}
+                        {(t('items', { returnObjects: true }) as Array<AboutItemProps>).map(
+                            (item, index) => <AboutItem {...item} key={index} />
+                        )}
                     </List>
                 </Card.Description>
             </Card.Content>
@@ -71,7 +73,7 @@ function AboutItem({
     text,
 }: AboutItemProps) {
     return (
-        <List.Item key={text}>
+        <List.Item>
             <List.Icon name={icon} />
             <List.Content>
                 <Link text={text} href={url} />
