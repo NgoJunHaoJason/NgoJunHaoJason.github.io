@@ -15,10 +15,10 @@ import {
 import auralaidLogo from '../../assets/images/auralaid_logo.png';
 import dbsLogo from '../../assets/images/dbs_logo.png';
 import ovtLogo from '../../assets/images/ovt_logo.png';
-import BulletedList from '../utils/BulletedList';
-import IconHeader from '../utils/IconHeader';
-import Labels from '../utils/Labels';
-import './Experience.css';
+import BulletedList from '../../utils/BulletedList';
+import IconHeader from '../../utils/IconHeader';
+import Labels from '../../utils/Labels';
+import './index.css';
 
 export default function Experience() {
     const { t } = useTranslation('experience');

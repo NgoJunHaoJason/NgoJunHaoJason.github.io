@@ -8,8 +8,8 @@ import {
     SemanticICONS
 } from 'semantic-ui-react';
 import ProfilePicture from '../../assets/images/profile_picture.png';
-import Link from '../utils/Link';
-import './About.css';
+import Link from '../../utils/Link';
+import './index.css';
 
 export default function About() {
     return (

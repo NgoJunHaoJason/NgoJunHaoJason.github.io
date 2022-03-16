@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Resume from './Resume';
+import Resume from '.';
 
 test('renders learn react link', () => {
     const { getByText } = render(<Resume />);

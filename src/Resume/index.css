@@ -2,10 +2,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.TranslateCounterWeight {
-    visibility: hidden;
-}
-
 @media (prefers-color-scheme: dark) {
     .Resume {
         background-color: #303030;

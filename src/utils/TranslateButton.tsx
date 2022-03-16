@@ -1,29 +1,19 @@
 import { useTranslation } from 'react-i18next';
+import { Button } from 'semantic-ui-react';
+import { Fragment } from 'react';
 
-import {
-    Container,
-    Divider,
-    Button,
-} from 'semantic-ui-react';
+import './TranslateButton.css';
 
-import About from './about/About';
-import Education from './education/Education';
-import Experience from './experience/Experience';
-import Projects from './projects/Projects';
-
-import 'fomantic-ui-css/semantic.min.css'
-import './Resume.css'
-
-export default function Resume() {
+export default function TranslateButton() {
     const { t, i18n } = useTranslation('common');
 
     const translateButtonOnClick = () => {
-        const language = (i18n.language === 'en') ? 'cn' : 'en';
+        const language = (i18n.language === 'en') ? 'zh' : 'en';
         i18n.changeLanguage(language);
     };
-
+    console.log(i18n.language);
     return (
-        <Container fluid className='Resume TextContainer'>
+        <Fragment>
             {/* this button does nothing, except to centre the header on mobile */}
             <Button
                 className='TranslateCounterWeight'
@@ -40,17 +30,6 @@ export default function Resume() {
             >
                 {t('changeLanguage')}
             </Button>
-
-            <About />
-            <Divider />
-
-            <Experience />
-            <Divider />
-
-            <Education />
-            <Divider />
-
-            <Projects />
-        </Container>
+        </Fragment>
     );
 }

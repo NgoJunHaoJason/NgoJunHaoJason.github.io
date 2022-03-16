@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
-import Resume from './resume/Resume';
-import LoadingScreen from './LoadingScreen';
+import Resume from './Resume';
+import LoadingScreen from './utils/LoadingScreen';
 
 import './i18n';
 
