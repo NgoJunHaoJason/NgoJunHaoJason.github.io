@@ -41,7 +41,6 @@ i18n
     .use(LanguageDetector)
     .init({
         interpolation: { escapeValue: false },
-        // lng: 'en',
         fallbackLng: 'en',
         ns: Object.keys(resources.en),
         defaultNS,
