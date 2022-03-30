@@ -1,24 +1,24 @@
-import {
-    faBriefcase
-} from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
     VerticalTimeline,
-    VerticalTimelineElement
+    VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import {
     Container,
     Image,
 } from 'semantic-ui-react';
-import auralaidLogo from '../../assets/images/auralaid_logo.png';
-import dbsLogo from '../../assets/images/dbs_logo.png';
-import ovtLogo from '../../assets/images/ovt_logo.png';
 import BulletedList from '../../utils/BulletedList';
 import IconHeader from '../../utils/IconHeader';
 import Labels from '../../utils/Labels';
+
+import 'react-vertical-timeline-component/style.min.css';
 import './index.css';
+
+import auralaidLogo from '../../assets/images/auralaid_logo.png';
+import dbsLogo from '../../assets/images/dbs_logo.png';
+import ovtLogo from '../../assets/images/ovt_logo.png';
 
 export default function Experience() {
     const { t } = useTranslation('experience');

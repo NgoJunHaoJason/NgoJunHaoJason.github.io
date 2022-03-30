@@ -7,6 +7,7 @@ import About from './About';
 import Education from './Education';
 import Experience from './Experience';
 import Projects from './Projects';
+import Skills from './Skills';
 import TranslateButton from '../utils/TranslateButton';
 
 import 'fomantic-ui-css/semantic.min.css'
@@ -28,6 +29,9 @@ export default function Resume() {
             <Divider />
 
             <Projects />
+            <Divider />
+
+            <Skills />
         </Container>
     );
 }

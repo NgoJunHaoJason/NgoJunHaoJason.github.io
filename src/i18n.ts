@@ -17,6 +17,9 @@ import experienceZH from './assets/translations/zh/experience.json';
 import projectsEN from './assets/translations/en/projects.json';
 import projectsZH from './assets/translations/zh/projects.json';
 
+import skillsEN from './assets/translations/en/skills.json';
+import skillsZH from './assets/translations/zh/skills.json';
+
 export const defaultNS = 'common';
 
 export const resources = {
@@ -26,6 +29,7 @@ export const resources = {
         education: educationEN,
         experience: experienceEN,
         projects: projectsEN,
+        skills: skillsEN,
     },
     zh: {
         common: commonZH,
@@ -33,6 +37,7 @@ export const resources = {
         education: educationZH,
         experience: experienceZH,
         projects: projectsZH,
+        skills: skillsZH,
     },
 } as const;
 

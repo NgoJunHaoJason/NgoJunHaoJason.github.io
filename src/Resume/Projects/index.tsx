@@ -1,6 +1,4 @@
-import {
-    faTasks,
-} from '@fortawesome/free-solid-svg-icons';
+import { faTasks } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 import {
     Card,

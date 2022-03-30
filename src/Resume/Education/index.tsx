@@ -5,9 +5,7 @@ import {
     faRobot,
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
-import {
-    FontAwesomeIcon
-} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
