@@ -14,7 +14,8 @@
             "companyName": "星展银行",
             "jobTitle": "研究生助理 (全栈开发人员)",
             "description": [
-                "贡献了具有 100% 单元测试覆盖率的干净代码"
+                "贡献了具有 100% 单元测试覆盖率的干净代码",
+                "修炼了软件工艺"
             ],
             "technologies": [
                 "Spring Boot",

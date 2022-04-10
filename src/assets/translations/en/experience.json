@@ -14,7 +14,8 @@
             "companyName": "DBS Bank",
             "jobTitle": "Graduate Associate (Full Stack Developer)",
             "description": [
-                "Contributed clean code with 100% unit test coverage"
+                "Contributed clean code with 100% unit test coverage",
+                "Practiced software craftsmanship"
             ],
             "technologies": [
                 "Spring Boot",
