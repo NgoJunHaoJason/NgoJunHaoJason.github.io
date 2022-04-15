@@ -14,7 +14,7 @@
             "companyName": "星展银行",
             "jobTitle": "研究生助理 (全栈开发人员)",
             "description": [
-                "贡献了具有 100% 单元测试覆盖率的干净代码",
+                "编写了具有 100% 单元测试覆盖率的干净代码",
                 "修炼了软件工艺"
             ],
             "technologies": [
@@ -35,7 +35,7 @@
             "companyName": "Aural-Aid",
             "jobTitle": "软件开发实习生",
             "description": [
-                "致力于网络抓取网站(autoscrape.com)的全栈开发",
+                "帮助开发了一个收集公司联系信息的网站",
                 "开发了远程控制虹膜门的原型移动应用程序"
             ],
             "technologies": [
@@ -60,7 +60,7 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "计算机视觉实习生",
             "description": [
-                "开发并部署了一个网站，用于显示对象检测模型的边界框",
+                "开发了一个显示对象检测模型边界框的网站",
                 "借助脚本收集并预处理了 10000 多张训练图像"
             ],
             "technologies": [

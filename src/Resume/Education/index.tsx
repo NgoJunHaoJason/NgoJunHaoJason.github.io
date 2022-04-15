@@ -6,7 +6,6 @@ import {
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
     Container,
@@ -74,10 +73,10 @@ function UniversitySummary() {
 function Certificate() {
     const { t } = useTranslation('education');
     return (
-        <Fragment>
+        <>
             <Link text={t('university.cert')} href={t('university.certURL')} />
             (<Link text={t('university.verify')} href={t('university.verifyURL')} />)
-        </Fragment>
+        </>
     );
 }
 

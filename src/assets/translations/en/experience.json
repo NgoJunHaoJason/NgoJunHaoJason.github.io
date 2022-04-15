@@ -14,7 +14,7 @@
             "companyName": "DBS Bank",
             "jobTitle": "Graduate Associate (Full Stack Developer)",
             "description": [
-                "Contributed clean code with 100% unit test coverage",
+                "Wrote clean code with 100% unit test coverage",
                 "Practiced software craftsmanship"
             ],
             "technologies": [
@@ -35,7 +35,7 @@
             "companyName": "Aural-Aid",
             "jobTitle": "Software Development Intern",
             "description": [
-                "Contributed to full-stack development of a website that scrapes for companies' contact information (autoscrape.com)",
+                "Contributed to development of a website that scrapes for companies' contact information",
                 "Developed a prototype mobile app that controls iris doors remotely"
             ],
             "technologies": [
@@ -60,7 +60,7 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "Computer Vision Intern",
             "description": [
-                "Developed and deployed a website for displaying bounding boxes of object detection models",
+                "Developed a website for displaying bounding boxes of object detection models",
                 "Collected and pre-processed more than 10000 training images with the help of scripts"
             ],
             "technologies": [

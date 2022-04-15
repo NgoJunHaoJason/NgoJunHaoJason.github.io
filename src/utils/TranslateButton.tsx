@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from 'semantic-ui-react';
-import { Fragment } from 'react';
 
 import './TranslateButton.css';
 
@@ -11,9 +10,9 @@ export default function TranslateButton() {
         const language = (i18n.language === 'en') ? 'zh' : 'en';
         i18n.changeLanguage(language);
     };
-    console.log(i18n.language);
+
     return (
-        <Fragment>
+        <>
             {/* this button does nothing, except to centre the header on mobile */}
             <Button
                 className='TranslateCounterWeight'
@@ -24,12 +23,13 @@ export default function TranslateButton() {
             </Button>
 
             <Button
+                data-testid='translate-button'
                 floated='right'
                 size='mini'
                 onClick={() => translateButtonOnClick()}
             >
                 {t('changeLanguage')}
             </Button>
-        </Fragment>
+        </>
     );
 }
