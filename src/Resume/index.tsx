@@ -1,6 +1,6 @@
 import {
-    Container,
-    Divider,
+  Container,
+  Divider,
 } from 'semantic-ui-react';
 
 import About from './About';
@@ -14,24 +14,23 @@ import 'fomantic-ui-css/semantic.min.css'
 import './index.css'
 
 export default function Resume() {
+  return (
+    <Container fluid className='Resume TextContainer'>
+      <TranslateButton />
 
-    return (
-        <Container fluid className='Resume TextContainer'>
-            <TranslateButton />
+      <About />
+      <Divider />
 
-            <About />
-            <Divider />
+      <Experience />
+      <Divider />
 
-            <Experience />
-            <Divider />
+      <Education />
+      <Divider />
 
-            <Education />
-            <Divider />
+      <Projects />
+      <Divider />
 
-            <Projects />
-            <Divider />
-
-            <Skills />
-        </Container>
-    );
+      <Skills />
+    </Container>
+  );
 }

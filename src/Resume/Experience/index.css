@@ -1,62 +1,62 @@
 .AutoscrapeLink{
-    color: white;
+  color: white;
 }
 
 .AutoscrapeLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .VerticalTimeline:before {
-    background-color: gray; /* line colour */
+  background-color: gray; /* line colour */
 }
 
 .TimelineText {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .TimelineDate {
-    color: black;
+  color: black;
 }
 
 @media only screen and (max-width: 1161px) {
-    .TimelineDate {
-        color: white;
-    }
+  .TimelineDate {
+    color: white;
+  }
 }
 
 .DBSLogo {
-    box-shadow: 0 0 0 4px white, 
-    inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, 
+  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
+  0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .AuralAidLogo {
-    box-shadow: 0 0 0 4px dodgerblue, 
-    inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px dodgerblue, 
+  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
+  0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .OVTLogo {
-    box-shadow: 0 0 0 4px white, 
-    inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, 
+  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
+  0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .VerticalTimelineElement.bounce-in {
-    visibility: visible;
-    animation: custom-animation 0.6s !important;
+  visibility: visible;
+  animation: custom-animation 0.6s !important;
 }
 @keyframes custom-animation {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    60% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

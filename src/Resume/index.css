@@ -1,26 +1,26 @@
 .Resume * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-    .Resume {
-        background-color: #303030;
-    }
+  .Resume {
+    background-color: #303030;
+  }
 
-    .Card {
-        background-color: #808080 !important;
-        box-shadow: none !important;
-    }
+  .Card {
+    background-color: #808080 !important;
+    box-shadow: none !important;
+  }
 
-    .Label {
-        background-color: #505050 !important;
-    }
+  .Label {
+    background-color: #505050 !important;
+  }
 
-    .TextContainer * :not(a) { /* all text except links */
-        color: white !important;
-    }
+  .TextContainer * :not(a) { /* all text except links */
+    color: white !important;
+  }
 
-    a {
-        color: deepskyblue;
-    }
+  a {
+    color: deepskyblue;
+  }
 }

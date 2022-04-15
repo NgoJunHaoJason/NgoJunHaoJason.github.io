@@ -23,33 +23,33 @@ import skillsZH from '../assets/translations/zh/skills.json';
 export const defaultNS = 'common';
 
 export const resources = {
-    en: {
-        common: commonEN,
-        about: aboutEN,
-        education: educationEN,
-        experience: experienceEN,
-        projects: projectsEN,
-        skills: skillsEN,
-    },
-    zh: {
-        common: commonZH,
-        about: aboutZH,
-        education: educationZH,
-        experience: experienceZH,
-        projects: projectsZH,
-        skills: skillsZH,
-    },
+  en: {
+    common: commonEN,
+    about: aboutEN,
+    education: educationEN,
+    experience: experienceEN,
+    projects: projectsEN,
+    skills: skillsEN,
+  },
+  zh: {
+    common: commonZH,
+    about: aboutZH,
+    education: educationZH,
+    experience: experienceZH,
+    projects: projectsZH,
+    skills: skillsZH,
+  },
 } as const;
 
 i18n
-    .use(initReactI18next)
-    .use(LanguageDetector)
-    .init({
-        interpolation: { escapeValue: false },
-        fallbackLng: 'en',
-        ns: Object.keys(resources.en),
-        defaultNS,
-        resources,
-    });
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    interpolation: { escapeValue: false },
+    fallbackLng: 'en',
+    ns: Object.keys(resources.en),
+    defaultNS,
+    resources,
+  });
 
 export default i18n;

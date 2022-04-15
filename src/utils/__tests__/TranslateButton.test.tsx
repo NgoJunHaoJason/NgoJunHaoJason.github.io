@@ -3,10 +3,10 @@ import i18n from '../../config/i18n';
 import TranslateButton from '../TranslateButton';
 
 it('changes language on click', () => {
-    render(<TranslateButton />);
-    const previousLanguage = i18n.language;
+  render(<TranslateButton />);
+  const previousLanguage = i18n.language;
 
-    screen.getByTestId('translate-button').click();
+  screen.getByTestId('translate-button').click();
 
-    expect(i18n.language).not.toEqual(previousLanguage);
+  expect(i18n.language).not.toEqual(previousLanguage);
 });
