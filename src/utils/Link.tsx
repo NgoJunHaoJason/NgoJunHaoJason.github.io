@@ -6,6 +6,7 @@ interface LinkProps {
 export default function Link({text, href}: LinkProps) {
   return (
     <a
+      data-testid='link'
       target='_blank'
       rel='noopener noreferrer'
       href={href}>

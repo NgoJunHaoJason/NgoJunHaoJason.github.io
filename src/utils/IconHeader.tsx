@@ -9,7 +9,7 @@ interface IconHeaderProps {
 
 export default function IconHeader({ icon, text }: IconHeaderProps) {
   return (
-    <Header size='large'>
+    <Header size='large' data-testid='icon-header'>
       <Header.Content>
         <FontAwesomeIcon icon={icon} />
         &nbsp;

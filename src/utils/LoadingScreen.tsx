@@ -8,7 +8,7 @@ export default function LoadingScreen() {
   return (
     <Container fluid>
       <Dimmer active>
-        <Loader />
+        <Loader data-testid='loader' />
       </Dimmer>
     </Container>
   );
