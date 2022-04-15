@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import i18n from '../../i18n';
+import i18n from '../../config/i18n';
 import TranslateButton from '../TranslateButton';
 
 it('changes language on click', () => {

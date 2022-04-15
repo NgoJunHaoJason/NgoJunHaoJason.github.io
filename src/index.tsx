@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Resume from './Resume';
 import LoadingScreen from './utils/LoadingScreen';
 
-import './i18n';
+import './config/i18n';
 
 ReactDOM.render(
     <React.StrictMode>
