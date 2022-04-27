@@ -7,9 +7,9 @@ import {
   List,
   SemanticICONS
 } from 'semantic-ui-react';
-import ProfilePicture from '../../assets/images/profile_picture.png';
-import Link from '../../utils/Link';
-import './index.css';
+import ProfilePicture from 'assets/images/profile_picture.png';
+import Link from 'utils/Link';
+import 'Resume/About/index.css';
 
 export default function About() {
   return (

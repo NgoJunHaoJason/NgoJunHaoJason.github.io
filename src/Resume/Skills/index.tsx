@@ -1,10 +1,10 @@
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 import { Container, Grid } from 'semantic-ui-react';
-import IconHeader from '../../utils/IconHeader';
+import IconHeader from 'utils/IconHeader';
 
 import 'devicon/devicon.min.css';
-import './index.css';
+import 'Resume/Skills/index.css';
 
 export default function Skills() {
   const { t } = useTranslation('skills');

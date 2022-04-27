@@ -3,15 +3,14 @@ import {
   Divider,
 } from 'semantic-ui-react';
 
-import About from './About';
-import Education from './Education';
-import Experience from './Experience';
-import Projects from './Projects';
-import Skills from './Skills';
-import TranslateButton from '../utils/TranslateButton';
+import About from 'Resume/About';
+import Education from 'Resume/Education';
+import Experience from 'Resume/Experience';
+import Projects from 'Resume/Projects';
+import Skills from 'Resume/Skills';
+import TranslateButton from 'utils/TranslateButton';
 
-import 'fomantic-ui-css/semantic.min.css'
-import './index.css'
+import 'Resume/index.css'
 
 export default function Resume() {
   return (

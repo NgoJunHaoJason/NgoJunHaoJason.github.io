@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from 'semantic-ui-react';
 
-import './TranslateButton.css';
+import 'utils/TranslateButton.css';
 
 export default function TranslateButton() {
   const { t, i18n } = useTranslation('common');

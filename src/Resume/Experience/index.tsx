@@ -9,16 +9,16 @@ import {
   Container,
   Image,
 } from 'semantic-ui-react';
-import BulletedList from '../../utils/BulletedList';
-import IconHeader from '../../utils/IconHeader';
-import Labels from '../../utils/Labels';
+import BulletedList from 'utils/BulletedList';
+import IconHeader from 'utils/IconHeader';
+import Labels from 'utils/Labels';
 
 import 'react-vertical-timeline-component/style.min.css';
-import './index.css';
+import 'Resume/Experience/index.css';
 
-import auralaidLogo from '../../assets/images/auralaid_logo.png';
-import dbsLogo from '../../assets/images/dbs_logo.png';
-import ovtLogo from '../../assets/images/ovt_logo.png';
+import auralaidLogo from 'assets/images/auralaid_logo.png';
+import dbsLogo from 'assets/images/dbs_logo.png';
+import ovtLogo from 'assets/images/ovt_logo.png';
 
 export default function Experience() {
   const { t } = useTranslation('experience');

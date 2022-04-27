@@ -4,10 +4,10 @@ import {
   Card,
   Container,
 } from 'semantic-ui-react';
-import BulletedList from '../../utils/BulletedList';
-import IconHeader from '../../utils/IconHeader';
-import Link from '../../utils/Link';
-import Labels from '../../utils/Labels';
+import BulletedList from 'utils/BulletedList';
+import IconHeader from 'utils/IconHeader';
+import Link from 'utils/Link';
+import Labels from 'utils/Labels';
 
 export default function Projects() {
   const { t } = useTranslation('projects');

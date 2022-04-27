@@ -12,9 +12,9 @@ import {
   Grid,
   Item,
 } from 'semantic-ui-react';
-import BulletedList from '../../utils/BulletedList';
-import IconHeader from '../../utils/IconHeader';
-import Link from '../../utils/Link';
+import BulletedList from 'utils/BulletedList';
+import IconHeader from 'utils/IconHeader';
+import Link from 'utils/Link';
 
 export default function Education() {
   const { t } = useTranslation('education');
