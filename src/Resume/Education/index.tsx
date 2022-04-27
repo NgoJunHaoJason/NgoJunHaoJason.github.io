@@ -16,7 +16,7 @@ import BulletedList from 'utils/BulletedList';
 import IconHeader from 'utils/IconHeader';
 import Link from 'utils/Link';
 
-export default function Education() {
+export default (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Container>
@@ -26,7 +26,7 @@ export default function Education() {
   );
 }
 
-function University() {
+const University = (): JSX.Element => {
   return (
     <Grid
       stackable
@@ -39,7 +39,7 @@ function University() {
   );
 }
 
-function UniversitySummary() {
+const UniversitySummary = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Grid.Row columns={1}>
@@ -70,7 +70,7 @@ function UniversitySummary() {
   );
 }
 
-function Certificate() {
+const Certificate = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <>
@@ -80,7 +80,7 @@ function Certificate() {
   );
 }
 
-function UniversityDetails() {
+const UniversityDetails = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Grid.Row columns={3} divided>
@@ -98,12 +98,12 @@ interface SectionProps {
   subjects: Array<string>,
 }
 
-function Section({
+const Section = ({
   header,
   icon,
   subheader,
   subjects,
-}: SectionProps) {
+}: SectionProps): JSX.Element => {
 
   const sectionIcons: { [key: string]: IconDefinition } = {
     'faLaptopCode': faLaptopCode,

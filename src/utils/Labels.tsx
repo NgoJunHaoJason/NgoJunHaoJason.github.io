@@ -4,7 +4,7 @@ interface LabelsProps {
   labels: Array<string>;
 };
 
-export default function Labels({ labels }: LabelsProps) {
+export default ({ labels }: LabelsProps): JSX.Element => {
   return (
     <Label.Group>
       {labels.map((text, index) => <Label className='Label' key={index}>{text}</Label>)}

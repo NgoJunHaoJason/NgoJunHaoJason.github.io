@@ -6,7 +6,9 @@ import IconHeader from 'utils/IconHeader';
 import 'devicon/devicon.min.css';
 import 'Resume/Skills/index.css';
 
-export default function Skills() {
+// TODO: refactor
+
+export default (): JSX.Element => {
   const { t } = useTranslation('skills');
   return (
     <Container>
@@ -48,9 +50,9 @@ interface TechnologyProps {
   name: string
 }
 
-function Technology({
+const Technology = ({
   name,
-}: TechnologyProps) {
+}: TechnologyProps): JSX.Element => {
   const className = `devicon-${mapTechToDevIconName(name)}-plain DevIcon`;
   return (
     <Grid.Column textAlign='center'>
@@ -61,7 +63,7 @@ function Technology({
   );
 }
 
-function mapTechToDevIconName(name: string) {
+const mapTechToDevIconName = (name: string) => {
   switch (name.toUpperCase()) {
     case 'C#':
       return 'csharp';

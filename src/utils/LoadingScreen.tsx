@@ -4,7 +4,7 @@ import {
   Loader,
 } from 'semantic-ui-react';
 
-export default function LoadingScreen() {
+export default (): JSX.Element => {
   return (
     <Container fluid>
       <Dimmer active>

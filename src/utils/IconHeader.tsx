@@ -7,7 +7,7 @@ interface IconHeaderProps {
   text: string;
 }
 
-export default function IconHeader({ icon, text }: IconHeaderProps) {
+export default ({ icon, text }: IconHeaderProps): JSX.Element => {
   return (
     <Header size='large' data-testid='icon-header'>
       <Header.Content>

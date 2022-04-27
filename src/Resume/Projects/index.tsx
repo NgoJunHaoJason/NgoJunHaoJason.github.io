@@ -9,7 +9,7 @@ import IconHeader from 'utils/IconHeader';
 import Link from 'utils/Link';
 import Labels from 'utils/Labels';
 
-export default function Projects() {
+export default (): JSX.Element => {
   const { t } = useTranslation('projects');
   return (
     <Container>
@@ -33,14 +33,14 @@ interface ProjectProps {
   technologies: Array<string>,
 }
 
-function Project({
+const Project = ({
   header,
   url,
   subheader,
   date,
   description,
   technologies,
-}: ProjectProps) {
+}: ProjectProps): JSX.Element => {
   return (
     <Card fluid className='Card'>
       <Card.Content>
@@ -70,7 +70,10 @@ interface ProjectTitleProps {
 }
 
 // display title as a link only if it exists
-function ProjectTitle({ text, url }: ProjectTitleProps) {
+const ProjectTitle = ({
+  text,
+  url,
+}: ProjectTitleProps): JSX.Element => {
   return (
     <Card.Header>
       {url === '' ? (text) : (<Link text={text} href={url} />)}

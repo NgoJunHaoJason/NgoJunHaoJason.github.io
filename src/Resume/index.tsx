@@ -12,7 +12,7 @@ import TranslateButton from 'utils/TranslateButton';
 
 import 'Resume/index.css'
 
-export default function Resume() {
+export default (): JSX.Element => {
   return (
     <Container fluid className='Resume TextContainer'>
       <TranslateButton />

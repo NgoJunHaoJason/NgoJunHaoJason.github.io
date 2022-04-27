@@ -20,7 +20,7 @@ import auralaidLogo from 'assets/images/auralaid_logo.png';
 import dbsLogo from 'assets/images/dbs_logo.png';
 import ovtLogo from 'assets/images/ovt_logo.png';
 
-export default function Experience() {
+export default (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
     <Container>
@@ -30,7 +30,7 @@ export default function Experience() {
   );
 }
 
-function Jobs() {
+const Jobs = (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
     <VerticalTimeline className='VerticalTimeline'>
@@ -52,7 +52,7 @@ interface JobProps {
   technologies: Array<string>,
 }
 
-function Job({
+const Job = ({
   contentStyle,
   contentArrowStyle,
   date,
@@ -61,7 +61,7 @@ function Job({
   jobTitle,
   description,
   technologies,
-}: JobProps) {
+}: JobProps): JSX.Element => {
 
   const companyLogos: { [key: string]: string } = {
     'DBSLogo': dbsLogo,

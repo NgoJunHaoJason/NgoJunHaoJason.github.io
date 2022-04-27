@@ -3,7 +3,7 @@ interface LinkProps {
   href: string
 }
 
-export default function Link({text, href}: LinkProps) {
+export default ({text, href}: LinkProps): JSX.Element => {
   return (
     <a
       data-testid='link'

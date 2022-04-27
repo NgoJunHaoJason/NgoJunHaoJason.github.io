@@ -4,7 +4,7 @@ interface BulletedListProps {
   list: Array<string>;
 };
 
-export default function BulletedList({ list }: BulletedListProps) {
+export default ({ list }: BulletedListProps): JSX.Element => {
   return (
     <List bulleted>
       {list.map((text, index) => <List.Item key={index}>{text}</List.Item>)}

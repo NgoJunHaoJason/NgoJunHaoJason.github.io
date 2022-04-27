@@ -11,7 +11,7 @@ import ProfilePicture from 'assets/images/profile_picture.png';
 import Link from 'utils/Link';
 import 'Resume/About/index.css';
 
-export default function About() {
+export default (): JSX.Element => {
   return (
     <Container>
       <AboutHeader />
@@ -20,7 +20,7 @@ export default function About() {
   );
 }
 
-function AboutHeader() {
+const AboutHeader = (): JSX.Element => {
   const { t } = useTranslation('about');
   return (
     <Header
@@ -44,7 +44,7 @@ function AboutHeader() {
   );
 }
 
-function AboutLinks() {
+const AboutLinks = (): JSX.Element => {
   const { t } = useTranslation('about');
   return (
     <Card centered className='Card'>
@@ -67,11 +67,11 @@ interface AboutItemProps {
   text: string,
 }
 
-function AboutItem({
+const AboutItem = ({
   icon,
   url,
   text,
-}: AboutItemProps) {
+}: AboutItemProps): JSX.Element => {
   return (
     <List.Item>
       <List.Icon name={icon} />
