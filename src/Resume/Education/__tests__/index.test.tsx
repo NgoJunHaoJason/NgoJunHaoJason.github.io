@@ -1,8 +1,8 @@
-import { render, screen, within } from "@testing-library/react"
+import { render, screen} from "@testing-library/react"
 import { UniversitySummary } from ".."
 
-it('renders all sections', () => {
+it('renders certificate in university summary', () => {
   render(<UniversitySummary />);
 
-  // expect(screen.getByTestId('certificate')).toBeInTheDocument();
+  expect(screen.getByTestId('certificate')).toBeInTheDocument();
 });

@@ -59,9 +59,7 @@ export const UniversitySummary = (): JSX.Element => {
               <Item.Description>
                 {t('university.honours')}, {t('university.gpa')}
               </Item.Description>
-              <Item.Extra>
-                <Certificate />
-              </Item.Extra>
+              <Certificate />
             </Item.Content>
           </Item>
         </Item.Group>
@@ -73,10 +71,10 @@ export const UniversitySummary = (): JSX.Element => {
 const Certificate = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
-    <>
+    <Item.Extra data-testid='certificate'>
       <Link text={t('university.cert')} href={t('university.certURL')} />
       (<Link text={t('university.verify')} href={t('university.verifyURL')} />)
-    </>
+    </Item.Extra>
   );
 }
 

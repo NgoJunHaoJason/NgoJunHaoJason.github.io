@@ -24,7 +24,7 @@ export default (): JSX.Element => {
   );
 }
 
-interface ProjectProps {
+export interface ProjectProps {
   header: string,
   url: string,
   subheader: string,
@@ -33,7 +33,7 @@ interface ProjectProps {
   technologies: Array<string>,
 }
 
-const Project = ({
+export const Project = ({
   header,
   url,
   subheader,
@@ -75,7 +75,7 @@ const ProjectTitle = ({
   url,
 }: ProjectTitleProps): JSX.Element => {
   return (
-    <Card.Header>
+    <Card.Header data-testid='project-title'>
       {url === '' ? (text) : (<Link text={text} href={url} />)}
     </Card.Header>
   );
