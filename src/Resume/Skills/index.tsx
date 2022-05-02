@@ -6,43 +6,48 @@ import IconHeader from 'utils/IconHeader';
 import 'devicon/devicon.min.css';
 import 'Resume/Skills/index.css';
 
-// TODO: refactor
-
 export default (): JSX.Element => {
   const { t } = useTranslation('skills');
   return (
     <Container>
       <IconHeader icon={faCode} text={t('header')} />
-      <Grid
-        container
-        doubling
-        verticalAlign='middle'>
-
-        <Grid.Row columns={3}>
-          <Technology name='Python' />
-          <Technology name='Java' />
-          <Technology name='JavaScript' />
-        </Grid.Row>
-        
-        <Grid.Row columns={3}>
-          <Technology name='TypeScript' />
-          <Technology name='Dart' />
-          <Technology name='C#' />
-        </Grid.Row>
-
-        <Grid.Row columns={3}>
-          <Technology name='C' />
-          <Technology name='HTML' />
-          <Technology name='CSS' />
-        </Grid.Row>
-
-        <Grid.Row columns={3}>
-          <Technology name='MySQL' />
-          <Technology name='Git' />
-          <Technology name='Ubuntu' />
-        </Grid.Row>
-      </Grid>
+      <Technologies />
     </Container>
+  );
+}
+
+// TODO: refactor to reduce duplication
+const Technologies = (): JSX.Element => {
+  return (
+    <Grid
+      container
+      doubling
+      verticalAlign='middle'>
+
+      <Grid.Row columns={3}>
+        <Technology name='Python' />
+        <Technology name='Java' />
+        <Technology name='JavaScript' />
+      </Grid.Row>
+
+      <Grid.Row columns={3}>
+        <Technology name='TypeScript' />
+        <Technology name='Dart' />
+        <Technology name='C#' />
+      </Grid.Row>
+
+      <Grid.Row columns={3}>
+        <Technology name='C' />
+        <Technology name='HTML' />
+        <Technology name='CSS' />
+      </Grid.Row>
+
+      <Grid.Row columns={3}>
+        <Technology name='MySQL' />
+        <Technology name='Git' />
+        <Technology name='Ubuntu' />
+      </Grid.Row>
+    </Grid>
   );
 }
 
@@ -50,20 +55,22 @@ interface TechnologyProps {
   name: string
 }
 
-const Technology = ({
+export const Technology = ({
   name,
 }: TechnologyProps): JSX.Element => {
   const className = `devicon-${mapTechToDevIconName(name)}-plain DevIcon`;
   return (
-    <Grid.Column textAlign='center'>
-      <i className={className}></i>
+    <Grid.Column
+      data-testid='technology'
+      textAlign='center'>
+      <i className={className} />
       <br />
       {name}
     </Grid.Column>
   );
 }
 
-const mapTechToDevIconName = (name: string) => {
+export const mapTechToDevIconName = (name: string): string => {
   switch (name.toUpperCase()) {
     case 'C#':
       return 'csharp';
