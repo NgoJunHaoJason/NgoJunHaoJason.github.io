@@ -39,7 +39,7 @@ const University = (): JSX.Element => {
   );
 }
 
-const UniversitySummary = (): JSX.Element => {
+export const UniversitySummary = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Grid.Row columns={1}>

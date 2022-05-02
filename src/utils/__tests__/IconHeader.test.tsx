@@ -5,5 +5,5 @@ import IconHeader from "../IconHeader"
 it('renders text', () => {
   render(<IconHeader icon={faCode} text='text' />);
 
-  expect(within(screen.getByTestId('icon-header')).getByText('text'));
+  expect(within(screen.getByTestId('icon-header')).getByText('text')).toBeInTheDocument();
 })

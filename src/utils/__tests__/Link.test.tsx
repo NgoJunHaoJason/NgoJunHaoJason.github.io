@@ -4,5 +4,5 @@ import Link from "../Link"
 it('renders text', () => {
   render(<Link text='text' href='' />);
 
-  expect(within(screen.getByTestId('link')).getByText('text'));
+  expect(within(screen.getByTestId('link')).getByText('text')).toBeInTheDocument();
 })
