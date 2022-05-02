@@ -26,12 +26,13 @@ export default (): JSX.Element => {
   );
 }
 
-const University = (): JSX.Element => {
+export const University = (): JSX.Element => {
   return (
     <Grid
       stackable
       doubling
-      padded='horizontally'>
+      padded='horizontally'
+      data-testid='university'>
 
       <UniversitySummary />
       <UniversityDetails />
@@ -42,7 +43,7 @@ const University = (): JSX.Element => {
 export const UniversitySummary = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
-    <Grid.Row columns={1}>
+    <Grid.Row columns={1} data-testid='university-summary'>
       <Grid.Column>
         <Item.Group>
           <Item>

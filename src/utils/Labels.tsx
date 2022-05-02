@@ -6,7 +6,7 @@ interface LabelsProps {
 
 export default ({ labels }: LabelsProps): JSX.Element => {
   return (
-    <Label.Group>
+    <Label.Group data-testid='labels'>
       {labels.map((text, index) => <Label className='Label' key={index}>{text}</Label>)}
     </Label.Group>
   );

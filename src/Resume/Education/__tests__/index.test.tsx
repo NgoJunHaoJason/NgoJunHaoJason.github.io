@@ -1,8 +1,12 @@
-import { render, screen} from "@testing-library/react"
-import { UniversitySummary } from ".."
+import { render, screen} from '@testing-library/react';
+import {
+  UniversitySummary,
+} from '..';
 
-it('renders certificate in university summary', () => {
-  render(<UniversitySummary />);
+describe('Education', () => {
 
-  expect(screen.getByTestId('certificate')).toBeInTheDocument();
+  it('renders certificate in university summary', () => {
+    render(<UniversitySummary />);
+    expect(screen.getByTestId('certificate')).toBeInTheDocument();
+  });
 });

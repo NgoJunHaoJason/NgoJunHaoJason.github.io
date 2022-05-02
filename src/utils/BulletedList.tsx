@@ -6,7 +6,9 @@ interface BulletedListProps {
 
 export default ({ list }: BulletedListProps): JSX.Element => {
   return (
-    <List bulleted>
+    <List
+      data-testid='bulleted-list'
+      bulleted>
       {list.map((text, index) => <List.Item key={index}>{text}</List.Item>)}
     </List>
   );

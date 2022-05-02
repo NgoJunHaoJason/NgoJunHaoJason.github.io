@@ -15,6 +15,7 @@ export default (): JSX.Element => {
     <>
       {/* this button does nothing, except to centre the header on mobile */}
       <Button
+        data-testid='translate-counterweight'
         className='TranslateCounterWeight'
         floated='left'
         size='mini'
