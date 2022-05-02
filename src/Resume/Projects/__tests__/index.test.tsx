@@ -1,5 +1,5 @@
-import { render, screen, within } from '@testing-library/react'
-import { Project, ProjectProps } from '..';
+import { render, screen } from '@testing-library/react'
+import { Project, ProjectProps } from 'Resume/Projects';
 
 const projectProps: ProjectProps = {
   header: 'header',
@@ -10,8 +10,9 @@ const projectProps: ProjectProps = {
   technologies: ['technology1', 'technology2'],
 };
 
-it('renders project title in project card', () => {
-  render(<Project {...projectProps} />);
-
-  expect(screen.getByTestId('project-title')).toBeInTheDocument();
+describe('Projects', () => {
+  it('renders project title in project card', () => {
+    render(<Project {...projectProps} />);
+    expect(screen.getByTestId('project-title')).toBeInTheDocument();
+  });
 });

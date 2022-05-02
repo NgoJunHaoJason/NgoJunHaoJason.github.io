@@ -1,8 +1,9 @@
-import { render, screen, within } from "@testing-library/react"
-import Link from "../Link"
+import { render, screen, within } from '@testing-library/react';
+import Link from 'utils/Link';
 
-it('renders text in link', () => {
-  render(<Link text='text' href='' />);
-
-  expect(within(screen.getByTestId('link')).getByText('text')).toBeInTheDocument();
-})
+describe('Link', () => {
+  it('renders text in link', () => {
+    render(<Link text='text' href='' />);
+    expect(within(screen.getByTestId('link')).getByText('text')).toBeInTheDocument();
+  });
+});

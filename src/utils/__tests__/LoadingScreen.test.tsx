@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import LoadingScreen from "../LoadingScreen";
+import { render, screen } from '@testing-library/react';
+import LoadingScreen from 'utils/LoadingScreen';
 
-it('renders loader in loading screen', () => {
-  render(<LoadingScreen />);
-
-  expect(screen.getByTestId('loader')).toBeInTheDocument();
+describe('LoadingScreen', () => {
+  it('renders loader in loading screen', () => {
+    render(<LoadingScreen />);
+    expect(screen.getByTestId('loader')).toBeInTheDocument();
+  });
 });
