@@ -9,7 +9,7 @@ reactI18Next.useTranslation = () => {
   };
 };
 
-reactI18Next.initReactI18next = { type: "3rdParty", init: jest.fn() };
+reactI18Next.initReactI18next = { type: '3rdParty', init: jest.fn() };
 
 module.exports = reactI18Next;
 

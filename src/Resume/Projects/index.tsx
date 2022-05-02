@@ -64,13 +64,13 @@ export const Project = ({
   );
 }
 
-interface ProjectTitleProps {
+export interface ProjectTitleProps {
   text: string,
   url: string
 }
 
 // display title as a link only if it exists
-const ProjectTitle = ({
+export const ProjectTitle = ({
   text,
   url,
 }: ProjectTitleProps): JSX.Element => {

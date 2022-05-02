@@ -61,19 +61,19 @@ const AboutLinks = (): JSX.Element => {
   );
 }
 
-interface AboutItemProps {
+export interface AboutItemProps {
   icon: SemanticICONS,
   url: string,
   text: string,
 }
 
-const AboutItem = ({
+export const AboutItem = ({
   icon,
   url,
   text,
 }: AboutItemProps): JSX.Element => {
   return (
-    <List.Item>
+    <List.Item data-testid='about-item'>
       <List.Icon name={icon} />
       <List.Content>
         <Link text={text} href={url} />
