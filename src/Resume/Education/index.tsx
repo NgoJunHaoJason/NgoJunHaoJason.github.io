@@ -45,7 +45,9 @@ export const University = (): JSX.Element => {
 export const UniversitySummary = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
-    <Grid.Row columns={1} data-testid='university-summary'>
+    <Grid.Row
+      data-testid='university-summary'
+      columns={1} >
       <Grid.Column>
         <Item.Group>
           <Item>
@@ -81,10 +83,11 @@ const Certificate = (): JSX.Element => {
   );
 }
 
-const UniversityDetails = (): JSX.Element => {
+export const UniversityDetails = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Grid.Row
+      data-testid='university-details'
       columns={3}
       divided>
       {t<any, SectionProps[]>('sections', { returnObjects: true }).map(
@@ -94,14 +97,14 @@ const UniversityDetails = (): JSX.Element => {
   );
 }
 
-interface SectionProps {
+export interface SectionProps {
   header: string,
   icon: string,
   subheader: string,
   subjects: Array<string>,
 }
 
-const Section = ({
+export const Section = ({
   header,
   icon,
   subheader,
@@ -115,7 +118,7 @@ const Section = ({
   };
 
   return (
-    <Grid.Column>
+    <Grid.Column data-testid='section'>
       <Item.Group>
         <Item>
           <Item.Content>
