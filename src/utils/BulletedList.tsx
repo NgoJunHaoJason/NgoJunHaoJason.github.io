@@ -9,7 +9,9 @@ export default ({ list }: BulletedListProps): JSX.Element => {
     <List
       data-testid='bulleted-list'
       bulleted>
-      {list.map((text, index) => <List.Item key={index}>{text}</List.Item>)}
+      {list.map(
+        (text: string, index: number) => <List.Item key={index}>{text}</List.Item>
+      )}
     </List>
   );
 }

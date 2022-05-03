@@ -47,12 +47,14 @@ const AboutHeader = (): JSX.Element => {
 const AboutLinks = (): JSX.Element => {
   const { t } = useTranslation('about');
   return (
-    <Card centered className='Card'>
+    <Card
+      centered
+      className='Card'>
       <Card.Content>
         <Card.Description>
           <List>
-            {(t('items', { returnObjects: true }) as Array<AboutItemProps>).map(
-              (item, index) => <AboutItem {...item} key={index} />
+            {t<any, AboutItemProps[]>('items', { returnObjects: true }).map(
+              (item: AboutItemProps, index: number) => <AboutItem {...item} key={index} />
             )}
           </List>
         </Card.Description>

@@ -15,9 +15,13 @@ export default (): JSX.Element => {
     <Container>
       <IconHeader icon={faTasks} text={t('header')} />
 
-      <Card.Group itemsPerRow={2} centered doubling stackable>
-        {(t('list', { returnObjects: true }) as Array<ProjectProps>).map(
-          (project, index) => <Project {...project} key={index} />
+      <Card.Group
+        itemsPerRow={2}
+        centered
+        doubling
+        stackable>
+        {t<any, ProjectProps[]>('list', { returnObjects: true }).map(
+          (project: ProjectProps, index: number) => <Project {...project} key={index} />
         )}
       </Card.Group>
     </Container>

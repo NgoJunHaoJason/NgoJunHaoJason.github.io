@@ -34,8 +34,8 @@ const Jobs = (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
     <VerticalTimeline className='VerticalTimeline'>
-      {(t('jobs', { returnObjects: true }) as Array<JobProps>).map(
-        (job, index) => <Job {...job} key={index} />
+      {t<any, JobProps[]>('jobs', { returnObjects: true }).map(
+        (job: JobProps, index: number) => <Job {...job} key={index} />
       )}
     </VerticalTimeline>
   );

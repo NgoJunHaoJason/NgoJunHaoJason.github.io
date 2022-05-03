@@ -82,9 +82,11 @@ const Certificate = (): JSX.Element => {
 const UniversityDetails = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
-    <Grid.Row columns={3} divided>
-      {(t('sections', { returnObjects: true }) as Array<SectionProps>).map(
-        (section, index) => <Section {...section} key={index} />
+    <Grid.Row
+      columns={3}
+      divided>
+      {t<any, SectionProps[]>('sections', { returnObjects: true }).map(
+        (section: SectionProps, index: number) => <Section {...section} key={index} />
       )}
     </Grid.Row>
   );
