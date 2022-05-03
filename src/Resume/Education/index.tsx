@@ -19,7 +19,7 @@ import Link from 'utils/Link';
 const Education = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
-    <Container>
+    <Container data-testid='education'>
       <IconHeader icon={faGraduationCap} text={t('header')} />
       <University />
     </Container>

@@ -7,9 +7,18 @@ import Education, {
 } from 'Resume/Education';
 
 describe('Education', () => {
-  // it('renders UniversitySummary and UniversityDetails within Education', () => {
-  //   render(<Education />);
-  // });
+  it('renders UniversitySummary and UniversityDetails within Education', () => {
+    render(<Education />);
+    const education = screen.getByTestId('education');
+
+    expect(within(education)
+      .getByTestId('university-summary'))
+      .toBeInTheDocument();
+
+    expect(within(education)
+      .getByTestId('university-details'))
+      .toBeInTheDocument();
+  });
 
   it('renders Certificate in UniversitySummary', () => {
     render(<UniversitySummary />);
@@ -19,13 +28,13 @@ describe('Education', () => {
       .toBeInTheDocument();
   });
 
-  // it('renders Section within UniversityDetails', () => {
-  //   render(<UniversityDetails />);
+  it('renders Section within UniversityDetails', () => {
+    render(<UniversityDetails />);
 
-  //   expect(within(screen.getByTestId('university-details'))
-  //     .getByTestId('section'))
-  //     .toBeInTheDocument();
-  // })
+    expect(within(screen.getByTestId('university-details'))
+      .getByTestId('section'))
+      .toBeInTheDocument();
+  })
 
   it('renders header and subheader within Section', () => {
     const sectionProps: SectionProps = {
