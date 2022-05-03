@@ -9,7 +9,7 @@ const BulletedProps = ({ list }: BulletedListProps): JSX.Element => {
     <List
       data-testid='bulleted-list'
       bulleted>
-      {list.map(
+      {list?.map(
         (text: string, index: number) => <List.Item key={index}>{text}</List.Item>
       )}
     </List>

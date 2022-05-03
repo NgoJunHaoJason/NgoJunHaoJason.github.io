@@ -7,7 +7,7 @@ interface LabelsProps {
 const Labels = ({ labels }: LabelsProps): JSX.Element => {
   return (
     <Label.Group data-testid='labels'>
-      {labels.map(
+      {labels?.map(
         (text: string, index: number) => <Label className='Label' key={index}>{text}</Label>
       )}
     </Label.Group>
