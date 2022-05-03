@@ -9,7 +9,7 @@ import 'Resume/Skills/index.css';
 const Skills = (): JSX.Element => {
   const { t } = useTranslation('skills');
   return (
-    <Container>
+    <Container data-testid='skills'>
       <IconHeader icon={faCode} text={t('header')} />
       <Technologies />
     </Container>
@@ -22,6 +22,7 @@ export default Skills;
 const Technologies = (): JSX.Element => {
   return (
     <Grid
+      data-testid='technologies'
       container
       doubling
       verticalAlign='middle'>
