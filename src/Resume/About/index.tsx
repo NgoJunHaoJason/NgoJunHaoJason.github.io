@@ -13,7 +13,7 @@ import 'Resume/About/index.css';
 
 const About = (): JSX.Element => {
   return (
-    <Container>
+    <Container data-testid='about'>
       <AboutHeader />
       <AboutLinks />
     </Container>
@@ -22,10 +22,11 @@ const About = (): JSX.Element => {
 
 export default About;
 
-const AboutHeader = (): JSX.Element => {
+export const AboutHeader = (): JSX.Element => {
   const { t } = useTranslation('about');
   return (
     <Header
+      data-testid='about-header'
       textAlign='center'
       size='huge'>
       <Header.Content>
@@ -46,12 +47,13 @@ const AboutHeader = (): JSX.Element => {
   );
 }
 
-const AboutLinks = (): JSX.Element => {
+export const AboutLinks = (): JSX.Element => {
   const { t } = useTranslation('about');
   return (
     <Card
-      centered
-      className='Card'>
+      data-testid='about-links'
+      className='Card'
+      centered>
       <Card.Content>
         <Card.Description>
           <List>
