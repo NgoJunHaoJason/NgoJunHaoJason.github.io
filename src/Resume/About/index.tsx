@@ -11,7 +11,7 @@ import ProfilePicture from 'assets/images/profile_picture.png';
 import Link from 'utils/Link';
 import 'Resume/About/index.css';
 
-export default (): JSX.Element => {
+const About = (): JSX.Element => {
   return (
     <Container>
       <AboutHeader />
@@ -19,6 +19,8 @@ export default (): JSX.Element => {
     </Container>
   );
 }
+
+export default About;
 
 const AboutHeader = (): JSX.Element => {
   const { t } = useTranslation('about');

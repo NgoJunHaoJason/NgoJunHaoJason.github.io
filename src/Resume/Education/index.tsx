@@ -16,7 +16,7 @@ import BulletedList from 'utils/BulletedList';
 import IconHeader from 'utils/IconHeader';
 import Link from 'utils/Link';
 
-export default (): JSX.Element => {
+const Education = (): JSX.Element => {
   const { t } = useTranslation('education');
   return (
     <Container>
@@ -25,6 +25,8 @@ export default (): JSX.Element => {
     </Container>
   );
 }
+
+export default Education;
 
 export const University = (): JSX.Element => {
   return (

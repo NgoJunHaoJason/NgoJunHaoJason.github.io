@@ -3,7 +3,7 @@ interface LinkProps {
   href: string
 }
 
-export default ({text, href}: LinkProps): JSX.Element => {
+const Link = ({text, href}: LinkProps): JSX.Element => {
   return (
     <a
       data-testid='link'
@@ -14,3 +14,5 @@ export default ({text, href}: LinkProps): JSX.Element => {
     </a>
   );
 }
+
+export default Link;

@@ -6,7 +6,7 @@ import IconHeader from 'utils/IconHeader';
 import 'devicon/devicon.min.css';
 import 'Resume/Skills/index.css';
 
-export default (): JSX.Element => {
+const Skills = (): JSX.Element => {
   const { t } = useTranslation('skills');
   return (
     <Container>
@@ -15,6 +15,8 @@ export default (): JSX.Element => {
     </Container>
   );
 }
+
+export default Skills;
 
 // TODO: refactor to reduce duplication
 const Technologies = (): JSX.Element => {

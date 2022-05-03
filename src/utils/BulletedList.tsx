@@ -4,7 +4,7 @@ interface BulletedListProps {
   list: Array<string>;
 };
 
-export default ({ list }: BulletedListProps): JSX.Element => {
+const BulletedProps = ({ list }: BulletedListProps): JSX.Element => {
   return (
     <List
       data-testid='bulleted-list'
@@ -15,3 +15,5 @@ export default ({ list }: BulletedListProps): JSX.Element => {
     </List>
   );
 }
+
+export default BulletedProps;

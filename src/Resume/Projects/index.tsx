@@ -9,7 +9,7 @@ import IconHeader from 'utils/IconHeader';
 import Link from 'utils/Link';
 import Labels from 'utils/Labels';
 
-export default (): JSX.Element => {
+const Projects = (): JSX.Element => {
   const { t } = useTranslation('projects');
   return (
     <Container>
@@ -27,6 +27,8 @@ export default (): JSX.Element => {
     </Container>
   );
 }
+
+export default Projects;
 
 export interface ProjectProps {
   header: string,

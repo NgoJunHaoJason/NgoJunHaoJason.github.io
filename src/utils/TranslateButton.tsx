@@ -3,7 +3,7 @@ import { Button } from 'semantic-ui-react';
 
 import 'utils/TranslateButton.css';
 
-export default (): JSX.Element => {
+const TranslateButton = (): JSX.Element => {
   const { t, i18n } = useTranslation('common');
 
   const translateButtonOnClick = () => {
@@ -34,3 +34,5 @@ export default (): JSX.Element => {
     </>
   );
 }
+
+export default TranslateButton;

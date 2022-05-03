@@ -4,7 +4,7 @@ interface LabelsProps {
   labels: Array<string>;
 };
 
-export default ({ labels }: LabelsProps): JSX.Element => {
+const Labels = ({ labels }: LabelsProps): JSX.Element => {
   return (
     <Label.Group data-testid='labels'>
       {labels.map(
@@ -13,3 +13,5 @@ export default ({ labels }: LabelsProps): JSX.Element => {
     </Label.Group>
   );
 };
+
+export default Labels;

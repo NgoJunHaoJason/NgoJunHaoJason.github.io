@@ -20,7 +20,7 @@ import auralaidLogo from 'assets/images/auralaid_logo.png';
 import dbsLogo from 'assets/images/dbs_logo.png';
 import ovtLogo from 'assets/images/ovt_logo.png';
 
-export default (): JSX.Element => {
+const Experience = (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
     <Container>
@@ -29,6 +29,8 @@ export default (): JSX.Element => {
     </Container>
   );
 }
+
+export default Experience;
 
 const Jobs = (): JSX.Element => {
   const { t } = useTranslation('experience');
