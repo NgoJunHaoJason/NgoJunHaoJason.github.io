@@ -12,7 +12,7 @@ import Labels from 'utils/Labels';
 const Projects = (): JSX.Element => {
   const { t } = useTranslation('projects');
   return (
-    <Container>
+    <Container data-testid='projects'>
       <IconHeader icon={faTasks} text={t('header')} />
 
       <Card.Group
@@ -48,7 +48,10 @@ export const Project = ({
   technologies,
 }: ProjectProps): JSX.Element => {
   return (
-    <Card fluid className='Card'>
+    <Card
+      data-testid='project'
+      className='Card'
+      fluid>
       <Card.Content>
         <ProjectTitle text={header} url={url} />
         <Card.Description>

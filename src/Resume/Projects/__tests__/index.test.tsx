@@ -1,33 +1,47 @@
 import { render, screen, within } from '@testing-library/react'
-import {
-  Project,
+import Projects, {
   ProjectProps,
-  ProjectTitle,
+  Project,
   ProjectTitleProps,
+  ProjectTitle,
 } from 'Resume/Projects';
 
 describe('Projects', () => {
-  it('renders project title in project card', () => {
+  it('renders Project within Projects', () => {
+    render(<Projects />);
+
+    expect(within(screen.getByTestId('projects'))
+      .getByTestId('project'))
+      .toBeInTheDocument();
+  });
+
+  it('renders ProjectTitle within Project', () => {
     const projectProps: ProjectProps = {
       header: 'header',
       url: '',
       subheader: 'subheader',
       date: '',
-      description: ['description1', 'description2'],
-      technologies: ['technology1', 'technology2'],
+      description: [],
+      technologies: [],
     };
 
     render(<Project {...projectProps} />);
-    expect(screen.getByTestId('project-title')).toBeInTheDocument();
+
+    expect(within(screen.getByTestId('project'))
+      .getByTestId('project-title'))
+      .toBeInTheDocument();
   });
 
-  it('renders text in project title', () => {
+  it('renders text in ProjectTitle', () => {
     const projectTitleProps: ProjectTitleProps = {
       text: 'text',
       url: '',
     };
 
     render(<ProjectTitle {...projectTitleProps} />);
-    expect(within(screen.getByTestId('project-title')).getByText('text')).toBeInTheDocument();
+
+    expect(within(screen.getByTestId('project-title'))
+      .getByText('text'))
+      .toBeInTheDocument();
   });
 });
