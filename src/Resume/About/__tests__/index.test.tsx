@@ -1,8 +1,8 @@
 import { render, screen, within } from '@testing-library/react';
 import About, {
   AboutLinks,
-  AboutItem,
   AboutItemProps,
+  AboutItem,
 } from 'Resume/About';
 
 describe('About', () => {
@@ -10,13 +10,21 @@ describe('About', () => {
     render(<About />);
     const about = screen.getByTestId('about');
 
-    expect(within(about).getByTestId('about-header')).toBeInTheDocument();
-    expect(within(about).getByTestId('about-links')).toBeInTheDocument();
+    expect(within(about)
+      .getByTestId('about-header'))
+      .toBeInTheDocument();
+
+    expect(within(about)
+      .getByTestId('about-links'))
+      .toBeInTheDocument();
   });
 
   it('renders AboutItem within AboutLinks', () => {
     render(<AboutLinks />);
-    expect(within(screen.getByTestId('about-links')).getByTestId('about-item')).toBeInTheDocument();
+
+    expect(within(screen.getByTestId('about-links'))
+      .getByTestId('about-item'))
+      .toBeInTheDocument();
   });
 
   it('renders text within AboutItem', () => {
@@ -27,6 +35,9 @@ describe('About', () => {
     };
 
     render(<AboutItem {...aboutItemProps} />);
-    expect(within(screen.getByTestId('about-item')).getByText('text')).toBeInTheDocument();
+
+    expect(within(screen.getByTestId('about-item'))
+      .getByText('text'))
+      .toBeInTheDocument();
   });
 });
