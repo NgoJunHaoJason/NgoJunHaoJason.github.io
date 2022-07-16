@@ -12,14 +12,21 @@
             "date": "2021年 7月 - 现在",
             "iconName": "DBSLogo",
             "companyName": "星展银行",
-            "jobTitle": "研究生助理 (全栈开发人员)",
+            "jobTitle": "毕业生课程学习生, SEED (后端开发人员)",
             "description": [
-                "编写了具有 100% 单元测试覆盖率的干净代码",
-                "修炼了软件工艺"
+                "开发客户关系管理 (CRM) 网站",
+                "编写由单元测试驱动的干净代码",
+                "学习了一点前端开发和质量保证 (QA) 自动化"
             ],
             "technologies": [
+                "Java",
+                "Kotlin",
+                "TypeScript",
+                "MariaDB",
                 "Spring Boot",
-                "React"
+                "React",
+                "Karate",
+                "Cypress"
             ]
         },
         {
@@ -35,16 +42,17 @@
             "companyName": "Aural-Aid",
             "jobTitle": "软件开发实习生",
             "description": [
-                "帮助开发了一个收集公司联系信息的网站",
+                "开发了一个收集公司联系信息的网站",
                 "开发了远程控制虹膜门的原型移动应用程序"
             ],
             "technologies": [
-                "Django",
+                "HTML",
+                "JavaScript",
+                "Python",
+                "Dart",
                 "Bootstrap",
-                "Scrapy",
-                "Pyppeteer",
-                "Flutter",
-                "AWS"
+                "Django",
+                "Flutter"
             ]
         },
         {
@@ -60,15 +68,15 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "计算机视觉实习生",
             "description": [
-                "开发了一个显示对象检测模型边界框的网站",
+                "建立了一个显示对象检测模型边界框的网站",
                 "借助脚本收集并预处理了 10000 多张训练图像"
             ],
             "technologies": [
-                "Django",
+                "HTML",
+                "JavaScript",
+                "Python",
                 "Bootstrap",
-                "D3.js",
-                "Nginx",
-                "uWSGI"
+                "Django"
             ]
         }
     ]

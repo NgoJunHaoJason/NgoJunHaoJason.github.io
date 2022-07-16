@@ -12,10 +12,9 @@
                 "Created a lightweight and fast license plate recognition system that has an accuracy of 96.1%"
             ],
             "technologies": [
+                "Python",
                 "MXNet",
-                "Tensorflow",
-                "LFFD",
-                "LPRNet"
+                "Tensorflow"
             ]
         },
         {
@@ -24,13 +23,12 @@
             "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
             "date": "Aug 2018 - Jul 2019",
             "description": [
-                "Carried out research on narrowcasting",
-                "Contributed to the development of a proof of concept for 3D virtual meeting apps"
+                "Learnt about narrowcasting",
+                "Worked on a proof of concept for 3D virtual meeting apps"
             ],
             "technologies": [
-                "Unity",
-                "Photon Unity Networking",
-                "Photon Voice"
+                "C#",
+                "Unity"
             ]
         },
         {
@@ -42,6 +40,7 @@
                 "Tuned a MobileNetV2-based neural network to get an accuracy of 93.4% on Adience's test set"
             ],
             "technologies": [
+                "Python",
                 "Tensorflow",
                 "Google Colaboratory",
                 "Weights and Biases"
@@ -53,9 +52,11 @@
             "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
             "date": "Jan 2020 - Mar 2020",
             "description": [
-                "Performed data preprocessing, model evaluation and ensemble learning to train a model that predicts if a transaction is fraudulent"
+                "Contributed to the training of a model that predicts if a transaction is fraudulent",
+                "Performed data pre-processing, model evaluation and ensemble learning"
             ],
             "technologies": [
+                "Python",
                 "Jupyter Notebook",
                 "Pandas",
                 "Scikit-Learn",

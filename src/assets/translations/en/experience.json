@@ -12,14 +12,21 @@
             "date": "Jul 2021 - present",
             "iconName": "DBSLogo",
             "companyName": "DBS Bank",
-            "jobTitle": "Graduate Associate (Full Stack Developer)",
+            "jobTitle": "Graduate Programme Hire, SEED (Back End Developer)",
             "description": [
-                "Wrote clean code with 100% unit test coverage",
-                "Practiced software craftsmanship"
+                "Worked on a customer relationship management (CRM) website",
+                "Wrote clean code driven by unit test",
+                "Picked up a little of front end development and quality assurance (QA) automation"
             ],
             "technologies": [
+                "Java",
+                "Kotlin",
+                "TypeScript",
+                "MariaDB",
                 "Spring Boot",
-                "React"
+                "React",
+                "Karate",
+                "Cypress"
             ]
         },
         {
@@ -35,16 +42,17 @@
             "companyName": "Aural-Aid",
             "jobTitle": "Software Development Intern",
             "description": [
-                "Contributed to development of a website that scrapes for companies' contact information",
+                "Worked on a website that scrapes for companies' contact information",
                 "Developed a prototype mobile app that controls iris doors remotely"
             ],
             "technologies": [
-                "Django",
+                "HTML",
+                "JavaScript",
+                "Python",
+                "Dart",
                 "Bootstrap",
-                "Scrapy",
-                "Pyppeteer",
-                "Flutter",
-                "AWS"
+                "Django",
+                "Flutter"
             ]
         },
         {
@@ -60,15 +68,15 @@
             "companyName": "Omnivision Technologies Singapore",
             "jobTitle": "Computer Vision Intern",
             "description": [
-                "Developed a website for displaying bounding boxes of object detection models",
+                "Built a website for displaying bounding boxes of object detection models",
                 "Collected and pre-processed more than 10000 training images with the help of scripts"
             ],
             "technologies": [
-                "Django",
+                "HTML",
+                "JavaScript",
+                "Python",
                 "Bootstrap",
-                "D3.js",
-                "Nginx",
-                "uWSGI"
+                "Django"
             ]
         }
     ]
