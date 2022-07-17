@@ -13,7 +13,10 @@ import 'Resume/index.css'
 
 const Resume = (): JSX.Element => {
   return (
-    <Container fluid className='Resume TextContainer'>
+    <Container
+      className='Resume TextContainer'
+      data-testid='resume'
+      fluid>
       <TranslateButton />
 
       <About />
