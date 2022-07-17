@@ -23,7 +23,7 @@ import ovtLogo from 'assets/images/ovt_logo.png';
 const Experience = (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
-    <Container>
+    <Container data-testid='experience'>
       <IconHeader icon={faBriefcase} text={t('header')} />
       <Jobs />
     </Container>
@@ -32,14 +32,16 @@ const Experience = (): JSX.Element => {
 
 export default Experience;
 
-const Jobs = (): JSX.Element => {
+export const Jobs = (): JSX.Element => {
   const { t } = useTranslation('experience');
   return (
-    <VerticalTimeline className='VerticalTimeline'>
-      {t<any, JobProps[]>('jobs', { returnObjects: true }).map(
-        (job: JobProps, index: number) => <Job {...job} key={index} />
-      )}
-    </VerticalTimeline>
+    <Container data-testid='jobs'>
+      <VerticalTimeline className='VerticalTimeline'>
+        {t<any, JobProps[]>('jobs', { returnObjects: true }).map(
+          (job: JobProps, index: number) => <Job {...job} key={index} />
+        )}
+      </VerticalTimeline>
+    </Container>
   );
 }
 
