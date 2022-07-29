@@ -12,11 +12,11 @@
             "date": "Jul 2021 - present",
             "iconName": "DBSLogo",
             "companyName": "DBS Bank",
-            "jobTitle": "Graduate Programme Hire, SEED (Back End Developer)",
+            "jobTitle": "Specialist, Graduate Associate - SEED (Back End Developer)",
             "description": [
                 "Worked on a customer relationship management (CRM) website",
                 "Wrote clean code driven by unit tests",
-                "Picked up a little of front end development and quality assurance (QA) automation"
+                "Picked up front end development and quality assurance (QA) automation"
             ],
             "technologies": [
                 "Java",
@@ -65,7 +65,7 @@
             },
             "date": "Aug 2019 - Dec 2019",
             "iconName": "OVTLogo",
-            "companyName": "Omnivision Technologies Singapore",
+            "companyName": "Omnivision Technologies",
             "jobTitle": "Computer Vision Intern",
             "description": [
                 "Built a website for displaying bounding boxes of object detection models",

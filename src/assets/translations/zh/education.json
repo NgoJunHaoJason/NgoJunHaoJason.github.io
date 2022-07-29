@@ -13,16 +13,16 @@
     },
     "sections": [
         {
-            "header": "Core",
+            "header": "主修",
             "icon": "faLaptopCode",
-            "subheader": "Computer Science",
+            "subheader": "计算机科学",
             "subjects": [
                 "微积分学",
                 "线性代数",
                 "顺序与系列",
                 "概率统计",
                 "离散数学",
-                "计算思想",
+                "计算思维",
                 "计算机组织与架构",
                 "数据结构",
                 "算法",
@@ -39,9 +39,9 @@
             ]
         },
         {
-            "header": "Elective Focus",
+            "header": "专修",
             "icon": "faRobot",
-            "subheader": "Artificial Intelligence",
+            "subheader": "人工智能",
             "subjects": [
                 "虚拟与增强现实",
                 "计算机视觉",
@@ -52,9 +52,9 @@
             ]
         },
         {
-            "header": "Minor",
+            "header": "副修",
             "icon": "faBrain",
-            "subheader": "Psychology",
+            "subheader": "心理学",
             "subjects": [
                 "社会科学研究",
                 "认知心理学",
