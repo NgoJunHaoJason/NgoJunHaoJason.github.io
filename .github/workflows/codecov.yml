@@ -1,4 +1,4 @@
-name: Running Code Coverage
+name: Code Coverage
 
 on: [push, pull_request]
 
@@ -28,5 +28,5 @@ jobs:
     - name: Run tests
       run: npm test -- --coverage
 
-    - name: Codecov
+    - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3.0.0
