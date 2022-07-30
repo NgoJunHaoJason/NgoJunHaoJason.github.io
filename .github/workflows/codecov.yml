@@ -2,6 +2,9 @@ name: Running Code Coverage
 
 on: [push, pull_request]
 
+ignore:
+  - "src/config/"
+
 jobs:
   build:
 
@@ -30,4 +33,3 @@ jobs:
 
     - name: Codecov
       uses: codecov/codecov-action@v3.0.0
-
