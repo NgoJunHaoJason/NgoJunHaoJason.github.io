@@ -3,8 +3,8 @@
     "list": [
         {
             "url": "",
-            "header": "联合行业最后一年项目",
-            "subheader": "与Omnivision Technologies Singapore合作",
+            "header": "协同工业最后一年项目",
+            "subheader": "与豪威科技合作",
             "date": "2020年 8月 - 2021年 6月",
             "description": [
                 "对车牌检测器进行微调, 以在 0.7 的 IOU 阈值下获得 96.9% 的平均精度",
