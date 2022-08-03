@@ -25,13 +25,13 @@ const TranslateButton = (): JSX.Element => {
 
       {/* To centre profile picture on mobile */}
       <Button
-        data-testid='translate-button'
+        data-testid='translate-counterweight'
         content={t('changeLanguage')}
         floated='right'
         size='mini'
         icon='world'
         labelPosition='left'
-        className='TranslateCounterWeight'
+        className='TranslateCounterweight'
       />
     </>
   );
