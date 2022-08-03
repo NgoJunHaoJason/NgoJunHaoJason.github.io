@@ -1,0 +1,100 @@
+{
+  "header": "Experience",
+  "jobs": [
+    {
+      "contentStyle": {
+        "background": "#ee2f2f",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ee2f2f"
+      },
+      "date": "Aug 2022 - present",
+      "iconName": "DBSLogo",
+      "companyName": "DBS Bank",
+      "jobTitle": "Specialist, Graduate Associate - SEED (Machine Learning Engineer)",
+      "description": [
+        "Learning to be a machine learning engineer"
+      ],
+      "technologies": []
+    },
+    {
+      "contentStyle": {
+        "background": "#ee2f2f",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ee2f2f"
+      },
+      "date": "Jul 2021 - Jul 2022",
+      "iconName": "DBSLogo",
+      "companyName": "DBS Bank",
+      "jobTitle": "Specialist, Graduate Associate - SEED (Back End Developer)",
+      "description": [
+        "Worked on a customer relationship management (CRM) website",
+        "Wrote clean code driven by unit tests",
+        "Picked up front end development"
+      ],
+      "technologies": [
+        "Java",
+        "Kotlin",
+        "TypeScript",
+        "MariaDB",
+        "Spring Boot",
+        "React",
+        "Karate",
+        "Cypress"
+      ]
+    },
+    {
+      "contentStyle": {
+        "background": "dodgerblue",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid dodgerblue"
+      },
+      "date": "May 2020 - Jul 2020",
+      "iconName": "AuralAidLogo",
+      "companyName": "Aural-Aid",
+      "jobTitle": "Software Development Intern",
+      "description": [
+        "Worked on a website that scrapes for companies' contact information",
+        "Developed a prototype mobile app that controls iris doors remotely"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Dart",
+        "Bootstrap",
+        "Django",
+        "Flutter"
+      ]
+    },
+    {
+      "contentStyle": {
+        "background": "#ea1102",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ea1102"
+      },
+      "date": "Aug 2019 - Dec 2019",
+      "iconName": "OVTLogo",
+      "companyName": "Omnivision Technologies",
+      "jobTitle": "Computer Vision Intern",
+      "description": [
+        "Built a website for displaying bounding boxes of object detection models",
+        "Collected and pre-processed more than 10000 training images with the help of scripts"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Bootstrap",
+        "Django"
+      ]
+    }
+  ]
+}
