@@ -9,7 +9,22 @@
             "contentArrowStyle": {
                 "borderRight": "7px solid #ee2f2f"
             },
-            "date": "2021年 7月 - 现在",
+            "date": "2022年 8月 - 现在",
+            "iconName": "DBSLogo",
+            "companyName": "星展银行",
+            "jobTitle": "专家, 毕业生助理 - SEED (机器学习工程师)",
+            "description": [],
+            "technologies": []
+        },
+        {
+            "contentStyle": {
+                "background": "#ee2f2f",
+                "color": "white"
+            },
+            "contentArrowStyle": {
+                "borderRight": "7px solid #ee2f2f"
+            },
+            "date": "2021年 7月 - 2022年 7月",
             "iconName": "DBSLogo",
             "companyName": "星展银行",
             "jobTitle": "专家, 毕业生助理 - SEED (后端开发人员)",

@@ -9,7 +9,22 @@
             "contentArrowStyle": {
                 "borderRight": "7px solid #ee2f2f"
             },
-            "date": "Jul 2021 - present",
+            "date": "Aug 2022 - present",
+            "iconName": "DBSLogo",
+            "companyName": "DBS Bank",
+            "jobTitle": "Specialist, Graduate Associate - SEED (Machine Learning Engineer)",
+            "description": [],
+            "technologies": []
+        },
+        {
+            "contentStyle": {
+                "background": "#ee2f2f",
+                "color": "white"
+            },
+            "contentArrowStyle": {
+                "borderRight": "7px solid #ee2f2f"
+            },
+            "date": "Jul 2021 - Jul 2022",
             "iconName": "DBSLogo",
             "companyName": "DBS Bank",
             "jobTitle": "Specialist, Graduate Associate - SEED (Back End Developer)",
