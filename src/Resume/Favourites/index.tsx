@@ -9,6 +9,9 @@ import {
 import IconHeader from 'utils/IconHeader';
 import Labels from 'utils/Labels';
 
+import cleanCodeCover from 'assets/images/books/clean_code_cover.png';
+import theSoftwareCraftsmanCover from 'assets/images/books/the_software_craftsman_cover.png';
+
 const Favourites = (): JSX.Element => {
   const { t } = useTranslation('favourites');
   return (
@@ -31,12 +34,12 @@ const Books = (): JSX.Element => {
   const books: BookProps[] = [
     {
     title: 'Clean Code',
-    imagePath: './books/clean_code_cover.png',
+    imageSrc: cleanCodeCover,
     href: 'https://www.oreilly.com/library/view/clean-code-a/9780136083238/',
     },
     {
     title: 'The Software Craftsman',
-    imagePath: './books/the_software_craftsman_cover.png',
+    imageSrc: theSoftwareCraftsmanCover,
     href: 'https://www.oreilly.com/library/view/the-software-craftsman/9780134052625/',
     },
   ];
@@ -51,17 +54,17 @@ const Books = (): JSX.Element => {
 
 interface BookProps {
   title: string,
-  imagePath: string,
+  imageSrc: string,
   href: string
 };
 
 const Book = ({
-  imagePath,
+  imageSrc,
   href,
 }: BookProps): JSX.Element => {
   return (
     <Image
-      src={imagePath}
+      src={imageSrc}
       size='small'
       rounded
       spaced
