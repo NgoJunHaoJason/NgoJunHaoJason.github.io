@@ -1,66 +1,66 @@
 {
-    "header": "Education",
-    "university": {
-        "name": "Nanyang Technological University, Singapore",
-        "date": "Aug 2017 - Jun 2021",
-        "degree": "Bachelor of Engineering (Computer Science)",
-        "honours": "Honours: Distinction",
-        "gpa": "GPA: 4.46 / 5.00",
-        "cert": "certificate",
-        "certURL": "./documents/degree_transcript_ngo_jun_hao_jason.opencert",
-        "verify": "can be verified here",
-        "verifyURL": "https://www.opencerts.io/"
+  "header": "Education",
+  "university": {
+    "name": "Nanyang Technological University, Singapore",
+    "date": "Aug 2017 - Jun 2021",
+    "degree": "Bachelor of Engineering (Computer Science)",
+    "honours": "Honours: Distinction",
+    "gpa": "GPA: 4.46 / 5.00",
+    "cert": "certificate",
+    "certURL": "./documents/degree_transcript_ngo_jun_hao_jason.opencert",
+    "verify": "can be verified here",
+    "verifyURL": "https://www.opencerts.io/"
+  },
+  "sections": [
+    {
+      "header": "Major",
+      "icon": "faLaptopCode",
+      "subheader": "Computer Science",
+      "subjects": [
+        "Calculus",
+        "Linear Algebra",
+        "Sequences and Series",
+        "Probability and Statistics",
+        "Discrete Mathematics",
+        "Computational Thinking",
+        "Computer Organisation and Architecture",
+        "Data Structures",
+        "Algorithms",
+        "Object-Oriented Design and Programming",
+        "Computer Graphics",
+        "Human-Computer Interaction",
+        "Operating Systems",
+        "Software Engineering",
+        "Databases",
+        "Software Systems Analysis and Design",
+        "Computer Networks",
+        "Compiler Techniques",
+        "Embedded Programming"
+      ]
     },
-    "sections": [
-        {
-            "header": "Major",
-            "icon": "faLaptopCode",
-            "subheader": "Computer Science",
-            "subjects": [
-                "Calculus",
-                "Linear Algebra",
-                "Sequences and Series",
-                "Probability and Statistics",
-                "Discrete Mathematics",
-                "Computational Thinking",
-                "Computer Organisation and Architecture",
-                "Data Structures",
-                "Algorithms",
-                "Object-Oriented Design and Programming",
-                "Computer Graphics",
-                "Human-Computer Interaction",
-                "Operating Systems",
-                "Software Engineering",
-                "Databases",
-                "Software Systems Analysis and Design",
-                "Computer Networks",
-                "Compiler Techniques",
-                "Embedded Programming"
-            ]
-        },
-        {
-            "header": "Elective Focus",
-            "icon": "faRobot",
-            "subheader": "Artificial Intelligence",
-            "subjects": [
-                "Virtual and Augmented Reality",
-                "Computer Vision",
-                "Machine Learning",
-                "Neural Networks and Deep Learning",
-                "Natural Language Processing",
-                "Intelligent Agents"
-            ]
-        },
-        {
-            "header": "Minor",
-            "icon": "faBrain",
-            "subheader": "Psychology",
-            "subjects": [
-                "Social Science Research",
-                "Cognitive Psychology",
-                "Sensation and Perception",
-                "Human Language"
-            ]
-        }
-    ]
+    {
+      "header": "Elective Focus",
+      "icon": "faRobot",
+      "subheader": "Artificial Intelligence",
+      "subjects": [
+        "Virtual and Augmented Reality",
+        "Computer Vision",
+        "Machine Learning",
+        "Neural Networks and Deep Learning",
+        "Natural Language Processing",
+        "Intelligent Agents"
+      ]
+    },
+    {
+      "header": "Minor",
+      "icon": "faBrain",
+      "subheader": "Psychology",
+      "subjects": [
+        "Social Science Research",
+        "Cognitive Psychology",
+        "Sensation and Perception",
+        "Human Language"
+      ]
+    }
+  ]
 }

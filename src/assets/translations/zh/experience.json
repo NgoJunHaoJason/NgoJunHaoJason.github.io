@@ -1,100 +1,100 @@
 {
-    "header": "工作经验",
-    "jobs": [
-        {
-            "contentStyle": {
-                "background": "#ee2f2f",
-                "color": "white"
-            },
-            "contentArrowStyle": {
-                "borderRight": "7px solid #ee2f2f"
-            },
-            "date": "2022年 8月 - 现在",
-            "iconName": "DBSLogo",
-            "companyName": "星展银行",
-            "jobTitle": "专家, 毕业生助理 - SEED (机器学习工程师)",
-            "description": [
-                "学习成为机器学习工程师"
-            ],
-            "technologies": []
-        },
-        {
-            "contentStyle": {
-                "background": "#ee2f2f",
-                "color": "white"
-            },
-            "contentArrowStyle": {
-                "borderRight": "7px solid #ee2f2f"
-            },
-            "date": "2021年 7月 - 2022年 7月",
-            "iconName": "DBSLogo",
-            "companyName": "星展银行",
-            "jobTitle": "专家, 毕业生助理 - SEED (后端开发人员)",
-            "description": [
-                "开发客户关系管理 (CRM) 网站",
-                "编写由单元测试驱动的干净代码",
-                "学习了前端开发"
-            ],
-            "technologies": [
-                "Java",
-                "Kotlin",
-                "TypeScript",
-                "MariaDB",
-                "Spring Boot",
-                "React",
-                "Karate",
-                "Cypress"
-            ]
-        },
-        {
-            "contentStyle": {
-                "background": "dodgerblue",
-                "color": "white"
-            },
-            "contentArrowStyle": {
-                "borderRight": "7px solid dodgerblue"
-            },
-            "date": "2020年 5月 - 2020年 7月",
-            "iconName": "AuralAidLogo",
-            "companyName": "Aural-Aid",
-            "jobTitle": "软件开发实习生",
-            "description": [
-                "开发了一个收集公司联系信息的网站",
-                "开发了远程控制虹膜门的原型移动应用程序"
-            ],
-            "technologies": [
-                "HTML",
-                "JavaScript",
-                "Python",
-                "Dart",
-                "Bootstrap",
-                "Django",
-                "Flutter"
-            ]
-        },
-        {
-            "contentStyle": {
-                "background": "#ea1102",
-                "color": "white"
-            },
-            "contentArrowStyle": {
-                "borderRight": "7px solid #ea1102"
-            },
-            "date": "2019年 8月 - 2019年 12月",
-            "iconName": "OVTLogo",
-            "companyName": "豪威科技",
-            "jobTitle": "计算机视觉实习生",
-            "description": [
-                "建立了一个显示对象检测模型边界框的网站",
-                "借助脚本收集并预处理了 10000 多张训练图像"
-            ],
-            "technologies": [
-                "HTML",
-                "JavaScript",
-                "Python",
-                "Bootstrap",
-                "Django"
-            ]
-        }
-    ]
+  "header": "工作经验",
+  "jobs": [
+    {
+      "contentStyle": {
+        "background": "#ee2f2f",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ee2f2f"
+      },
+      "date": "2022年 8月 - 现在",
+      "iconName": "DBSLogo",
+      "companyName": "星展银行",
+      "jobTitle": "专家, 毕业生助理 - SEED (机器学习工程师)",
+      "description": [
+        "学习成为机器学习工程师"
+      ],
+      "technologies": []
+    },
+    {
+      "contentStyle": {
+        "background": "#ee2f2f",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ee2f2f"
+      },
+      "date": "2021年 7月 - 2022年 7月",
+      "iconName": "DBSLogo",
+      "companyName": "星展银行",
+      "jobTitle": "专家, 毕业生助理 - SEED (后端开发人员)",
+      "description": [
+        "开发客户关系管理 (CRM) 网站",
+        "编写由单元测试驱动的干净代码",
+        "学习了前端开发"
+      ],
+      "technologies": [
+        "Java",
+        "Kotlin",
+        "TypeScript",
+        "MariaDB",
+        "Spring Boot",
+        "React",
+        "Karate",
+        "Cypress"
+      ]
+    },
+    {
+      "contentStyle": {
+        "background": "dodgerblue",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid dodgerblue"
+      },
+      "date": "2020年 5月 - 2020年 7月",
+      "iconName": "AuralAidLogo",
+      "companyName": "Aural-Aid",
+      "jobTitle": "软件开发实习生",
+      "description": [
+        "开发了一个收集公司联系信息的网站",
+        "开发了远程控制虹膜门的原型移动应用程序"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Dart",
+        "Bootstrap",
+        "Django",
+        "Flutter"
+      ]
+    },
+    {
+      "contentStyle": {
+        "background": "#ea1102",
+        "color": "white"
+      },
+      "contentArrowStyle": {
+        "borderRight": "7px solid #ea1102"
+      },
+      "date": "2019年 8月 - 2019年 12月",
+      "iconName": "OVTLogo",
+      "companyName": "豪威科技",
+      "jobTitle": "计算机视觉实习生",
+      "description": [
+        "建立了一个显示对象检测模型边界框的网站",
+        "借助脚本收集并预处理了 10000 多张训练图像"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Bootstrap",
+        "Django"
+      ]
+    }
+  ]
 }
