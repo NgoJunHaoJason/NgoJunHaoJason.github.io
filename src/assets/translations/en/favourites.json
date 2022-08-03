@@ -1,5 +1,14 @@
 {
   "header": "Favourites",
   "books": "Books",
-  "practices": "Practices"
+  "practices": {
+    "header": "Practices",
+    "list": [
+      "code review",
+      "pair programming",
+      "refactoring",
+      "test-driven development (TDD)",
+      "continuous integration and continuous delivery (CI/CD)"
+    ]
+  }
 }

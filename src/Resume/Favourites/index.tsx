@@ -5,9 +5,9 @@ import {
   Divider,
   Header,
   Image,
-  Label,
 } from 'semantic-ui-react';
 import IconHeader from 'utils/IconHeader';
+import Labels from 'utils/Labels';
 
 const Favourites = (): JSX.Element => {
   const { t } = useTranslation('favourites');
@@ -72,23 +72,18 @@ const Book = ({
   );
 };
 
+interface PracticesType {
+  header: string,
+  list: string[],
+};
+
 const Practices = (): JSX.Element => {
   const { t } = useTranslation('favourites');
-
-  const practices: string[] = [
-    'code review',
-    'pair programming',
-    'refactoring',
-    'test-driven development (TDD)',
-    'continuous integration and continuous delivery (CI/CD)',
-  ];
-
+  const practices = t<any, PracticesType[]>('practices', { returnObjects: true })
   return (
     <Container data-testid='practices'>
-      <Header sub icon='level up' content={t('practices')} />
-      <Label.Group>
-        {practices.map(practice => <Label content={practice} />)}
-      </Label.Group>
+      <Header sub icon='level up' content={practices.header} />
+      <Labels labels={practices.list} />
     </Container>
   )
 };
