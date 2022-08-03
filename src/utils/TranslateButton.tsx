@@ -13,7 +13,7 @@ const TranslateButton = (): JSX.Element => {
 
   return (
     <>
-      <Button
+      <Button // shows findDOMNode warning in console
         data-testid='translate-button'
         content={t('changeLanguage')}
         floated='left'
@@ -23,8 +23,7 @@ const TranslateButton = (): JSX.Element => {
         onClick={() => translateButtonOnClick()}
       />
 
-      {/* To centre profile picture on mobile */}
-      <Button
+      <Button // to centre profile picture on mobile
         data-testid='translate-counterweight'
         content={t('changeLanguage')}
         floated='right'

@@ -44,7 +44,7 @@ const Books = (): JSX.Element => {
   return (
     <Container data-testid='books'>
       <Header sub icon='book' content={t('books')} />
-      {books.map(book => Book(book))}
+      {books.map(book => <Book {...book} key={book.title} />)}
     </Container>
   );
 };
