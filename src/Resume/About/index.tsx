@@ -82,7 +82,7 @@ export const AboutItem = ({
     <List.Item data-testid='about-item'>
       <List.Icon name={icon} />
       <List.Content>
-        <Link text={text} href={url} />
+        <Link content={text} href={url} />
       </List.Content>
     </List.Item>
   );

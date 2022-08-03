@@ -1,0 +1,9 @@
+.Link {
+  color: steelblue;
+}
+
+@media (prefers-color-scheme: dark) {
+  .Link {
+    color: aqua;
+  }
+}

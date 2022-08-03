@@ -10,6 +10,7 @@ import Projects from 'Resume/Projects';
 import TranslateButton from 'utils/TranslateButton';
 
 import 'Resume/index.css'
+import GitHubCorner from 'utils/GitHubCorner';
 
 const Resume = (): JSX.Element => {
   return (
@@ -18,6 +19,7 @@ const Resume = (): JSX.Element => {
       data-testid='resume'
       fluid>
       <TranslateButton />
+      <GitHubCorner />
 
       <About />
       <Divider />

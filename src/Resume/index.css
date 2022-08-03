@@ -19,8 +19,4 @@
   .TextContainer * :not(a) { /* all text except links */
     color: white !important;
   }
-
-  a {
-    color: deepskyblue;
-  }
 }

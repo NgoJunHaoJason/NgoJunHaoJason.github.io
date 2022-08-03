@@ -1,16 +1,19 @@
+import 'utils/Link.css';
+
 interface LinkProps {
-  text: string,
+  content: string | JSX.Element,
   href: string
 }
 
-const Link = ({text, href}: LinkProps): JSX.Element => {
+const Link = ({content, href}: LinkProps): JSX.Element => {
   return (
     <a
       data-testid='link'
+      className='Link'
       target='_blank'
       rel='noopener noreferrer'
       href={href}>
-      {text}
+      {content}
     </a>
   );
 }

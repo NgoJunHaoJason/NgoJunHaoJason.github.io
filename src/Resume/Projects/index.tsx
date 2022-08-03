@@ -85,7 +85,7 @@ export const ProjectTitle = ({
 }: ProjectTitleProps): JSX.Element => {
   return (
     <Card.Header data-testid='project-title'>
-      {url === '' ? (text) : (<Link text={text} href={url} />)}
+      {url === '' ? (text) : (<Link content={text} href={url} />)}
     </Card.Header>
   );
 }
