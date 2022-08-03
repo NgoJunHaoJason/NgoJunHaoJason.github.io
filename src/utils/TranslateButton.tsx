@@ -12,15 +12,28 @@ const TranslateButton = (): JSX.Element => {
   };
 
   return (
-    <Button
-      data-testid='translate-button'
-      content={t('changeLanguage')}
-      floated='left'
-      size='mini'
-      icon='world'
-      labelPosition='left'
-      onClick={() => translateButtonOnClick()}
-    />
+    <>
+      <Button
+        data-testid='translate-button'
+        content={t('changeLanguage')}
+        floated='left'
+        size='mini'
+        icon='world'
+        labelPosition='left'
+        onClick={() => translateButtonOnClick()}
+      />
+
+      {/* To centre profile picture on mobile */}
+      <Button
+        data-testid='translate-button'
+        content={t('changeLanguage')}
+        floated='right'
+        size='mini'
+        icon='world'
+        labelPosition='left'
+        className='TranslateCounterWeight'
+      />
+    </>
   );
 }
 
