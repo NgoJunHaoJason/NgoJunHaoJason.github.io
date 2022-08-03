@@ -15,8 +15,9 @@ describe('Experience', () => {
   it('renders Jobs within Experience', () => {
     render(<Experience />);
 
-    expect(within(screen.getByTestId('experience'))
-      .getByTestId('jobs'))
+    expect(
+      within(screen.getByTestId('experience'))
+        .getByTestId('jobs'))
       .toBeInTheDocument();
   });
 });

@@ -17,9 +17,29 @@ describe('Resume', () => {
 
     const resume = screen.getByTestId('resume');
 
-    expect(within(resume).getByTestId('about')).toBeInTheDocument();
-    expect(within(resume).getByTestId('experience')).toBeInTheDocument();
-    expect(within(resume).getByTestId('education')).toBeInTheDocument();
-    expect(within(resume).getByTestId('projects')).toBeInTheDocument();
+    expect(
+      within(resume)
+        .getByTestId('about'))
+      .toBeInTheDocument();
+
+    expect(
+      within(resume)
+        .getByTestId('experience'))
+      .toBeInTheDocument();
+
+    expect(
+      within(resume)
+        .getByTestId('education'))
+      .toBeInTheDocument();
+
+    expect(
+      within(resume)
+        .getByTestId('projects'))
+      .toBeInTheDocument();
+
+    expect(
+      within(resume)
+        .getByTestId('favourites'))
+      .toBeInTheDocument();
   });
 });

@@ -7,10 +7,11 @@ import About from 'Resume/About';
 import Education from 'Resume/Education';
 import Experience from 'Resume/Experience';
 import Projects from 'Resume/Projects';
+import Favourites from 'Resume/Favourites';
 import TranslateButton from 'utils/TranslateButton';
+import GitHubCorner from 'utils/GitHubCorner';
 
 import 'Resume/index.css'
-import GitHubCorner from 'utils/GitHubCorner';
 
 const Resume = (): JSX.Element => {
   return (
@@ -31,6 +32,9 @@ const Resume = (): JSX.Element => {
       <Divider />
 
       <Projects />
+      <Divider />
+
+      <Favourites />
     </Container>
   );
 }
