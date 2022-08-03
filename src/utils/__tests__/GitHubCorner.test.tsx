@@ -10,7 +10,7 @@ describe('GitHubCorner', () => {
     expect(
       within(screen.getByTestId('github-corner'))
         .getByTestId('github-corner-picture'))
-        .toBeInTheDocument();
+      .toBeInTheDocument();
   });
 
   it('renders components in GitHubCornerPicture', () => {
@@ -21,16 +21,16 @@ describe('GitHubCorner', () => {
     expect(
       within(githubCornerPicture)
         .getByTestId('outline'))
-        .toBeInTheDocument();
-    
+      .toBeInTheDocument();
+
     expect(
       within(githubCornerPicture)
         .getByTestId('octocat-arm'))
-        .toBeInTheDocument();
+      .toBeInTheDocument();
 
     expect(
       within(githubCornerPicture)
         .getByTestId('octocat-body'))
-        .toBeInTheDocument();
+      .toBeInTheDocument();
   });
 });

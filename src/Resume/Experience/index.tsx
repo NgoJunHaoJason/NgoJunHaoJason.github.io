@@ -16,9 +16,9 @@ import Labels from 'utils/Labels';
 import 'react-vertical-timeline-component/style.min.css';
 import 'Resume/Experience/index.css';
 
-import auralaidLogo from 'assets/images/auralaid_logo.png';
-import dbsLogo from 'assets/images/dbs_logo.png';
-import ovtLogo from 'assets/images/ovt_logo.png';
+import auralaidLogo from 'assets/images/companies/auralaid_logo.png';
+import dbsLogo from 'assets/images/companies/dbs_logo.png';
+import ovtLogo from 'assets/images/companies/ovt_logo.png';
 
 const Experience = (): JSX.Element => {
   const { t } = useTranslation('experience');

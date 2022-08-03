@@ -1,5 +1,5 @@
 import { Container } from 'semantic-ui-react';
-import Link from './Link';
+import Link from 'utils/Link';
 
 import 'utils/GitHubCorner.css';
 

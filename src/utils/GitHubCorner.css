@@ -18,10 +18,10 @@
 }
 
 .GitHubCorner:hover .OctoArm {
-  animation: octocat-wave 560ms ease-in-out
+  animation: OctocatWave 560ms ease-in-out
 }
 
-@keyframes octocat-wave {
+@keyframes OctocatWave {
 
   0%, 100% {
     transform: rotate(0);
@@ -42,6 +42,6 @@
   }
 
   .GitHubCorner .OctoArm {
-    animation: octocat-wave 560ms ease-in-out;
+    animation: OctocatWave 560ms ease-in-out;
   }
 }
