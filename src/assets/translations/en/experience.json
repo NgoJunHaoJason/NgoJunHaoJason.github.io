@@ -12,11 +12,13 @@
       "date": "Aug 2022 - present",
       "iconName": "DBSLogo",
       "companyName": "DBS Bank",
-      "jobTitle": "Machine Learning Engineer (Specialist, Graduate Associate - SEED)",
+      "jobTitle": "Machine Learning Engineer",
       "description": [
-        "Learning to be a machine learning engineer"
+        "Developed preprocessing pipeline for sentiment analysis"
       ],
-      "technologies": []
+      "technologies": [
+        "Python"
+      ]
     },
     {
       "contentStyle": {
@@ -29,11 +31,11 @@
       "date": "Jul 2021 - Jul 2022",
       "iconName": "DBSLogo",
       "companyName": "DBS Bank",
-      "jobTitle": "Back End Developer (Specialist, Graduate Associate - SEED)",
+      "jobTitle": "Software Engineer",
       "description": [
-        "Worked on a customer relationship management (CRM) website",
-        "Wrote clean code driven by unit tests",
-        "Picked up front end development"
+        "Did mainly back end development for a customer relationship management (CRM) website",
+        "Wrote clean code driven by unit tests to deliver defect-free features",
+        "Learnt front end development on top of day-to-day tasks"
       ],
       "technologies": [
         "Java",

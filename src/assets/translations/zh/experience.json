@@ -12,11 +12,13 @@
       "date": "2022年 8月 - 现在",
       "iconName": "DBSLogo",
       "companyName": "星展银行",
-      "jobTitle": "机器学习工程师 (专家, 毕业生助理 - SEED)",
+      "jobTitle": "机器学习工程师",
       "description": [
-        "学习成为机器学习工程师"
+        "开发用于情感分析的预处理管道"
       ],
-      "technologies": []
+      "technologies": [
+        "Python"
+      ]
     },
     {
       "contentStyle": {
@@ -29,11 +31,11 @@
       "date": "2021年 7月 - 2022年 7月",
       "iconName": "DBSLogo",
       "companyName": "星展银行",
-      "jobTitle": "后端开发人员 (专家, 毕业生助理 - SEED)",
+      "jobTitle": "软件工程师",
       "description": [
-        "开发客户关系管理 (CRM) 网站",
-        "编写由单元测试驱动的干净代码",
-        "学习了前端开发"
+        "主要为客户关系管理 (CRM) 网站进行后端开发",
+        "编写了由单元测试驱动的干净代码，以提供无缺陷的功能",
+        "在日常任务之外学习前端开发"
       ],
       "technologies": [
         "Java",
