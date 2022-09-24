@@ -14,7 +14,8 @@
       "companyName": "DBS Bank",
       "jobTitle": "Machine Learning Engineer",
       "description": [
-        "Developed preprocessing pipeline for sentiment analysis"
+        "Developed the preprocessing pipeline for sentiment analysis",
+        "Contributed to the setting of guidelines, processes and standards for the team"
       ],
       "technologies": [
         "Python"
@@ -34,7 +35,8 @@
       "jobTitle": "Software Engineer",
       "description": [
         "Did mainly back end development for a customer relationship management (CRM) website",
-        "Wrote clean code driven by unit tests to deliver defect-free features",
+        "Practised test-driven development to deliver modular code with high coverage",
+        "Onboarded newcomers by helping them to get familiar with the code base and coding standards",
         "Learnt front end development on top of day-to-day tasks"
       ],
       "technologies": [
