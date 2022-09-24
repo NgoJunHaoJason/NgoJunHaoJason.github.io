@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.f614c2e4.css",
-    "main.js": "./static/js/main.e335d4c1.js",
+    "main.js": "./static/js/main.fa11c357.js",
     "static/media/icons.svg": "./static/media/icons.18df003f90a7f1313b98.svg",
     "static/media/brand-icons.svg": "./static/media/brand-icons.3c45c98f6f6c1b009c08.svg",
     "static/media/icons.eot": "./static/media/icons.7eefe04dc985dd4ad38b.eot",
@@ -26,10 +26,10 @@
     "static/media/ovt_logo.png": "./static/media/ovt_logo.da68fb148622cd2d5598.png",
     "index.html": "./index.html",
     "main.f614c2e4.css.map": "./static/css/main.f614c2e4.css.map",
-    "main.e335d4c1.js.map": "./static/js/main.e335d4c1.js.map"
+    "main.fa11c357.js.map": "./static/js/main.fa11c357.js.map"
   },
   "entrypoints": [
     "static/css/main.f614c2e4.css",
-    "static/js/main.e335d4c1.js"
+    "static/js/main.fa11c357.js"
   ]
 }
