@@ -9,8 +9,9 @@ import {
 import IconHeader from 'utils/IconHeader';
 import Labels from 'utils/Labels';
 
-import cleanCodeCover from 'assets/images/books/clean_code_cover.png';
 import theSoftwareCraftsmanCover from 'assets/images/books/the_software_craftsman_cover.png';
+import driveCover from 'assets/images/books/drive_cover.png';
+import cleanCodeCover from 'assets/images/books/clean_code_cover.png';
 
 const Favourites = (): JSX.Element => {
   const { t } = useTranslation('favourites');
@@ -31,16 +32,22 @@ export default Favourites;
 const Books = (): JSX.Element => {
   const { t } = useTranslation('favourites');
 
+  // TODO: refactor
   const books: BookProps[] = [
-    {
-    title: 'Clean Code',
-    imageSrc: cleanCodeCover,
-    href: 'https://www.oreilly.com/library/view/clean-code-a/9780136083238/',
-    },
     {
     title: 'The Software Craftsman',
     imageSrc: theSoftwareCraftsmanCover,
     href: 'https://www.oreilly.com/library/view/the-software-craftsman/9780134052625/',
+    },
+    {
+    title: 'Drive',
+    imageSrc: driveCover,
+    href: 'https://www.danpink.com/books/drive/',
+    },
+    {
+    title: 'Clean Code',
+    imageSrc: cleanCodeCover,
+    href: 'https://www.oreilly.com/library/view/clean-code-a/9780136083238/',
     },
   ];
 

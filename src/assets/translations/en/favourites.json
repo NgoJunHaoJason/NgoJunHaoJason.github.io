@@ -5,8 +5,8 @@
     "header": "Practices",
     "list": [
       "code review",
-      "pair programming",
       "refactoring",
+      "pair programming",
       "test-driven development (TDD)",
       "continuous integration and continuous delivery (CI/CD)"
     ]

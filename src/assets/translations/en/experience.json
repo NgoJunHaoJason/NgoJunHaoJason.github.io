@@ -14,7 +14,7 @@
       "companyName": "DBS Bank",
       "jobTitle": "Machine Learning Engineer",
       "description": [
-        "Developed the preprocessing pipeline for sentiment analysis",
+        "Developed a text pre-processing pipeline for sentiment analysis",
         "Contributed to the setting of guidelines, processes and standards for the team"
       ],
       "technologies": [
