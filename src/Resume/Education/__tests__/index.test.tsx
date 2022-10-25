@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import Education, {
   UniversitySummary,
   UniversityDetails,
@@ -36,23 +36,31 @@ describe('Education', () => {
       .toBeInTheDocument();
   })
 
-  it('renders header and subheader within Section', () => {
+  it('renders section title and subjects within Section', () => {
     const sectionProps: SectionProps = {
       header: 'header',
       icon: 'faBrain',
       subheader: 'subheader',
-      subjects: [],
+      subjects: ['subject'],
     };
 
     render(<Section {...sectionProps} />);
     const section = screen.getByTestId('section');
 
     expect(within(section)
-      .getByText('header'))
+      .getByTestId('section-title'))
       .toBeInTheDocument();
 
     expect(within(section)
-      .getByText('subheader'))
-      .toBeInTheDocument();
+      .getByTestId('subjects'))
+      .not
+      .toHaveClass('active');
+
+    const sectionTitle = screen.getByTestId('section-title');
+    fireEvent.click(sectionTitle);
+
+    expect(within(section)
+      .getByTestId('subjects'))
+      .toHaveClass('active');
   });
 });

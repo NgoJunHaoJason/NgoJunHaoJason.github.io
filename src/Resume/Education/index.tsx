@@ -6,10 +6,13 @@ import {
   IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  Accordion,
   Container,
   Grid,
+  Icon,
   Item,
 } from 'semantic-ui-react';
 import BulletedList from 'utils/BulletedList';
@@ -104,6 +107,12 @@ export interface SectionProps {
   subjects: Array<string>,
 }
 
+const sectionIcons: { [key: string]: IconDefinition } = {
+  'faLaptopCode': faLaptopCode,
+  'faRobot': faRobot,
+  'faBrain': faBrain,
+};
+
 export const Section = ({
   header,
   icon,
@@ -111,32 +120,25 @@ export const Section = ({
   subjects,
 }: SectionProps): JSX.Element => {
 
-  const sectionIcons: { [key: string]: IconDefinition } = {
-    'faLaptopCode': faLaptopCode,
-    'faRobot': faRobot,
-    'faBrain': faBrain,
-  };
+  const [active, setActive] = useState(false);
 
   return (
     <Grid.Column data-testid='section'>
-      <Item.Group>
-        <Item>
-          <Item.Content>
-            <Item.Header>
-              {header}
-            </Item.Header>
-            <Item.Meta>
-              <FontAwesomeIcon icon={sectionIcons[icon]} />
-              &nbsp;
-              {subheader}
-            </Item.Meta>
+      <Accordion styled inverted>
+        <Accordion.Title
+          data-testid='section-title'
+          active={active}
+          onClick={() => setActive(!active)}>
+          <Icon name='dropdown' />
+          {header}:<br />
+          &nbsp; &nbsp; &nbsp; {subheader} &nbsp;
+          <FontAwesomeIcon icon={sectionIcons[icon]} />
+        </Accordion.Title>
 
-            <Item.Description>
-              <BulletedList list={subjects} />
-            </Item.Description>
-          </Item.Content>
-        </Item>
-      </Item.Group>
+        <Accordion.Content data-testid='subjects' active={active}>
+          <BulletedList list={subjects} />
+        </Accordion.Content>
+      </Accordion>
     </Grid.Column>
   );
 }
