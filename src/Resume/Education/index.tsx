@@ -88,12 +88,13 @@ const Certificate = (): JSX.Element => {
 
 export const UniversityDetails = (): JSX.Element => {
   const { t } = useTranslation('education');
+  const sections = t<any, SectionProps[]>('sections', { returnObjects: true });
   return (
     <Grid.Row
       data-testid='university-details'
-      columns={3}
+      columns={sections.length}
       divided>
-      {t<any, SectionProps[]>('sections', { returnObjects: true }).map(
+      {sections.map(
         (section: SectionProps, index: number) => <Section {...section} key={index} />
       )}
     </Grid.Row>
@@ -124,7 +125,7 @@ export const Section = ({
 
   return (
     <Grid.Column data-testid='section'>
-      <Accordion styled inverted>
+      <Accordion className='Card' styled>
         <Accordion.Title
           data-testid='section-title'
           active={active}
