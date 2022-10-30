@@ -92,8 +92,7 @@ export const UniversityDetails = (): JSX.Element => {
   return (
     <Grid.Row
       data-testid='university-details'
-      columns={sections.length}
-      divided>
+      columns={sections.length}>
       {sections.map(
         (section: SectionProps, index: number) => <Section {...section} key={index} />
       )}
