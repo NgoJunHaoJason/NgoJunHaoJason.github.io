@@ -9,7 +9,7 @@ interface IconHeaderProps {
 
 const IconHeader = ({ icon, text }: IconHeaderProps): JSX.Element => {
   return (
-    <Header size='large' data-testid='icon-header'>
+    <Header size="large" data-testid="icon-header">
       <Header.Content>
         <FontAwesomeIcon icon={icon} />
         &nbsp;
@@ -17,6 +17,6 @@ const IconHeader = ({ icon, text }: IconHeaderProps): JSX.Element => {
       </Header.Content>
     </Header>
   );
-}
+};
 
 export default IconHeader;

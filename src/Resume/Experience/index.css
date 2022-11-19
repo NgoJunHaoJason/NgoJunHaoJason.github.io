@@ -1,4 +1,4 @@
-.AutoscrapeLink{
+.AutoscrapeLink {
   color: white;
 }
 
@@ -26,21 +26,18 @@
 }
 
 .DBSLogo {
-  box-shadow: 0 0 0 4px white, 
-  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-  0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .AuralAidLogo {
-  box-shadow: 0 0 0 4px dodgerblue, 
-  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-  0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px dodgerblue, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .OVTLogo {
-  box-shadow: 0 0 0 4px white, 
-  inset 0 2px 0 rgba(0, 0, 0, 0.08), 
-  0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .VerticalTimelineElement.bounce-in {

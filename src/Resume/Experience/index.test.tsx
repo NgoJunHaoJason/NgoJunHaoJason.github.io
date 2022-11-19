@@ -1,5 +1,5 @@
-import { render, screen, within } from '@testing-library/react';
-import Experience from 'Resume/Experience';
+import { render, screen, within } from "@testing-library/react";
+import Experience from "Resume/Experience";
 
 beforeEach(() => {
   const mockIntersectionObserver = jest.fn();
@@ -11,13 +11,12 @@ beforeEach(() => {
   window.IntersectionObserver = mockIntersectionObserver;
 });
 
-describe('Experience', () => {
-  it('renders Jobs within Experience', () => {
+describe("Experience", () => {
+  it("renders Jobs within Experience", () => {
     render(<Experience />);
 
     expect(
-      within(screen.getByTestId('experience'))
-        .getByTestId('jobs'))
-      .toBeInTheDocument();
+      within(screen.getByTestId("experience")).getByTestId("jobs")
+    ).toBeInTheDocument();
   });
 });

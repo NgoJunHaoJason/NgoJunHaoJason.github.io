@@ -1,5 +1,5 @@
 .Resume * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +16,8 @@
     background-color: #505050 !important;
   }
 
-  .TextContainer * :not(a) { /* all text except links */
+  .TextContainer * :not(a) {
+    /* all text except links */
     color: white !important;
   }
 }

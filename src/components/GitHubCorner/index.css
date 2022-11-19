@@ -1,6 +1,6 @@
 .GitHubCornerPicture {
-  fill:steelblue;
-  color:#fff;
+  fill: steelblue;
+  color: #fff;
   position: absolute;
   top: 0;
   border: 0;
@@ -18,25 +18,27 @@
 }
 
 .GitHubCorner:hover .OctoArm {
-  animation: OctocatWave 560ms ease-in-out
+  animation: OctocatWave 560ms ease-in-out;
 }
 
 @keyframes OctocatWave {
-
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
 
-  20%, 60% {
+  20%,
+  60% {
     transform: rotate(-25deg);
   }
 
-  40%, 80% {
+  40%,
+  80% {
     transform: rotate(10deg);
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .GitHubCorner:hover .OctoArm {
     animation: none;
   }
