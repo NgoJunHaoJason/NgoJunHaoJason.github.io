@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
-import Resume from "Resume";
+import Resume from "components/Resume";
 import LoadingScreen from "components/LoadingScreen";
 
 import "config/i18n";
