@@ -6,10 +6,9 @@
 
 ## instructions
 
-- install modules: `npm install` (or `npm i` or `npm ci`)
-- update dependencies: `npm update`
+- install/update node modules: `npm i` (clean install: `npm ci`)
 - view locally: `npm start`
-- test: `npm test` (with coverage: `npm test -- --coverage`)
+- test: `npm test` (with coverage: `npm test . -- --coverage`)
 - deploy:
   - `npm run deploy`
-  - add CNAME (can be done in GitHub repo settings)
+  - add CNAME (can be done in repo's GitHub Pages settings)
