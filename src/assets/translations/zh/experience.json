@@ -14,12 +14,12 @@
       "companyName": "星展银行",
       "jobTitle": "机器学习工程师",
       "description": [
-        "开发了文本预处理管道以进行情感分析",
+        "从零开始做金融建模网站的前端开发",
+        "指导队友进行前端开发",
+        "开发了用于情感分析的文本处理管道",
         "为队伍制定指导方针、流程和标准做出了贡献"
       ],
-      "technologies": [
-        "Python"
-      ]
+      "technologies": ["Python", "TypeScript", "React"]
     },
     {
       "contentStyle": {
@@ -34,10 +34,9 @@
       "companyName": "星展银行",
       "jobTitle": "软件工程师",
       "description": [
-        "主要为客户关系管理 (CRM) 网站进行后端开发",
-        "实践测试驱动开发以交付具有高覆盖率的模块化代码",
+        "通过测试驱动开发为客户关系管理网站编写了具有高代码覆盖率的模块化后端代码",
         "通过帮助他们熟悉代码库和编码标准来帮助新人入职",
-        "在日常任务之外学习前端开发"
+        "在日常任务之上学习并帮助进行前端开发"
       ],
       "technologies": [
         "Java",
@@ -63,7 +62,7 @@
       "companyName": "Aural-Aid",
       "jobTitle": "软件开发实习生",
       "description": [
-        "开发了一个收集公司联系信息的网站",
+        "为抓取公司联系信息的网站进行了全栈开发",
         "开发了远程控制虹膜门的原型移动应用程序"
       ],
       "technologies": [
@@ -89,16 +88,10 @@
       "companyName": "豪威科技",
       "jobTitle": "计算机视觉实习生",
       "description": [
-        "建立了一个显示对象检测模型边界框的网站",
-        "借助脚本收集并预处理了 10000 多张训练图像"
+        "建立了一个用于显示边界框的网站，以帮助队伍对目标检测模型进行定性分析",
+        "通过脚本加速收集和预处理超过 10000 张图像"
       ],
-      "technologies": [
-        "HTML",
-        "JavaScript",
-        "Python",
-        "Bootstrap",
-        "Django"
-      ]
+      "technologies": ["HTML", "JavaScript", "Python", "Bootstrap", "Django"]
     }
   ]
 }

@@ -14,12 +14,12 @@
       "companyName": "DBS Bank",
       "jobTitle": "Machine Learning Engineer",
       "description": [
-        "Developed a text pre-processing pipeline for sentiment analysis",
+        "Did front end development of a financial modelling website from scratch",
+        "Mentored a teammate in front end development",
+        "Developed a text processing pipeline for sentiment analysis",
         "Contributed to the setting of guidelines, processes and standards for the team"
       ],
-      "technologies": [
-        "Python"
-      ]
+      "technologies": ["Python", "TypeScript", "React"]
     },
     {
       "contentStyle": {
@@ -34,10 +34,9 @@
       "companyName": "DBS Bank",
       "jobTitle": "Software Engineer",
       "description": [
-        "Did mainly back end development for a customer relationship management (CRM) website",
-        "Practised test-driven development to deliver modular code with high coverage",
-        "Onboarded newcomers by helping them to get familiar with the code base and coding standards",
-        "Learnt front end development on top of day-to-day tasks"
+        "Wrote modular back end code with high code coverage for a customer relationship management website via test-driven development",
+        "Onboarded several newcomers by helping them to get familiar with the code base and coding standards",
+        "Learnt and helped out with front end development on top of day-to-day tasks"
       ],
       "technologies": [
         "Java",
@@ -63,7 +62,7 @@
       "companyName": "Aural-Aid",
       "jobTitle": "Software Development Intern",
       "description": [
-        "Worked on a website that scrapes for companies' contact information",
+        "Did full stack development for a website that scrapes companies' contact information",
         "Developed a prototype mobile app that controls iris doors remotely"
       ],
       "technologies": [
@@ -89,16 +88,10 @@
       "companyName": "Omnivision Technologies",
       "jobTitle": "Computer Vision Intern",
       "description": [
-        "Built a website for displaying bounding boxes of object detection models",
-        "Collected and pre-processed more than 10000 training images with the help of scripts"
+        "Built a website for displaying bounding boxes, to aid the team in qualitative analysis of object detection models",
+        "Sped up the collection and pre-processing of more than 10000 images via scripting"
       ],
-      "technologies": [
-        "HTML",
-        "JavaScript",
-        "Python",
-        "Bootstrap",
-        "Django"
-      ]
+      "technologies": ["HTML", "JavaScript", "Python", "Bootstrap", "Django"]
     }
   ]
 }

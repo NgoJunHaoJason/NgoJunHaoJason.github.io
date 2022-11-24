@@ -9,13 +9,9 @@
       "description": [
         "Fine-tuned a license plate detector to get an average precision of 96.9% for an IOU threshold of 0.7",
         "Improved upon a license plate recogniser to reach an accuracy of 97.2%",
-        "Created a lightweight and fast license plate recognition system that has an accuracy of 96.1%"
+        "Combined the license plate detector and recogniser, resulting in a lightweight and fast license plate recognition system with an accuracy of 96.1%"
       ],
-      "technologies": [
-        "Python",
-        "MXNet",
-        "Tensorflow"
-      ]
+      "technologies": ["Python", "MXNet", "Tensorflow"]
     },
     {
       "url": "",
@@ -23,12 +19,9 @@
       "subheader": "An Augmented Virtuality Approach To 3D Videoconferencing",
       "date": "Aug 2018 - Jul 2019",
       "description": [
-        "Learnt about narrowcasting and applied it to a proof of concept for 3D virtual meeting apps"
+        "Learnt about narrowcasting, and applied learnings to create a proof of concept for 3D virtual meeting apps"
       ],
-      "technologies": [
-        "C#",
-        "Unity"
-      ]
+      "technologies": ["C#", "Unity"]
     },
     {
       "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",

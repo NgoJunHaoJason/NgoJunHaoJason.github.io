@@ -9,13 +9,9 @@
       "description": [
         "对车牌检测器进行微调, 以在 0.7 的 IOU 阈值下获得 96.9% 的平均精度",
         "改进了车牌识别器, 准确率达到 97.2%",
-        "打造轻量级快速车牌识别系统, 准确率达96.1%"
+        "结合了车牌检测器和识别器，形成了一个轻巧快速的车牌识别系统，准确率达到 96.1%"
       ],
-      "technologies": [
-        "Python",
-        "MXNet",
-        "Tensorflow"
-      ]
+      "technologies": ["Python", "MXNet", "Tensorflow"]
     },
     {
       "url": "",
@@ -23,12 +19,9 @@
       "subheader": "3D视频会议的增强虚拟化方法",
       "date": "2018年 8月 - 2019年 7月",
       "description": [
-        "了解窄播并将其应用于 3D 虚拟会议应用程序的概念验证"
+        "了解窄播，并应用所学知识来创建 3D 虚拟会议应用程序的概念证明"
       ],
-      "technologies": [
-        "C#",
-        "Unity"
-      ]
+      "technologies": ["C#", "Unity"]
     },
     {
       "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
