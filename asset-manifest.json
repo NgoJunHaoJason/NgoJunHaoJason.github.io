@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.01bf7eda.css",
-    "main.js": "./static/js/main.de9a35b0.js",
+    "main.js": "./static/js/main.3efd3940.js",
     "static/media/Lato-Italic.woff": "./static/media/Lato-Italic.62a9c838c99d073c7ba6.woff",
     "static/media/Lato-BoldItalic.woff": "./static/media/Lato-BoldItalic.3e6b99809852a8290c42.woff",
     "static/media/Lato-Bold.woff": "./static/media/Lato-Bold.89b618086a797a8be0f4.woff",
@@ -33,10 +33,10 @@
     "static/media/ovt_logo.png": "./static/media/ovt_logo.da68fb148622cd2d5598.png",
     "index.html": "./index.html",
     "main.01bf7eda.css.map": "./static/css/main.01bf7eda.css.map",
-    "main.de9a35b0.js.map": "./static/js/main.de9a35b0.js.map"
+    "main.3efd3940.js.map": "./static/js/main.3efd3940.js.map"
   },
   "entrypoints": [
     "static/css/main.01bf7eda.css",
-    "static/js/main.de9a35b0.js"
+    "static/js/main.3efd3940.js"
   ]
 }
