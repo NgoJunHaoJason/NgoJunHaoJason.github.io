@@ -14,10 +14,10 @@
       "companyName": "DBS Bank",
       "jobTitle": "Machine Learning Engineer",
       "description": [
-        "Did front end development of a financial modelling website from scratch",
+        "Developed the user interface of a financial modelling website",
         "Mentored a teammate in front end development",
         "Developed a text processing pipeline for sentiment analysis",
-        "Contributed to the setting of guidelines, processes and standards for the team"
+        "Contributed to the set-up of guidelines, processes and standards for the team"
       ],
       "technologies": ["Python", "TypeScript", "React"]
     },
@@ -34,7 +34,8 @@
       "companyName": "DBS Bank",
       "jobTitle": "Software Engineer",
       "description": [
-        "Wrote modular back end code with high code coverage for a customer relationship management website via test-driven development",
+        "Created and enhanced application programming interfaces for a customer relationship management website",
+        "Practised test-driven development to deliver modular code with high coverage",
         "Onboarded several newcomers by helping them to get familiar with the code base and coding standards",
         "Learnt and helped out with front end development on top of day-to-day tasks"
       ],
