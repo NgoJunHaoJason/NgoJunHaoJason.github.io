@@ -1,5 +1,5 @@
 {
-  "header": "Academic Projects",
+  "header": "Projects",
   "list": [
     {
       "url": "",
@@ -11,7 +11,7 @@
         "Improved upon a license plate recogniser to reach an accuracy of 97.2%",
         "Combined the license plate detector and recogniser, resulting in a lightweight and fast license plate recognition system with an accuracy of 96.1%"
       ],
-      "technologies": ["Python", "MXNet", "Tensorflow"]
+      "technologies": ["Python", "MXNet", "Tensorflow", "LFFD", "LPRNet"]
     },
     {
       "url": "",
@@ -22,38 +22,6 @@
         "Learnt about narrowcasting, and applied learnings to create a proof of concept for 3D virtual meeting apps"
       ],
       "technologies": ["C#", "Unity"]
-    },
-    {
-      "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
-      "header": "Neural Network and Deep Learning Group Project",
-      "subheader": "-",
-      "date": "Sep 2020 - Nov 2020",
-      "description": [
-        "Tuned a MobileNetV2-based neural network to get an accuracy of 93.4% on Adience's test set"
-      ],
-      "technologies": [
-        "Python",
-        "Tensorflow",
-        "Google Colaboratory",
-        "Weights and Biases"
-      ]
-    },
-    {
-      "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
-      "header": "Machine Learning Group Project",
-      "subheader": "Kaggle Challenge (IEEE-CIS Fraud Detection)",
-      "date": "Jan 2020 - Mar 2020",
-      "description": [
-        "Contributed to the training of a model that predicts if a transaction is fraudulent",
-        "Performed data pre-processing, model evaluation and ensemble learning"
-      ],
-      "technologies": [
-        "Python",
-        "Jupyter Notebook",
-        "Pandas",
-        "Scikit-Learn",
-        "LightGBM"
-      ]
     }
   ]
 }

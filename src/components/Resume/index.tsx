@@ -25,10 +25,10 @@ const Resume = (): JSX.Element => {
       <Education />
       <Divider />
 
-      <Projects />
+      <Favourites />
       <Divider />
 
-      <Favourites />
+      <Projects />
     </Container>
   );
 };

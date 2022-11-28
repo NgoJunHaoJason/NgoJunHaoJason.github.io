@@ -11,7 +11,7 @@
         "改进了车牌识别器, 准确率达到 97.2%",
         "结合了车牌检测器和识别器，形成了一个轻巧快速的车牌识别系统，准确率达到 96.1%"
       ],
-      "technologies": ["Python", "MXNet", "Tensorflow"]
+      "technologies": ["Python", "MXNet", "Tensorflow", "LFFD", "LPRNet"]
     },
     {
       "url": "",
@@ -22,38 +22,6 @@
         "了解窄播，并应用所学知识来创建 3D 虚拟会议应用程序的概念证明"
       ],
       "technologies": ["C#", "Unity"]
-    },
-    {
-      "url": "https://github.com/NgoJunHaoJason/CZ4042/tree/master/project",
-      "header": "神经网络与深度学习小组项目",
-      "subheader": "-",
-      "date": "2020年 9月 - 2020年 11月",
-      "description": [
-        "调整了基于 MobileNetV2 的神经网络, 在 Adience 的测试集上获得了 93.4% 的准确率"
-      ],
-      "technologies": [
-        "Python",
-        "Tensorflow",
-        "Google Colaboratory",
-        "Weights and Biases"
-      ]
-    },
-    {
-      "url": "https://github.com/NgoJunHaoJason/CZ4041/tree/master/project",
-      "header": "机器学习小组项目",
-      "subheader": "Kaggle 挑战 (IEEE-CIS 欺诈识别)",
-      "date": "2020年 1月 - 2020年 3月",
-      "description": [
-        "助于训练预测交易是否欺诈的模型",
-        "执行数据预处理、模型评估和集成学习"
-      ],
-      "technologies": [
-        "Python",
-        "Jupyter Notebook",
-        "Pandas",
-        "Scikit-Learn",
-        "LightGBM"
-      ]
     }
   ]
 }
