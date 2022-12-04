@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import TranslateButton from "components/Resume/TranslateButton";
+import TranslateButton from "components/CurriculumVitae/TranslateButton";
 
 describe("TranslateButton", () => {
   it("renders translate button", () => {

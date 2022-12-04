@@ -4,7 +4,7 @@ import Education, {
   UniversityDetails,
   SectionProps,
   Section,
-} from "components/Resume/Education";
+} from "components/CurriculumVitae/Education";
 
 describe("Education", () => {
   it("renders UniversitySummary and UniversityDetails within Education", () => {

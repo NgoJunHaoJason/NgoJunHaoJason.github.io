@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import Resume from "components/Resume";
+import Resume from "components/CurriculumVitae";
 
 beforeEach(() => {
   const mockIntersectionObserver = jest.fn();

@@ -4,7 +4,7 @@ import Projects, {
   Project,
   ProjectTitleProps,
   ProjectTitle,
-} from "components/Resume/Projects";
+} from "components/CurriculumVitae/Projects";
 
 describe("Projects", () => {
   it("renders Project within Projects", () => {

@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import About, { AboutLinks, AboutItemProps, AboutItem } from "components/Resume/About";
+import About, { AboutLinks, AboutItemProps, AboutItem } from "components/CurriculumVitae/About";
 
 describe("About", () => {
   it("renders components within About", () => {

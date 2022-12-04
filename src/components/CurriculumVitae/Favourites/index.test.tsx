@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import Favourites from "components/Resume/Favourites";
+import Favourites from "components/CurriculumVitae/Favourites";
 
 describe("Favourites", () => {
   it("renders components within Favourites", () => {
