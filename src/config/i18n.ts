@@ -1,26 +1,26 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
 
-import commonEN from 'assets/translations/en/common.json';
-import commonZH from 'assets/translations/zh/common.json';
+import commonEN from "assets/translations/en/common.json";
+import commonZH from "assets/translations/zh/common.json";
 
-import aboutEN from 'assets/translations/en/about.json';
-import aboutZH from 'assets/translations/zh/about.json';
+import aboutEN from "assets/translations/en/about.json";
+import aboutZH from "assets/translations/zh/about.json";
 
-import educationEN from 'assets/translations/en/education.json';
-import educationZH from 'assets/translations/zh/education.json';
+import educationEN from "assets/translations/en/education.json";
+import educationZH from "assets/translations/zh/education.json";
 
-import experienceEN from 'assets/translations/en/experience.json';
-import experienceZH from 'assets/translations/zh/experience.json';
+import experienceEN from "assets/translations/en/experience.json";
+import experienceZH from "assets/translations/zh/experience.json";
 
-import projectsEN from 'assets/translations/en/projects.json';
-import projectsZH from 'assets/translations/zh/projects.json';
+import projectsEN from "assets/translations/en/projects.json";
+import projectsZH from "assets/translations/zh/projects.json";
 
-import favouritesEN from 'assets/translations/en/favourites.json';
-import favouritesZH from 'assets/translations/zh/favourites.json';
+import favouritesEN from "assets/translations/en/favourites.json";
+import favouritesZH from "assets/translations/zh/favourites.json";
 
-export const defaultNS = 'common';
+export const defaultNS = "common";
 
 export const resources = {
   en: {
@@ -46,7 +46,7 @@ i18n
   .use(LanguageDetector)
   .init({
     interpolation: { escapeValue: false },
-    fallbackLng: 'en',
+    fallbackLng: "en",
     ns: Object.keys(resources.en),
     defaultNS,
     resources,

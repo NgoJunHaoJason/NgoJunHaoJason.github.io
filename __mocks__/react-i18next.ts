@@ -1,4 +1,4 @@
-const reactI18Next: any = jest.createMockFromModule('react-i18next');
+const reactI18Next: any = jest.createMockFromModule("react-i18next");
 
 reactI18Next.useTranslation = () => {
   return {
@@ -9,7 +9,7 @@ reactI18Next.useTranslation = () => {
   };
 };
 
-reactI18Next.initReactI18next = { type: '3rdParty', init: jest.fn() };
+reactI18Next.initReactI18next = { type: "3rdParty", init: jest.fn() };
 
 module.exports = reactI18Next;
 
