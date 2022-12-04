@@ -10,9 +10,13 @@ import TranslateButton from "components/CurriculumVitae/TranslateButton";
 
 import "./index.css";
 
-const Resume = (): JSX.Element => {
+const CurriculumVitae = (): JSX.Element => {
   return (
-    <Container className="Resume TextContainer" data-testid="resume" fluid>
+    <Container
+      data-testid="curriculum-vitae"
+      className="CurriculumVitae TextContainer"
+      fluid
+    >
       <TranslateButton />
       <GitHubCorner />
 
@@ -33,4 +37,4 @@ const Resume = (): JSX.Element => {
   );
 };
 
-export default Resume;
+export default CurriculumVitae;

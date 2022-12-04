@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
-import Resume from "components/CurriculumVitae";
+import CurriculumVitae from "components/CurriculumVitae";
 import LoadingScreen from "components/LoadingScreen";
 
 import "config/i18n";
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
     <Suspense fallback={<LoadingScreen />}>
-      <Resume />
+      <CurriculumVitae />
     </Suspense>
   </React.StrictMode>
 );

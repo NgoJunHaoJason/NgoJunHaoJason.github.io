@@ -1,9 +1,9 @@
-.Resume * {
+.CurriculumVitae * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-  .Resume {
+  .CurriculumVitae {
     background-color: #303030;
   }
 

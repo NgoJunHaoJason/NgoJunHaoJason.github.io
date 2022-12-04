@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import Resume from "components/CurriculumVitae";
+import CurriculumVitae from "components/CurriculumVitae";
 
 beforeEach(() => {
   const mockIntersectionObserver = jest.fn();
@@ -11,20 +11,16 @@ beforeEach(() => {
   window.IntersectionObserver = mockIntersectionObserver;
 });
 
-describe("Resume", () => {
-  it("renders all sections in Resume", () => {
-    render(<Resume />);
+describe("CurriculumVitae", () => {
+  it("renders all sections", () => {
+    render(<CurriculumVitae />);
 
-    const resume = screen.getByTestId("resume");
+    const curriculumVitae = screen.getByTestId("curriculum-vitae");
 
-    expect(within(resume).getByTestId("about")).toBeInTheDocument();
-
-    expect(within(resume).getByTestId("experience")).toBeInTheDocument();
-
-    expect(within(resume).getByTestId("education")).toBeInTheDocument();
-
-    expect(within(resume).getByTestId("projects")).toBeInTheDocument();
-
-    expect(within(resume).getByTestId("favourites")).toBeInTheDocument();
+    expect(within(curriculumVitae).getByTestId("about")).toBeInTheDocument();
+    expect(within(curriculumVitae).getByTestId("experience")).toBeInTheDocument();
+    expect(within(curriculumVitae).getByTestId("education")).toBeInTheDocument();
+    expect(within(curriculumVitae).getByTestId("projects")).toBeInTheDocument();
+    expect(within(curriculumVitae).getByTestId("favourites")).toBeInTheDocument();
   });
 });
