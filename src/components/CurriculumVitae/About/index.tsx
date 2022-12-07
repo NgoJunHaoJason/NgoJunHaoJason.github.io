@@ -37,7 +37,12 @@ export const AboutHeader = (): JSX.Element => {
         {t("name")}
       </Header.Content>
 
-      <Header.Subheader>{t("description")}</Header.Subheader>
+      <Header.Subheader>
+        <Link
+          content={t("description")}
+          href="https://manifesto.softwarecraftsmanship.org/"
+        />
+      </Header.Subheader>
     </Header>
   );
 };
