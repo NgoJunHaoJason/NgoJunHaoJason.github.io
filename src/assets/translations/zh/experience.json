@@ -19,7 +19,7 @@
         "开发了用于情感分析的文本处理管道",
         "为队伍制定指导方针、流程和标准做出了贡献"
       ],
-      "technologies": ["Python", "TypeScript", "React"]
+      "technologies": ["Python", "TypeScript", "React", "styled-components"]
     },
     {
       "contentStyle": {
@@ -42,11 +42,12 @@
       "technologies": [
         "Java",
         "Kotlin",
-        "TypeScript",
-        "MariaDB",
         "Spring Boot",
-        "React",
+        "MariaDB",
         "Karate",
+        "TypeScript",
+        "React",
+        "styled-components",
         "Cypress"
       ]
     },
@@ -70,10 +71,12 @@
         "HTML",
         "JavaScript",
         "Python",
-        "Dart",
-        "Bootstrap",
         "Django",
-        "Flutter"
+        "Bootstrap",
+        "SQLite",
+        "Dart",
+        "Flutter",
+        "AWS (EC2 and Lambda)"
       ]
     },
     {
@@ -89,10 +92,19 @@
       "companyName": "豪威科技",
       "jobTitle": "计算机视觉实习生",
       "description": [
-        "建立了一个用于显示边界框的网站，以帮助队伍对目标检测模型进行定性分析",
+        "建立一个用于显示边界框的网站并将其部署在本地服务器上，以帮助计算机视觉团队对目标检测模型进行定性分析",
         "通过脚本加速收集和预处理超过 10000 张图像"
       ],
-      "technologies": ["HTML", "JavaScript", "Python", "Bootstrap", "Django"]
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Django",
+        "Bootstrap",
+        "SQLite",
+        "Nginx",
+        "uWSGI"
+      ]
     }
   ]
 }

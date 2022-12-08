@@ -19,7 +19,7 @@
         "Developed a text processing pipeline for sentiment analysis",
         "Contributed to the set-up of guidelines, processes and standards for the team"
       ],
-      "technologies": ["Python", "TypeScript", "React"]
+      "technologies": ["Python", "TypeScript", "React", "styled-components"]
     },
     {
       "contentStyle": {
@@ -42,11 +42,12 @@
       "technologies": [
         "Java",
         "Kotlin",
-        "TypeScript",
-        "MariaDB",
         "Spring Boot",
-        "React",
+        "MariaDB",
         "Karate",
+        "TypeScript",
+        "React",
+        "styled-components",
         "Cypress"
       ]
     },
@@ -70,10 +71,12 @@
         "HTML",
         "JavaScript",
         "Python",
-        "Dart",
-        "Bootstrap",
         "Django",
-        "Flutter"
+        "Bootstrap",
+        "SQLite",
+        "Dart",
+        "Flutter",
+        "AWS (EC2 and Lambda)"
       ]
     },
     {
@@ -89,10 +92,19 @@
       "companyName": "Omnivision Technologies",
       "jobTitle": "Computer Vision Intern",
       "description": [
-        "Built a website for displaying bounding boxes, to aid the team in qualitative analysis of object detection models",
+        "Built a website for displaying bounding boxes and deployed it on an on-premise server, to aid the computer vision team in qualitative analysis of object detection models",
         "Sped up the collection and pre-processing of more than 10000 images via scripting"
       ],
-      "technologies": ["HTML", "JavaScript", "Python", "Bootstrap", "Django"]
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Django",
+        "Bootstrap",
+        "SQLite",
+        "Nginx",
+        "uWSGI"
+      ]
     }
   ]
 }
