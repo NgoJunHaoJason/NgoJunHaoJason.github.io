@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import Link from "components/reusable/Link";
+import Link from "components/shared/Link";
 
 describe("Link", () => {
   it("renders text in link", () => {

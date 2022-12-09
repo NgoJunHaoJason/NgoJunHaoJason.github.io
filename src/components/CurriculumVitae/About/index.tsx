@@ -1,5 +1,5 @@
 import ProfilePicture from "assets/images/profile_picture.png";
-import Link from "components/reusable/Link";
+import Link from "components/shared/Link";
 import { useTranslation } from "react-i18next";
 import {
   Card,

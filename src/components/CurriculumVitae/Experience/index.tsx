@@ -1,7 +1,7 @@
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import BulletedList from "components/reusable/BulletedList";
-import IconHeader from "components/reusable/IconHeader";
-import Labels from "components/reusable/Labels";
+import BulletedList from "components/shared/BulletedList";
+import IconHeader from "components/shared/IconHeader";
+import Labels from "components/shared/Labels";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import {

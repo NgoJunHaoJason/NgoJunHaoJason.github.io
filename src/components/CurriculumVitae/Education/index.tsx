@@ -6,9 +6,9 @@ import {
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BulletedList from "components/reusable/BulletedList";
-import IconHeader from "components/reusable/IconHeader";
-import Link from "components/reusable/Link";
+import BulletedList from "components/shared/BulletedList";
+import IconHeader from "components/shared/IconHeader";
+import Link from "components/shared/Link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Accordion, Container, Grid, Icon, Item } from "semantic-ui-react";

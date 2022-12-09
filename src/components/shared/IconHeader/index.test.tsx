@@ -1,6 +1,6 @@
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { render, screen, within } from "@testing-library/react";
-import IconHeader from "components/reusable/IconHeader";
+import IconHeader from "components/shared/IconHeader";
 
 describe("IconHeader", () => {
   it("renders text in icon header", () => {

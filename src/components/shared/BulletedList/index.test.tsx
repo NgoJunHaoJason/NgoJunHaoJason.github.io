@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import BulletedList from "components/reusable/BulletedList";
+import BulletedList from "components/shared/BulletedList";
 
 describe("BulletedList", () => {
   it("renders bulleted list", () => {

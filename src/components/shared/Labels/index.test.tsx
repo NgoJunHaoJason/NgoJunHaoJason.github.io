@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import Labels from "components/reusable/Labels";
+import Labels from "components/shared/Labels";
 
 describe("Labels", () => {
   it("renders labels", () => {

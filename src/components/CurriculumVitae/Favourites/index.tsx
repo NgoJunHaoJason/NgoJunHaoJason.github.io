@@ -1,6 +1,6 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import IconHeader from "components/reusable/IconHeader";
-import Labels from "components/reusable/Labels";
+import IconHeader from "components/shared/IconHeader";
+import Labels from "components/shared/Labels";
 import { useTranslation } from "react-i18next";
 import { Container, Divider, Header, Image } from "semantic-ui-react";
 

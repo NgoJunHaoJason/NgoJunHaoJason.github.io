@@ -1,8 +1,8 @@
 import { faTasks } from "@fortawesome/free-solid-svg-icons";
-import BulletedList from "components/reusable/BulletedList";
-import IconHeader from "components/reusable/IconHeader";
-import Labels from "components/reusable/Labels";
-import Link from "components/reusable/Link";
+import BulletedList from "components/shared/BulletedList";
+import IconHeader from "components/shared/IconHeader";
+import Labels from "components/shared/Labels";
+import Link from "components/shared/Link";
 import { useTranslation } from "react-i18next";
 import { Card, Container } from "semantic-ui-react";
 

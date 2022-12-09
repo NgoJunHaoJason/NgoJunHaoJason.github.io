@@ -1,4 +1,4 @@
-import Link from "components/reusable/Link";
+import Link from "components/shared/Link";
 import { Container } from "semantic-ui-react";
 
 import "./index.css";
