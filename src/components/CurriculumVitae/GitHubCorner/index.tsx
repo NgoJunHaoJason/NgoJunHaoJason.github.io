@@ -1,5 +1,5 @@
-import { Container } from "semantic-ui-react";
 import Link from "components/reusable/Link";
+import { Container } from "semantic-ui-react";
 
 import "./index.css";
 

@@ -1,3 +1,5 @@
+import ProfilePicture from "assets/images/profile_picture.png";
+import Link from "components/reusable/Link";
 import { useTranslation } from "react-i18next";
 import {
   Card,
@@ -7,8 +9,6 @@ import {
   List,
   SemanticICONS,
 } from "semantic-ui-react";
-import ProfilePicture from "assets/images/profile_picture.png";
-import Link from "components/reusable/Link";
 import "./index.css";
 
 const About = (): JSX.Element => {

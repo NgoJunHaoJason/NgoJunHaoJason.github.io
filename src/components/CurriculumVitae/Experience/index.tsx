@@ -1,4 +1,7 @@
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import BulletedList from "components/reusable/BulletedList";
+import IconHeader from "components/reusable/IconHeader";
+import Labels from "components/reusable/Labels";
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -6,9 +9,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { Container, Image } from "semantic-ui-react";
-import BulletedList from "components/reusable/BulletedList";
-import IconHeader from "components/reusable/IconHeader";
-import Labels from "components/reusable/Labels";
 
 import "react-vertical-timeline-component/style.min.css";
 import "./index.css";

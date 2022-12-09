@@ -1,9 +1,9 @@
 import { render, screen, within } from "@testing-library/react";
 import Projects, {
-  ProjectProps,
   Project,
-  ProjectTitleProps,
+  ProjectProps,
   ProjectTitle,
+  ProjectTitleProps,
 } from "components/CurriculumVitae/Projects";
 
 describe("Projects", () => {

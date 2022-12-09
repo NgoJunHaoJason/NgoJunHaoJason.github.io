@@ -1,12 +1,12 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { useTranslation } from "react-i18next";
-import { Container, Divider, Header, Image } from "semantic-ui-react";
 import IconHeader from "components/reusable/IconHeader";
 import Labels from "components/reusable/Labels";
+import { useTranslation } from "react-i18next";
+import { Container, Divider, Header, Image } from "semantic-ui-react";
 
-import theSoftwareCraftsmanCover from "assets/images/books/the_software_craftsman_cover.png";
-import driveCover from "assets/images/books/drive_cover.png";
 import cleanCodeCover from "assets/images/books/clean_code_cover.png";
+import driveCover from "assets/images/books/drive_cover.png";
+import theSoftwareCraftsmanCover from "assets/images/books/the_software_craftsman_cover.png";
 
 const Favourites = (): JSX.Element => {
   const { t } = useTranslation("favourites");

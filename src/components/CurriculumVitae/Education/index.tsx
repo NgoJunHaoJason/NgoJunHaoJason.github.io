@@ -6,12 +6,12 @@ import {
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Accordion, Container, Grid, Icon, Item } from "semantic-ui-react";
 import BulletedList from "components/reusable/BulletedList";
 import IconHeader from "components/reusable/IconHeader";
 import Link from "components/reusable/Link";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Accordion, Container, Grid, Icon, Item } from "semantic-ui-react";
 
 const Education = (): JSX.Element => {
   const { t } = useTranslation("education");

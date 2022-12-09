@@ -18,9 +18,15 @@ describe("CurriculumVitae", () => {
     const curriculumVitae = screen.getByTestId("curriculum-vitae");
 
     expect(within(curriculumVitae).getByTestId("about")).toBeInTheDocument();
-    expect(within(curriculumVitae).getByTestId("experience")).toBeInTheDocument();
-    expect(within(curriculumVitae).getByTestId("education")).toBeInTheDocument();
+    expect(
+      within(curriculumVitae).getByTestId("experience")
+    ).toBeInTheDocument();
+    expect(
+      within(curriculumVitae).getByTestId("education")
+    ).toBeInTheDocument();
     expect(within(curriculumVitae).getByTestId("projects")).toBeInTheDocument();
-    expect(within(curriculumVitae).getByTestId("favourites")).toBeInTheDocument();
+    expect(
+      within(curriculumVitae).getByTestId("favourites")
+    ).toBeInTheDocument();
   });
 });

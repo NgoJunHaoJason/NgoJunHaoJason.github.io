@@ -1,5 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
-import GitHubCorner, { GitHubCornerPicture } from "components/CurriculumVitae/GitHubCorner";
+import GitHubCorner, {
+  GitHubCornerPicture,
+} from "components/CurriculumVitae/GitHubCorner";
 
 describe("GitHubCorner", () => {
   it("renders GitHubCornerPicture in GitHubCorner", () => {

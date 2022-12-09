@@ -1,9 +1,9 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import Education, {
-  UniversitySummary,
-  UniversityDetails,
-  SectionProps,
   Section,
+  SectionProps,
+  UniversityDetails,
+  UniversitySummary,
 } from "components/CurriculumVitae/Education";
 
 describe("Education", () => {

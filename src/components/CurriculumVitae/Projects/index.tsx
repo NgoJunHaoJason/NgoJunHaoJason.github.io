@@ -1,10 +1,10 @@
 import { faTasks } from "@fortawesome/free-solid-svg-icons";
-import { useTranslation } from "react-i18next";
-import { Card, Container } from "semantic-ui-react";
 import BulletedList from "components/reusable/BulletedList";
 import IconHeader from "components/reusable/IconHeader";
-import Link from "components/reusable/Link";
 import Labels from "components/reusable/Labels";
+import Link from "components/reusable/Link";
+import { useTranslation } from "react-i18next";
+import { Card, Container } from "semantic-ui-react";
 
 const Projects = (): JSX.Element => {
   const { t } = useTranslation("projects");

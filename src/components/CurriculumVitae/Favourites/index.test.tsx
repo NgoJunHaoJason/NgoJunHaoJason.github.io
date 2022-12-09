@@ -8,7 +8,6 @@ describe("Favourites", () => {
     const favourites = screen.getByTestId("favourites");
 
     expect(within(favourites).getByTestId("books")).toBeInTheDocument();
-
     expect(within(favourites).getByTestId("practices")).toBeInTheDocument();
   });
 });
