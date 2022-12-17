@@ -1,61 +1,67 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import Education, {
-  Section,
-  SectionProps,
-  UniversityDetails,
-  UniversitySummary,
+  BachelorsDetails,
+  bachelorsDetailsTestId,
+  BachelorsSection,
+  BachelorsSectionProps,
+  bachelorsSummaryTestId,
+  mastersSummaryTestId,
 } from "components/CurriculumVitae/Education";
 
 describe("Education", () => {
-  it("renders UniversitySummary and UniversityDetails within Education", () => {
+  it("renders children", () => {
     render(<Education />);
     const education = screen.getByTestId("education");
 
     expect(
-      within(education).getByTestId("university-summary")
+      within(education).getByTestId(mastersSummaryTestId)
     ).toBeInTheDocument();
 
     expect(
-      within(education).getByTestId("university-details")
+      within(education).getByTestId(bachelorsSummaryTestId)
     ).toBeInTheDocument();
-  });
-
-  it("renders Certificate in UniversitySummary", () => {
-    render(<UniversitySummary />);
 
     expect(
-      within(screen.getByTestId("university-summary")).getByTestId(
-        "certificate"
-      )
+      within(education).getByTestId(bachelorsDetailsTestId)
     ).toBeInTheDocument();
   });
 
-  it("renders Section within UniversityDetails", () => {
-    render(<UniversityDetails />);
+  describe("BachelorsDetails", () => {
+    it("renders children", () => {
+      render(<BachelorsDetails />);
 
-    expect(
-      within(screen.getByTestId("university-details")).getByTestId("section")
-    ).toBeInTheDocument();
-  });
+      expect(
+        within(screen.getByTestId(bachelorsDetailsTestId)).getByTestId(
+          "section"
+        )
+      ).toBeInTheDocument();
+    });
 
-  it("renders section title and subjects within Section", () => {
-    const sectionProps: SectionProps = {
-      header: "header",
-      icon: "faBrain",
-      subheader: "subheader",
-      subjects: ["subject"],
-    };
+    describe("BachelorsSection", () => {
+      it("renders children", () => {
+        const sectionProps: BachelorsSectionProps = {
+          header: "header",
+          icon: "faBrain",
+          subheader: "subheader",
+          subjects: ["subject"],
+        };
 
-    render(<Section {...sectionProps} />);
-    const section = screen.getByTestId("section");
+        render(<BachelorsSection {...sectionProps} />);
+        const section = screen.getByTestId("section");
 
-    expect(within(section).getByTestId("section-title")).toBeInTheDocument();
+        expect(
+          within(section).getByTestId("section-title")
+        ).toBeInTheDocument();
 
-    expect(within(section).getByTestId("subjects")).not.toHaveClass("active");
+        expect(within(section).getByTestId("subjects")).not.toHaveClass(
+          "active"
+        );
 
-    const sectionTitle = screen.getByTestId("section-title");
-    fireEvent.click(sectionTitle);
+        const sectionTitle = screen.getByTestId("section-title");
+        fireEvent.click(sectionTitle);
 
-    expect(within(section).getByTestId("subjects")).toHaveClass("active");
+        expect(within(section).getByTestId("subjects")).toHaveClass("active");
+      });
+    });
   });
 });

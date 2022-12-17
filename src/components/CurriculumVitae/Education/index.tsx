@@ -18,88 +18,147 @@ const Education = (): JSX.Element => {
   return (
     <Container data-testid="education">
       <IconHeader icon={faGraduationCap} text={t("header")} />
-      <University />
+      <Masters />
+      <Bachelors />
     </Container>
   );
 };
 
 export default Education;
 
-export const University = (): JSX.Element => {
+export const mastersSummaryTestId = "masters-summary";
+
+export const Masters = (): JSX.Element => {
+  const { t } = useTranslation("education");
   return (
-    <Grid stackable doubling padded="horizontally" data-testid="university">
-      <UniversitySummary />
-      <UniversityDetails />
+    <Grid stackable doubling padded="horizontally" data-testid="masters">
+      <Summary
+        testId={mastersSummaryTestId}
+        university={t("masters.summary.university")}
+        degree={t("masters.summary.degree")}
+        date={t("masters.summary.date")}
+      />
     </Grid>
   );
 };
 
-export const UniversitySummary = (): JSX.Element => {
+export const bachelorsSummaryTestId = "bachelors-summary";
+
+export const Bachelors = (): JSX.Element => {
   const { t } = useTranslation("education");
+  const certificate: CertificateProps = {
+    label: t("bachelors.certificate.label"),
+    certificateLink: "./documents/degree_transcript_ngo_jun_hao_jason.opencert",
+    verify: t("bachelors.certificate.verify"),
+    verificationLink: "https://www.opencerts.io/",
+  };
   return (
-    <Grid.Row data-testid="university-summary" columns={1}>
-      <Grid.Column>
-        <Item.Group>
-          <Item>
-            <Item.Content>
-              <Item.Header>{t("university.name")}</Item.Header>
-              <Item.Meta>{t("university.date")}</Item.Meta>
-              <Item.Description>{t("university.degree")}</Item.Description>
-              <Item.Description>
-                {t("university.honours")}, {t("university.gpa")}
-              </Item.Description>
-              <Certificate />
-            </Item.Content>
-          </Item>
-        </Item.Group>
-      </Grid.Column>
-    </Grid.Row>
+    <Grid stackable doubling padded="horizontally" data-testid="bachelors">
+      <Summary
+        testId={bachelorsSummaryTestId}
+        university={t("bachelors.summary.university")}
+        degree={t("bachelors.summary.degree")}
+        date={t("bachelors.summary.date")}
+        grades={`${t("bachelors.summary.honours")}, ${t(
+          "bachelors.summary.gpa"
+        )}`}
+        certificate={certificate}
+      />
+      <BachelorsDetails />
+    </Grid>
   );
 };
 
-const Certificate = (): JSX.Element => {
-  const { t } = useTranslation("education");
-  return (
-    <Item.Extra data-testid="certificate">
-      <Link content={t("university.cert")} href={t("university.certURL")} />
-      (
-      <Link content={t("university.verify")} href={t("university.verifyURL")} />
-      )
-    </Item.Extra>
-  );
-};
+interface SummaryProps {
+  testId: string;
+  university: string;
+  degree: string;
+  date: string;
+  grades?: string;
+  certificate?: CertificateProps;
+}
 
-export const UniversityDetails = (): JSX.Element => {
+export const Summary = ({
+  testId,
+  university,
+  degree,
+  date,
+  grades,
+  certificate,
+}: SummaryProps): JSX.Element => (
+  <Grid.Row data-testid={testId} columns={1}>
+    <Grid.Column>
+      <Item.Group>
+        <Item>
+          <Item.Content>
+            <Item.Header>{university}</Item.Header>
+            <Item.Meta>{degree}</Item.Meta>
+            <Item.Description>{date}</Item.Description>
+            {grades && <Item.Description>{grades}</Item.Description>}
+            {certificate && <Certificate {...certificate} />}
+          </Item.Content>
+        </Item>
+      </Item.Group>
+    </Grid.Column>
+  </Grid.Row>
+);
+
+interface CertificateProps {
+  label: string;
+  certificateLink: string;
+  verify?: string;
+  verificationLink?: string;
+}
+
+const Certificate = ({
+  label,
+  certificateLink,
+  verify,
+  verificationLink,
+}: CertificateProps): JSX.Element => (
+  <Item.Extra data-testid="certificate">
+    <Link content={label} href={certificateLink} />
+    {verify && verificationLink && (
+      <Link content={`(${verify})`} href={verificationLink} />
+    )}
+  </Item.Extra>
+);
+
+export const bachelorsDetailsTestId = "bachelors-details";
+
+export const BachelorsDetails = (): JSX.Element => {
   const { t } = useTranslation("education");
-  const sections = t<any, SectionProps[]>("sections", { returnObjects: true });
+  const sections = t<any, BachelorsSectionProps[]>("bachelors.details", {
+    returnObjects: true,
+  });
   return (
-    <Grid.Row data-testid="university-details" columns={sections.length}>
-      {sections.map((section: SectionProps, index: number) => (
-        <Section {...section} key={index} />
+    <Grid.Row data-testid={bachelorsDetailsTestId} columns={sections.length}>
+      {sections.map((section: BachelorsSectionProps, index: number) => (
+        <BachelorsSection {...section} key={index} />
       ))}
     </Grid.Row>
   );
 };
 
-export interface SectionProps {
+export interface BachelorsSectionProps {
   header: string;
   icon: string;
   subheader: string;
   subjects: Array<string>;
 }
 
-const sectionIcons: { [key: string]: IconDefinition } = {
+const bachelorsSectionIcons: { [key: string]: IconDefinition } = {
   faLaptopCode: faLaptopCode,
   faRobot: faRobot,
   faBrain: faBrain,
 };
 
-export const Section = ({
+export const BachelorsSection = ({
   header,
   icon,
   subheader,
   subjects,
-}: SectionProps): JSX.Element => {
+}: BachelorsSectionProps): JSX.Element => {
   const [active, setActive] = useState(false);
 
   return (
@@ -113,7 +172,7 @@ export const Section = ({
           <Icon name="dropdown" />
           {header}:<br />
           &nbsp; &nbsp; &nbsp; {subheader} &nbsp;
-          <FontAwesomeIcon icon={sectionIcons[icon]} />
+          <FontAwesomeIcon icon={bachelorsSectionIcons[icon]} />
         </Accordion.Title>
 
         <Accordion.Content data-testid="subjects" active={active}>
