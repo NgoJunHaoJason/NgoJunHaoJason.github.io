@@ -5,7 +5,15 @@
       "university": "Georgia Institute of Technology",
       "date": "Jan 2023 - Future",
       "degree": "Online Master of Science in Computer Science"
-    }
+    },
+    "details": [
+      {
+        "header": "Specialisation",
+        "icon": "faVrCardboard",
+        "subheader": "Interactive Intelligence",
+        "subjects": ["TBD"]
+      }
+    ]
   },
   "bachelors": {
     "summary": {

@@ -1,17 +1,10 @@
-import {
-  faBrain,
-  faGraduationCap,
-  faLaptopCode,
-  faRobot,
-  IconDefinition
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BulletedList from "components/shared/BulletedList";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import Degree from "components/CurriculumVitae/Education/Degree";
+import { DegreeDetailsSectionProps } from "components/CurriculumVitae/Education/DegreeDetails";
+import { CertificateProps } from "components/CurriculumVitae/Education/DegreeSummary";
 import IconHeader from "components/shared/IconHeader";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Accordion, Container, Grid, Icon } from "semantic-ui-react";
-import DegreeSummary, { CertificateProps } from "components/CurriculumVitae/Education/DegreeSummary";
+import { Container } from "semantic-ui-react";
 
 const Education = (): JSX.Element => {
   const { t } = useTranslation("education");
@@ -26,23 +19,28 @@ const Education = (): JSX.Element => {
 
 export default Education;
 
-export const mastersSummaryTestId = "masters-summary";
-
 export const MastersDegree = (): JSX.Element => {
   const { t } = useTranslation("education");
+
+  const sections: DegreeDetailsSectionProps[] = t<
+    any,
+    DegreeDetailsSectionProps[]
+  >("masters.details", {
+    returnObjects: true,
+  });
+
   return (
-    <Grid stackable doubling padded="horizontally" data-testid="masters">
-      <DegreeSummary
-        testId={mastersSummaryTestId}
-        university={t("masters.summary.university")}
-        degree={t("masters.summary.degree")}
-        date={t("masters.summary.date")}
-      />
-    </Grid>
+    <Degree
+      testId={mastersDegreeTestId}
+      university={t("masters.summary.university")}
+      degreeName={t("masters.summary.degree")}
+      date={t("masters.summary.date")}
+      sections={sections}
+    />
   );
 };
 
-export const bachelorsSummaryTestId = "bachelors-summary";
+export const mastersDegreeTestId = "masters-degree";
 
 export const BachelorsDegree = (): JSX.Element => {
   const { t } = useTranslation("education");
@@ -56,77 +54,24 @@ export const BachelorsDegree = (): JSX.Element => {
     verify: t("bachelors.certificate.verify"),
     verificationLink: "https://www.opencerts.io/",
   };
-
-  return (
-    <Grid stackable doubling padded="horizontally" data-testid="bachelors">
-      <DegreeSummary
-        testId={bachelorsSummaryTestId}
-        university={t("bachelors.summary.university")}
-        degree={t("bachelors.summary.degree")}
-        date={t("bachelors.summary.date")}
-        grades={grades}
-        certificate={certificate}
-      />
-      <BachelorsDetails />
-    </Grid>
-  );
-};
-
-export const bachelorsDetailsTestId = "bachelors-details";
-
-export const BachelorsDetails = (): JSX.Element => {
-  const { t } = useTranslation("education");
-  const sections = t<any, BachelorsSectionProps[]>("bachelors.details", {
+  const sections: DegreeDetailsSectionProps[] = t<
+    any,
+    DegreeDetailsSectionProps[]
+  >("bachelors.details", {
     returnObjects: true,
   });
+
   return (
-    <Grid.Row data-testid={bachelorsDetailsTestId} columns={sections.length}>
-      {sections.map((section: BachelorsSectionProps, index: number) => (
-        <BachelorsSection {...section} key={index} />
-      ))}
-    </Grid.Row>
+    <Degree
+      testId={bachelorsDegreeTestId}
+      university={t("bachelors.summary.university")}
+      degreeName={t("bachelors.summary.degree")}
+      date={t("bachelors.summary.date")}
+      grades={grades}
+      certificate={certificate}
+      sections={sections}
+    />
   );
 };
 
-export interface BachelorsSectionProps {
-  header: string;
-  icon: string;
-  subheader: string;
-  subjects: Array<string>;
-}
-
-const bachelorsSectionIcons: { [key: string]: IconDefinition } = {
-  faLaptopCode: faLaptopCode,
-  faRobot: faRobot,
-  faBrain: faBrain,
-};
-
-export const BachelorsSection = ({
-  header,
-  icon,
-  subheader,
-  subjects,
-}: BachelorsSectionProps): JSX.Element => {
-  const [active, setActive] = useState(false);
-
-  return (
-    <Grid.Column data-testid="section">
-      <Accordion className="Card" styled>
-        <Accordion.Title
-          data-testid="section-title"
-          active={active}
-          onClick={() => setActive(!active)}
-        >
-          <Icon name="dropdown" />
-          {header}:<br />
-          &nbsp; &nbsp; &nbsp; {subheader} &nbsp;
-          <FontAwesomeIcon icon={bachelorsSectionIcons[icon]} />
-        </Accordion.Title>
-
-        <Accordion.Content data-testid="subjects" active={active}>
-          <BulletedList list={subjects} />
-        </Accordion.Content>
-      </Accordion>
-    </Grid.Column>
-  );
-};
+export const bachelorsDegreeTestId = "bachelors-degree";

@@ -4,7 +4,7 @@ import { Grid, Item } from "semantic-ui-react";
 interface DegreeSummaryProps {
   testId: string;
   university: string;
-  degree: string;
+  degreeName: string;
   date: string;
   grades?: string;
   certificate?: CertificateProps;
@@ -13,7 +13,7 @@ interface DegreeSummaryProps {
 const DegreeSummary = ({
   testId,
   university,
-  degree,
+  degreeName,
   date,
   grades,
   certificate,
@@ -24,9 +24,13 @@ const DegreeSummary = ({
         <Item>
           <Item.Content>
             <Item.Header>{university}</Item.Header>
-            <Item.Meta>{degree}</Item.Meta>
+            <Item.Meta>{degreeName}</Item.Meta>
             <Item.Description>{date}</Item.Description>
-            {grades && <Item.Description>{grades}</Item.Description>}
+            {grades && (
+              <Item.Description data-testid={gradesTestId}>
+                {grades}
+              </Item.Description>
+            )}
             {certificate && <Certificate {...certificate} />}
           </Item.Content>
         </Item>
@@ -37,6 +41,8 @@ const DegreeSummary = ({
 
 export default DegreeSummary;
 
+export const gradesTestId = "grades";
+
 export interface CertificateProps {
   label: string;
   certificateLink: string;
@@ -44,16 +50,24 @@ export interface CertificateProps {
   verificationLink?: string;
 }
 
-const Certificate = ({
+export const Certificate = ({
   label,
   certificateLink,
   verify,
   verificationLink,
 }: CertificateProps): JSX.Element => (
-  <Item.Extra data-testid="certificate">
+  <Item.Extra data-testid={certificateTestId}>
     <Link content={label} href={certificateLink} />
     {verify && verificationLink && (
-      <Link content={`(${verify})`} href={verificationLink} />
+      <Link
+        testId={certificateVerificationLinkTestId}
+        content={`(${verify})`}
+        href={verificationLink}
+      />
     )}
   </Item.Extra>
 );
+
+export const certificateTestId = "certificate";
+export const certificateVerificationLinkTestId =
+  "certificate-verification-link";

@@ -5,7 +5,15 @@
       "university": "佐治亚理工学院",
       "date": "2023年 1月 - 未来",
       "degree": "计算机科学在线理学硕士"
-    }
+    },
+    "details": [
+      {
+        "header": "专修",
+        "icon": "faVrCardboard",
+        "subheader": "交互智能",
+        "subjects": ["待定"]
+      }
+    ]
   },
   "bachelors": {
     "summary": {
