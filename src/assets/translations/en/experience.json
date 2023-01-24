@@ -12,12 +12,13 @@
       "date": "Aug 2022 - present",
       "iconName": "DBSLogo",
       "companyName": "DBS Bank",
-      "jobTitle": "Machine Learning Engineer",
+      "jobTitle": "Machine Learning Engineer (frontend-focus)",
       "description": [
-        "Developed the user interface of a financial modelling website",
-        "Mentored a teammate in front end development",
-        "Developed a text processing pipeline for sentiment analysis",
-        "Contributed to the set-up of guidelines, processes and standards for the team"
+        "Developed the user interface of a financial modelling website as a proof-of-concept, intended to replace weeks of manual input in Excel spreadsheets with a few minutes of form submission",
+        "Guided teammates in front end development by doing pair programming and going through React concepts",
+        "Instilled a culture of documentation in the team, which reduced the time spent on knowledge transfer",
+        "Contributed to the set-up of guidelines, processes and standards for the team",
+        "Developed a text processing pipeline for sentiment analysis"
       ],
       "technologies": ["Python", "TypeScript", "React", "styled-components"]
     },
@@ -32,11 +33,12 @@
       "date": "Jul 2021 - Jul 2022",
       "iconName": "DBSLogo",
       "companyName": "DBS Bank",
-      "jobTitle": "Software Engineer",
+      "jobTitle": "Software Engineer (backend-focus)",
       "description": [
-        "Created and enhanced application programming interfaces for a customer relationship management website",
-        "Practised test-driven development to deliver modular code with high coverage",
+        "Created and enhanced application programming interfaces for a customer relationship management website (Client Connect) that supplements the interactions between relationship managers and customers",
+        "Championed the values of software craftsmanship and code quality, to raise the bar of professional softftware development in the project",
         "Onboarded several newcomers by helping them to get familiar with the code base and coding standards",
+        "Pioneered test-driven development to deliver modular code with high coverage in the team",
         "Learnt and helped out with front end development on top of day-to-day tasks"
       ],
       "technologies": [
@@ -64,7 +66,7 @@
       "companyName": "Aural-Aid",
       "jobTitle": "Software Development Intern",
       "description": [
-        "Did full stack development for a website that scrapes companies' contact information",
+        "Did full stack development for a website (Autoscrape) that scrapes companies' contact information",
         "Developed a prototype mobile app that controls iris doors remotely"
       ],
       "technologies": [
