@@ -10,5 +10,5 @@
 - view locally: `npm start`
 - test: `npm test` (with coverage: `npm test . -- --coverage`)
 - deploy:
-  - `npm run deploy`
+  - `npm run deploy -- -m "<commit_message>"`
   - add CNAME (can be done in repo's GitHub Pages settings)
